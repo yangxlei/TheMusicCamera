@@ -13,6 +13,7 @@
 #import "SettingViewController.h"
 #import "ShareViewController.h"
 #import "DataManager.h"
+#import "CameraController.h"
 
 @interface ViewController ()
 
@@ -128,9 +129,15 @@
     }
     else
     {
-        NSLog(@"1111 %d %@",tabBarController.selectedIndex,viewController);
+        NSLog(@"1111 %d %@",(int)tabBarController.selectedIndex,viewController);
         if (tabBarController.selectedIndex==4) {
             [self.mainTabBarController hidesTabBar:YES animated:YES];
+        }
+        else if (tabBarController.selectedIndex == 2)
+        {
+          UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"camera" bundle:[NSBundle mainBundle]];
+          CameraController *camera = [storyboard instantiateViewControllerWithIdentifier:@"CameraController"];
+          [(UINavigationController*)viewController pushViewController:camera animated:YES];
         }
     }
 

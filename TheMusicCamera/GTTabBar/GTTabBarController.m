@@ -236,7 +236,7 @@ static GTTabBarController *gtTabBarController;
         }
     }
     // If target index if equal to current index, do nothing.
-    if (selectedIndex == index && [[transitionView subviews] count] != 0)
+    if (selectedIndex == index && [[transitionView subviews] count] != 0 && index != 2)
     {
         return;
     }

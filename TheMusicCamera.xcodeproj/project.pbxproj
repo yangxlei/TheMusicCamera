@@ -88,6 +88,12 @@
 		9571A222185C975D003D3285 /* shot_size_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A217185C975D003D3285 /* shot_size_1_1.png */; };
 		9571A223185C975D003D3285 /* shot_size_4_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A218185C975D003D3285 /* shot_size_4_3.png */; };
 		9571A226185C9C3A003D3285 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9571A225185C9C3A003D3285 /* CameraController.m */; };
+		9571A445185CA0A6003D3285 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A444185CA0A6003D3285 /* ImageIO.framework */; };
+		9571A447185CA0AD003D3285 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A446185CA0AD003D3285 /* OpenGLES.framework */; };
+		9571A449185CA0B3003D3285 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A448185CA0B3003D3285 /* AVFoundation.framework */; };
+		9571A44B185CA0BC003D3285 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44A185CA0BC003D3285 /* CoreMedia.framework */; };
+		9571A44D185CA0C4003D3285 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44C185CA0C4003D3285 /* CoreVideo.framework */; };
+		9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44E185CA0CD003D3285 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +203,12 @@
 		9571A218185C975D003D3285 /* shot_size_4_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot_size_4_3.png; sourceTree = "<group>"; };
 		9571A224185C9C3A003D3285 /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		9571A225185C9C3A003D3285 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
+		9571A444185CA0A6003D3285 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		9571A446185CA0AD003D3285 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9571A448185CA0B3003D3285 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9571A44A185CA0BC003D3285 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9571A44C185CA0C4003D3285 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9571A44E185CA0CD003D3285 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +216,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */,
+				9571A44D185CA0C4003D3285 /* CoreVideo.framework in Frameworks */,
+				9571A44B185CA0BC003D3285 /* CoreMedia.framework in Frameworks */,
+				9571A449185CA0B3003D3285 /* AVFoundation.framework in Frameworks */,
+				9571A447185CA0AD003D3285 /* OpenGLES.framework in Frameworks */,
+				9571A445185CA0A6003D3285 /* ImageIO.framework in Frameworks */,
 				354467F0185AD419005AB0D9 /* CoreGraphics.framework in Frameworks */,
 				354467F2185AD419005AB0D9 /* UIKit.framework in Frameworks */,
 				354467EE185AD419005AB0D9 /* Foundation.framework in Frameworks */,
@@ -285,6 +303,12 @@
 		354467EC185AD419005AB0D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9571A44E185CA0CD003D3285 /* QuartzCore.framework */,
+				9571A44C185CA0C4003D3285 /* CoreVideo.framework */,
+				9571A44A185CA0BC003D3285 /* CoreMedia.framework */,
+				9571A448185CA0B3003D3285 /* AVFoundation.framework */,
+				9571A446185CA0AD003D3285 /* OpenGLES.framework */,
+				9571A444185CA0A6003D3285 /* ImageIO.framework */,
 				354467ED185AD419005AB0D9 /* Foundation.framework */,
 				354467EF185AD419005AB0D9 /* CoreGraphics.framework */,
 				354467F1185AD419005AB0D9 /* UIKit.framework */,
@@ -705,6 +729,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
@@ -717,6 +745,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";

@@ -8,7 +8,7 @@
         <!--Camera Controller-->
         <scene sceneID="yI6-35-HoK">
             <objects>
-                <viewController id="Yjg-4C-iUm" customClass="CameraController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraController" id="Yjg-4C-iUm" customClass="CameraController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qUR-da-EHp"/>
                         <viewControllerLayoutGuide type="bottom" id="iEE-zy-W5k"/>
@@ -34,6 +34,9 @@
                                 <state key="normal" backgroundImage="shoot_camera_button_1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="Yjg-4C-iUm" eventType="touchUpInside" id="MUk-bd-IfT"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoot_camera_button_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-JB-dHn">
                                 <rect key="frame" x="139" y="419" width="43" height="32"/>
@@ -54,8 +57,11 @@
                                 <state key="normal" backgroundImage="shot_back.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="back:" destination="Yjg-4C-iUm" eventType="touchUpInside" id="Tdr-oM-77B"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPO-Iu-X1D">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPO-Iu-X1D">
                                 <rect key="frame" x="93" y="11" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -63,6 +69,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" backgroundImage="shot_flash_on.png"/>
+                                <connections>
+                                    <action selector="flash:" destination="Yjg-4C-iUm" eventType="touchUpInside" id="COn-c9-KJG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-T8-pX7">
                                 <rect key="frame" x="183" y="16" width="45" height="25"/>
@@ -71,6 +80,9 @@
                                 <state key="normal" backgroundImage="shot_kirikae.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="frontCamera:" destination="Yjg-4C-iUm" eventType="touchUpInside" id="1Hi-7c-Q9w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-an-iVd">
                                 <rect key="frame" x="264" y="12" width="29" height="28"/>
@@ -80,14 +92,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" backgroundImage="shot_size_4_3.png"/>
+                                <connections>
+                                    <action selector="sizeClick:" destination="Yjg-4C-iUm" eventType="touchUpInside" id="vDE-cy-whb"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Gm-GZG">
                                 <rect key="frame" x="0.0" y="59" width="320" height="339"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wA9-Gm-GZG" firstAttribute="leading" secondItem="j2H-tx-Wh4" secondAttribute="leading" id="2P7-FH-Uwm"/>
                             <constraint firstAttribute="trailing" secondItem="j2H-tx-Wh4" secondAttribute="trailing" id="6uH-X6-WyJ"/>
@@ -113,7 +128,7 @@
                         <outlet property="flashBtn" destination="nPO-Iu-X1D" id="BTu-Io-Sbo"/>
                         <outlet property="kirikaeBtn" destination="gm5-T8-pX7" id="fHb-pd-0hx"/>
                         <outlet property="sizeBtn" destination="bGE-an-iVd" id="8pI-GO-FcP"/>
-                        <outlet property="view" destination="wA9-Gm-GZG" id="vQa-1F-Gjr"/>
+                        <outlet property="view" destination="eUj-fY-07E" id="TZe-G3-MuD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhK-JA-7Oy" userLabel="First Responder" sceneMemberID="firstResponder"/>

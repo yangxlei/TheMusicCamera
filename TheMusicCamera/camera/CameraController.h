@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface CameraController : UIViewController
 
@@ -16,5 +17,11 @@
 @property (nonatomic, strong) IBOutlet UIButton* sizeBtn;
 @property (nonatomic, strong) IBOutlet UIButton* cameraBtn;
 @property (nonatomic, strong) IBOutlet UIView* cameraView;
+
+-(IBAction) back:(id)sender;
+-(IBAction) flash:(id)sender;
+-(IBAction) frontCamera:(id)sender;
+-(IBAction) sizeClick:(id)sender;
+-(IBAction) takePhoto:(id)sender;
 
 @end
