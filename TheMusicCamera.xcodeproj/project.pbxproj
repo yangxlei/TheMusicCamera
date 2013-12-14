@@ -775,6 +775,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -783,6 +784,7 @@
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -791,6 +793,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -799,6 +802,7 @@
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

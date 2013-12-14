@@ -96,8 +96,8 @@
                                     <action selector="sizeClick:" destination="Yjg-4C-iUm" eventType="touchUpInside" id="vDE-cy-whb"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Gm-GZG">
-                                <rect key="frame" x="0.0" y="59" width="320" height="339"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Gm-GZG">
+                                <rect key="frame" x="0.0" y="59" width="320" height="341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -125,6 +125,7 @@
                     <connections>
                         <outlet property="backBtn" destination="VbG-AX-rmE" id="uDv-iE-DDJ"/>
                         <outlet property="cameraBtn" destination="HFh-yl-SnE" id="zRy-Tz-Wqi"/>
+                        <outlet property="cameraView" destination="wA9-Gm-GZG" id="YID-m8-z3b"/>
                         <outlet property="flashBtn" destination="nPO-Iu-X1D" id="BTu-Io-Sbo"/>
                         <outlet property="kirikaeBtn" destination="gm5-T8-pX7" id="fHb-pd-0hx"/>
                         <outlet property="sizeBtn" destination="bGE-an-iVd" id="8pI-GO-FcP"/>
