@@ -81,6 +81,7 @@
 		9571A221185C975D003D3285 /* shot_kirikae.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A216185C975D003D3285 /* shot_kirikae.png */; };
 		9571A222185C975D003D3285 /* shot_size_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A217185C975D003D3285 /* shot_size_1_1.png */; };
 		9571A223185C975D003D3285 /* shot_size_4_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A218185C975D003D3285 /* shot_size_4_3.png */; };
+		9571A226185C9C3A003D3285 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9571A225185C9C3A003D3285 /* CameraController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +183,8 @@
 		9571A216185C975D003D3285 /* shot_kirikae.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot_kirikae.png; sourceTree = "<group>"; };
 		9571A217185C975D003D3285 /* shot_size_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot_size_1_1.png; sourceTree = "<group>"; };
 		9571A218185C975D003D3285 /* shot_size_4_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot_size_4_3.png; sourceTree = "<group>"; };
+		9571A224185C9C3A003D3285 /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
+		9571A225185C9C3A003D3285 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +389,8 @@
 			isa = PBXGroup;
 			children = (
 				9571A20C185C917A003D3285 /* camera.storyboard */,
+				9571A224185C9C3A003D3285 /* CameraController.h */,
+				9571A225185C9C3A003D3285 /* CameraController.m */,
 			);
 			path = camera;
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 				354467FA185AD419005AB0D9 /* main.m in Sources */,
 				356E6A75185ADE97002A1014 /* ShareViewController.m in Sources */,
 				356E6A8E185B15FC002A1014 /* DataManager.m in Sources */,
+				9571A226185C9C3A003D3285 /* CameraController.m in Sources */,
 				356E6A66185AD973002A1014 /* GTTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

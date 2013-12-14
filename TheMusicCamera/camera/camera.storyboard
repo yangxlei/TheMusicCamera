@@ -5,28 +5,137 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera Controller-->
         <scene sceneID="yI6-35-HoK">
             <objects>
-                <viewController id="Yjg-4C-iUm" sceneMemberID="viewController">
+                <viewController id="Yjg-4C-iUm" customClass="CameraController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qUR-da-EHp"/>
                         <viewControllerLayoutGuide type="bottom" id="iEE-zy-W5k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eUj-fY-07E">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoot_camera_button_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="j2H-tx-Wh4">
+                                <rect key="frame" x="0.0" y="397" width="320" height="83"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="MPC-ee-o6F"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFh-yl-SnE">
+                                <rect key="frame" x="99" y="413" width="123" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="my8-SH-QSt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="shoot_camera_button_1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoot_camera_button_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-JB-dHn">
+                                <rect key="frame" x="139" y="419" width="43" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="62P-cj-K4z"/>
+                                    <constraint firstAttribute="height" constant="32" id="me8-Nr-nTb"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="shot_button_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="iGK-t8-Jlt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbG-AX-rmE">
+                                <rect key="frame" x="26" y="18" width="24" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="shot_back.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPO-Iu-X1D">
+                                <rect key="frame" x="93" y="11" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="shot_flash_off.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="shot_flash_on.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-T8-pX7">
+                                <rect key="frame" x="183" y="16" width="45" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="shot_kirikae.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-an-iVd">
+                                <rect key="frame" x="264" y="12" width="29" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="shot_size_1_1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="shot_size_4_3.png"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Gm-GZG">
+                                <rect key="frame" x="0.0" y="59" width="320" height="339"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="leading" secondItem="j2H-tx-Wh4" secondAttribute="leading" id="2P7-FH-Uwm"/>
+                            <constraint firstAttribute="trailing" secondItem="j2H-tx-Wh4" secondAttribute="trailing" id="6uH-X6-WyJ"/>
+                            <constraint firstAttribute="bottom" secondItem="j2H-tx-Wh4" secondAttribute="bottom" id="8WT-MS-1TN"/>
+                            <constraint firstItem="HFh-yl-SnE" firstAttribute="centerX" secondItem="j2H-tx-Wh4" secondAttribute="centerX" id="HDu-1A-Cb6"/>
+                            <constraint firstItem="j2H-tx-Wh4" firstAttribute="leading" secondItem="eUj-fY-07E" secondAttribute="leading" id="MON-c3-b51"/>
+                            <constraint firstAttribute="bottom" secondItem="HFh-yl-SnE" secondAttribute="bottom" constant="16" id="MmZ-V7-yJy"/>
+                            <constraint firstItem="RJr-JB-dHn" firstAttribute="centerX" secondItem="HFh-yl-SnE" secondAttribute="centerX" id="OFX-uW-cda"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="top" secondItem="iGK-t8-Jlt" secondAttribute="bottom" id="XKj-67-4Vz"/>
+                            <constraint firstItem="HFh-yl-SnE" firstAttribute="leading" secondItem="eUj-fY-07E" secondAttribute="leading" constant="99" id="Yw9-6Y-yyl"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="leading" secondItem="iGK-t8-Jlt" secondAttribute="leading" id="dRP-qG-ZrY"/>
+                            <constraint firstAttribute="bottom" secondItem="RJr-JB-dHn" secondAttribute="bottom" constant="29" id="lEN-jw-XhV"/>
+                            <constraint firstAttribute="bottom" secondItem="wA9-Gm-GZG" secondAttribute="bottom" constant="82" id="ojC-0z-KBA"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="trailing" secondItem="j2H-tx-Wh4" secondAttribute="trailing" id="pEv-5Q-dw7"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="trailing" secondItem="iGK-t8-Jlt" secondAttribute="trailing" id="q4D-WO-vcs"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="top" secondItem="eUj-fY-07E" secondAttribute="top" constant="59" id="wBP-Zw-vPS"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="backBtn" destination="VbG-AX-rmE" id="uDv-iE-DDJ"/>
+                        <outlet property="cameraBtn" destination="HFh-yl-SnE" id="zRy-Tz-Wqi"/>
+                        <outlet property="flashBtn" destination="nPO-Iu-X1D" id="BTu-Io-Sbo"/>
+                        <outlet property="kirikaeBtn" destination="gm5-T8-pX7" id="fHb-pd-0hx"/>
+                        <outlet property="sizeBtn" destination="bGE-an-iVd" id="8pI-GO-FcP"/>
+                        <outlet property="view" destination="wA9-Gm-GZG" id="vQa-1F-Gjr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhK-JA-7Oy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18" y="-303"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shoot_camera_button_1.png" width="246" height="101"/>
+        <image name="shoot_camera_button_2.png" width="85" height="64"/>
+        <image name="shoot_camera_button_bg.png" width="640" height="166"/>
+        <image name="shot_back.png" width="47" height="46"/>
+        <image name="shot_button_bg.png" width="640" height="118"/>
+        <image name="shot_flash_off.png" width="92" height="60"/>
+        <image name="shot_flash_on.png" width="78" height="59"/>
+        <image name="shot_kirikae.png" width="89" height="49"/>
+        <image name="shot_size_1_1.png" width="57" height="56"/>
+        <image name="shot_size_4_3.png" width="57" height="70"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
