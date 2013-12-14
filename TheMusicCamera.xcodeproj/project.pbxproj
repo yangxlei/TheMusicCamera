@@ -15,6 +15,14 @@
 		2E44DAB0185C9D7000C5C1DC /* setting_sound_image_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAAE185C9D7000C5C1DC /* setting_sound_image_960.png */; };
 		2E44DAB1185C9D7000C5C1DC /* setting_sound_image_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAAF185C9D7000C5C1DC /* setting_sound_image_1136.png */; };
 		2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAB2185C9EAE00C5C1DC /* recording_button.png */; };
+		2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DAB6185CA34C00C5C1DC /* SoundsRecordViewController.m */; };
+		2E44DAB9185CA3FE00C5C1DC /* header_recording.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAB8185CA3FE00C5C1DC /* header_recording.png */; };
+		2E44DABC185CA63600C5C1DC /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DABA185CA63600C5C1DC /* button_back.png */; };
+		2E44DABD185CA63600C5C1DC /* button_save.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DABB185CA63600C5C1DC /* button_save.png */; };
+		2E44DAC0185CA7AA00C5C1DC /* SoundsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DABF185CA7AA00C5C1DC /* SoundsListViewController.m */; };
+		2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */; };
+		2E44DAC5185CAF7500C5C1DC /* header_sound_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */; };
+		2E44DAC7185CB0B900C5C1DC /* header_sound_re.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */; };
 		2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A32E185C07C000C226DF /* mama_camera_top_1136.png */; };
 		2EB0A331185C07C000C226DF /* mama_camera_top_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A32F185C07C000C226DF /* mama_camera_top_960.png */; };
 		2EB0A333185C2FB400C226DF /* header_sound_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A332185C2FB400C226DF /* header_sound_setting.png */; };
@@ -115,6 +123,17 @@
 		2E44DAAE185C9D7000C5C1DC /* setting_sound_image_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_sound_image_960.png; sourceTree = "<group>"; };
 		2E44DAAF185C9D7000C5C1DC /* setting_sound_image_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_sound_image_1136.png; sourceTree = "<group>"; };
 		2E44DAB2185C9EAE00C5C1DC /* recording_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_button.png; sourceTree = "<group>"; };
+		2E44DAB5185CA34C00C5C1DC /* SoundsRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundsRecordViewController.h; sourceTree = "<group>"; };
+		2E44DAB6185CA34C00C5C1DC /* SoundsRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsRecordViewController.m; sourceTree = "<group>"; };
+		2E44DAB8185CA3FE00C5C1DC /* header_recording.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_recording.png; sourceTree = "<group>"; };
+		2E44DABA185CA63600C5C1DC /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_back.png; sourceTree = "<group>"; };
+		2E44DABB185CA63600C5C1DC /* button_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_save.png; sourceTree = "<group>"; };
+		2E44DABE185CA7A900C5C1DC /* SoundsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundsListViewController.h; sourceTree = "<group>"; };
+		2E44DABF185CA7AA00C5C1DC /* SoundsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsListViewController.m; sourceTree = "<group>"; };
+		2E44DAC1185CADEC00C5C1DC /* SoundsRepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundsRepeatViewController.h; sourceTree = "<group>"; };
+		2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsRepeatViewController.m; sourceTree = "<group>"; };
+		2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_list.png; sourceTree = "<group>"; };
+		2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_re.png; sourceTree = "<group>"; };
 		2EB0A32E185C07C000C226DF /* mama_camera_top_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mama_camera_top_1136.png; sourceTree = "<group>"; };
 		2EB0A32F185C07C000C226DF /* mama_camera_top_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mama_camera_top_960.png; sourceTree = "<group>"; };
 		2EB0A332185C2FB400C226DF /* header_sound_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_setting.png; sourceTree = "<group>"; };
@@ -241,9 +260,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E44DAB4185CA2BA00C5C1DC /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				356E6A6A185ADE5E002A1014 /* SoundsViewController.h */,
+				356E6A6B185ADE5E002A1014 /* SoundsViewController.m */,
+				2E44DAB5185CA34C00C5C1DC /* SoundsRecordViewController.h */,
+				2E44DAB6185CA34C00C5C1DC /* SoundsRecordViewController.m */,
+				2E44DABE185CA7A900C5C1DC /* SoundsListViewController.h */,
+				2E44DABF185CA7AA00C5C1DC /* SoundsListViewController.m */,
+				2E44DAC1185CADEC00C5C1DC /* SoundsRepeatViewController.h */,
+				2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */,
+				2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */,
+				2E44DABA185CA63600C5C1DC /* button_back.png */,
+				2E44DABB185CA63600C5C1DC /* button_save.png */,
+				2E44DAB8185CA3FE00C5C1DC /* header_recording.png */,
 				2E44DAB2185C9EAE00C5C1DC /* recording_button.png */,
 				2E44DAAE185C9D7000C5C1DC /* setting_sound_image_960.png */,
 				2E44DAAF185C9D7000C5C1DC /* setting_sound_image_1136.png */,
@@ -329,8 +368,7 @@
 				35446803185AD419005AB0D9 /* ViewController.m */,
 				356E6A67185ADE2A002A1014 /* BeautifiedPictureViewController.h */,
 				356E6A68185ADE2A002A1014 /* BeautifiedPictureViewController.m */,
-				356E6A6A185ADE5E002A1014 /* SoundsViewController.h */,
-				356E6A6B185ADE5E002A1014 /* SoundsViewController.m */,
+				2E44DAB4185CA2BA00C5C1DC /* Sounds */,
 				356E6A6D185ADE76002A1014 /* PhontoViewController.h */,
 				356E6A6E185ADE76002A1014 /* PhontoViewController.m */,
 				356E6A70185ADE88002A1014 /* SettingViewController.h */,
@@ -516,6 +554,7 @@
 				2E44DAB0185C9D7000C5C1DC /* setting_sound_image_960.png in Resources */,
 				2E44DAB1185C9D7000C5C1DC /* setting_sound_image_1136.png in Resources */,
 				356E6A83185AE23E002A1014 /* main_tab_osusume_off.png in Resources */,
+				2E44DAC5185CAF7500C5C1DC /* header_sound_list.png in Resources */,
 				356E6A52185AD70F002A1014 /* icon-72.png in Resources */,
 				356E6A80185AE23E002A1014 /* main_tab_camera.png in Resources */,
 				2EB0A339185C567800C226DF /* share_save_pop.png in Resources */,
@@ -537,6 +576,7 @@
 				356E6A5F185AD70F002A1014 /* iTunesArtwork.png in Resources */,
 				9571A223185C975D003D3285 /* shot_size_4_3.png in Resources */,
 				9571A20D185C917A003D3285 /* camera.storyboard in Resources */,
+				2E44DAB9185CA3FE00C5C1DC /* header_recording.png in Resources */,
 				9571A21F185C975D003D3285 /* shot_flash_off.png in Resources */,
 				2EB0A345185C585B00C226DF /* share_sns_twitter.png in Resources */,
 				2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */,
@@ -556,11 +596,13 @@
 				356E6A56185AD70F002A1014 /* Icon-Small-40.png in Resources */,
 				356E6A59185AD70F002A1014 /* Icon-Small-50@2x.png in Resources */,
 				354467F8185AD419005AB0D9 /* InfoPlist.strings in Resources */,
+				2E44DABD185CA63600C5C1DC /* button_save.png in Resources */,
 				35446801185AD419005AB0D9 /* Main.storyboard in Resources */,
 				9571A21D185C975D003D3285 /* shot_back.png in Resources */,
 				2EB0A331185C07C000C226DF /* mama_camera_top_960.png in Resources */,
 				2EB0A343185C585B00C226DF /* share_sns_line.png in Resources */,
 				356E6A51185AD70F002A1014 /* icon-60@2x.png in Resources */,
+				2E44DABC185CA63600C5C1DC /* button_back.png in Resources */,
 				2E44DAAC185C9BB900C5C1DC /* record_sound_setting.png in Resources */,
 				356E6A5C185AD70F002A1014 /* icon.png in Resources */,
 				9571A21E185C975D003D3285 /* shot_button_bg.png in Resources */,
@@ -570,6 +612,7 @@
 				2E44DAA7185C96B200C5C1DC /* sound_setting_2.png in Resources */,
 				2EB0A349185C745200C226DF /* sleep_mode.png in Resources */,
 				2EB0A335185C37EE00C226DF /* header_share.png in Resources */,
+				2E44DAC7185CB0B900C5C1DC /* header_sound_re.png in Resources */,
 				356E6A85185AE23E002A1014 /* main_tab_setting_off.png in Resources */,
 				356E6A55185AD70F002A1014 /* icon-76@2x.png in Resources */,
 				356E6A86185AE23E002A1014 /* main_tab_setting_on.png in Resources */,
@@ -594,8 +637,11 @@
 			files = (
 				356E6A6F185ADE76002A1014 /* PhontoViewController.m in Sources */,
 				356E6A65185AD973002A1014 /* GTTabBar.m in Sources */,
+				2E44DAC0185CA7AA00C5C1DC /* SoundsListViewController.m in Sources */,
 				356E6A69185ADE2A002A1014 /* BeautifiedPictureViewController.m in Sources */,
 				35446804185AD419005AB0D9 /* ViewController.m in Sources */,
+				2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */,
+				2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */,
 				356E6A6C185ADE5E002A1014 /* SoundsViewController.m in Sources */,
 				356E6A72185ADE88002A1014 /* SettingViewController.m in Sources */,
 				354467FE185AD419005AB0D9 /* AppDelegate.m in Sources */,
