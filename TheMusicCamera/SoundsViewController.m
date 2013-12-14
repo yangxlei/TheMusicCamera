@@ -8,6 +8,7 @@
 
 #import "SoundsViewController.h"
 #import "DataManager.h"
+#import "Public.h"
 
 @interface SoundsViewController ()
 
@@ -29,6 +30,22 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self navgationImage:@"header_sound_setting"];
+    
+    if (iPhone5) {
+        UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(20, 168, 281, 252)];
+        image.image = [UIImage imageNamed:@"setting_sound_image_1136"];
+        [self.view addSubview:image];
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(91, 356, 138, 42);
+        [button setBackgroundImage:[UIImage imageNamed:@"recording_button"] forState:UIControlStateNormal];
+        [self.view addSubview:button];
+        
+    }
+    else
+    {
+    
+    }
     
 }
 
