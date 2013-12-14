@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>71F292E7-C44D-455A-9CF6-C2B0DB57B1BC</string>
+	<string>283B4FB5-AE3C-4437-9462-755441957B1F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TheMusicCamera</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>78080DC2-814C-450A-8029-D148C4D9F105</key>
-		<string>https://github.com/LeiYang9010/MyApp.git</string>
+		<key>A418C8B7-CE0B-410F-B634-5D3AE39CEA85</key>
+		<string>https://github.com/LeiYang9010/TheMusicCamera.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TheMusicCamera/TheMusicCamera.xcodeproj/project.xcworkspace</string>
+	<string>TheMusicCamera.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>78080DC2-814C-450A-8029-D148C4D9F105</key>
-		<string>../../..</string>
+		<key>A418C8B7-CE0B-410F-B634-5D3AE39CEA85</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/LeiYang9010/MyApp.git</string>
+	<string>https://github.com/LeiYang9010/TheMusicCamera.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>78080DC2-814C-450A-8029-D148C4D9F105</string>
+	<string>A418C8B7-CE0B-410F-B634-5D3AE39CEA85</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>78080DC2-814C-450A-8029-D148C4D9F105</string>
+			<string>A418C8B7-CE0B-410F-B634-5D3AE39CEA85</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MyApp</string>
+			<string>TheMusicCamera</string>
 		</dict>
 	</array>
 </dict>
