@@ -8,6 +8,7 @@
 
 #import "SoundsRecordViewController.h"
 #import "DataManager.h"
+#import "DataManager.h"
 
 @interface SoundsRecordViewController ()
 
@@ -28,7 +29,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    dataManager = [DataManager sharedManager];
+
     self.hidesBottomBarWhenPushed = YES;
 
     [self navgationImage:@"header_recording"];
@@ -39,6 +41,14 @@
     UIButton *saveBtn = [self navgationButton:@"button_save" andFrame:CGRectMake(260, 10, 52, 28)];
     [saveBtn addTarget:self action:@selector(saveBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    NSError *sessionError;
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
+    
+    if(session == nil)
+        NSLog(@"Error creating session: %@", [sessionError description]);
+    else
+        [session setActive:YES error:nil];
 
 }
 
@@ -58,4 +68,17 @@
     
 }
 
+- (IBAction)recordVoice:(id)sender {
+    NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
+
+    NSString *recorderFilePath = [NSString stringWithFormat:@"%@/11.caf", savePath];
+    recordedFile = [NSURL fileURLWithPath:recorderFilePath];
+    
+    recorder = [[AVAudioRecorder alloc] initWithURL:recordedFile settings:nil error:nil];
+    [recorder prepareToRecord];
+    [recorder record];
+
+
+    
+}
 @end

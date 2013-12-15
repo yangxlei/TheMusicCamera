@@ -17,11 +17,42 @@
 	
 	if (self){
 
-        
+        _databaseName = @"music.sqlite";
+        _path = [[NSBundle mainBundle] resourcePath];
+        _downloadPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+        [self checkAndCreateDatabase];
+        [self createDirectory:@"music"];
+
     }
 	return self;
 }
 
+-(void) createDirectory:(NSString *)dir
+{
+	NSString *folderPath = [_downloadPath stringByAppendingPathComponent:dir];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	BOOL fileExists = [fileManager fileExistsAtPath:folderPath];
+	
+	if (!fileExists) {
+		[fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:nil];
+	}
+}
+
+-(void) checkAndCreateDatabase
+{
+	_databasePath = [_downloadPath stringByAppendingPathComponent:_databaseName];
+    
+	BOOL success;
+	
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	success = [fileManager fileExistsAtPath:_databasePath];
+    
+	if(success)
+        return;
+    
+	NSString *databasePathFromApp = [_path stringByAppendingPathComponent:_databaseName];
+	[fileManager copyItemAtPath:databasePathFromApp toPath:_databasePath error:nil];
+}
 
 //////////////////////////////////////////////////////////////////////////
 static DataManager *sharedDataManager = nil;

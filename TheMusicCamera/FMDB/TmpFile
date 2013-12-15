@@ -1,0 +1,20 @@
+select book.id, 	
+                       book_no , 	
+                       ISBN ,
+                       author , 	
+                       book_name , 	
+                       cover_image_name , 	
+                       introduction ,
+                       comment_count ,
+                       star_count ,
+                       price, 
+                       recommend_image, 
+                       author_id, 
+                       publish_time, 
+                       category_name 
+                       from book inner join book_subject_link on book.id=book_subject_link.book_id 
+                       inner join book_recommend on book_recommend.book_id=book.id 
+                       inner join book_category_subject_link on book_category_subject_link.subject_id=book_subject_link.subject_id 
+                       inner join book_category on book_category.id=book_category_subject_link.category_id 
+                       where recommend_type=%d                
+                       order by book_recommend.sn 

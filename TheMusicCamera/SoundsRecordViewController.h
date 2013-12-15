@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+@class DataManager;
 
-@interface SoundsRecordViewController : UIViewController
+@interface SoundsRecordViewController : UIViewController<AVAudioPlayerDelegate>
+{
+    __weak IBOutlet UIImageView *timeImage;
+    AVAudioRecorder *recorder;
+    NSURL *recordedFile;
+    DataManager *dataManager;
+
+}
 
 @end

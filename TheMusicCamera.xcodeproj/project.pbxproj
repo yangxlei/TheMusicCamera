@@ -23,6 +23,19 @@
 		2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */; };
 		2E44DAC5185CAF7500C5C1DC /* header_sound_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */; };
 		2E44DAC7185CB0B900C5C1DC /* header_sound_re.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */; };
+		2E69360E185DE05B000C95F5 /* recording_bg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E69360C185DE05B000C95F5 /* recording_bg_2.png */; };
+		2E69360F185DE05B000C95F5 /* recording_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E69360D185DE05B000C95F5 /* recording_bg.png */; };
+		2E693613185DE2D5000C95F5 /* recording_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E693610185DE2D5000C95F5 /* recording_play.png */; };
+		2E693614185DE2D5000C95F5 /* recording_rec.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E693611185DE2D5000C95F5 /* recording_rec.png */; };
+		2E693615185DE2D5000C95F5 /* recording_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E693612185DE2D5000C95F5 /* recording_stop.png */; };
+		2E693624185DF7B5000C95F5 /* DBAccress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E693618185DF7B5000C95F5 /* DBAccress.m */; };
+		2E693625185DF7B5000C95F5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E69361A185DF7B5000C95F5 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2E693626185DF7B5000C95F5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E69361C185DF7B5000C95F5 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2E693627185DF7B5000C95F5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E69361E185DF7B5000C95F5 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2E693628185DF7B5000C95F5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E693620185DF7B5000C95F5 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2E693629185DF7B5000C95F5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E693622185DF7B5000C95F5 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2E69362A185DF7B5000C95F5 /* TmpFile in Resources */ = {isa = PBXBuildFile; fileRef = 2E693623185DF7B5000C95F5 /* TmpFile */; };
+		2E69362C185DF8FD000C95F5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E69362B185DF8FD000C95F5 /* libsqlite3.dylib */; };
 		2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A32E185C07C000C226DF /* mama_camera_top_1136.png */; };
 		2EB0A331185C07C000C226DF /* mama_camera_top_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A32F185C07C000C226DF /* mama_camera_top_960.png */; };
 		2EB0A333185C2FB400C226DF /* header_sound_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A332185C2FB400C226DF /* header_sound_setting.png */; };
@@ -134,6 +147,25 @@
 		2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsRepeatViewController.m; sourceTree = "<group>"; };
 		2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_list.png; sourceTree = "<group>"; };
 		2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_re.png; sourceTree = "<group>"; };
+		2E69360C185DE05B000C95F5 /* recording_bg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_bg_2.png; sourceTree = "<group>"; };
+		2E69360D185DE05B000C95F5 /* recording_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_bg.png; sourceTree = "<group>"; };
+		2E693610185DE2D5000C95F5 /* recording_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_play.png; sourceTree = "<group>"; };
+		2E693611185DE2D5000C95F5 /* recording_rec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_rec.png; sourceTree = "<group>"; };
+		2E693612185DE2D5000C95F5 /* recording_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_stop.png; sourceTree = "<group>"; };
+		2E693617185DF7B5000C95F5 /* DBAccress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAccress.h; sourceTree = "<group>"; };
+		2E693618185DF7B5000C95F5 /* DBAccress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAccress.m; sourceTree = "<group>"; };
+		2E693619185DF7B5000C95F5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2E69361A185DF7B5000C95F5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2E69361B185DF7B5000C95F5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2E69361C185DF7B5000C95F5 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2E69361D185DF7B5000C95F5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		2E69361E185DF7B5000C95F5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2E69361F185DF7B5000C95F5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		2E693620185DF7B5000C95F5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2E693621185DF7B5000C95F5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2E693622185DF7B5000C95F5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		2E693623185DF7B5000C95F5 /* TmpFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TmpFile; sourceTree = "<group>"; };
+		2E69362B185DF8FD000C95F5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		2EB0A32E185C07C000C226DF /* mama_camera_top_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mama_camera_top_1136.png; sourceTree = "<group>"; };
 		2EB0A32F185C07C000C226DF /* mama_camera_top_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mama_camera_top_960.png; sourceTree = "<group>"; };
 		2EB0A332185C2FB400C226DF /* header_sound_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_setting.png; sourceTree = "<group>"; };
@@ -235,6 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E69362C185DF8FD000C95F5 /* libsqlite3.dylib in Frameworks */,
 				9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */,
 				9571A44D185CA0C4003D3285 /* CoreVideo.framework in Frameworks */,
 				9571A44B185CA0BC003D3285 /* CoreMedia.framework in Frameworks */,
@@ -275,9 +308,34 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		2E693616185DF7B5000C95F5 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				2E693617185DF7B5000C95F5 /* DBAccress.h */,
+				2E693618185DF7B5000C95F5 /* DBAccress.m */,
+				2E693619185DF7B5000C95F5 /* FMDatabase.h */,
+				2E69361A185DF7B5000C95F5 /* FMDatabase.m */,
+				2E69361B185DF7B5000C95F5 /* FMDatabaseAdditions.h */,
+				2E69361C185DF7B5000C95F5 /* FMDatabaseAdditions.m */,
+				2E69361D185DF7B5000C95F5 /* FMDatabasePool.h */,
+				2E69361E185DF7B5000C95F5 /* FMDatabasePool.m */,
+				2E69361F185DF7B5000C95F5 /* FMDatabaseQueue.h */,
+				2E693620185DF7B5000C95F5 /* FMDatabaseQueue.m */,
+				2E693621185DF7B5000C95F5 /* FMResultSet.h */,
+				2E693622185DF7B5000C95F5 /* FMResultSet.m */,
+				2E693623185DF7B5000C95F5 /* TmpFile */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2E693610185DE2D5000C95F5 /* recording_play.png */,
+				2E693611185DE2D5000C95F5 /* recording_rec.png */,
+				2E693612185DE2D5000C95F5 /* recording_stop.png */,
+				2E69360C185DE05B000C95F5 /* recording_bg_2.png */,
+				2E69360D185DE05B000C95F5 /* recording_bg.png */,
 				2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */,
 				2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */,
 				2E44DABA185CA63600C5C1DC /* button_back.png */,
@@ -342,6 +400,7 @@
 		354467EC185AD419005AB0D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E69362B185DF8FD000C95F5 /* libsqlite3.dylib */,
 				9571A44E185CA0CD003D3285 /* QuartzCore.framework */,
 				9571A44C185CA0C4003D3285 /* CoreVideo.framework */,
 				9571A44A185CA0BC003D3285 /* CoreMedia.framework */,
@@ -359,6 +418,7 @@
 		354467F3185AD419005AB0D9 /* TheMusicCamera */ = {
 			isa = PBXGroup;
 			children = (
+				2E693616185DF7B5000C95F5 /* FMDB */,
 				9571A20B185C917A003D3285 /* camera */,
 				356E6A60185AD973002A1014 /* GTTabBar */,
 				354467FC185AD419005AB0D9 /* AppDelegate.h */,
@@ -595,21 +655,27 @@
 				9571A222185C975D003D3285 /* shot_size_1_1.png in Resources */,
 				356E6A56185AD70F002A1014 /* Icon-Small-40.png in Resources */,
 				356E6A59185AD70F002A1014 /* Icon-Small-50@2x.png in Resources */,
+				2E69360F185DE05B000C95F5 /* recording_bg.png in Resources */,
 				354467F8185AD419005AB0D9 /* InfoPlist.strings in Resources */,
 				2E44DABD185CA63600C5C1DC /* button_save.png in Resources */,
 				35446801185AD419005AB0D9 /* Main.storyboard in Resources */,
+				2E69362A185DF7B5000C95F5 /* TmpFile in Resources */,
 				9571A21D185C975D003D3285 /* shot_back.png in Resources */,
 				2EB0A331185C07C000C226DF /* mama_camera_top_960.png in Resources */,
 				2EB0A343185C585B00C226DF /* share_sns_line.png in Resources */,
 				356E6A51185AD70F002A1014 /* icon-60@2x.png in Resources */,
+				2E693613185DE2D5000C95F5 /* recording_play.png in Resources */,
 				2E44DABC185CA63600C5C1DC /* button_back.png in Resources */,
 				2E44DAAC185C9BB900C5C1DC /* record_sound_setting.png in Resources */,
+				2E693615185DE2D5000C95F5 /* recording_stop.png in Resources */,
 				356E6A5C185AD70F002A1014 /* icon.png in Resources */,
+				2E69360E185DE05B000C95F5 /* recording_bg_2.png in Resources */,
 				9571A21E185C975D003D3285 /* shot_button_bg.png in Resources */,
 				356E6A87185AE23E002A1014 /* main_tab_sound_off.png in Resources */,
 				356E6A5B185AD70F002A1014 /* icon-small@2x.png in Resources */,
 				9571A21A185C975D003D3285 /* shoot_camera_button_2.png in Resources */,
 				2E44DAA7185C96B200C5C1DC /* sound_setting_2.png in Resources */,
+				2E693614185DE2D5000C95F5 /* recording_rec.png in Resources */,
 				2EB0A349185C745200C226DF /* sleep_mode.png in Resources */,
 				2EB0A335185C37EE00C226DF /* header_share.png in Resources */,
 				2E44DAC7185CB0B900C5C1DC /* header_sound_re.png in Resources */,
@@ -635,10 +701,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E693624185DF7B5000C95F5 /* DBAccress.m in Sources */,
 				356E6A6F185ADE76002A1014 /* PhontoViewController.m in Sources */,
+				2E693627185DF7B5000C95F5 /* FMDatabasePool.m in Sources */,
 				356E6A65185AD973002A1014 /* GTTabBar.m in Sources */,
 				2E44DAC0185CA7AA00C5C1DC /* SoundsListViewController.m in Sources */,
+				2E693628185DF7B5000C95F5 /* FMDatabaseQueue.m in Sources */,
+				2E693625185DF7B5000C95F5 /* FMDatabase.m in Sources */,
+				2E693626185DF7B5000C95F5 /* FMDatabaseAdditions.m in Sources */,
 				356E6A69185ADE2A002A1014 /* BeautifiedPictureViewController.m in Sources */,
+				2E693629185DF7B5000C95F5 /* FMResultSet.m in Sources */,
 				35446804185AD419005AB0D9 /* ViewController.m in Sources */,
 				2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */,
 				2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */,

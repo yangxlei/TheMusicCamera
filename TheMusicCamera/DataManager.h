@@ -15,6 +15,10 @@
 }
 
 @property (nonatomic, strong) GTTabBarController *mainTabBarController;
+@property (strong, nonatomic) NSString *databasePath;
+@property (strong, nonatomic) NSString *downloadPath;
+@property (strong, nonatomic) NSString *databaseName;
+@property (strong, nonatomic) NSString *path;
 
 
 + (DataManager *) sharedManager;
