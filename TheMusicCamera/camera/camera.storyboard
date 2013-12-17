@@ -14,18 +14,18 @@
                         <viewControllerLayoutGuide type="bottom" id="iEE-zy-W5k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eUj-fY-07E">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoot_camera_button_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="j2H-tx-Wh4">
-                                <rect key="frame" x="0.0" y="397" width="320" height="83"/>
+                                <rect key="frame" x="0.0" y="485" width="320" height="83"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="83" id="MPC-ee-o6F"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFh-yl-SnE">
-                                <rect key="frame" x="99" y="413" width="123" height="51"/>
+                                <rect key="frame" x="99" y="501" width="123" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="my8-SH-QSt"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoot_camera_button_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-JB-dHn">
-                                <rect key="frame" x="139" y="419" width="43" height="32"/>
+                                <rect key="frame" x="139" y="507" width="43" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="43" id="62P-cj-K4z"/>
@@ -96,8 +96,8 @@
                                     <action selector="sizeClick:" destination="Yjg-4C-iUm" eventType="touchUpInside" id="vDE-cy-whb"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Gm-GZG">
-                                <rect key="frame" x="0.0" y="59" width="320" height="341"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Gm-GZG">
+                                <rect key="frame" x="0.0" y="59" width="320" height="427"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -152,6 +152,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>
