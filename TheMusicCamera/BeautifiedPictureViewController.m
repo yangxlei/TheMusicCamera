@@ -8,6 +8,7 @@
 
 #import "BeautifiedPictureViewController.h"
 #import "PhontoViewController.h"
+#import "DataManager.h"
 
 @interface BeautifiedPictureViewController ()
 
@@ -32,12 +33,30 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
+    
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.hidesBottomBarWhenPushed = YES;
+    self.navigationController.navigationBarHidden = YES;
     
-	
-    // Do any additional setup after loading the view.
+    [self navgationImage:@"header_share"];
+    
+    UIButton *btn = [self navgationButton:@"button_top" andFrame:CGRectMake(250, 10, 60, 28)];
+    [btn addTarget:self action:@selector(topBtuuon) forControlEvents:UIControlEventTouchUpInside];
+
+    UIImagePickerControllerSourceType type = UIImagePickerControllerSourceTypePhotoLibrary;
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.allowsEditing = NO;
+    picker.delegate   = self;
+    picker.sourceType = type;
+    [self presentViewController:picker animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +64,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark- ImagePicker delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+}
+
 
 @end

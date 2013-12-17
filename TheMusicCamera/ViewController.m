@@ -139,6 +139,13 @@
           CameraController *camera = [storyboard instantiateViewControllerWithIdentifier:@"CameraController"];
           [(UINavigationController*)viewController pushViewController:camera animated:YES];
         }
+        else if (tabBarController.selectedIndex == 0)
+        {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            BeautifiedPictureViewController *bpVC = [storyboard instantiateViewControllerWithIdentifier:@"BeautifiedPictureViewController"];
+            [(UINavigationController*)viewController pushViewController:bpVC animated:YES];
+            
+        }
     }
 
 }

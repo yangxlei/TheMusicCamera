@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BeautifiedPictureViewController : UIViewController
+@interface BeautifiedPictureViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @end

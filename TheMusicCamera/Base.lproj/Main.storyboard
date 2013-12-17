@@ -210,7 +210,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="obH-YA-XJ5"/>
                                     <constraint firstAttribute="height" constant="39" id="zDK-ay-BTy"/>
                                 </constraints>
-                                <state key="normal" image="sound_setting_2.png">
+                                <state key="normal" image="sound_setting_now_list2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -223,7 +223,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="fxf-g2-AWp"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="sound_setting_1.png">
+                                <state key="normal" title="Button" image="sound_setting_now_list1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -391,17 +391,17 @@
                                 <rect key="frame" x="40" y="367" width="240" height="74"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="WoU-m2-VlC"/>
+                                    <constraint firstAttribute="height" constant="74" id="FeV-1g-cWZ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tb-D5-hwO">
-                                <rect key="frame" x="197" y="396" width="64" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tb-D5-hwO">
+                                <rect key="frame" x="194" y="398" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="gYQ-6x-svP"/>
-                                    <constraint firstAttribute="height" constant="30" id="sL8-4k-xT0"/>
+                                    <constraint firstAttribute="width" constant="70" id="8OR-0d-OtW"/>
+                                    <constraint firstAttribute="height" constant="30" id="Zy9-GM-3YT"/>
                                 </constraints>
-                                <state key="normal" title="静音">
+                                <state key="normal" image="sleep_mode_off.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -409,12 +409,11 @@
                         </subviews>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="7tb-D5-hwO" secondAttribute="bottom" constant="142" id="6ka-wF-Lap"/>
-                            <constraint firstItem="h6t-de-v6G" firstAttribute="leading" secondItem="JTN-Si-0nt" secondAttribute="leading" constant="40" id="OeD-eG-4o4"/>
-                            <constraint firstAttribute="trailing" secondItem="7tb-D5-hwO" secondAttribute="trailing" constant="59" id="Qvw-px-8ko"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h6t-de-v6G" secondAttribute="bottom" constant="127" id="Uoe-KD-Mhf"/>
-                            <constraint firstAttribute="bottom" secondItem="h6t-de-v6G" secondAttribute="bottom" constant="127" id="ctG-Nl-adO"/>
-                            <constraint firstItem="h6t-de-v6G" firstAttribute="centerX" secondItem="JTN-Si-0nt" secondAttribute="centerX" id="iU8-8N-95E"/>
+                            <constraint firstAttribute="trailing" secondItem="7tb-D5-hwO" secondAttribute="trailing" constant="56" id="1lq-XH-az1"/>
+                            <constraint firstAttribute="bottom" secondItem="7tb-D5-hwO" secondAttribute="bottom" constant="140" id="4yz-G8-sBn"/>
+                            <constraint firstItem="h6t-de-v6G" firstAttribute="centerX" secondItem="JTN-Si-0nt" secondAttribute="centerX" id="7ub-SM-Paj"/>
+                            <constraint firstAttribute="bottom" secondItem="h6t-de-v6G" secondAttribute="bottom" constant="127" id="IJ3-4K-mYw"/>
+                            <constraint firstItem="h6t-de-v6G" firstAttribute="leading" secondItem="JTN-Si-0nt" secondAttribute="leading" constant="40" id="Kcq-n5-VEH"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -439,9 +438,10 @@
         <image name="share_sns_mail.png" width="78" height="102"/>
         <image name="share_sns_twitter.png" width="97" height="102"/>
         <image name="sleep_mode.png" width="483" height="149"/>
-        <image name="sound_setting_1.png" width="606" height="79"/>
-        <image name="sound_setting_2.png" width="606" height="79"/>
+        <image name="sleep_mode_off.png" width="140" height="60"/>
         <image name="sound_setting_now.png" width="219" height="28"/>
+        <image name="sound_setting_now_list1.png" width="604" height="83"/>
+        <image name="sound_setting_now_list2.png" width="604" height="81"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
