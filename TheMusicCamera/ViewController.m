@@ -135,9 +135,11 @@
         }
         else if (tabBarController.selectedIndex == 2)
         {
-          UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"camera" bundle:[NSBundle mainBundle]];
-          CameraController *camera = [storyboard instantiateViewControllerWithIdentifier:@"CameraController"];
-          [(UINavigationController*)viewController pushViewController:camera animated:YES];
+            if (dataManager.isPhotoView) {
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"camera" bundle:[NSBundle mainBundle]];
+                CameraController *camera = [storyboard instantiateViewControllerWithIdentifier:@"CameraController"];
+                [(UINavigationController*)viewController pushViewController:camera animated:YES];
+            }
         }
         else if (tabBarController.selectedIndex == 0)
         {
@@ -154,6 +156,7 @@
 
 - (void) returnPhotoVC: (NSNotification*) aNotification
 {
+    dataManager.isPhotoView = NO;
     [self.mainTabBarController hidesTabBar:NO animated:YES];
     self.mainTabBarController.selectedIndex = 2;
 

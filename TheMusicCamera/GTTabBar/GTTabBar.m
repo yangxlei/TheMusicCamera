@@ -7,6 +7,7 @@
 //
 
 #import "GTTabBar.h"
+#import "DataManager.h"
 
 @implementation GTTabBar
 
@@ -20,6 +21,8 @@
     self = [super initWithFrame:frame];
     if (self)
 	{
+        dataManager = [DataManager sharedManager];
+
 		self.backgroundColor = [UIColor clearColor];
 		backgroundView = [[UIImageView alloc] initWithFrame:self.bounds];
 		[self addSubview:backgroundView];
@@ -48,7 +51,10 @@
 {
 	UIButton *btn = sender;
 	[self selectTabAtIndex:btn.tag];
-    NSLog(@"Select index: %d",btn.tag);
+//    NSLog(@"Select index: %d",btn.tag);
+    if (btn.tag==2) {
+        dataManager.isPhotoView = YES;
+    }
     if (!_delegate) {
         return;
     }

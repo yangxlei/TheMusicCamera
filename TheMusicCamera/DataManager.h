@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSString *downloadPath;
 @property (strong, nonatomic) NSString *databaseName;
 @property (strong, nonatomic) NSString *path;
+@property (readwrite) BOOL isPhotoView;
 
 
 + (DataManager *) sharedManager;

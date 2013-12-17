@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DataManager;
 
 @protocol GTTabBarDelegate;
 
 @interface GTTabBar : UIView
 {
     id __unsafe_unretained _delegate;
+    DataManager *dataManager;
 }
 
 @property (nonatomic, retain) UIImageView *backgroundView;
