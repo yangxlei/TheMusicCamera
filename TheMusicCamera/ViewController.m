@@ -141,9 +141,11 @@
         }
         else if (tabBarController.selectedIndex == 0)
         {
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-            BeautifiedPictureViewController *bpVC = [storyboard instantiateViewControllerWithIdentifier:@"BeautifiedPictureViewController"];
-            [(UINavigationController*)viewController pushViewController:bpVC animated:YES];
+            [self.mainTabBarController hidesTabBar:YES animated:YES];
+//
+//            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//            BeautifiedPictureViewController *bpVC = [storyboard instantiateViewControllerWithIdentifier:@"BeautifiedPictureViewController"];
+//            [(UINavigationController*)viewController pushViewController:bpVC animated:YES];
             
         }
     }

@@ -26,17 +26,19 @@
 }
 
 - (IBAction)buttonEvent:(id)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-
-    PhontoViewController *bpVC = [storyboard instantiateViewControllerWithIdentifier:@"PhontoViewController"];
-    [self.navigationController pushViewController:bpVC animated:YES];
+    UIImagePickerControllerSourceType type = UIImagePickerControllerSourceTypePhotoLibrary;
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.allowsEditing = NO;
+    picker.delegate   = self;
+    picker.sourceType = type;
+    [self.navigationController presentViewController:picker animated:YES completion:nil];
 
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
-    
+    [UIApplication sharedApplication].statusBarHidden=YES;
 
 }
 
@@ -46,23 +48,24 @@
     self.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBarHidden = YES;
     
-    [self navgationImage:@"header_share"];
+//    [self navgationImage:@"header_share"];
     
-    UIButton *btn = [self navgationButton:@"button_top" andFrame:CGRectMake(250, 10, 60, 28)];
-    [btn addTarget:self action:@selector(topBtuuon) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *btn = [self navgationButton:@"button_camera_roll" andFrame:CGRectMake(10, 10, 99, 33)];
+    [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
-    UIImagePickerControllerSourceType type = UIImagePickerControllerSourceTypePhotoLibrary;
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.allowsEditing = NO;
-    picker.delegate   = self;
-    picker.sourceType = type;
-    [self presentViewController:picker animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)backBtuuon
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
+
 }
 
 #pragma mark- ImagePicker delegate
@@ -73,5 +76,9 @@
     
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
