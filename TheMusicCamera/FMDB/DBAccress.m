@@ -54,7 +54,7 @@
     return musicId + 1;
 }
 
-- (void) getUpdateDataInfo:(NSMutableArray*)list;
+- (void) getLoadMusicList:(NSMutableArray*)list
 {
     [self openDatabase];
     

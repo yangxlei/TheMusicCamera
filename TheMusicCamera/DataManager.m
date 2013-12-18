@@ -21,9 +21,12 @@
         _databaseName = @"music.sqlite";
         _path = [[NSBundle mainBundle] resourcePath];
         _downloadPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-        [self checkAndCreateDatabase];
         [self createDirectory:@"music"];
+        [self checkAndCreateDatabase];
 
+        _musicList = [[NSMutableArray alloc] init];
+
+        
     }
 	return self;
 }
@@ -53,6 +56,21 @@
     
 	NSString *databasePathFromApp = [_path stringByAppendingPathComponent:_databaseName];
 	[fileManager copyItemAtPath:databasePathFromApp toPath:_databasePath error:nil];
+    
+    NSString *savePath = [_downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
+    
+    NSString *recorderFilePath1 = [NSString stringWithFormat:@"%@/default01.wav", savePath];
+    NSString *recorderFilePath2 = [NSString stringWithFormat:@"%@/default02.wav", savePath];
+    NSString *recorderFilePath3 = [NSString stringWithFormat:@"%@/default03.wav", savePath];
+
+    NSString *databasePathFromApp1 = [_path stringByAppendingPathComponent:@"default01.wav"];
+	NSString *databasePathFromApp2= [_path stringByAppendingPathComponent:@"default02.wav"];
+	NSString *databasePathFromApp3 = [_path stringByAppendingPathComponent:@"default03.wav"];
+
+    [fileManager copyItemAtPath:databasePathFromApp1 toPath:recorderFilePath1 error:nil];
+	[fileManager copyItemAtPath:databasePathFromApp2 toPath:recorderFilePath2 error:nil];
+	[fileManager copyItemAtPath:databasePathFromApp3 toPath:recorderFilePath3 error:nil];
+
 }
 
 - (int)getMusicId//
@@ -61,6 +79,13 @@
     return [dBAccress getMusicId];
 }
 
+- (void) getLoadMusicList
+{
+    [_musicList removeAllObjects];
+
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    [dBAccress getLoadMusicList:_musicList];
+}
 //////////////////////////////////////////////////////////////////////////
 static DataManager *sharedDataManager = nil;
 

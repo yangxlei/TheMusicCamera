@@ -350,8 +350,51 @@
                     <view key="view" contentMode="scaleToFill" id="lxh-Is-4Yk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="03X-OJ-3Ne">
+                                <rect key="frame" x="9" y="66" width="303" height="494"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="41" id="OjT-mv-9Ck">
+                                        <rect key="frame" x="0.0" y="22" width="303" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OjT-mv-9Ck" id="ANT-6U-qrj">
+                                            <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6R-xD-q58">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="VCv-pz-K7a">
+                                                    <rect key="frame" x="260" y="10" width="20" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="232" translatesAutoresizingMaskIntoConstraints="NO" id="UQ5-gs-rdg">
+                                                    <rect key="frame" x="20" y="3" width="232" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.71009675090000002" blue="0.41348278910000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="03X-OJ-3Ne" firstAttribute="leading" secondItem="lxh-Is-4Yk" secondAttribute="leading" constant="9" id="4is-bd-E4Z"/>
+                            <constraint firstItem="03X-OJ-3Ne" firstAttribute="top" secondItem="lxh-Is-4Yk" secondAttribute="top" constant="66" id="8kH-en-tuH"/>
+                            <constraint firstAttribute="bottom" secondItem="03X-OJ-3Ne" secondAttribute="bottom" constant="8" id="Obl-N1-1e2"/>
+                            <constraint firstItem="03X-OJ-3Ne" firstAttribute="centerX" secondItem="lxh-Is-4Yk" secondAttribute="centerX" id="uVF-Bz-ilP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableViews" destination="03X-OJ-3Ne" id="kRe-Sl-9lC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8h-eF-4p8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,6 +466,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="check.png" width="41" height="36"/>
+        <image name="list_2.png" width="606" height="81"/>
         <image name="record_sound_setting.png" width="608" height="72"/>
         <image name="recorded_sound.png" width="160" height="29"/>
         <image name="recording_bg.png" width="640" height="1136"/>

@@ -19,9 +19,12 @@
 @property (strong, nonatomic) NSString *downloadPath;
 @property (strong, nonatomic) NSString *databaseName;
 @property (strong, nonatomic) NSString *path;
+@property (strong, nonatomic) NSMutableArray *musicList;
+
 @property (readwrite) BOOL isPhotoView;
 
 - (int)getMusicId;
+- (void) getLoadMusicList;
 
 + (DataManager *) sharedManager;
 
