@@ -45,7 +45,8 @@
   [self initialize];
   
   _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
-  _preview.frame = CGRectMake(0, 0, self.cameraView.frame.size.width, self.cameraView.frame.size.height);
+  int height = MIN(427, self.cameraView.frame.size.height);
+  _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
   _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
   
   [self.cameraView.layer addSublayer:_preview];
@@ -62,13 +63,13 @@
   _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
   [_device lockForConfiguration:nil];
   if([_device flashMode] == AVCaptureFlashModeOff){
-    [flashBtn setImage:[UIImage imageNamed:@"shot_flash_off"] forState:UIControlStateNormal];
+    [flashBtn setSelected:NO];
   }
   else if([_device flashMode] == AVCaptureFlashModeAuto){
-    [flashBtn setImage:[UIImage imageNamed:@"shot_flash_off"] forState:UIControlStateNormal];
+    [flashBtn setSelected:NO];
   }
   else{
-    [flashBtn setImage:[UIImage imageNamed:@"shot_flash_on"] forState:UIControlStateNormal];
+    [flashBtn setSelected:YES];
   }
   [_device unlockForConfiguration];
   
@@ -96,23 +97,177 @@
 
 -(IBAction) flash:(id)sender
 {
-
+  if([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera] && [_device hasFlash])
+  {
+    [flashBtn setEnabled:NO];
+    [_session beginConfiguration];
+    [_device lockForConfiguration:nil];
+    if (flashBtn.isSelected) {
+      [flashBtn setSelected:NO];
+      [_device setFlashMode:AVCaptureFlashModeOff];
+    }
+    else
+    {
+      [flashBtn setSelected:YES];
+      [_device setFlashMode:AVCaptureFlashModeOn];
+    }
+//    if([_device flashMode] == AVCaptureFlashModeOff)
+//    {
+//      [_device setFlashMode:AVCaptureFlashModeAuto];
+//      [flashBtn setSelected:NO];
+//    }
+//    else if([_device flashMode] == AVCaptureFlashModeAuto)
+//    {
+//      [_device setFlashMode:AVCaptureFlashModeOn];
+//      [flashBtn setSelected:YES];
+//    }
+//    else{
+//      [_device setFlashMode:AVCaptureFlashModeOff];
+//      [flashBtn setSelected:NO];
+//    }
+    [_device unlockForConfiguration];
+    [_session commitConfiguration];
+    [flashBtn setEnabled:YES];
+  }
 }
 
 -(IBAction) frontCamera:(id)sender
 {
+  //添加动画
+  CATransition *animation = [CATransition animation];
+  animation.delegate = self;
+  animation.duration = .8f;
+  animation.timingFunction = UIViewAnimationCurveEaseInOut;
+  animation.type = @"oglFlip";
+  if (_device.position == AVCaptureDevicePositionFront) {
+    animation.subtype = kCATransitionFromRight;
+  }
+  else if(_device.position == AVCaptureDevicePositionBack){
+    animation.subtype = kCATransitionFromLeft;
+  }
+  [_preview addAnimation:animation forKey:@"animation"];
+  
+  NSArray *inputs = _session.inputs;
+  for ( AVCaptureDeviceInput *input in inputs )
+  {
+    AVCaptureDevice *device = input.device;
+    if ([device hasMediaType:AVMediaTypeVideo])
+    {
+      AVCaptureDevicePosition position = device.position;
+      AVCaptureDevice *newCamera = nil;
+      AVCaptureDeviceInput *newInput = nil;
+      
+      if (position == AVCaptureDevicePositionFront)
+      {
+        newCamera = [self cameraWithPosition:AVCaptureDevicePositionBack];
+      }
+      else
+      {
+        newCamera = [self cameraWithPosition:AVCaptureDevicePositionFront];
+      }
+      _device = newCamera;
+      newInput = [AVCaptureDeviceInput deviceInputWithDevice:newCamera error:nil];
+      
+      // beginConfiguration ensures that pending changes are not applied immediately
+      [_session beginConfiguration];
+      
+      [_session removeInput:input];
+      [_session addInput:newInput];
+      
+      // Changes take effect once the outermost commitConfiguration is invoked.
+      [_session commitConfiguration];
+      break;
+    }
+  }
+}
 
+- (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position
+{
+  NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+  for (AVCaptureDevice *device in devices)
+  {
+    if (device.position == position)
+    {
+      return device;
+    }
+  }
+  return nil;
 }
 
 -(IBAction)sizeClick:(id)sender
 {
-
+  int height ;
+  if (sizeBtn.isSelected)
+  {
+    [sizeBtn setSelected:NO];
+    height = 320;
+  }
+  else
+  {
+    [sizeBtn setSelected:YES];
+    height = MIN(427, self.cameraView.frame.size.height);
+  }
+  
+  _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height) /2, 320, height);
+  
 }
 
 -(IBAction)takePhoto:(id)sender
 {
+  [self addHollowCloseToView:self.cameraView];
+  
+  //get connection
+  AVCaptureConnection *videoConnection = nil;
+  for (AVCaptureConnection *connection in _captureOutput.connections) {
+    for (AVCaptureInputPort *port in [connection inputPorts]) {
+      if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
+        videoConnection = connection;
+        break;
+      }
+    }
+    if (videoConnection) { break; }
+  }
+  
+  //get UIImage
+  [_captureOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
+   ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
+//     _saveButton.hidden = NO;
+//     _cancelButton.hidden = NO;
+     [self addHollowCloseToView:self.cameraView];
+     [_session stopRunning];
+     [self addHollowOpenToView:self.cameraView];
+     CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+     if (exifAttachments) {
+       // Do something with the attachments.
+     }
+     // Continue as appropriate.
+     NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
+     _finishImage = [[UIImage alloc] initWithData:imageData] ;
+     [self.cameraView.layer removeAllAnimations];
+     [cameraBtn setEnabled:NO];
+   }];
 }
 
+- (void)addHollowOpenToView:(UIView *)view
+{
+  CATransition *animation = [CATransition animation];
+  animation.duration = 0.5f;
+  animation.delegate = self;
+  animation.timingFunction = UIViewAnimationCurveEaseInOut;
+  animation.fillMode = kCAFillModeForwards;
+  animation.type = @"cameraIrisHollowOpen";
+  [view.layer addAnimation:animation forKey:@"animation"];
+}
+
+- (void)addHollowCloseToView:(UIView *)view
+{
+  CATransition *animation = [CATransition animation];//初始化动画
+  animation.duration = 0.5f;//间隔的时间
+  animation.timingFunction = UIViewAnimationCurveEaseInOut;
+  animation.type = @"cameraIrisHollowClose";
+  
+  [view.layer addAnimation:animation forKey:@"HollowClose"];
+}
 
 
 - (void)didReceiveMemoryWarning
