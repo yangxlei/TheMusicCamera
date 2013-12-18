@@ -9,6 +9,7 @@
 #import "DBAccress.h"
 #import "FMDatabase.h"
 #import "DataManager.h"
+#import "Music.h"
 
 @implementation DBAccress
 
@@ -51,6 +52,61 @@
     [self closeDatabase];
     
     return musicId + 1;
+}
+
+- (void) getUpdateDataInfo:(NSMutableArray*)list;
+{
+    [self openDatabase];
+    
+    FMResultSet *rs = [db executeQuery:@"select id,name from musicList "];
+    
+    while ([rs next]) {
+        Music *music = [[Music alloc] init];
+        
+        music.ID= [rs intForColumnIndex:0];
+        music.name= [rs stringForColumnIndex:1];
+        
+        [list addObject:music];
+    }
+    
+    [self closeDatabase];
+}
+
+- (void) insertCourseInfo:(NSMutableArray*)list
+{
+    [self openDatabase];
+    [db beginTransaction];
+    
+    BOOL isSucceeded = YES;
+    
+    NSString *sql = @"insert into musicList ("
+    "id,"
+    "name)"
+    "VALUES (?,?)";
+    
+    for(Music *music in list )
+    {
+        if( ![db executeUpdate:sql,
+              [NSNumber numberWithInteger:music.ID],
+              music.name
+              ])
+        {
+            isSucceeded = NO;
+            break;
+        }
+    }
+        
+    if( isSucceeded )
+    {
+        [db commit];
+    }
+    else
+    {
+        [db rollback];
+    }
+    
+    [self closeDatabase];
+    
 }
 
 @end

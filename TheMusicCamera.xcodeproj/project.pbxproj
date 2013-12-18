@@ -99,6 +99,7 @@
 		356E6A87185AE23E002A1014 /* main_tab_sound_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 356E6A7E185AE23E002A1014 /* main_tab_sound_off.png */; };
 		356E6A88185AE23E002A1014 /* main_tab_sound_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 356E6A7F185AE23E002A1014 /* main_tab_sound_on.png */; };
 		356E6A8E185B15FC002A1014 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E6A8D185B15FB002A1014 /* DataManager.m */; };
+		35ADB3D91861B9DF009647C8 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ADB3D81861B9DF009647C8 /* Music.m */; };
 		9571A20D185C917A003D3285 /* camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9571A20C185C917A003D3285 /* camera.storyboard */; };
 		9571A219185C975D003D3285 /* shoot_camera_button_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A20E185C975D003D3285 /* shoot_camera_button_1.png */; };
 		9571A21A185C975D003D3285 /* shoot_camera_button_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A20F185C975D003D3285 /* shoot_camera_button_2.png */; };
@@ -246,6 +247,8 @@
 		356E6A89185AFBF3002A1014 /* Public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
 		356E6A8C185B15FB002A1014 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		356E6A8D185B15FB002A1014 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		35ADB3D71861B9DF009647C8 /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
+		35ADB3D81861B9DF009647C8 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Music.m; sourceTree = "<group>"; };
 		9571A20C185C917A003D3285 /* camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = camera.storyboard; sourceTree = "<group>"; };
 		9571A20E185C975D003D3285 /* shoot_camera_button_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoot_camera_button_1.png; sourceTree = "<group>"; };
 		9571A20F185C975D003D3285 /* shoot_camera_button_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoot_camera_button_2.png; sourceTree = "<group>"; };
@@ -429,6 +432,8 @@
 			children = (
 				356E6A8C185B15FB002A1014 /* DataManager.h */,
 				356E6A8D185B15FB002A1014 /* DataManager.m */,
+				35ADB3D71861B9DF009647C8 /* Music.h */,
+				35ADB3D81861B9DF009647C8 /* Music.m */,
 				2E693616185DF7B5000C95F5 /* FMDB */,
 				9571A20B185C917A003D3285 /* camera */,
 				356E6A60185AD973002A1014 /* GTTabBar */,
@@ -730,6 +735,7 @@
 				356E6A72185ADE88002A1014 /* SettingViewController.m in Sources */,
 				354467FE185AD419005AB0D9 /* AppDelegate.m in Sources */,
 				354467FA185AD419005AB0D9 /* main.m in Sources */,
+				35ADB3D91861B9DF009647C8 /* Music.m in Sources */,
 				356E6A75185ADE97002A1014 /* ShareViewController.m in Sources */,
 				356E6A8E185B15FC002A1014 /* DataManager.m in Sources */,
 				9571A226185C9C3A003D3285 /* CameraController.m in Sources */,
