@@ -7,6 +7,7 @@
 //
 
 #import "DataManager.h"
+#import "DBAccress.h"
 
 @implementation DataManager
 
@@ -52,6 +53,12 @@
     
 	NSString *databasePathFromApp = [_path stringByAppendingPathComponent:_databaseName];
 	[fileManager copyItemAtPath:databasePathFromApp toPath:_databasePath error:nil];
+}
+
+- (int)getMusicId//
+{
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    return [dBAccress getMusicId];
 }
 
 //////////////////////////////////////////////////////////////////////////

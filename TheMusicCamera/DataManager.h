@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSString *path;
 @property (readwrite) BOOL isPhotoView;
 
+- (int)getMusicId;
 
 + (DataManager *) sharedManager;
 

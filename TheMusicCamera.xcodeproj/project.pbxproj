@@ -427,6 +427,8 @@
 		354467F3185AD419005AB0D9 /* TheMusicCamera */ = {
 			isa = PBXGroup;
 			children = (
+				356E6A8C185B15FB002A1014 /* DataManager.h */,
+				356E6A8D185B15FB002A1014 /* DataManager.m */,
 				2E693616185DF7B5000C95F5 /* FMDB */,
 				9571A20B185C917A003D3285 /* camera */,
 				356E6A60185AD973002A1014 /* GTTabBar */,
@@ -445,8 +447,6 @@
 				356E6A73185ADE97002A1014 /* ShareViewController.h */,
 				356E6A74185ADE97002A1014 /* ShareViewController.m */,
 				356E6A89185AFBF3002A1014 /* Public.h */,
-				356E6A8C185B15FB002A1014 /* DataManager.h */,
-				356E6A8D185B15FB002A1014 /* DataManager.m */,
 				35446805185AD419005AB0D9 /* Images.xcassets */,
 				354467F4185AD419005AB0D9 /* Supporting Files */,
 			);

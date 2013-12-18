@@ -36,5 +36,21 @@
     }
 }
 
+- (int)getMusicId
+{
+    int musicId = 0;
+    
+    [self openDatabase];
+    
+    FMResultSet *rs = [db executeQuery:@"select max(id) from musicList"];
+    
+    while ([rs next]) {
+        musicId = [rs intForColumnIndex:0];
+    }
+    
+    [self closeDatabase];
+    
+    return musicId + 1;
+}
 
 @end
