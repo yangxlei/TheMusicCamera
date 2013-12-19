@@ -144,6 +144,7 @@
         else if (tabBarController.selectedIndex == 0)
         {
             [self.mainTabBarController hidesTabBar:YES animated:YES];
+          
 //
 //            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
 //            BeautifiedPictureViewController *bpVC = [storyboard instantiateViewControllerWithIdentifier:@"BeautifiedPictureViewController"];
