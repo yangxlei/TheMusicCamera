@@ -12,6 +12,8 @@
 {
     UIImageView *backImage;
 
+    BOOL soundsOff;
+    
 }
 
 @end

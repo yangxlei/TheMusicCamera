@@ -30,6 +30,8 @@
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
     
+    soundsOff = YES;
+    
     backImage = [[UIImageView alloc]initWithFrame:self.view.frame];
     
     if (iPhone5) {
@@ -48,6 +50,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)soundsBtn:(id)sender {
+    if (soundsOff) {
+        soundsOff = NO;
+        [sender setImage:[UIImage imageNamed:@"sleep_mode_on"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        soundsOff = YES;
+        [sender setImage:[UIImage imageNamed:@"sleep_mode_off"] forState:UIControlStateNormal];
+    }
 }
 
 @end
