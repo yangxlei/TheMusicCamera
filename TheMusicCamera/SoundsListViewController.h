@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DataManager;
 
-@interface SoundsListViewController : UIViewController
+@interface SoundsListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    __weak IBOutlet UITableView *tableViews;
+    DataManager *dataManager;
+    
+}
 
 @end

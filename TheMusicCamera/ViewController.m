@@ -29,6 +29,11 @@
 
     [self loadMainView];
     
+    if ([[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"]]isEqualToString:@"(null)"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicID"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"default01.wav"] forKey:@"musicName"];
+    }
     dataManager = [DataManager sharedManager];
     
 }

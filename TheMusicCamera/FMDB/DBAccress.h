@@ -17,6 +17,7 @@
 }
 
 
+- (void) getLoadMusicList:(NSMutableArray*)list;
 
 /////////////////////////////////////////////
 
