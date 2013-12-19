@@ -61,6 +61,7 @@
 		2EE5AF9A1860781000A35754 /* sleep_mode_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE5AF981860781000A35754 /* sleep_mode_off.png */; };
 		2EE5AF9B1860781000A35754 /* sleep_mode_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE5AF991860781000A35754 /* sleep_mode_on.png */; };
 		2EE5AF9D18608B4600A35754 /* button_camera_roll.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE5AF9C18608B4600A35754 /* button_camera_roll.png */; };
+		352C015A1862D57B00C0C710 /* top_now_sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 352C01591862D57B00C0C710 /* top_now_sound.png */; };
 		354467EE185AD419005AB0D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354467ED185AD419005AB0D9 /* Foundation.framework */; };
 		354467F0185AD419005AB0D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354467EF185AD419005AB0D9 /* CoreGraphics.framework */; };
 		354467F2185AD419005AB0D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354467F1185AD419005AB0D9 /* UIKit.framework */; };
@@ -203,6 +204,7 @@
 		2EE5AF981860781000A35754 /* sleep_mode_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep_mode_off.png; sourceTree = "<group>"; };
 		2EE5AF991860781000A35754 /* sleep_mode_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep_mode_on.png; sourceTree = "<group>"; };
 		2EE5AF9C18608B4600A35754 /* button_camera_roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_camera_roll.png; sourceTree = "<group>"; };
+		352C01591862D57B00C0C710 /* top_now_sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_now_sound.png; sourceTree = "<group>"; };
 		354467EA185AD419005AB0D9 /* TheMusicCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMusicCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		354467ED185AD419005AB0D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		354467EF185AD419005AB0D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -367,6 +369,7 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				352C01591862D57B00C0C710 /* top_now_sound.png */,
 				2E6409C61861F60D0080E903 /* check.png */,
 				2E6409C71861F60D0080E903 /* list_1.png */,
 				2E6409C81861F60D0080E903 /* list_2.png */,
@@ -727,6 +730,7 @@
 				2EE5AF9A1860781000A35754 /* sleep_mode_off.png in Resources */,
 				356E6A51185AD70F002A1014 /* icon-60@2x.png in Resources */,
 				2E693613185DE2D5000C95F5 /* recording_play.png in Resources */,
+				352C015A1862D57B00C0C710 /* top_now_sound.png in Resources */,
 				2E44DABC185CA63600C5C1DC /* button_back.png in Resources */,
 				2E44DAAC185C9BB900C5C1DC /* record_sound_setting.png in Resources */,
 				2E693615185DE2D5000C95F5 /* recording_stop.png in Resources */,

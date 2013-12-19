@@ -44,6 +44,9 @@
     }
     
     [self.view insertSubview:backImage atIndex:0];
+    
+    musicLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
+    
 }
 
 - (void)didReceiveMemoryWarning

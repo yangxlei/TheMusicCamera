@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SoundsRepeatViewController : UIViewController
+@interface SoundsRepeatViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    __weak IBOutlet UITableView *tableViews;
+
+}
 
 @end

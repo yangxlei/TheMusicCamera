@@ -33,6 +33,9 @@
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicID"];
         
         [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"default01.wav"] forKey:@"musicName"];
+
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicrepeat"];
+
     }
     dataManager = [DataManager sharedManager];
     

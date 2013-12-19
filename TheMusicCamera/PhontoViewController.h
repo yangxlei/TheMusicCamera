@@ -13,6 +13,7 @@
     UIImageView *backImage;
 
     BOOL soundsOff;
+    IBOutlet UILabel *musicLabel;
     
 }
 
