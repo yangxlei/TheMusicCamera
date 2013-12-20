@@ -12,5 +12,6 @@
 
 @property (readwrite) int ID;
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *path;
 
 @end
