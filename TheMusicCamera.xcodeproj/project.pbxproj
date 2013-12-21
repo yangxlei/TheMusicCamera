@@ -128,6 +128,7 @@
 		9571A44B185CA0BC003D3285 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44A185CA0BC003D3285 /* CoreMedia.framework */; };
 		9571A44D185CA0C4003D3285 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44C185CA0C4003D3285 /* CoreVideo.framework */; };
 		9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44E185CA0CD003D3285 /* QuartzCore.framework */; };
+		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +288,7 @@
 		9571A44A185CA0BC003D3285 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		9571A44C185CA0C4003D3285 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9571A44E185CA0CD003D3285 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		95C1172318633EF7008391BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */,
 				2E69362C185DF8FD000C95F5 /* libsqlite3.dylib in Frameworks */,
 				9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */,
 				9571A44D185CA0C4003D3285 /* CoreVideo.framework in Frameworks */,
@@ -446,6 +449,7 @@
 		354467EC185AD419005AB0D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95C1172318633EF7008391BB /* CoreFoundation.framework */,
 				2E69362B185DF8FD000C95F5 /* libsqlite3.dylib */,
 				9571A44E185CA0CD003D3285 /* QuartzCore.framework */,
 				9571A44C185CA0C4003D3285 /* CoreVideo.framework */,
@@ -464,7 +468,6 @@
 		354467F3185AD419005AB0D9 /* TheMusicCamera */ = {
 			isa = PBXGroup;
 			children = (
-				95C116781861FE3A008391BB /* colortracking */,
 				356E6A8C185B15FB002A1014 /* DataManager.h */,
 				356E6A8D185B15FB002A1014 /* DataManager.m */,
 				35ADB3D71861B9DF009647C8 /* Music.h */,
@@ -583,13 +586,6 @@
 				9571A225185C9C3A003D3285 /* CameraController.m */,
 			);
 			path = camera;
-			sourceTree = "<group>";
-		};
-		95C116781861FE3A008391BB /* colortracking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = colortracking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

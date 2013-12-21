@@ -153,6 +153,10 @@
         {
             [self.mainTabBarController hidesTabBar:YES animated:YES];
           
+          UIImagePickerController* picker = [[UIImagePickerController alloc] init];
+          picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+          picker.delegate = self;
+          [self presentModalViewController:picker animated:YES];
 //
 //            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
 //            BeautifiedPictureViewController *bpVC = [storyboard instantiateViewControllerWithIdentifier:@"BeautifiedPictureViewController"];
@@ -169,6 +173,16 @@
     [self.mainTabBarController hidesTabBar:NO animated:YES];
     self.mainTabBarController.selectedIndex = 2;
 
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+  
+  [picker dismissModalViewControllerAnimated:YES];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+  [picker dismissModalViewControllerAnimated:YES];
 }
 
 @end

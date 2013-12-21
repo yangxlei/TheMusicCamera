@@ -10,7 +10,7 @@
 #import "GTTabBarController.h"
 @class DataManager;
 
-@interface ViewController : UIViewController<UINavigationControllerDelegate, GTTabBarControllerDelegate>
+@interface ViewController : UIViewController<UINavigationControllerDelegate, GTTabBarControllerDelegate, UIImagePickerControllerDelegate>
 {
     DataManager *dataManager;
     BOOL firstEntry;//第一次启动进入app
