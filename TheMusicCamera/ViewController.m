@@ -14,6 +14,8 @@
 #import "ShareViewController.h"
 #import "DataManager.h"
 #import "CameraController.h"
+#import "ProcessGLView.h"
+#import "MQUIImage.h"
 
 @interface ViewController ()
 
@@ -176,14 +178,81 @@
 
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+  UIImage * image = [info valueForKey:UIImagePickerControllerOriginalImage];
   
-  [picker dismissModalViewControllerAnimated:YES];
+  UIImage *tmpimage =
+  [[UIImage alloc] initWithCGImage:image.CGImage
+                             scale:image.scale
+                       orientation:image.imageOrientation];
+  
+  [ProcessGLView sharedProcessGLView].backVideo = 0;
+  [self processImageFrame:[tmpimage fixOrientation].CGImage];
+//  [tmpimage release];
+  CropImageController *processPhotoController = nil;
+  
+  if (!processPhotoController) {
+//    processPhotoController = [[CropImageController alloc] initWithNibName:@"CropImageController"
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"cropimage" bundle:nil];
+    processPhotoController = [storyboard instantiateInitialViewController];
+    processPhotoController.delegate = self;
+    processPhotoController.videoFrameSize = videoFrameSize;
+    processPhotoController.frameTexture = videoFrameTexture;
+//    processPhotoController.image_orientation = UIDeviceOrientationPortrait;
+//    [self.imagePickerController.view addSubview:processPhotoController.view];
+    [self.view addSubview:processPhotoController.view];
+    [processPhotoController beginEdit:SelectRectangl];
+    
+//    processPhotoController.view.frame = CGRectMake(0, [shareProvider() window].frame.size.height, 320, [shareProvider() window].frame.size.height);
+//    [UIView animateWithDuration:0.3 animations:^(void){
+//      processPhotoController.view.frame = CGRectMake(0, 0, 320, [shareProvider() window].frame.size.height);
+//    }];
+  }
+  [picker dismissModalViewControllerAnimated:NO];
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
   [picker dismissModalViewControllerAnimated:YES];
+}
+
+- (void)processImageFrame:(CGImageRef)spriteImage;
+{
+  if (spriteImage && videoFrameTexture) {
+    glDeleteTextures(1, &videoFrameTexture);
+    videoFrameTexture = 0;
+    videoFrameSize = CGSizeZero;
+  }
+  videoFrameTexture = [[ProcessGLView sharedProcessGLView] setupTextureFromImageRef:spriteImage];
+  
+  
+  // 2
+  size_t width = CGImageGetWidth(spriteImage);
+  size_t height = CGImageGetHeight(spriteImage);
+  
+  if (width > 1024 || height > 1024) {
+    if (width > height) {
+      height = height*1024.0f/width;
+      width = 1024;
+    } else {
+      width = width*1024.0f/height;
+      height = 1024;
+    }
+  }
+  
+  videoFrameSize = CGSizeMake(width, height);
+  
+}
+
+
+- (void)cancelProcessPhoto
+{
+  
+}
+
+- (void)useProcessPhoto:(NSDictionary*)dic
+{
+  
 }
 
 @end

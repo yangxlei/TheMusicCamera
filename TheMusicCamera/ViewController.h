@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "GTTabBarController.h"
+#import "CropImageController.h"
 @class DataManager;
 
-@interface ViewController : UIViewController<UINavigationControllerDelegate, GTTabBarControllerDelegate, UIImagePickerControllerDelegate>
+@interface ViewController : UIViewController<UINavigationControllerDelegate, GTTabBarControllerDelegate, UIImagePickerControllerDelegate, CropImageDelegate>
 {
     DataManager *dataManager;
     BOOL firstEntry;//第一次启动进入app
+  
+  GLuint videoFrameTexture;
+  CGSize videoFrameSize;
 }
 @property (nonatomic, strong) GTTabBarController *mainTabBarController;
 

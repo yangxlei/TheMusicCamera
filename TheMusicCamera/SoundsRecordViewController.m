@@ -84,9 +84,7 @@
 
 - (void)saveBtuuon
 {
-    dataManager
     [self.navigationController popViewControllerAnimated:YES];
-
 }
 
 - (IBAction)recordVoice:(id)sender {
