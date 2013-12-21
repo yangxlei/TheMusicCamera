@@ -30,7 +30,14 @@
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
     
-    soundsOff = YES;
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] integerValue]==1) {
+        soundsOff = YES;
+    }
+    else
+    {
+        soundsOff = NO;
+        musicLabel.text = @"おやすみモード";
+    }
     
     backImage = [[UIImageView alloc]initWithFrame:self.view.frame];
     
@@ -45,6 +52,11 @@
     
     [self.view insertSubview:backImage atIndex:0];
     
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     musicLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
     
 }
@@ -58,11 +70,15 @@
 - (IBAction)soundsBtn:(id)sender {
     if (soundsOff) {
         soundsOff = NO;
+        musicLabel.text = @"おやすみモード";
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"musicOFF"];
         [sender setImage:[UIImage imageNamed:@"sleep_mode_on"] forState:UIControlStateNormal];
     }
     else
     {
         soundsOff = YES;
+        musicLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicOFF"];
         [sender setImage:[UIImage imageNamed:@"sleep_mode_off"] forState:UIControlStateNormal];
     }
 }

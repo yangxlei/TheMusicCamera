@@ -14,9 +14,19 @@
 {
     __weak IBOutlet UIImageView *timeImage;
     AVAudioRecorder *recorder;
+    AVAudioPlayer *player;
+
     NSURL *recordedFile;
     DataManager *dataManager;
 
+    __weak IBOutlet UILabel *musicNameLabel;
+    NSString *dateString;//当前时间
+    __weak IBOutlet UIButton *deleteBtn;
+    UIButton *saveBtn;//保存按钮
+    __weak IBOutlet UIButton *recordBtn;
 }
+
+@property (nonatomic) BOOL isRecording;
+@property (nonatomic) BOOL isPlaying;
 
 @end

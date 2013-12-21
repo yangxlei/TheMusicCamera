@@ -58,14 +58,15 @@
 {
     [self openDatabase];
     
-    FMResultSet *rs = [db executeQuery:@"select id,name from musicList "];
+    FMResultSet *rs = [db executeQuery:@"select id,name,path from musicList "];
     
     while ([rs next]) {
         Music *music = [[Music alloc] init];
         
         music.ID= [rs intForColumnIndex:0];
         music.name= [rs stringForColumnIndex:1];
-        
+        music.path= [rs stringForColumnIndex:2];
+
         [list addObject:music];
     }
     
@@ -81,14 +82,16 @@
     
     NSString *sql = @"insert into musicList ("
     "id,"
+    "path,"
     "name)"
-    "VALUES (?,?)";
+    "VALUES (?,?,?)";
     
     for(Music *music in list )
     {
         if( ![db executeUpdate:sql,
               [NSNumber numberWithInteger:music.ID],
-              music.name
+              music.name,
+              music.path
               ])
         {
             isSucceeded = NO;

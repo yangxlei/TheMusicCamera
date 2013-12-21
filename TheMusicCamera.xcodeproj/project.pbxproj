@@ -29,6 +29,7 @@
 		2E6409CB1861F60D0080E903 /* list_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409C71861F60D0080E903 /* list_1.png */; };
 		2E6409CC1861F60D0080E903 /* list_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409C81861F60D0080E903 /* list_2.png */; };
 		2E6409CD1861F60D0080E903 /* list_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409C91861F60D0080E903 /* list_3.png */; };
+		2E6409CF18633F900080E903 /* recording_dustbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409CE18633F900080E903 /* recording_dustbox.png */; };
 		2E69360E185DE05B000C95F5 /* recording_bg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E69360C185DE05B000C95F5 /* recording_bg_2.png */; };
 		2E69360F185DE05B000C95F5 /* recording_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E69360D185DE05B000C95F5 /* recording_bg.png */; };
 		2E693613185DE2D5000C95F5 /* recording_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E693610185DE2D5000C95F5 /* recording_play.png */; };
@@ -167,6 +168,7 @@
 		2E6409C71861F60D0080E903 /* list_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_1.png; sourceTree = "<group>"; };
 		2E6409C81861F60D0080E903 /* list_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_2.png; sourceTree = "<group>"; };
 		2E6409C91861F60D0080E903 /* list_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_3.png; sourceTree = "<group>"; };
+		2E6409CE18633F900080E903 /* recording_dustbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_dustbox.png; sourceTree = "<group>"; };
 		2E69360C185DE05B000C95F5 /* recording_bg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_bg_2.png; sourceTree = "<group>"; };
 		2E69360D185DE05B000C95F5 /* recording_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_bg.png; sourceTree = "<group>"; };
 		2E693610185DE2D5000C95F5 /* recording_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_play.png; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2E6409CE18633F900080E903 /* recording_dustbox.png */,
 				352C01591862D57B00C0C710 /* top_now_sound.png */,
 				2E6409C61861F60D0080E903 /* check.png */,
 				2E6409C71861F60D0080E903 /* list_1.png */,
@@ -672,6 +675,7 @@
 				356E6A80185AE23E002A1014 /* main_tab_camera.png in Resources */,
 				2EB0A339185C567800C226DF /* share_save_pop.png in Resources */,
 				2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */,
+				2E6409CF18633F900080E903 /* recording_dustbox.png in Resources */,
 				2EE5AF97186077BA00A35754 /* sound_setting_now_list2.png in Resources */,
 				356E6A5D185AD70F002A1014 /* icon@2x.png in Resources */,
 				2EB0A340185C585B00C226DF /* share_arrow.png in Resources */,
@@ -914,7 +918,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -924,7 +928,7 @@
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
+				PROVISIONING_PROFILE = "D05618BA-4B19-42A2-B7A6-D38544233D56";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -934,7 +938,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -944,7 +948,7 @@
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
+				PROVISIONING_PROFILE = "D05618BA-4B19-42A2-B7A6-D38544233D56";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
