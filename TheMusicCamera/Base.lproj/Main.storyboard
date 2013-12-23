@@ -64,12 +64,95 @@
                     <view key="view" contentMode="scaleToFill" id="a84-8G-PKu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="4da-ht-YXH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_setting_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-rV-73Z">
+                                <rect key="frame" x="20" y="50" width="66" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_ver_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="eU4-AQ-Kyb">
+                                <rect key="frame" x="20" y="136" width="110" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_info_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="RhN-bI-Hfg">
+                                <rect key="frame" x="20" y="227" width="110" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esl-om-A9g">
+                                <rect key="frame" x="30" y="248" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKm-eX-3eC">
+                                <rect key="frame" x="30" y="305" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="infoBtn:" destination="G1H-s7-wbh" eventType="touchUpInside" id="XaV-q1-Ecc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJu-yt-AF4">
+                                <rect key="frame" x="30" y="189" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGJ-yq-haz">
+                                <rect key="frame" x="30" y="157" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-dG-Fwe">
+                                <rect key="frame" x="30" y="72" width="223" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingBtn:" destination="G1H-s7-wbh" eventType="touchUpInside" id="2PP-Cf-ZTx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOD-5S-eCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-380" y="337"/>
+            <point key="canvasLocation" x="-996" y="1025"/>
+        </scene>
+        <!--Station View Controller-->
+        <scene sceneID="WMF-hG-VC4">
+            <objects>
+                <viewController storyboardIdentifier="StationViewController" id="jpF-p8-9Lb" customClass="StationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NZl-AM-OCY"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Xk-TF-tOg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lOq-3D-bc4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFP-cO-KbJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sq0-Co-Vqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="1014"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="BPS-nv-Fnh">
@@ -190,6 +273,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qg0-T1-GsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="292" y="337"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="UVw-xr-cRP">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" id="iA1-EY-lNM" customClass="InfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9vn-Ks-RcL"/>
+                        <viewControllerLayoutGuide type="bottom" id="2SU-6W-eOt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CV0-XA-5T6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Ym-aa-b4i">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info.png" translatesAutoresizingMaskIntoConstraints="NO" id="XYs-4J-EVD">
+                                <rect key="frame" x="30" y="191" width="260" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBq-bG-8FL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="1046"/>
         </scene>
         <!--Sounds View Controller-->
         <scene sceneID="oWr-hD-pDt">
@@ -618,7 +729,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_1136.png" width="640" height="1136"/>
         <image name="check.png" width="41" height="36"/>
+        <image name="info.png" width="521" height="407"/>
         <image name="list_2.png" width="606" height="81"/>
         <image name="record_sound_setting.png" width="608" height="72"/>
         <image name="recorded_sound.png" width="160" height="29"/>
@@ -627,7 +740,10 @@
         <image name="recording_button.png" width="276" height="84"/>
         <image name="recording_dustbox.png" width="99" height="98"/>
         <image name="recording_rec.png" width="178" height="178"/>
+        <image name="setting_info_text.png" width="220" height="25"/>
+        <image name="setting_setting_text.png" width="110" height="27"/>
         <image name="setting_sound_image_1136.png" width="562" height="505"/>
+        <image name="setting_ver_text.png" width="223" height="27"/>
         <image name="share_announce.png" width="496" height="46"/>
         <image name="share_arrow.png" width="93" height="144"/>
         <image name="share_save_pop.png" width="488" height="82"/>

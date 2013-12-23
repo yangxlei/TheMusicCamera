@@ -63,6 +63,15 @@
 		2EB0A345185C585B00C226DF /* share_sns_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A33F185C585B00C226DF /* share_sns_twitter.png */; };
 		2EB0A347185C5A3800C226DF /* share_announce.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A346185C5A3800C226DF /* share_announce.png */; };
 		2EB0A349185C745200C226DF /* sleep_mode.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A348185C745200C226DF /* sleep_mode.png */; };
+		2ED5B1D218689105007075EC /* header_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1D018689105007075EC /* header_setting.png */; };
+		2ED5B1D318689105007075EC /* setting_setting_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1D118689105007075EC /* setting_setting_text.png */; };
+		2ED5B1D61868922B007075EC /* setting_info_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1D41868922B007075EC /* setting_info_text.png */; };
+		2ED5B1D71868922B007075EC /* setting_ver_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1D51868922B007075EC /* setting_ver_text.png */; };
+		2ED5B1DB186893BC007075EC /* StationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED5B1DA186893BC007075EC /* StationViewController.m */; };
+		2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED5B1DD186893C7007075EC /* InfoViewController.m */; };
+		2ED5B1E018689454007075EC /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1DF18689454007075EC /* info.png */; };
+		2ED5B1E218689556007075EC /* header_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1E118689556007075EC /* header_info.png */; };
+		2ED5B1E418689590007075EC /* header_sound_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1E318689590007075EC /* header_sound_btn.png */; };
 		2EE5AF96186077BA00A35754 /* sound_setting_now_list1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE5AF94186077BA00A35754 /* sound_setting_now_list1.png */; };
 		2EE5AF97186077BA00A35754 /* sound_setting_now_list2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE5AF95186077BA00A35754 /* sound_setting_now_list2.png */; };
 		2EE5AF9A1860781000A35754 /* sleep_mode_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE5AF981860781000A35754 /* sleep_mode_off.png */; };
@@ -235,6 +244,17 @@
 		2EB0A33F185C585B00C226DF /* share_sns_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_sns_twitter.png; sourceTree = "<group>"; };
 		2EB0A346185C5A3800C226DF /* share_announce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_announce.png; sourceTree = "<group>"; };
 		2EB0A348185C745200C226DF /* sleep_mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep_mode.png; sourceTree = "<group>"; };
+		2ED5B1D018689105007075EC /* header_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_setting.png; sourceTree = "<group>"; };
+		2ED5B1D118689105007075EC /* setting_setting_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_setting_text.png; sourceTree = "<group>"; };
+		2ED5B1D41868922B007075EC /* setting_info_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_info_text.png; sourceTree = "<group>"; };
+		2ED5B1D51868922B007075EC /* setting_ver_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_ver_text.png; sourceTree = "<group>"; };
+		2ED5B1D9186893BC007075EC /* StationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationViewController.h; sourceTree = "<group>"; };
+		2ED5B1DA186893BC007075EC /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationViewController.m; sourceTree = "<group>"; };
+		2ED5B1DC186893C7007075EC /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		2ED5B1DD186893C7007075EC /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		2ED5B1DF18689454007075EC /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		2ED5B1E118689556007075EC /* header_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_info.png; sourceTree = "<group>"; };
+		2ED5B1E318689590007075EC /* header_sound_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_btn.png; sourceTree = "<group>"; };
 		2EE5AF94186077BA00A35754 /* sound_setting_now_list1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_setting_now_list1.png; sourceTree = "<group>"; };
 		2EE5AF95186077BA00A35754 /* sound_setting_now_list2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_setting_now_list2.png; sourceTree = "<group>"; };
 		2EE5AF981860781000A35754 /* sleep_mode_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep_mode_off.png; sourceTree = "<group>"; };
@@ -443,6 +463,13 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2ED5B1E318689590007075EC /* header_sound_btn.png */,
+				2ED5B1E118689556007075EC /* header_info.png */,
+				2ED5B1DF18689454007075EC /* info.png */,
+				2ED5B1D41868922B007075EC /* setting_info_text.png */,
+				2ED5B1D51868922B007075EC /* setting_ver_text.png */,
+				2ED5B1D018689105007075EC /* header_setting.png */,
+				2ED5B1D118689105007075EC /* setting_setting_text.png */,
 				2E1EBB441867E5FE00F64A2E /* bg_1136.png */,
 				2E1EBB451867E5FE00F64A2E /* bg.png */,
 				2E1EBB461867E5FE00F64A2E /* header_record_sound.png */,
@@ -505,6 +532,19 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		2ED5B1D8186893A3007075EC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				356E6A70185ADE88002A1014 /* SettingViewController.h */,
+				356E6A71185ADE88002A1014 /* SettingViewController.m */,
+				2ED5B1D9186893BC007075EC /* StationViewController.h */,
+				2ED5B1DA186893BC007075EC /* StationViewController.m */,
+				2ED5B1DC186893C7007075EC /* InfoViewController.h */,
+				2ED5B1DD186893C7007075EC /* InfoViewController.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		354467E1185AD419005AB0D9 = {
 			isa = PBXGroup;
 			children = (
@@ -564,8 +604,7 @@
 				2E44DAB4185CA2BA00C5C1DC /* Sounds */,
 				356E6A6D185ADE76002A1014 /* PhontoViewController.h */,
 				356E6A6E185ADE76002A1014 /* PhontoViewController.m */,
-				356E6A70185ADE88002A1014 /* SettingViewController.h */,
-				356E6A71185ADE88002A1014 /* SettingViewController.m */,
+				2ED5B1D8186893A3007075EC /* Setting */,
 				356E6A73185ADE97002A1014 /* ShareViewController.h */,
 				356E6A74185ADE97002A1014 /* ShareViewController.m */,
 				356E6A89185AFBF3002A1014 /* Public.h */,
@@ -828,6 +867,7 @@
 				356E6A5E185AD70F002A1014 /* icon_117.png in Resources */,
 				2EB0A341185C585B00C226DF /* share_sns_bg.png in Resources */,
 				2E1EBB471867E5FE00F64A2E /* bg_1136.png in Resources */,
+				2ED5B1E218689556007075EC /* header_info.png in Resources */,
 				950C7EEE1865E8B50021FE5D /* none.vsh.txt in Resources */,
 				356E6A5F185AD70F002A1014 /* iTunesArtwork.png in Resources */,
 				9571A223185C975D003D3285 /* shot_size_4_3.png in Resources */,
@@ -839,6 +879,7 @@
 				2EB0A345185C585B00C226DF /* share_sns_twitter.png in Resources */,
 				2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */,
 				9571A219185C975D003D3285 /* shoot_camera_button_1.png in Resources */,
+				2ED5B1D61868922B007075EC /* setting_info_text.png in Resources */,
 				9571A221185C975D003D3285 /* shot_kirikae.png in Resources */,
 				2EB0A342185C585B00C226DF /* share_sns_facebook.png in Resources */,
 				2EE5AF96186077BA00A35754 /* sound_setting_now_list1.png in Resources */,
@@ -858,6 +899,7 @@
 				9571A222185C975D003D3285 /* shot_size_1_1.png in Resources */,
 				356E6A56185AD70F002A1014 /* Icon-Small-40.png in Resources */,
 				2E1EBB401867534900F64A2E /* SnackerComic_PerosnalUseOnly.ttf in Resources */,
+				2ED5B1D218689105007075EC /* header_setting.png in Resources */,
 				356E6A59185AD70F002A1014 /* Icon-Small-50@2x.png in Resources */,
 				2E69360F185DE05B000C95F5 /* recording_bg.png in Resources */,
 				354467F8185AD419005AB0D9 /* InfoPlist.strings in Resources */,
@@ -868,15 +910,19 @@
 				2E69362A185DF7B5000C95F5 /* TmpFile in Resources */,
 				9571A21D185C975D003D3285 /* shot_back.png in Resources */,
 				2EB0A331185C07C000C226DF /* mama_camera_top_960.png in Resources */,
+				2ED5B1E018689454007075EC /* info.png in Resources */,
 				2EB0A343185C585B00C226DF /* share_sns_line.png in Resources */,
+				2ED5B1D71868922B007075EC /* setting_ver_text.png in Resources */,
 				2EE5AF9A1860781000A35754 /* sleep_mode_off.png in Resources */,
 				356E6A51185AD70F002A1014 /* icon-60@2x.png in Resources */,
 				2E693613185DE2D5000C95F5 /* recording_play.png in Resources */,
 				352C015A1862D57B00C0C710 /* top_now_sound.png in Resources */,
 				2E44DABC185CA63600C5C1DC /* button_back.png in Resources */,
 				2E44DAAC185C9BB900C5C1DC /* record_sound_setting.png in Resources */,
+				2ED5B1E418689590007075EC /* header_sound_btn.png in Resources */,
 				2E693615185DE2D5000C95F5 /* recording_stop.png in Resources */,
 				356E6A5C185AD70F002A1014 /* icon.png in Resources */,
+				2ED5B1D318689105007075EC /* setting_setting_text.png in Resources */,
 				2E69360E185DE05B000C95F5 /* recording_bg_2.png in Resources */,
 				9571A21E185C975D003D3285 /* shot_button_bg.png in Resources */,
 				356E6A87185AE23E002A1014 /* main_tab_sound_off.png in Resources */,
@@ -935,6 +981,8 @@
 				2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */,
 				950C7ED11865E4F40021FE5D /* CropImageController.m in Sources */,
 				950C7EF71865F3780021FE5D /* TileBG.m in Sources */,
+				2ED5B1DB186893BC007075EC /* StationViewController.m in Sources */,
+				2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */,
 				2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */,
 				950C7EE61865E6700021FE5D /* MQRoundPatView.m in Sources */,
 				950C7EF31865E9BD0021FE5D /* PictureRangeSelectView.m in Sources */,
