@@ -12,6 +12,7 @@
 #import "SoundsRecordViewController.h"
 #import "SoundsListViewController.h"
 #import "SoundsRepeatViewController.h"
+#import "SoundsRecordListViewController.h"
 
 @interface SoundsViewController ()
 
@@ -89,5 +90,12 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     SoundsRepeatViewController *spVC = [storyboard instantiateViewControllerWithIdentifier:@"SoundsRepeatViewController"];
     [self.navigationController pushViewController:spVC animated:YES];
+}
+
+- (IBAction)gotoSoundsRecordList:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    SoundsRecordListViewController *spVC = [storyboard instantiateViewControllerWithIdentifier:@"SoundsRecordListViewController"];
+    [self.navigationController pushViewController:spVC animated:YES];
+
 }
 @end

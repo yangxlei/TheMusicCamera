@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 @class FMDatabase;
 @class DataManager;
+@class Music;
 
 @interface DBAccress : NSObject
 {
@@ -18,6 +19,10 @@
 
 
 - (void) getLoadMusicList:(NSMutableArray*)list;
+- (void) getLoadRecordMusicList:(NSMutableArray*)list;
+- (void) insertMusicInfo:(Music*)music;
+- (void)deleteMusicWithID:(int)musicID;
+- (void)deleteMusicWithName:(NSString *)musicName;
 
 /////////////////////////////////////////////
 

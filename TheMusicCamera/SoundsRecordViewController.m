@@ -9,6 +9,7 @@
 #import "SoundsRecordViewController.h"
 #import "DataManager.h"
 #import "DataManager.h"
+#import "Music.h"
 
 @interface SoundsRecordViewController ()
 
@@ -59,6 +60,7 @@
     [saveBtn addTarget:self action:@selector(saveBtuuon) forControlEvents:UIControlEventTouchUpInside];
     saveBtn.hidden = YES;
     
+//////////////////////////////////////////////////////////////////////////////////
     AVAudioSession *session = [AVAudioSession sharedInstance];
     NSError *sessionError;
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
@@ -67,7 +69,15 @@
         NSLog(@"Error creating session: %@", [sessionError description]);
     else
         [session setActive:YES error:nil];
+    
+    NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
+    NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", savePath,dateString];
+    recordedFile = [NSURL fileURLWithPath:recorderFilePath];
+    
+    recorder = [[AVAudioRecorder alloc] initWithURL:recordedFile settings:nil error:nil];
+    [recorder prepareToRecord];
 
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,6 +112,7 @@
             recorder = nil;
             deleteBtn.hidden = NO;
             saveBtn.hidden = NO;
+            [timer invalidate];
 
         }
         else
@@ -127,18 +138,54 @@
         
         [sender setBackgroundImage:[UIImage imageNamed:@"recording_stop"] forState:UIControlStateNormal];
         
-        NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
-        NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", savePath,dateString];
-        recordedFile = [NSURL fileURLWithPath:recorderFilePath];
-        
-        recorder = [[AVAudioRecorder alloc] initWithURL:recordedFile settings:nil error:nil];
-        [recorder prepareToRecord];
         [recorder record];
 
+        intTime = 0;
+        
+        Music *music = [[Music alloc]init];
+        music.name = dateString;
+        music.path = [NSString stringWithFormat:@"%@.caf",dateString];
+        [dataManager insertMusicInfo:music];
+
+        
+        NSTimeInterval timeInterval =1.0 ;
+        //定时器
+        timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
+                                                               target:self
+                                                             selector:@selector(showTimer:)
+                                                             userInfo:nil
+                                                              repeats:YES];
+        [timer fire];
+        
     }
 
 
     
+}
+
+- (void)showTimer:(NSTimer *)theTimer
+{
+    intTime++;
+
+    timeLabel.text = [NSString stringWithFormat:@"%d:00/10:00",intTime];
+    timeLabel.font = [UIFont fontWithName:@"SnackerComic_PerosnalUseOnly" size:30];
+
+    if (intTime==10) {
+        [timer invalidate];
+        
+        _isPlaying = YES;
+        [recorder stop];
+        recorder = nil;
+        deleteBtn.hidden = NO;
+        saveBtn.hidden = NO;
+        [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_play"] forState:UIControlStateNormal];
+
+    }
+    timeImage.frame = CGRectMake(timeImage.frame.origin.x, timeImage.frame.origin.y-21, timeImage.frame.size.width, 481);
+    
+    NSLog(@"%f   %f   %f   %f   ",timeImage.frame.origin.x,timeImage.frame.origin.y,timeImage.frame.size.width,timeImage.frame.size.height);
+    
+
 }
 
 - (IBAction)deleteSounds:(id)sender
@@ -150,12 +197,15 @@
     deleteBtn.hidden = YES;
 
     [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_rec"] forState:UIControlStateNormal];
+    timeImage.frame = CGRectMake(timeImage.frame.origin.x, 346, timeImage.frame.size.width, 481);
 
     NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
     NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", savePath,dateString];
 
     NSFileManager *fileManager = [NSFileManager defaultManager];
     [fileManager removeItemAtPath:recorderFilePath error:nil];
+    
+    [dataManager deleteMusicWithName:[NSString stringWithFormat:@"%@.caf",dateString]];
 
 }
 

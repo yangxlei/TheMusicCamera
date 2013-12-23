@@ -1,19 +1,20 @@
 //
-//  SoundsRepeatViewController.m
+//  SoundsRecordListViewController.m
 //  TheMusicCamera
 //
-//  Created by song on 13-12-14.
+//  Created by song on 13-12-23.
 //  Copyright (c) 2013年 songl. All rights reserved.
 //
 
-#import "SoundsRepeatViewController.h"
+#import "SoundsRecordListViewController.h"
 #import "DataManager.h"
+#import "Music.h"
 
-@interface SoundsRepeatViewController ()
+@interface SoundsRecordListViewController ()
 
 @end
 
-@implementation SoundsRepeatViewController
+@implementation SoundsRecordListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,19 +28,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    [self navgationImage:@"header_sound_list"];
+    //header_record_sound
+    
+    [self navgationImage:@"header_record_sound"];
     
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
     
+    dataManager = [DataManager sharedManager];
+
+    [dataManager getLoadRecordMusicList];
     
     tableViews.delegate = self;
     tableViews.dataSource = self;
     tableViews.separatorStyle = NO;
-    
+
     [tableViews reloadData];
+
+	// Do any additional setup after loading the view.
+}
+
+- (void)backBtuuon
+{
+    [self.navigationController popViewControllerAnimated:YES];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
     
 }
 
@@ -48,13 +61,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)backBtuuon
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -65,7 +71,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    return dataManager.musicList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,6 +83,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
+    Music *music = (Music *)[dataManager.musicList objectAtIndex:indexPath.row];
     
     static NSString *CellIdentifier = @"Cell";
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -85,30 +92,32 @@
     }
     
     UIImageView *bgImg = (UIImageView *)[cell viewWithTag:1];
-    if (indexPath.row==0) {
+    if (indexPath.row==0 && dataManager.musicList.count!=1) {
         bgImg.image = [UIImage imageNamed:@"list_1"];
-        UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
-        nameLabel.text = [NSString stringWithFormat:@"なし无"];
-
+    }
+    else if (indexPath.row==dataManager.musicList.count-1 && dataManager.musicList.count!=1)
+    {
+        bgImg.image = [UIImage imageNamed:@"list_3"];
     }
     else
     {
-        UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
-        nameLabel.text = [NSString stringWithFormat:@"あり有"];
-        
-        bgImg.image = [UIImage imageNamed:@"list_3"];
+        bgImg.image = [UIImage imageNamed:@"list_2"];
     }
     
     UIImageView *checkImg = (UIImageView *)[cell viewWithTag:2];
     
-    int selectNO = [[[NSUserDefaults standardUserDefaults] objectForKey:@"musicrepeat"] intValue];
-    if (selectNO==indexPath.row) {
+    int selectNO = [[[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"] intValue];
+    if (selectNO==music.ID) {
         checkImg.hidden = NO;
     }
     else
     {
         checkImg.hidden = YES;
     }
+    
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
+    nameLabel.text = [NSString stringWithFormat:@"%@",music.name];
+    
     
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     
@@ -122,9 +131,14 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:indexPath.row] forKey:@"musicrepeat"];
-    
-    [tableViews reloadData];
+//    Music *music = (Music *)[dataManager.musicList objectAtIndex:indexPath.row];
+//    
+//    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:music.ID] forKey:@"musicID"];
+//    
+//    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@",music.name] forKey:@"musicName"];
+//    
+//    
+//    [tableViews reloadData];
     
     
 }

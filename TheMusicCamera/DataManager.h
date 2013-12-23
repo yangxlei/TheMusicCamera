@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GTTabBarController.h"
 
+@class Music;
+
 @interface DataManager : NSObject
 {
     
@@ -25,6 +27,10 @@
 
 - (int)getMusicId;
 - (void) getLoadMusicList;
+- (void) getLoadRecordMusicList;
+- (void) insertMusicInfo:(Music*)music;
+- (void)deleteMusicWithID:(int)musicID;
+- (void)deleteMusicWithName:(NSString *)musicName;
 
 + (DataManager *) sharedManager;
 

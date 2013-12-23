@@ -24,6 +24,9 @@
     __weak IBOutlet UIButton *deleteBtn;
     UIButton *saveBtn;//保存按钮
     __weak IBOutlet UIButton *recordBtn;
+    int intTime;//秒数计数
+    NSTimer   *timer ;
+    __weak IBOutlet UILabel *timeLabel;
 }
 
 @property (nonatomic) BOOL isRecording;

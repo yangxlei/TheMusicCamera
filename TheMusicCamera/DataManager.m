@@ -8,6 +8,7 @@
 
 #import "DataManager.h"
 #import "DBAccress.h"
+#import "Music.h"
 
 @implementation DataManager
 
@@ -86,6 +87,34 @@
     DBAccress *dBAccress=[[DBAccress alloc] init];
     [dBAccress getLoadMusicList:_musicList];
 }
+
+- (void) getLoadRecordMusicList
+{
+    [_musicList removeAllObjects];
+    
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    [dBAccress getLoadRecordMusicList:_musicList];
+}
+
+- (void) insertMusicInfo:(Music*)music
+{
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    [dBAccress insertMusicInfo:music];
+
+}
+
+- (void)deleteMusicWithID:(int)musicID
+{
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    [dBAccress deleteMusicWithID:musicID];
+}
+
+- (void)deleteMusicWithName:(NSString *)musicName
+{
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    [dBAccress deleteMusicWithName:musicName];
+}
+
 //////////////////////////////////////////////////////////////////////////
 static DataManager *sharedDataManager = nil;
 

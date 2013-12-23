@@ -73,43 +73,73 @@
     [self closeDatabase];
 }
 
-- (void) insertCourseInfo:(NSMutableArray*)list
+- (void) getLoadRecordMusicList:(NSMutableArray*)list
 {
     [self openDatabase];
-    [db beginTransaction];
     
-    BOOL isSucceeded = YES;
+    FMResultSet *rs = [db executeQuery:@"select id,name,path,defaultValue from musicList where defaultValue=0"];
     
-    NSString *sql = @"insert into musicList ("
-    "id,"
-    "path,"
-    "name)"
-    "VALUES (?,?,?)";
-    
-    for(Music *music in list )
-    {
-        if( ![db executeUpdate:sql,
-              [NSNumber numberWithInteger:music.ID],
-              music.name,
-              music.path
-              ])
-        {
-            isSucceeded = NO;
-            break;
-        }
-    }
+    while ([rs next]) {
+        Music *music = [[Music alloc] init];
         
-    if( isSucceeded )
-    {
-        [db commit];
+        music.ID= [rs intForColumnIndex:0];
+        music.name= [rs stringForColumnIndex:1];
+        music.path= [rs stringForColumnIndex:2];
+        
+        [list addObject:music];
     }
-    else
-    {
-        [db rollback];
+    
+    [self closeDatabase];
+
+}
+
+- (void) insertMusicInfo:(Music*)music
+{
+    [self openDatabase];
+    
+    int musicId = 0;
+    
+    FMResultSet *rs = [db executeQuery:@"select max(id) from musicList"];
+    
+    while ([rs next]) {
+        musicId = [rs intForColumnIndex:0];
+    }
+    
+    if(![db executeUpdate:@"insert into musicList(id,path,name,defaultValue ) values(?,?,?,0)",[NSNumber numberWithInteger:musicId+1],music.path,music.name]) {
+        
     }
     
     [self closeDatabase];
     
+}
+
+- (void)deleteMusicWithID:(int)musicID
+{
+    [self openDatabase];
+    NSString *sql = [NSString stringWithFormat:@"delete from musicList where id=%d",musicID];
+    
+    FMResultSet *rs = [db executeQuery:sql];
+    
+    while ([rs next]) {
+        
+    }
+    
+    [self closeDatabase];
+}
+
+- (void)deleteMusicWithName:(NSString *)musicName
+{
+    [self openDatabase];
+    NSString *sql = [NSString stringWithFormat:@"delete from musicList where name=%@",musicName];
+    
+    FMResultSet *rs = [db executeQuery:sql];
+    
+    while ([rs next]) {
+        
+    }
+    
+    [self closeDatabase];
+
 }
 
 @end
