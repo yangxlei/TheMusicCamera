@@ -770,6 +770,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = songl;
 				TargetAttributes = {
+					354467E9185AD419005AB0D9 = {
+						DevelopmentTeam = JX724T69DW;
+					};
 					3544680A185AD419005AB0D9 = {
 						TestTargetID = 354467E9185AD419005AB0D9;
 					};
@@ -1016,7 +1019,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI KE (PDSSUVSVXA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1055,7 +1059,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI KE (PDSSUVSVXA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1076,7 +1081,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -1086,7 +1092,7 @@
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1096,7 +1102,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -1106,7 +1113,7 @@
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

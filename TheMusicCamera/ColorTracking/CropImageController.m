@@ -138,14 +138,15 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 -(IBAction) useClick:(id)sender
 {
   
-  UIActivityIndicatorView* actprocess = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-  actprocess.center = self.view.center;
-  
-  [self.view addSubview:actprocess];
-  
-  [actprocess startAnimating];
+//  UIActivityIndicatorView* actprocess = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+//  actprocess.center = self.view.center;
+//  
+//  [self.view addSubview:actprocess];
+//  
+//  [actprocess startAnimating];
   //afteruse
-  [self performSelector:@selector(afteruse:) withObject:actprocess afterDelay:0];
+//  [self performSelector:@selector(afteruse:) withObject:actprocess afterDelay:0];
+    [self performSelector:@selector(afteruse:) withObject:nil afterDelay:0];
 
  }
 
@@ -183,8 +184,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
   
   [[ProcessGLView sharedProcessGLView] setDisplayFramebuffer];
   [[ProcessGLView sharedProcessGLView] clearScreenAndDraw];
-  [active stopAnimating];
-  [active removeFromSuperview];
+//  [active stopAnimating];
+//  [active removeFromSuperview];
 }
 
 
