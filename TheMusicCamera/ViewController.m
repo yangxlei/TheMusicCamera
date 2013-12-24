@@ -133,8 +133,8 @@
     return YES;
 }
 
-- (void)tabBarController:(GTTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-
+- (void)tabBarController:(GTTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
     if (firstEntry) {
         firstEntry = NO;
     }

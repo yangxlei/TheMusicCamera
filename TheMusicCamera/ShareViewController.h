@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Twitter/Twitter.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface ShareViewController : UIViewController
+{
+    SLComposeViewController *slComposerSheet;
+
+}
 
 @end

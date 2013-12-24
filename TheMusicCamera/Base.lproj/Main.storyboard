@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -206,6 +206,9 @@
                                 <state key="normal" backgroundImage="share_sns_mail.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="emailBtn:" destination="hYD-YR-ave" eventType="touchUpInside" id="s6n-5F-8Z8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZX-UM-CLr">
                                 <rect key="frame" x="95" y="481" width="64" height="51"/>
@@ -217,6 +220,9 @@
                                 <state key="normal" backgroundImage="share_sns_facebook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="faceBookBtn:" destination="hYD-YR-ave" eventType="touchUpInside" id="kuL-a4-Fyv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwX-8R-DWw">
                                 <rect key="frame" x="171" y="481" width="49" height="51"/>
@@ -227,6 +233,9 @@
                                 <state key="normal" backgroundImage="share_sns_twitter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="twitterBtn:" destination="hYD-YR-ave" eventType="touchUpInside" id="YfX-vk-WYR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGC-0g-uFO">
                                 <rect key="frame" x="245" y="481" width="39" height="52"/>
@@ -238,6 +247,9 @@
                                 <state key="normal" backgroundImage="share_sns_line.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="lineBtn:" destination="hYD-YR-ave" eventType="touchUpInside" id="tAM-Pk-cOo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.036863209190000003" green="0.50196081400000003" blue="0.033278981399999998" alpha="1" colorSpace="calibratedRGB"/>
