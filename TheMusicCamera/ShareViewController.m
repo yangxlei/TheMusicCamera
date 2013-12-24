@@ -50,6 +50,28 @@
 }
 
 - (IBAction)emailBtn:(id)sender {
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    
+    picker.mailComposeDelegate =self;
+    [picker setSubject:@"文件分享"];
+    // Set up recipients
+    NSArray *toRecipients = [NSArray arrayWithObject:@"first@qq.com"];
+    NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@qq.com",@"third@qq.com", nil];
+    NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@qq.com"];
+    
+    [picker setToRecipients:toRecipients];
+    [picker setCcRecipients:ccRecipients];
+    [picker setBccRecipients:bccRecipients];
+    //发送图片附件
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"IMG_0194" ofType:@"JPG"];
+    NSData *myData = [NSData dataWithContentsOfFile:path];
+    [picker addAttachmentData:nil mimeType:@"image/jpeg" fileName:@"IMG_0194.JPG"];
+    
+    NSString *emailBody =[NSString stringWithFormat:@"我分享了文件给您，地址是"] ;
+    [picker setMessageBody:emailBody isHTML:NO];
+//    [self presentModalViewController:picker animated:YES];
+    [self.navigationController presentViewController:picker animated:YES completion:nil];
+
 }
 
 - (IBAction)faceBookBtn:(id)sender {

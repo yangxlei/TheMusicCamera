@@ -115,6 +115,11 @@
     [dBAccress deleteMusicWithName:musicName];
 }
 
+- (int)selectMusicDate
+{
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    return [dBAccress selectMusicDate];
+}
 //////////////////////////////////////////////////////////////////////////
 static DataManager *sharedDataManager = nil;
 

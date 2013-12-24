@@ -27,5 +27,6 @@
 /////////////////////////////////////////////
 
 - (int)getMusicId;
+- (int)selectMusicDate;
 
 @end

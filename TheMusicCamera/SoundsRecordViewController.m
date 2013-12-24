@@ -33,6 +33,7 @@
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     dateString = [dateFormat stringFromDate:today];
     
+    dateString = [NSString stringWithFormat:@"%@-%d",dateString,[dataManager selectMusicDate]];
     NSLog(@"date: %@", dateString);
 
 }
@@ -77,7 +78,10 @@
     recorder = [[AVAudioRecorder alloc] initWithURL:recordedFile settings:nil error:nil];
     [recorder prepareToRecord];
 
+    timeLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:20];
+
     
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,6 +98,11 @@
 
 - (void)saveBtuuon
 {
+    Music *music = [[Music alloc]init];
+    music.name = dateString;
+    music.path = [NSString stringWithFormat:@"%@.caf",dateString];
+    [dataManager insertMusicInfo:music];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -142,10 +151,6 @@
 
         intTime = 0;
         
-        Music *music = [[Music alloc]init];
-        music.name = dateString;
-        music.path = [NSString stringWithFormat:@"%@.caf",dateString];
-        [dataManager insertMusicInfo:music];
 
         
         NSTimeInterval timeInterval =1.0 ;
@@ -168,7 +173,6 @@
     intTime++;
 
     timeLabel.text = [NSString stringWithFormat:@"%d:00/10:00",intTime];
-    timeLabel.font = [UIFont fontWithName:@"SnackerComic_PerosnalUseOnly" size:30];
 
     if (intTime==10) {
         [timer invalidate];

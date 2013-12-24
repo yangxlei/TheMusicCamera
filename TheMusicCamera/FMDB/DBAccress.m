@@ -142,4 +142,28 @@
 
 }
 
+- (int)selectMusicDate
+{
+    [self openDatabase];
+    
+    int num=1;
+    
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateString = [dateFormat stringFromDate:today];
+
+    NSString *sql = [NSString stringWithFormat:@"select id,name,path,defaultValue from musicList where name=%@",dateString];
+
+    FMResultSet *rs = [db executeQuery:sql];
+    
+    while ([rs next]) {
+        num++;
+    }
+    
+    [self closeDatabase];
+    
+    return num;
+}
+
 @end

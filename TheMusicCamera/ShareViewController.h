@@ -10,8 +10,10 @@
 #import <Twitter/Twitter.h>
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
+#import <MessageUI/MessageUI.h>
+#import<MessageUI/MFMailComposeViewController.h>
 
-@interface ShareViewController : UIViewController
+@interface ShareViewController : UIViewController<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
 {
     SLComposeViewController *slComposerSheet;
 
