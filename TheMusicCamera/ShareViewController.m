@@ -137,5 +137,49 @@
 }
 
 - (IBAction)lineBtn:(id)sender {
+    
 }
+
+-  (void)mailComposeController:(MFMailComposeViewController*)controller
+           didFinishWithResult:(MFMailComposeResult)result
+                         error:(NSError*)error
+{
+    
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Send e-mail Cancel"
+                                                            message:@""
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+            break;
+        case MFMailComposeResultSaved:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"E-mail have been saved"
+                                                            message:@""
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK" 
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+            break;
+        default:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"E-mail Not Sent"
+                                                            message:@""
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK" 
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+            break;
+    }
+    //邮件视图消失
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

@@ -153,7 +153,7 @@
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSString *dateString = [dateFormat stringFromDate:today];
 
-    NSString *sql = [NSString stringWithFormat:@"select id,name,path,defaultValue from musicList where name=%@",dateString];
+    NSString *sql = [NSString stringWithFormat:@"select id,name,path,defaultValue from musicList where name like '%@%%'",dateString];
 
     FMResultSet *rs = [db executeQuery:sql];
     
