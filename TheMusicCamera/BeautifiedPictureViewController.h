@@ -20,7 +20,6 @@ typedef struct {
 
 
 @interface BeautifiedPictureViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
--(void) setCropImage : (UIImage* )image;
 @property (nonatomic, strong) IBOutlet MQCropImageView* cropImageView;
 
 @property (nonatomic) SelectType seletType;

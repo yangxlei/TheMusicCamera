@@ -37,10 +37,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     return self;
 }
 
--(void) setCropImage:(UIImage *)image
-{
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];

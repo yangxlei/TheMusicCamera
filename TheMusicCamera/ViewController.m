@@ -189,40 +189,13 @@
                              scale:image.scale
                        orientation:image.imageOrientation];
   
-  [bpVC setCropImage:tmpimage];
-  
-  
-  
   [ProcessGLView sharedProcessGLView].backVideo = 0;
   [self processImageFrame:[tmpimage fixOrientation].CGImage];
   
-<<<<<<< HEAD
   bpVC.videoFrameSize = videoFrameSize;
   bpVC.frameTexture = videoFrameTexture;
   [bpVC beginEdit:SelectRectangl];
-  
-=======
-  if (!processPhotoController) {
-//    processPhotoController = [[CropImageController alloc] initWithNibName:@"CropImageController"
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"cropimage" bundle:nil];
-    processPhotoController = [storyboard instantiateInitialViewController];
-    processPhotoController.delegate = self;
-    processPhotoController.videoFrameSize = videoFrameSize;
-    processPhotoController.frameTexture = videoFrameTexture;
-//    processPhotoController.image_orientation = UIDeviceOrientationPortrait;
-//    [self.imagePickerController.view addSubview:processPhotoController.view];
-    [self.view addSubview:processPhotoController.view];
-    [processPhotoController beginEdit:SelectRectangl];
-    
-//    processPhotoController.view.frame = CGRectMake(0, [shareProvider() window].frame.size.height, 320, [shareProvider() window].frame.size.height);
-//    [UIView animateWithDuration:0.3 animations:^(void){
-//      processPhotoController.view.frame = CGRectMake(0, 0, 320, [shareProvider() window].frame.size.height);
-//    }];
-  }
-//  [picker dismissModalViewControllerAnimated:NO];
-    [picker dismissViewControllerAnimated:YES completion:nil];
 
->>>>>>> f1a2fab4214f132306020453cab9d6796bbb6eda
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
