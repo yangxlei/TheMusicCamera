@@ -35,7 +35,9 @@
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
-    
+    UIButton *editBtn = [self navgationButton:@"button_edit" andFrame:CGRectMake(260, 10, 52, 28)];
+    [editBtn addTarget:self action:@selector(editBtuuon) forControlEvents:UIControlEventTouchUpInside];
+
     dataManager = [DataManager sharedManager];
 
     [dataManager getLoadRecordMusicList];
@@ -54,6 +56,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
     
+}
+
+- (void)editBtuuon
+{
+
 }
 
 - (void)didReceiveMemoryWarning
