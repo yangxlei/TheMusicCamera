@@ -209,11 +209,14 @@
 //      processPhotoController.view.frame = CGRectMake(0, 0, 320, [shareProvider() window].frame.size.height);
 //    }];
   }
-  [picker dismissModalViewControllerAnimated:NO];
+//  [picker dismissModalViewControllerAnimated:NO];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+
 }
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-  [picker dismissModalViewControllerAnimated:YES];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)processImageFrame:(CGImageRef)spriteImage;

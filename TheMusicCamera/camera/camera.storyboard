@@ -99,6 +99,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Gm-GZG">
                                 <rect key="frame" x="0.0" y="59" width="320" height="427"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtJ-C3-NXO">
+                                        <rect key="frame" x="20" y="375" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="shoot_sound_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playMusic:" destination="Yjg-4C-iUm" eventType="touchUpInside" id="f65-l0-OPT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -141,6 +153,7 @@
         <image name="shoot_camera_button_1.png" width="246" height="101"/>
         <image name="shoot_camera_button_2.png" width="85" height="64"/>
         <image name="shoot_camera_button_bg.png" width="640" height="166"/>
+        <image name="shoot_sound_button.png" width="88" height="88"/>
         <image name="shot_back.png" width="47" height="46"/>
         <image name="shot_button_bg.png" width="640" height="118"/>
         <image name="shot_flash_off.png" width="92" height="60"/>
