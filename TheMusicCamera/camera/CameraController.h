@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface CameraController : UIViewController
+@interface CameraController : UIViewController<AVAudioPlayerDelegate>
+{
+    AVAudioPlayer *avAudioPlayer;   //播放器player
+    BOOL isPlay;
+
+}
 
 @property (nonatomic, strong) IBOutlet UIButton* backBtn;
 @property (nonatomic, strong) IBOutlet UIButton* flashBtn;

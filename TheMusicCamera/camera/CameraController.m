@@ -269,6 +269,16 @@
   [view.layer addAnimation:animation forKey:@"HollowClose"];
 }
 
+- (IBAction)playMusic:(id)sender {
+    NSString *string = [[NSBundle mainBundle] pathForResource:@"What Is Dancing" ofType:@"mp3"];
+    //把音频文件转换成url格式
+    NSURL *url = [NSURL fileURLWithPath:string];
+    //初始化音频类 并且添加播放文件
+    avAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    avAudioPlayer.delegate = self;
+    isPlay = YES;
+
+}
 
 - (void)didReceiveMemoryWarning
 {
