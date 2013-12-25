@@ -20,6 +20,8 @@
     DataManager *dataManager;
 
     __weak IBOutlet UILabel *musicNameLabel;
+    __weak IBOutlet UITextField *musicNameText;
+    
     NSString *dateString;//当前时间
     __weak IBOutlet UIButton *deleteBtn;
     UIButton *saveBtn;//保存按钮

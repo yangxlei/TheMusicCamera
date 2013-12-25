@@ -85,9 +85,9 @@
     }
     
     UIImageView *bgImg = (UIImageView *)[cell viewWithTag:1];
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
     if (indexPath.row==0) {
         bgImg.image = [UIImage imageNamed:@"list_1"];
-        UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
         nameLabel.text = [NSString stringWithFormat:@"なし无"];
 
     }
@@ -98,7 +98,8 @@
         
         bgImg.image = [UIImage imageNamed:@"list_3"];
     }
-    
+    nameLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+
     UIImageView *checkImg = (UIImageView *)[cell viewWithTag:2];
     
     int selectNO = [[[NSUserDefaults standardUserDefaults] objectForKey:@"musicrepeat"] intValue];

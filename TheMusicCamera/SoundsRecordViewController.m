@@ -34,6 +34,9 @@
     dateString = [dateFormat stringFromDate:today];
     
     dateString = [NSString stringWithFormat:@"%@-%d",dateString,[dataManager selectMusicDate]];
+    
+    dateString = [dateString stringByReplacingOccurrencesOfString:@"-" withString:@"."];
+    
     NSLog(@"date: %@", dateString);
 
 }
@@ -50,8 +53,14 @@
     _isRecording = NO;
     _isPlaying = NO;
     
-    musicNameLabel.text = dateString;
-    
+//    musicNameLabel.text = dateString;
+    musicNameText.text = dateString;
+    musicNameText.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+
+    UITapGestureRecognizer* showTap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showGes)];
+    showTap.numberOfTapsRequired=1;
+    [self.view addGestureRecognizer:showTap];
+
     [self navgationImage:@"header_recording"];
     
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
@@ -78,7 +87,7 @@
     recorder = [[AVAudioRecorder alloc] initWithURL:recordedFile settings:nil error:nil];
     [recorder prepareToRecord];
 
-    timeLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:20];
+    timeLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:35];
 
     
 
@@ -90,6 +99,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)showGes
+{
+    [musicNameText resignFirstResponder];
+}
+
 - (void)backBtuuon
 {
     
@@ -99,8 +113,8 @@
 - (void)saveBtuuon
 {
     Music *music = [[Music alloc]init];
-    music.name = dateString;
-    music.path = [NSString stringWithFormat:@"%@.caf",dateString];
+    music.name = musicNameText.text;
+    music.path = [NSString stringWithFormat:@"%@.caf",musicNameText.text];
     [dataManager insertMusicInfo:music];
 
     [self.navigationController popViewControllerAnimated:YES];
@@ -122,6 +136,7 @@
             deleteBtn.hidden = NO;
             saveBtn.hidden = NO;
             [timer invalidate];
+            musicNameText.enabled = YES;
 
         }
         else
@@ -151,7 +166,7 @@
 
         intTime = 0;
         
-
+        musicNameText.enabled = NO;
         
         NSTimeInterval timeInterval =1.0 ;
         //定时器
@@ -183,6 +198,7 @@
         deleteBtn.hidden = NO;
         saveBtn.hidden = NO;
         [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_play"] forState:UIControlStateNormal];
+        musicNameText.enabled = YES;
 
     }
     timeImage.frame = CGRectMake(timeImage.frame.origin.x, timeImage.frame.origin.y-21, timeImage.frame.size.width, 481);

@@ -468,10 +468,17 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00/10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEw-YJ-pms">
                                 <rect key="frame" x="60" y="361" width="214" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="1" green="0.75161037121882224" blue="0.4655347969826269" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2013" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5W8-W8-iPQ">
+                                <rect key="frame" x="32" y="68" width="257" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.71009675090000002" blue="0.41348278910000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -484,6 +491,7 @@
                     <connections>
                         <outlet property="deleteBtn" destination="pMX-9f-a9k" id="4C0-hX-t9e"/>
                         <outlet property="musicNameLabel" destination="OCK-iq-MK9" id="3jZ-d2-gXo"/>
+                        <outlet property="musicNameText" destination="5W8-W8-iPQ" id="kcF-Yq-udj"/>
                         <outlet property="recordBtn" destination="NtW-Mm-1SN" id="yJ7-FE-4pH"/>
                         <outlet property="timeImage" destination="bCA-ft-fIC" id="eE9-W4-p6j"/>
                         <outlet property="timeLabel" destination="zEw-YJ-pms" id="yuY-fC-jba"/>

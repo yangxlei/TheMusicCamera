@@ -58,7 +58,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     musicLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
-    
+    musicLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 }
 
 - (void)didReceiveMemoryWarning
