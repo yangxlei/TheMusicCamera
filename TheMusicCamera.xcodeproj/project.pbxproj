@@ -137,8 +137,6 @@
 		950C7EC51865E3370021FE5D /* MQCameraFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7EC41865E3370021FE5D /* MQCameraFocusView.m */; };
 		950C7EC81865E3870021FE5D /* MQUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7EC71865E3870021FE5D /* MQUIImage.m */; };
 		950C7ECB1865E3F60021FE5D /* ColorTrackingCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7ECA1865E3F60021FE5D /* ColorTrackingCamera.m */; };
-		950C7ED11865E4F40021FE5D /* CropImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7ED01865E4F40021FE5D /* CropImageController.m */; };
-		950C7ED31865E5090021FE5D /* cropimage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950C7ED21865E5090021FE5D /* cropimage.storyboard */; };
 		950C7ED71865E5D40021FE5D /* photo_cut_bottombar_select_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 950C7ED41865E5D40021FE5D /* photo_cut_bottombar_select_btn@2x.png */; };
 		950C7ED81865E5D40021FE5D /* photo_cut_bottombar_cancle_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 950C7ED51865E5D40021FE5D /* photo_cut_bottombar_cancle_btn@2x.png */; };
 		950C7ED91865E5D40021FE5D /* photo_cut_bottombar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 950C7ED61865E5D40021FE5D /* photo_cut_bottombar_bg@2x.png */; };
@@ -347,9 +345,6 @@
 		950C7EC71865E3870021FE5D /* MQUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQUIImage.m; sourceTree = "<group>"; };
 		950C7EC91865E3F60021FE5D /* ColorTrackingCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTrackingCamera.h; sourceTree = "<group>"; };
 		950C7ECA1865E3F60021FE5D /* ColorTrackingCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTrackingCamera.m; sourceTree = "<group>"; };
-		950C7ECF1865E4F40021FE5D /* CropImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageController.h; sourceTree = "<group>"; };
-		950C7ED01865E4F40021FE5D /* CropImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageController.m; sourceTree = "<group>"; };
-		950C7ED21865E5090021FE5D /* cropimage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = cropimage.storyboard; sourceTree = "<group>"; };
 		950C7ED41865E5D40021FE5D /* photo_cut_bottombar_select_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_cut_bottombar_select_btn@2x.png"; sourceTree = "<group>"; };
 		950C7ED51865E5D40021FE5D /* photo_cut_bottombar_cancle_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_cut_bottombar_cancle_btn@2x.png"; sourceTree = "<group>"; };
 		950C7ED61865E5D40021FE5D /* photo_cut_bottombar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_cut_bottombar_bg@2x.png"; sourceTree = "<group>"; };
@@ -744,9 +739,6 @@
 				950C7EC11865E2C40021FE5D /* ProcessGLView.m */,
 				950C7EBD1865E25E0021FE5D /* ColorTrackingGLView.h */,
 				950C7EBE1865E25E0021FE5D /* ColorTrackingGLView.m */,
-				950C7ECF1865E4F40021FE5D /* CropImageController.h */,
-				950C7ED01865E4F40021FE5D /* CropImageController.m */,
-				950C7ED21865E5090021FE5D /* cropimage.storyboard */,
 			);
 			path = ColorTracking;
 			sourceTree = "<group>";
@@ -964,7 +956,6 @@
 				2E6409C31861EA4F0080E903 /* default03.wav in Resources */,
 				2EE5AF9D18608B4600A35754 /* button_camera_roll.png in Resources */,
 				2E44DAC7185CB0B900C5C1DC /* header_sound_re.png in Resources */,
-				950C7ED31865E5090021FE5D /* cropimage.storyboard in Resources */,
 				2E1EBB491867E5FE00F64A2E /* header_record_sound.png in Resources */,
 				356E6A85185AE23E002A1014 /* main_tab_setting_off.png in Resources */,
 				2E1EBB481867E5FE00F64A2E /* bg.png in Resources */,
@@ -1007,7 +998,6 @@
 				2E693629185DF7B5000C95F5 /* FMResultSet.m in Sources */,
 				35446804185AD419005AB0D9 /* ViewController.m in Sources */,
 				2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */,
-				950C7ED11865E4F40021FE5D /* CropImageController.m in Sources */,
 				950C7EF71865F3780021FE5D /* TileBG.m in Sources */,
 				2ED5B1DB186893BC007075EC /* StationViewController.m in Sources */,
 				2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */,

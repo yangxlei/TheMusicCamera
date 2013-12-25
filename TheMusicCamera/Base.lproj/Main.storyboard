@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -35,19 +35,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6f-Se-LzZ">
-                                <rect key="frame" x="89" y="262" width="46" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-pB-BCU">
+                                <rect key="frame" x="0.0" y="517" width="320" height="53"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo_cut_bottombar_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-M9-K6t">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDO-rL-yBE">
+                                        <rect key="frame" x="34" y="2" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" backgroundImage="photo_cut_bottombar_cancle_btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelClick:" destination="tUg-MK-pYY" eventType="touchUpInside" id="BEK-Ww-QXy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUg-G1-rhI">
+                                        <rect key="frame" x="232" y="2" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" backgroundImage="photo_cut_bottombar_select_btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="useClick:" destination="tUg-MK-pYY" eventType="touchUpInside" id="lEf-qa-Nzy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="uDr-9G-xNo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9p-Ef-mkc" customClass="MQCropImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="517"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonEvent:" destination="tUg-MK-pYY" eventType="touchUpInside" id="b6z-KY-Z2g"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p9p-Ef-mkc" firstAttribute="top" secondItem="L8Y-JD-WDc" secondAttribute="top" id="AtT-yI-eTv"/>
+                            <constraint firstItem="p9p-Ef-mkc" firstAttribute="leading" secondItem="J7q-pB-BCU" secondAttribute="leading" id="Kf5-Eo-0kr"/>
+                            <constraint firstItem="p9p-Ef-mkc" firstAttribute="trailing" secondItem="J7q-pB-BCU" secondAttribute="trailing" id="aJo-Dx-SvF"/>
+                            <constraint firstAttribute="bottom" secondItem="J7q-pB-BCU" secondAttribute="bottom" constant="-2" id="eGP-QU-lyy"/>
+                            <constraint firstItem="p9p-Ef-mkc" firstAttribute="leading" secondItem="L8Y-JD-WDc" secondAttribute="leading" id="rfO-Ym-465"/>
+                            <constraint firstAttribute="bottom" secondItem="p9p-Ef-mkc" secondAttribute="bottom" constant="51" id="tqQ-b5-cXa"/>
+                            <constraint firstAttribute="trailing" secondItem="p9p-Ef-mkc" secondAttribute="trailing" id="wfS-8m-bEh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cropImageView" destination="p9p-Ef-mkc" id="5sA-4t-GWg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3D-cp-apm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -753,6 +796,9 @@
         <image name="check.png" width="41" height="36"/>
         <image name="info.png" width="521" height="407"/>
         <image name="list_2.png" width="606" height="81"/>
+        <image name="photo_cut_bottombar_bg.png" width="3" height="71"/>
+        <image name="photo_cut_bottombar_cancle_btn.png" width="50" height="50"/>
+        <image name="photo_cut_bottombar_select_btn.png" width="50" height="50"/>
         <image name="record_sound_setting.png" width="608" height="72"/>
         <image name="recorded_sound.png" width="160" height="29"/>
         <image name="recording_bg.png" width="640" height="1136"/>
