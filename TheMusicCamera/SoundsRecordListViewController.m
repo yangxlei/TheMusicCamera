@@ -36,7 +36,7 @@
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *editBtn = [self navgationButton:@"button_edit" andFrame:CGRectMake(260, 10, 52, 28)];
-    [editBtn addTarget:self action:@selector(editBtuuon) forControlEvents:UIControlEventTouchUpInside];
+    [editBtn addTarget:self action:@selector(editBtuuon:) forControlEvents:UIControlEventTouchUpInside];
 
     dataManager = [DataManager sharedManager];
 
@@ -48,6 +48,9 @@
 
     [tableViews reloadData];
 
+    isEdit = NO;
+    selectIndex = -1;
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -58,8 +61,19 @@
     
 }
 
-- (void)editBtuuon
+- (void)editBtuuon:(UIButton *)button
 {
+    if (isEdit) {
+        isEdit = NO;
+        [button setBackgroundImage:[UIImage imageNamed:@"button_edit"] forState:UIControlStateNormal];
+        selectIndex = -1;
+    }
+    else
+    {
+        isEdit = YES;
+        [button setBackgroundImage:[UIImage imageNamed:@"button_finish"] forState:UIControlStateNormal];
+    }
+    [tableViews reloadData];
 
 }
 
@@ -111,17 +125,28 @@
         bgImg.image = [UIImage imageNamed:@"list_2"];
     }
     
+    
+    UIImageView *editImg = (UIImageView *)[cell viewWithTag:4];
+    if (!isEdit) {
+        editImg.hidden = YES;
+    }
+    else
+    {
+        editImg.hidden = NO;
+    }
+    
     UIImageView *checkImg = (UIImageView *)[cell viewWithTag:2];
     
-    int selectNO = [[[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"] intValue];
-    if (selectNO==music.ID) {
+    if (selectIndex==indexPath.row) {
         checkImg.hidden = NO;
+        editImg.image = [UIImage imageNamed:@"check_mark_dot"];
     }
     else
     {
         checkImg.hidden = YES;
+        editImg.image = [UIImage imageNamed:@"check_mark_blank"];
     }
-    
+
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
     nameLabel.text = [NSString stringWithFormat:@"%@",music.name];
     nameLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
@@ -139,6 +164,15 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    if (isEdit) {
+        selectIndex = indexPath.row;
+        [tableViews reloadData];
+    }else
+    {
+        selectIndex = -1;
+    }
+    
+
 //    Music *music = (Music *)[dataManager.musicList objectAtIndex:indexPath.row];
 //    
 //    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:music.ID] forKey:@"musicID"];

@@ -14,6 +14,8 @@
     __weak IBOutlet UITableView *tableViews;
     DataManager *dataManager;
 
+    BOOL isEdit;
+    int selectIndex;
 }
 
 @end

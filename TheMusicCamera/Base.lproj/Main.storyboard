@@ -580,7 +580,7 @@
                                                     <rect key="frame" x="20" y="3" width="232" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.71009675090000002" blue="0.41348278910000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.65098039220000004" green="0.4549019608" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -637,13 +637,17 @@
                                                     <rect key="frame" x="260" y="10" width="20" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="232" translatesAutoresizingMaskIntoConstraints="NO" id="QSb-VV-E6T">
-                                                    <rect key="frame" x="20" y="3" width="232" height="33"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="216" translatesAutoresizingMaskIntoConstraints="NO" id="QSb-VV-E6T">
+                                                    <rect key="frame" x="36" y="3" width="216" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.71009675090000002" blue="0.41348278910000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.65098039220000004" green="0.4549019608" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check_mark_blank.png" translatesAutoresizingMaskIntoConstraints="NO" id="arm-jv-rEH">
+                                                    <rect key="frame" x="13" y="11" width="15" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -696,7 +700,7 @@
                                                     <rect key="frame" x="20" y="3" width="232" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.71009675090000002" blue="0.41348278910000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.65098039215686276" green="0.45490196078431372" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -765,7 +769,7 @@
                                     <constraint firstAttribute="height" constant="35" id="WGH-bf-Ddc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.96952726403061229" green="0.72562318602261655" blue="0.36041691214651284" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.65098039220000004" green="0.4549019608" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -794,6 +798,7 @@
     <resources>
         <image name="bg_1136.png" width="640" height="1136"/>
         <image name="check.png" width="41" height="36"/>
+        <image name="check_mark_blank.png" width="30" height="30"/>
         <image name="info.png" width="521" height="407"/>
         <image name="list_2.png" width="606" height="81"/>
         <image name="photo_cut_bottombar_bg.png" width="3" height="71"/>
