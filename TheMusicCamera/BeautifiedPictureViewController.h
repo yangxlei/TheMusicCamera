@@ -32,4 +32,6 @@ typedef struct {
 - (UIImage *)saveImageFromGLView;
 
 - (void)beginEdit:(SelectType)type;
+
+-(IBAction) changeSize:(id)sender;
 @end

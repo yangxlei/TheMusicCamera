@@ -15,6 +15,7 @@
 #import <CoreImage/CoreImage.h>
 #import <math.h>
 #import "objc/message.h"
+#import "WaterImageController.h"
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
@@ -116,6 +117,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
   
   [[ProcessGLView sharedProcessGLView] removeFromSuperview];
   [cropImageView setCropImageSource:resultImg];
+  
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"water_image" bundle:nil];
+  WaterImageController* water = [storyboard instantiateInitialViewController];
+  [self.navigationController pushViewController:water animated:YES];
+  [water setSourceImage:resultImg];
 }
 
 
@@ -297,5 +303,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
   [[ProcessGLView sharedProcessGLView] presentFramebuffer];
 }
 
+-(IBAction) changeSize:(id)sender
+{
+  CGRect rect = cropImageView.cropPatView.frame;
+  rect = CGRectMake(10, 30, 300, 400);
+  cropImageView.cropPatView.frame = rect;
+  [cropImageView setCropSizeInScreen:rect];
+}
 
 @end

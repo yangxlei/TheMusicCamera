@@ -176,6 +176,8 @@
 		9571A44B185CA0BC003D3285 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44A185CA0BC003D3285 /* CoreMedia.framework */; };
 		9571A44D185CA0C4003D3285 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44C185CA0C4003D3285 /* CoreVideo.framework */; };
 		9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44E185CA0CD003D3285 /* QuartzCore.framework */; };
+		95916A39186C847A001086A1 /* WaterImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95916A38186C847A001086A1 /* WaterImageController.m */; };
+		95916A3B186C8489001086A1 /* water_image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95916A3A186C8489001086A1 /* water_image.storyboard */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -402,6 +404,9 @@
 		9571A44A185CA0BC003D3285 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		9571A44C185CA0C4003D3285 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9571A44E185CA0CD003D3285 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		95916A37186C847A001086A1 /* WaterImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterImageController.h; sourceTree = "<group>"; };
+		95916A38186C847A001086A1 /* WaterImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterImageController.m; sourceTree = "<group>"; };
+		95916A3A186C8489001086A1 /* water_image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = water_image.storyboard; sourceTree = "<group>"; };
 		95C1172318633EF7008391BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -817,6 +822,9 @@
 				9571A20C185C917A003D3285 /* camera.storyboard */,
 				9571A224185C9C3A003D3285 /* CameraController.h */,
 				9571A225185C9C3A003D3285 /* CameraController.m */,
+				95916A37186C847A001086A1 /* WaterImageController.h */,
+				95916A38186C847A001086A1 /* WaterImageController.m */,
+				95916A3A186C8489001086A1 /* water_image.storyboard */,
 			);
 			path = camera;
 			sourceTree = "<group>";
@@ -940,6 +948,7 @@
 				9571A21F185C975D003D3285 /* shot_flash_off.png in Resources */,
 				2E6409C11861EA4F0080E903 /* default01.wav in Resources */,
 				2EB0A345185C585B00C226DF /* share_sns_twitter.png in Resources */,
+				95916A3B186C8489001086A1 /* water_image.storyboard in Resources */,
 				2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */,
 				9571A219185C975D003D3285 /* shoot_camera_button_1.png in Resources */,
 				2ED5B1D61868922B007075EC /* setting_info_text.png in Resources */,
@@ -1032,6 +1041,7 @@
 				356E6A6F185ADE76002A1014 /* PhontoViewController.m in Sources */,
 				2E693627185DF7B5000C95F5 /* FMDatabasePool.m in Sources */,
 				950C7EC81865E3870021FE5D /* MQUIImage.m in Sources */,
+				95916A39186C847A001086A1 /* WaterImageController.m in Sources */,
 				356E6A65185AD973002A1014 /* GTTabBar.m in Sources */,
 				950C7EC51865E3370021FE5D /* MQCameraFocusView.m in Sources */,
 				3519A02C186C31F400FEC752 /* MBProgressHUD.m in Sources */,
