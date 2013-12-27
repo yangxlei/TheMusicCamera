@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+@class DataManager;
+
 @interface CameraController : UIViewController<AVAudioPlayerDelegate>
 {
     AVAudioPlayer *avAudioPlayer;   //播放器player
     BOOL isPlay;
-
+    DataManager *dataManager;
 }
 
 @property (nonatomic, strong) IBOutlet UIButton* backBtn;

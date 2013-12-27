@@ -8,6 +8,8 @@
 
 #import "CameraController.h"
 #import <ImageIO/ImageIO.h>
+#import "DataManager.h"
+//#import <MediaPlayer/MediaPlayer.h>
 
 @interface CameraController ()
 {
@@ -41,7 +43,8 @@
 {
     [super viewDidLoad];
   self.hidesBottomBarWhenPushed = YES;
-  
+    dataManager = [DataManager sharedManager];
+
   [self initialize];
   
   _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
@@ -51,6 +54,11 @@
   
   [self.cameraView.layer addSublayer:_preview];
   [_session startRunning];
+    
+    
+//    MPMusicPlayerController *mpc = [MPMusicPlayerController applicationMusicPlayer];
+//    mpc.volume = 0;  //0.0~1.0
+
 }
 
 - (void) initialize
@@ -214,6 +222,8 @@
 
 -(IBAction)takePhoto:(id)sender
 {
+    
+
   [self addHollowCloseToView:self.cameraView];
   
   //get connection
@@ -269,14 +279,38 @@
   [view.layer addAnimation:animation forKey:@"HollowClose"];
 }
 
-- (IBAction)playMusic:(id)sender {
-    NSString *string = [[NSBundle mainBundle] pathForResource:@"What Is Dancing" ofType:@"mp3"];
-    //把音频文件转换成url格式
-    NSURL *url = [NSURL fileURLWithPath:string];
-    //初始化音频类 并且添加播放文件
-    avAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    avAudioPlayer.delegate = self;
-    isPlay = YES;
+- (IBAction)playMusic:(id)sender
+{
+//    [[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"]
+//    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:music.ID] forKey:@"musicID"];
+
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];//静音下可以播放
+        [[AVAudioSession sharedInstance] setActive: YES error:nil];
+        
+        NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
+        int selectNO = [[[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"] intValue];
+        NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@", savePath,[dataManager selectMusicWithID:selectNO]];
+        //    recordedFile = [NSURL fileURLWithPath:recorderFilePath];
+        
+        //把音频文件转换成url格式
+        NSURL *url = [NSURL fileURLWithPath:recorderFilePath];
+        //初始化音频类 并且添加播放文件
+        avAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        avAudioPlayer.delegate = self;
+        isPlay = YES;
+        avAudioPlayer.delegate = self;
+        avAudioPlayer.volume=1.0;//0.0~1.0之间
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicrepeat"] intValue]==1) {
+            avAudioPlayer.numberOfLoops = -1;
+        }
+        else
+        {
+            avAudioPlayer.numberOfLoops = 0;
+        }
+        
+        [avAudioPlayer play];
+    }
 
 }
 
@@ -284,6 +318,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    
+    
 }
 
 @end

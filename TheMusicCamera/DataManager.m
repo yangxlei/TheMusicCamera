@@ -109,6 +109,12 @@
     [dBAccress deleteMusicWithID:musicID];
 }
 
+- (NSString *)selectMusicWithID:(int)musicID
+{
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    return [dBAccress selectMusicWithID:musicID];
+}
+
 - (void)deleteMusicWithName:(NSString *)musicName
 {
     DBAccress *dBAccress=[[DBAccress alloc] init];

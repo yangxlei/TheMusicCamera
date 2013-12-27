@@ -138,6 +138,7 @@
 		356E6A87185AE23E002A1014 /* main_tab_sound_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 356E6A7E185AE23E002A1014 /* main_tab_sound_off.png */; };
 		356E6A88185AE23E002A1014 /* main_tab_sound_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 356E6A7F185AE23E002A1014 /* main_tab_sound_on.png */; };
 		356E6A8E185B15FC002A1014 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E6A8D185B15FB002A1014 /* DataManager.m */; };
+		359C857B186D6FE6005FEC11 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359C857A186D6FE6005FEC11 /* MediaPlayer.framework */; };
 		35ADB3D91861B9DF009647C8 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ADB3D81861B9DF009647C8 /* Music.m */; };
 		950C7EBF1865E25E0021FE5D /* ColorTrackingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7EBE1865E25E0021FE5D /* ColorTrackingGLView.m */; };
 		950C7EC21865E2C40021FE5D /* ProcessGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7EC11865E2C40021FE5D /* ProcessGLView.m */; };
@@ -351,6 +352,7 @@
 		356E6A89185AFBF3002A1014 /* Public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
 		356E6A8C185B15FB002A1014 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		356E6A8D185B15FB002A1014 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		359C857A186D6FE6005FEC11 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		35ADB3D71861B9DF009647C8 /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
 		35ADB3D81861B9DF009647C8 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Music.m; sourceTree = "<group>"; };
 		950C7EBD1865E25E0021FE5D /* ColorTrackingGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTrackingGLView.h; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359C857B186D6FE6005FEC11 /* MediaPlayer.framework in Frameworks */,
 				3519A028186C314900FEC752 /* StoreKit.framework in Frameworks */,
 				2ED5B1EA1869DC54007075EC /* MessageUI.framework in Frameworks */,
 				356207C81869570C0091737A /* Accounts.framework in Frameworks */,
@@ -624,6 +627,7 @@
 		354467EC185AD419005AB0D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				359C857A186D6FE6005FEC11 /* MediaPlayer.framework */,
 				3519A027186C314900FEC752 /* StoreKit.framework */,
 				2ED5B1E91869DC54007075EC /* MessageUI.framework */,
 				356207C71869570C0091737A /* Accounts.framework */,
@@ -1143,8 +1147,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: LI KE (PDSSUVSVXA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1183,8 +1187,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: LI KE (PDSSUVSVXA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
