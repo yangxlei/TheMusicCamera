@@ -32,6 +32,7 @@
 - (void)deleteMusicWithID:(int)musicID;
 - (void)deleteMusicWithName:(NSString *)musicName;
 - (int)selectMusicDate;
+- (NSString *)selectMusicWithID:(int)musicID;
 
 + (DataManager *) sharedManager;
 

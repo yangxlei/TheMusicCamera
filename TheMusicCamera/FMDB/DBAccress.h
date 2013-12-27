@@ -23,6 +23,7 @@
 - (void) insertMusicInfo:(Music*)music;
 - (void)deleteMusicWithID:(int)musicID;
 - (void)deleteMusicWithName:(NSString *)musicName;
+- (NSString *)selectMusicWithID:(int)musicID;
 
 /////////////////////////////////////////////
 

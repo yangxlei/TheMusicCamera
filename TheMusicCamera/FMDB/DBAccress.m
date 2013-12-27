@@ -127,6 +127,22 @@
     [self closeDatabase];
 }
 
+- (NSString *)selectMusicWithID:(int)musicID
+{
+    [self openDatabase];
+    NSString *sql = [NSString stringWithFormat:@"select path from musicList where id=%d",musicID];
+    
+    NSString *name ;
+    FMResultSet *rs = [db executeQuery:sql];
+    
+    while ([rs next]) {
+        name = [rs stringForColumnIndex:0];
+    }
+    
+    [self closeDatabase];
+    return name;
+}
+
 - (void)deleteMusicWithName:(NSString *)musicName
 {
     [self openDatabase];
@@ -152,6 +168,7 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSString *dateString = [dateFormat stringFromDate:today];
+    dateString = [dateString stringByReplacingOccurrencesOfString:@"-" withString:@"."];
 
     NSString *sql = [NSString stringWithFormat:@"select id,name,path,defaultValue from musicList where name like '%@%%'",dateString];
 

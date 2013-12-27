@@ -141,16 +141,20 @@
         }
         else
         {
-            NSError *playerError;
             
-            player = [[AVAudioPlayer alloc] initWithContentsOfURL:recordedFile error:&playerError];
+            AVAudioSession *session = [AVAudioSession sharedInstance];
+            NSError *sessionError;
+            [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
+            
+            player = [[AVAudioPlayer alloc] initWithContentsOfURL:recordedFile error:&sessionError];
             
             if (player == nil)
             {
-                NSLog(@"ERror creating player: %@", [playerError description]);
+                NSLog(@"ERror creating player: %@", [sessionError description]);
             }
             player.delegate = self;
-            
+            player.volume=1.0;//0.0~1.0之间
+
             [player play];
 
         }
@@ -232,6 +236,8 @@
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
 //    [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
+    
+    
 }
 
 @end

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013年 songl. All rights reserved.
 //
 
+//http://blog.csdn.net/ryantang03/article/details/8468852图片剪裁地址
+
 #import "AppDelegate.h"
 
 
