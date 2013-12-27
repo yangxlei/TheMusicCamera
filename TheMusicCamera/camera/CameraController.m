@@ -10,6 +10,8 @@
 #import <ImageIO/ImageIO.h>
 #import "DataManager.h"
 //#import <MediaPlayer/MediaPlayer.h>
+//UIImagePickerController * picker=[[UIImagePickerController alloc]init];
+//[picker takePicture];//他将会自动调用代理方法完成照片的拍摄；
 
 @interface CameraController ()
 {
@@ -58,6 +60,7 @@
     
 //    MPMusicPlayerController *mpc = [MPMusicPlayerController applicationMusicPlayer];
 //    mpc.volume = 0;  //0.0~1.0
+    ///////////////////磊磊上面是我加的
 
 }
 
@@ -222,8 +225,14 @@
 
 -(IBAction)takePhoto:(id)sender
 {
+///////////////////
+//    if([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera] )
+//    {
+//        UIImagePickerController * picker=[[UIImagePickerController alloc]init];
+//        [picker takePicture];//他将会自动调用代理方法完成照片的拍摄；
+//    }
+///////////////////磊磊上面是我加的
     
-
   [self addHollowCloseToView:self.cameraView];
   
   //get connection
