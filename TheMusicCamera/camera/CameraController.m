@@ -57,6 +57,18 @@
   [self.cameraView.layer addSublayer:_preview];
   [_session startRunning];
     
+    _musicBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicstation"] intValue]==1) {
+        _musicBtn.frame = CGRectMake(20, self.view.frame.size.height-150, 44, 44);
+    }
+    else
+    {
+        _musicBtn.frame = CGRectMake(self.view.frame.size.width-64, self.view.frame.size.height-150, 44, 44);
+    }
+    [_musicBtn setBackgroundImage:[UIImage imageNamed:@"shoot_sound_button"] forState:UIControlStateNormal];
+    [_musicBtn addTarget:self action:@selector(playMusic:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_musicBtn];
     
 //    MPMusicPlayerController *mpc = [MPMusicPlayerController applicationMusicPlayer];
 //    mpc.volume = 0;  //0.0~1.0
@@ -233,6 +245,9 @@
 //    }
 ///////////////////磊磊上面是我加的
     
+    [avAudioPlayer stop];
+    [_musicBtn setEnabled:NO];
+
   [self addHollowCloseToView:self.cameraView];
   
   //get connection

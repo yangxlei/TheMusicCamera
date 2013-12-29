@@ -24,6 +24,7 @@
 @property (nonatomic, strong) IBOutlet UIButton* sizeBtn;
 @property (nonatomic, strong) IBOutlet UIButton* cameraBtn;
 @property (nonatomic, strong) IBOutlet UIView* cameraView;
+@property (weak, nonatomic) IBOutlet UIButton *musicBtn;
 
 -(IBAction) back:(id)sender;
 -(IBAction) flash:(id)sender;
