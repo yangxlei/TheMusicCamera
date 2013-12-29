@@ -47,4 +47,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)leftBtn:(id)sender {
+    
+}
+
+- (IBAction)rightBtn:(id)sender {
+    
+}
 @end

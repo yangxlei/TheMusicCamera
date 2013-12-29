@@ -9,6 +9,7 @@
 #import "SoundsRecordListViewController.h"
 #import "DataManager.h"
 #import "Music.h"
+#import "CustomButton.h"
 
 @interface SoundsRecordListViewController ()
 
@@ -135,18 +136,33 @@
         editImg.hidden = NO;
     }
     
-    UIImageView *checkImg = (UIImageView *)[cell viewWithTag:2];
-    
+//    UIImageView *checkImg = (UIImageView *)[cell viewWithTag:2];
+//    
     if (selectIndex==indexPath.row) {
-        checkImg.hidden = NO;
+//        checkImg.hidden = NO;
         editImg.image = [UIImage imageNamed:@"check_mark_dot"];
     }
     else
     {
-        checkImg.hidden = YES;
+//        checkImg.hidden = YES;
         editImg.image = [UIImage imageNamed:@"check_mark_blank"];
     }
 
+    CustomButton *deleteBtn = (CustomButton *)[cell viewWithTag:2];
+    int listNO = indexPath.row+10;
+    NSLog(@"%d",listNO);
+
+    deleteBtn.listNo = indexPath.row+10;
+    [deleteBtn addTarget:self action:@selector(deleteBtn:) forControlEvents:UIControlEventTouchUpInside];
+    if (!isEdit) {
+        deleteBtn.hidden = YES;
+    }
+    else
+    {
+        deleteBtn.hidden = NO;
+    }
+
+    
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
     nameLabel.text = [NSString stringWithFormat:@"%@",music.name];
     nameLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
@@ -182,6 +198,19 @@
 //    
 //    [tableViews reloadData];
     
+    
+}
+
+- (void)deleteBtn:(CustomButton *)button
+{
+//tableViews deleteRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:<#(UITableViewRowAnimation)#>
+    Music *music = (Music *)[dataManager.musicList objectAtIndex:button.listNo-10];
+    [dataManager.musicList removeObjectAtIndex:button.listNo-10];
+    [dataManager deleteMusicWithID:music.ID];
+    
+    [dataManager getLoadRecordMusicList];
+
+    [tableViews reloadData];
     
 }
 
