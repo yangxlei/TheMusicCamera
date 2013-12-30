@@ -16,6 +16,7 @@
 @interface ShareViewController : UIViewController<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
 {
     SLComposeViewController *slComposerSheet;
+    IBOutlet UIImageView *shareImage;
 
 }
 

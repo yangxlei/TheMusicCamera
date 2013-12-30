@@ -45,45 +45,80 @@
 - (void)topBtuuon
 {
     NSLog(@"topBtuuon");
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
 
 }
 
 - (IBAction)emailBtn:(id)sender {
+    Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
+    if (mailClass != nil)
+    {
+        if ([mailClass canSendMail])
+        {
+            [self displayComposerSheet];
+        }
+        else
+        {
+            [self launchMailAppOnDevice];
+        }
+    }
+    else
+    {
+        [self launchMailAppOnDevice];
+    }
+}
+
+-(void)displayComposerSheet
+{
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     
     picker.mailComposeDelegate =self;
     [picker setSubject:@"文件分享"];
     // Set up recipients
-    NSArray *toRecipients = [NSArray arrayWithObject:@"first@qq.com"];
-    NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@qq.com",@"third@qq.com", nil];
-    NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@qq.com"];
+    NSArray *toRecipients = [NSArray arrayWithObject:@"317295583@qq.com"];
     
     [picker setToRecipients:toRecipients];
-    [picker setCcRecipients:ccRecipients];
-    [picker setBccRecipients:bccRecipients];
-    //发送图片附件
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"IMG_0194" ofType:@"JPG"];
-    NSData *myData = [NSData dataWithContentsOfFile:path];
-    [picker addAttachmentData:nil mimeType:@"image/jpeg" fileName:@"IMG_0194.JPG"];
+    NSData *imageData = UIImageJPEGRepresentation(shareImage.image, 1);    // jpeg
     
-    NSString *emailBody =[NSString stringWithFormat:@"我分享了文件给您，地址是"] ;
+    [picker addAttachmentData:imageData mimeType:@"" fileName:@"image.jpg"];
+    
+    NSString *emailBody =[NSString stringWithFormat:@"我分享了图片给您"] ;
     [picker setMessageBody:emailBody isHTML:NO];
-//    [self presentModalViewController:picker animated:YES];
-    [self.navigationController presentViewController:picker animated:YES completion:nil];
-
+    [self presentViewController:picker animated:YES completion:nil];
+    
+}
+-(void)launchMailAppOnDevice
+{
+    NSString *recipients = @"mailto:first@example.com&subject=my email!";
+    //@"mailto:first@example.com?cc=second@example.com,third@example.com&subject=my email!";
+    NSString *body = @"&body=email body!";
+    
+    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
+    email = [email stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:email]];
 }
 
 - (IBAction)faceBookBtn:(id)sender {
-    //  if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-    //{
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
     slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     [slComposerSheet setInitialText:@"this is facebook"];
-    [slComposerSheet addImage:[UIImage imageNamed:@"ios6.jpg"]];
+    [slComposerSheet addImage:shareImage.image];
     [slComposerSheet addURL:[NSURL URLWithString:@"http://www.facebook.com/"]];
     [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
-    // }
-    
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请设置facebook账号信息，这里需要改"
+                                                        message:@""
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+
     [slComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
         NSLog(@"start completion block");
         NSString *output;
@@ -103,36 +138,45 @@
             [alert show];
         }
     }];
-    
 }
 
 - (IBAction)twitterBtn:(id)sender {
-    slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [slComposerSheet setInitialText:@"this is ios6 twitter"];
-    [slComposerSheet addImage:[UIImage imageNamed:@"ios6.jpg"]];
-    [slComposerSheet addURL:[NSURL URLWithString:@"http://www.twitter.com/"]];
-    [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
-    //        }
-
-    [slComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
-        NSLog(@"start completion block");
-        NSString *output;
-        switch (result) {
-            case SLComposeViewControllerResultCancelled:
-                output = @"Action Cancelled";
-                break;
-            case SLComposeViewControllerResultDone:
-                output = @"Post Successfull";
-                break;
-            default:
-                break;
-        }
-        if (result != SLComposeViewControllerResultCancelled)
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [slComposerSheet setInitialText:@"this is ios6 twitter"];
+        [slComposerSheet addImage:shareImage.image];
+        [slComposerSheet addURL:[NSURL URLWithString:@"http://www.twitter.com/"]];
+        [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
+    }
+        else
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Twitter Message" message:output delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请设置twitter账号信息，这里需要改"
+                                                            message:@""
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
             [alert show];
         }
-    }];
+        [slComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+            NSLog(@"start completion block");
+            NSString *output;
+            switch (result) {
+                case SLComposeViewControllerResultCancelled:
+                    output = @"Action Cancelled";
+                    break;
+                case SLComposeViewControllerResultDone:
+                    output = @"Post Successfull";
+                    break;
+                default:
+                    break;
+            }
+            if (result != SLComposeViewControllerResultCancelled)
+            {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Twitter Message" message:output delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [alert show];
+            }
+        }];
+    
 
 }
 
@@ -167,9 +211,20 @@
             [alert show];
         }
             break;
+        case MFMailComposeResultSent:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"E-mail have been Sent"
+                                                            message:@""
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+            break;
+
         default:
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"E-mail Not Sent"
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"E-mail  Not Sent"
                                                             message:@""
                                                            delegate:self
                                                   cancelButtonTitle:@"OK" 

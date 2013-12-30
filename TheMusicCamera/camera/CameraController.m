@@ -49,14 +49,6 @@
 
   [self initialize];
   
-  _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
-  int height = MIN(427, self.cameraView.frame.size.height);
-  _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
-  _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
-  
-  [self.cameraView.layer addSublayer:_preview];
-  [_session startRunning];
-    
     _musicBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicstation"] intValue]==1) {
@@ -111,6 +103,74 @@
   NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG,AVVideoCodecKey,nil];
   [_captureOutput setOutputSettings:outputSettings];
 	[_session addOutput:_captureOutput];
+    
+    _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
+    int height = MIN(427, self.cameraView.frame.size.height);
+    _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
+    _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    
+    [self.cameraView.layer addSublayer:_preview];
+    [_session startRunning];
+
+
+}
+
+- (void) initializeVideo
+{
+    cameraStop = NO;
+    NSError *error = nil;
+    
+    // Create the session
+    _session = [[AVCaptureSession alloc] init];
+    
+    // Configure the session to produce lower resolution video frames, if your
+    // processing algorithm can cope. We'll specify medium quality for the
+    // chosen device.
+    _session.sessionPreset = AVCaptureSessionPresetMedium;
+    
+    // Find a suitable AVCaptureDevice
+    AVCaptureDevice *device = [AVCaptureDevice
+                               defaultDeviceWithMediaType:AVMediaTypeVideo];//这里默认是使用后置摄像头，你可以改成前置摄像头
+    
+    // Create a device input with the device and add it to the session.
+    AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device
+                                                                        error:&error];
+    if (!input) {
+        // Handling the error appropriately.
+    }
+    [_session addInput:input];
+    
+    // Create a VideoDataOutput and add it to the session
+    AVCaptureVideoDataOutput *output = [[AVCaptureVideoDataOutput alloc] init];
+    [_session addOutput:output];
+    
+    // Configure your output.
+    dispatch_queue_t queue = dispatch_queue_create("myQueue", NULL);
+    [output setSampleBufferDelegate:self queue:queue];
+    
+    // Specify the pixel format
+    output.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:
+                            [NSNumber numberWithInt:kCVPixelFormatType_32BGRA], kCVPixelBufferPixelFormatTypeKey,
+                            [NSNumber numberWithInt: 320], (id)kCVPixelBufferWidthKey,
+                            [NSNumber numberWithInt: 240], (id)kCVPixelBufferHeightKey,
+                            nil];
+    
+    
+    _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
+    int height = MIN(427, self.cameraView.frame.size.height);
+    _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
+    _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    
+    [self.cameraView.layer addSublayer:_preview];
+    [_session startRunning];
+    // If you wish to cap the frame rate to a known value, such as 15 fps, set
+    // minFrameDuration.
+//    output.minFrameDuration = CMTimeMake(1, 15);
+    device.ActiveVideoMinFrameDuration = CMTimeMake(1, 15);
+
+    // Start the session running to start the flow of data
+    [_session startRunning];
+
 }
 
 -(IBAction) back:(id)sender
@@ -247,39 +307,48 @@
     
     [avAudioPlayer stop];
     [_musicBtn setEnabled:NO];
-
-  [self addHollowCloseToView:self.cameraView];
+    cameraStop = YES;
+    
+//  [self addHollowCloseToView:self.cameraView];
   
   //get connection
-  AVCaptureConnection *videoConnection = nil;
-  for (AVCaptureConnection *connection in _captureOutput.connections) {
-    for (AVCaptureInputPort *port in [connection inputPorts]) {
-      if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
-        videoConnection = connection;
-        break;
-      }
-    }
-    if (videoConnection) { break; }
-  }
+//  AVCaptureConnection *videoConnection = nil;
+//  for (AVCaptureConnection *connection in _captureOutput.connections) {
+//    for (AVCaptureInputPort *port in [connection inputPorts]) {
+//      if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
+//        videoConnection = connection;
+//        break;
+//      }
+//    }
+//    if (videoConnection) { break; }
+//  }
   
   //get UIImage
-  [_captureOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
-   ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
-//     _saveButton.hidden = NO;
-//     _cancelButton.hidden = NO;
-     [self addHollowCloseToView:self.cameraView];
-     [_session stopRunning];
-     [self addHollowOpenToView:self.cameraView];
-     CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
-     if (exifAttachments) {
-       // Do something with the attachments.
-     }
-     // Continue as appropriate.
-     NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
-     _finishImage = [[UIImage alloc] initWithData:imageData] ;
-     [self.cameraView.layer removeAllAnimations];
-     [cameraBtn setEnabled:NO];
-   }];
+//  [_captureOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
+//   ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
+////     _saveButton.hidden = NO;
+////     _cancelButton.hidden = NO;
+//     [self addHollowCloseToView:self.cameraView];
+//     [_session stopRunning];
+//     [self addHollowOpenToView:self.cameraView];
+//     CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+//     if (exifAttachments) {
+//       // Do something with the attachments.
+//     }
+//     // Continue as appropriate.
+//     NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
+//     _finishImage = [[UIImage alloc] initWithData:imageData] ;
+//     [self.cameraView.layer removeAllAnimations];
+//     [cameraBtn setEnabled:NO];
+//   }];
+    
+    
+//    UIGraphicsBeginImageContext(self.cameraView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
+//    [self.cameraView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
+//    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();//返回一个基于当前图形上下文的图片
+//    UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
+//    UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
+
 }
 
 - (void)addHollowOpenToView:(UIView *)view
@@ -348,6 +417,78 @@
 {
     
     
+}
+
+- (void)captureOutput:(AVCaptureOutput *)captureOutput
+didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
+       fromConnection:(AVCaptureConnection *)connection
+{
+    // Create a UIImage from the sample buffer data
+    if (cameraStop) {
+        UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
+        
+        int height ;
+        if (sizeBtn.isSelected)
+        {
+            [sizeBtn setSelected:NO];
+            height = 320;
+        }
+        else
+        {
+            [sizeBtn setSelected:YES];
+            height = MIN(427, self.cameraView.frame.size.height);
+        }
+        
+        _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height) /2, 320, height);
+
+
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);//然后将该图片保存到图片图
+//
+//        NSData *mData = UIImageJPEGRepresentation(image, 0.5);//这里的mData是NSData对象，后面的0.5代表生成的图片质量
+        [_session stopRunning];
+    }
+    
+}
+
+- (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer
+{
+    // Get a CMSampleBuffer's Core Video image buffer for the media data
+    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    // Lock the base address of the pixel buffer
+    CVPixelBufferLockBaseAddress(imageBuffer, 0);
+    
+    // Get the number of bytes per row for the pixel buffer
+    void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+    
+    // Get the number of bytes per row for the pixel buffer
+    size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
+    // Get the pixel buffer width and height
+    size_t width = CVPixelBufferGetWidth(imageBuffer);
+    size_t height = CVPixelBufferGetHeight(imageBuffer);
+    
+    // Create a device-dependent RGB color space
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    // Create a bitmap graphics context with the sample buffer data
+    CGContextRef context = CGBitmapContextCreate(baseAddress, width, height, 8,
+                                                 bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+    // Create a Quartz image from the pixel data in the bitmap graphics context
+    CGImageRef quartzImage = CGBitmapContextCreateImage(context);
+    // Unlock the pixel buffer
+    CVPixelBufferUnlockBaseAddress(imageBuffer,0);
+    
+    // Free up the context and color space
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    
+    // Create an image object from the Quartz image
+    //UIImage *image = [UIImage imageWithCGImage:quartzImage];
+    UIImage *image = [UIImage imageWithCGImage:quartzImage scale:1.0f orientation:UIImageOrientationRight];
+    
+    // Release the Quartz image
+    CGImageRelease(quartzImage);
+    
+    return (image);
 }
 
 @end

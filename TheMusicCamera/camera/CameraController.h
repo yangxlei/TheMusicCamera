@@ -11,11 +11,13 @@
 
 @class DataManager;
 
-@interface CameraController : UIViewController<AVAudioPlayerDelegate>
+@interface CameraController : UIViewController<AVAudioPlayerDelegate,AVCaptureVideoDataOutputSampleBufferDelegate>
 {
     AVAudioPlayer *avAudioPlayer;   //播放器player
     BOOL isPlay;
     DataManager *dataManager;
+    BOOL cameraStop;
+    
 }
 
 @property (nonatomic, strong) IBOutlet UIButton* backBtn;
