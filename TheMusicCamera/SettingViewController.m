@@ -10,6 +10,7 @@
 #import "DataManager.h"
 #import "StationViewController.h"
 #import "InfoViewController.h"
+#import "ExplanationViewController.h"
 
 @interface SettingViewController ()
 
@@ -49,6 +50,12 @@
 - (IBAction)infoBtn:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     InfoViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"InfoViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
+- (IBAction)explanationBtn:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ExplanationViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ExplanationViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 
 }

@@ -28,6 +28,14 @@
 		2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */; };
 		2E44DAC5185CAF7500C5C1DC /* header_sound_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */; };
 		2E44DAC7185CB0B900C5C1DC /* header_sound_re.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */; };
+		2E5C9F1A1871B21A00E6A680 /* ExplanationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C9F191871B21A00E6A680 /* ExplanationViewController.m */; };
+		2E5C9F201871B3DD00E6A680 /* howTo_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C9F1B1871B3DD00E6A680 /* howTo_01.png */; };
+		2E5C9F211871B3DD00E6A680 /* howTo_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C9F1C1871B3DD00E6A680 /* howTo_02.png */; };
+		2E5C9F221871B3DD00E6A680 /* howTo_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C9F1D1871B3DD00E6A680 /* howTo_03.png */; };
+		2E5C9F231871B3DD00E6A680 /* howTo_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C9F1E1871B3DD00E6A680 /* howTo_04.png */; };
+		2E5C9F241871B3DD00E6A680 /* info_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C9F1F1871B3DD00E6A680 /* info_close.png */; };
+		2E5C9F271871BC7F00E6A680 /* howTo_nest.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C9F251871BC7F00E6A680 /* howTo_nest.png */; };
+		2E5C9F281871BC7F00E6A680 /* howTo_previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C9F261871BC7F00E6A680 /* howTo_previous.png */; };
 		2E6409C11861EA4F0080E903 /* default01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409BC1861EA4F0080E903 /* default01.wav */; };
 		2E6409C21861EA4F0080E903 /* default02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409BD1861EA4F0080E903 /* default02.wav */; };
 		2E6409C31861EA4F0080E903 /* default03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409BE1861EA4F0080E903 /* default03.wav */; };
@@ -220,6 +228,15 @@
 		2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsRepeatViewController.m; sourceTree = "<group>"; };
 		2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_list.png; sourceTree = "<group>"; };
 		2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_sound_re.png; sourceTree = "<group>"; };
+		2E5C9F181871B21A00E6A680 /* ExplanationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplanationViewController.h; sourceTree = "<group>"; };
+		2E5C9F191871B21A00E6A680 /* ExplanationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplanationViewController.m; sourceTree = "<group>"; };
+		2E5C9F1B1871B3DD00E6A680 /* howTo_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howTo_01.png; sourceTree = "<group>"; };
+		2E5C9F1C1871B3DD00E6A680 /* howTo_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howTo_02.png; sourceTree = "<group>"; };
+		2E5C9F1D1871B3DD00E6A680 /* howTo_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howTo_03.png; sourceTree = "<group>"; };
+		2E5C9F1E1871B3DD00E6A680 /* howTo_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howTo_04.png; sourceTree = "<group>"; };
+		2E5C9F1F1871B3DD00E6A680 /* info_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_close.png; sourceTree = "<group>"; };
+		2E5C9F251871BC7F00E6A680 /* howTo_nest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howTo_nest.png; sourceTree = "<group>"; };
+		2E5C9F261871BC7F00E6A680 /* howTo_previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howTo_previous.png; sourceTree = "<group>"; };
 		2E6409BC1861EA4F0080E903 /* default01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = default01.wav; sourceTree = "<group>"; };
 		2E6409BD1861EA4F0080E903 /* default02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = default02.wav; sourceTree = "<group>"; };
 		2E6409BE1861EA4F0080E903 /* default03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = default03.wav; sourceTree = "<group>"; };
@@ -506,6 +523,13 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2E5C9F251871BC7F00E6A680 /* howTo_nest.png */,
+				2E5C9F261871BC7F00E6A680 /* howTo_previous.png */,
+				2E5C9F1B1871B3DD00E6A680 /* howTo_01.png */,
+				2E5C9F1C1871B3DD00E6A680 /* howTo_02.png */,
+				2E5C9F1D1871B3DD00E6A680 /* howTo_03.png */,
+				2E5C9F1E1871B3DD00E6A680 /* howTo_04.png */,
+				2E5C9F1F1871B3DD00E6A680 /* info_close.png */,
 				35563FF31871431700BA2BD6 /* list_middle_a.png */,
 				2E24856C1870287B0090634D /* btn_setting_left.png */,
 				2E24856D1870287B0090634D /* btn_setting_right.png */,
@@ -592,6 +616,8 @@
 				2ED5B1DA186893BC007075EC /* StationViewController.m */,
 				2ED5B1DC186893C7007075EC /* InfoViewController.h */,
 				2ED5B1DD186893C7007075EC /* InfoViewController.m */,
+				2E5C9F181871B21A00E6A680 /* ExplanationViewController.h */,
+				2E5C9F191871B21A00E6A680 /* ExplanationViewController.m */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -968,6 +994,7 @@
 				9571A221185C975D003D3285 /* shot_kirikae.png in Resources */,
 				35563FF41871431700BA2BD6 /* list_middle_a.png in Resources */,
 				2EB0A342185C585B00C226DF /* share_sns_facebook.png in Resources */,
+				2E5C9F201871B3DD00E6A680 /* howTo_01.png in Resources */,
 				2EE5AF96186077BA00A35754 /* sound_setting_now_list1.png in Resources */,
 				2E44DAAD185C9BB900C5C1DC /* recorded_sound.png in Resources */,
 				356E6A84185AE23E002A1014 /* main_tab_osusume_on.png in Resources */,
@@ -985,10 +1012,12 @@
 				2E6409C51861EA4F0080E903 /* music.sqlite in Resources */,
 				9571A222185C975D003D3285 /* shot_size_1_1.png in Resources */,
 				356E6A56185AD70F002A1014 /* Icon-Small-40.png in Resources */,
+				2E5C9F241871B3DD00E6A680 /* info_close.png in Resources */,
 				2ED5B1D218689105007075EC /* header_setting.png in Resources */,
 				356E6A59185AD70F002A1014 /* Icon-Small-50@2x.png in Resources */,
 				2E69360F185DE05B000C95F5 /* recording_bg.png in Resources */,
 				354467F8185AD419005AB0D9 /* InfoPlist.strings in Resources */,
+				2E5C9F211871B3DD00E6A680 /* howTo_02.png in Resources */,
 				2E6409CC1861F60D0080E903 /* list_2.png in Resources */,
 				2E44DABD185CA63600C5C1DC /* button_save.png in Resources */,
 				950C7ED81865E5D40021FE5D /* photo_cut_bottombar_cancle_btn@2x.png in Resources */,
@@ -1003,7 +1032,9 @@
 				356E6A51185AD70F002A1014 /* icon-60@2x.png in Resources */,
 				2E693613185DE2D5000C95F5 /* recording_play.png in Resources */,
 				352C015A1862D57B00C0C710 /* top_now_sound.png in Resources */,
+				2E5C9F271871BC7F00E6A680 /* howTo_nest.png in Resources */,
 				2E44DABC185CA63600C5C1DC /* button_back.png in Resources */,
+				2E5C9F281871BC7F00E6A680 /* howTo_previous.png in Resources */,
 				2ED5B1E81869C288007075EC /* A-OTF-Jun501Pro-Bold.otf in Resources */,
 				2E44DAAC185C9BB900C5C1DC /* record_sound_setting.png in Resources */,
 				2ED5B1E418689590007075EC /* header_sound_btn.png in Resources */,
@@ -1024,10 +1055,12 @@
 				2E6409C31861EA4F0080E903 /* default03.wav in Resources */,
 				2EE5AF9D18608B4600A35754 /* button_camera_roll.png in Resources */,
 				2E44DAC7185CB0B900C5C1DC /* header_sound_re.png in Resources */,
+				2E5C9F221871B3DD00E6A680 /* howTo_03.png in Resources */,
 				2E1EBB491867E5FE00F64A2E /* header_record_sound.png in Resources */,
 				356E6A85185AE23E002A1014 /* main_tab_setting_off.png in Resources */,
 				2E1EBB481867E5FE00F64A2E /* bg.png in Resources */,
 				356E6A55185AD70F002A1014 /* icon-76@2x.png in Resources */,
+				2E5C9F231871B3DD00E6A680 /* howTo_04.png in Resources */,
 				356E6A86185AE23E002A1014 /* main_tab_setting_on.png in Resources */,
 				2E6409CB1861F60D0080E903 /* list_1.png in Resources */,
 				356E6A54185AD70F002A1014 /* icon-76.png in Resources */,
@@ -1087,6 +1120,7 @@
 				950C7EE41865E6700021FE5D /* MQCropPatView.m in Sources */,
 				356E6A8E185B15FC002A1014 /* DataManager.m in Sources */,
 				950C7ECB1865E3F60021FE5D /* ColorTrackingCamera.m in Sources */,
+				2E5C9F1A1871B21A00E6A680 /* ExplanationViewController.m in Sources */,
 				9571A226185C9C3A003D3285 /* CameraController.m in Sources */,
 				356E6A66185AD973002A1014 /* GTTabBarController.m in Sources */,
 				2E1EBB431867E21D00F64A2E /* SoundsRecordListViewController.m in Sources */,
