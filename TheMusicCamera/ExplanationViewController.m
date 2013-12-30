@@ -38,7 +38,7 @@
         [scrollView addSubview:imageV];
     }
     scrollView.contentSize =CGSizeMake(320*4, 568);
-    
+    scrollView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +49,16 @@
 
 - (void)backBtuuon
 {
-
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)previousBtn:(id)sender
+{
+    
+}
+
+- (IBAction)nestBtn:(id)sender
+{
+    
+}
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExplanationViewController : UIViewController
+@interface ExplanationViewController : UIViewController<UIScrollViewDelegate>
 {
     __weak IBOutlet UIScrollView *scrollView;
 
