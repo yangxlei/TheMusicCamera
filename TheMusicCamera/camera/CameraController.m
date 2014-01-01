@@ -338,6 +338,7 @@
      // Continue as appropriate.
      NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
      _finishImage = [[UIImage alloc] initWithData:imageData] ;
+       UIImageWriteToSavedPhotosAlbum(_finishImage, nil, nil, nil);//然后将该图片保存到图片图
      [self.cameraView.layer removeAllAnimations];
      [cameraBtn setEnabled:NO];
    }];
