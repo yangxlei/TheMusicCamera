@@ -39,6 +39,8 @@
     }
     scrollView.contentSize =CGSizeMake(320*4, 568);
     scrollView.delegate = self;
+    currentPage = 0;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,11 +56,28 @@
 
 - (IBAction)previousBtn:(id)sender
 {
-    
+    if (currentPage>=1) {
+        currentPage--;
+        [scrollView setContentOffset:CGPointMake(320*currentPage, 0)];
+    }
 }
 
 - (IBAction)nestBtn:(id)sender
 {
+    if (currentPage<=2) {
+        currentPage++;
+        [scrollView setContentOffset:CGPointMake(320*currentPage, 0)];
+    }
+}
+
+- (void) scrollViewDidScroll:(UIScrollView *)sender {
+    // 得到每页宽度
+    CGFloat pageWidth = sender.frame.size.width;
+    // 根据当前的x坐标和页宽度计算出当前页数
+    currentPage = floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    NSLog(@"currentPage  %d",currentPage);
+    
     
 }
+
 @end

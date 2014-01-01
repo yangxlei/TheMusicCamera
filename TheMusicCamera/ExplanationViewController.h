@@ -11,7 +11,8 @@
 @interface ExplanationViewController : UIViewController<UIScrollViewDelegate>
 {
     __weak IBOutlet UIScrollView *scrollView;
-
+    int currentPage;
+    
 }
 
 @end

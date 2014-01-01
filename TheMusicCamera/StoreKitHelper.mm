@@ -8,16 +8,16 @@
 //
 //#import "StoreKitHelper.h"
 //
-//#import "RootViewController.h"
-//#import "AppController.h"
+////#import "RootViewController.h"
+////#import "AppController.h"
 //
-//#import "NSString+SBJSON.h"
-//#import "NSData+Base64.h"
-//#import "SBJson.h"
-//
-//#import "ASIHTTPRequest.h"
-//#import "ASIFormDataRequest.h"
-//#include "AppStorePayment.h"
+////#import "NSString+SBJSON.h"
+////#import "NSData+Base64.h"
+////#import "SBJson.h"
+////
+////#import "ASIHTTPRequest.h"
+////#import "ASIFormDataRequest.h"
+////#include "AppStorePayment.h"
 //
 //@implementation StoreKitHelper
 //
@@ -38,7 +38,6 @@
 //        //----监听购买结果
 //        [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
 //        m_transaction=Nil;
-////        [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
 //    }
 //    
 //    return self;
@@ -51,7 +50,6 @@
 //
 //-(BOOL)putStringToItunes:(NSData*)iapData {
 //    
-////    NSString *encodingStr = [[NSString alloc] initWithData:iapData encoding:nsstring]
 //    
 //   NSString *encodingStr =  [iapData base64EncodedString];
 //    
@@ -87,14 +85,6 @@
 //    NSString *results=[[NSString alloc]initWithBytes:[recivedData bytes] length:[recivedData length] encoding:NSUTF8StringEncoding];
 //        
 //    NSDictionary *dic = [results JSONValue];
-//        
-////    UIAlertView *alertView =  [[UIAlertView alloc] initWithTitle: @"encodingStr,dic"
-////                                                         message: [NSString stringWithFormat:@"%@ \n %@",encodingStr,dic]
-////                                                        delegate: nil
-////                                               cancelButtonTitle: @"OK"
-////                                               otherButtonTitles: nil];
-////    [alertView autorelease];
-////    [alertView show];
 //    
 //    if([[dic objectForKey:@"status"] intValue]==0){//注意，status=@"0" 是验证收据成功
 //        return true;
@@ -122,17 +112,17 @@
 //    SKPayment *payment = [SKPayment paymentWithProductIdentifier:product];
 //    [[SKPaymentQueue defaultQueue] addPayment:payment];
 //    
-//    RootViewController *rootViewControll = [AppController shareRootViewController];
-//    
-//    HUD = [[MBProgressHUD alloc] initWithView:rootViewControll.view];
-//	[rootViewControll.view addSubview:HUD];
+////    RootViewController *rootViewControll = [AppController shareRootViewController];
+////    
+////    HUD = [[MBProgressHUD alloc] initWithView:rootViewControll.view];
+////	[rootViewControll.view addSubview:HUD];
 //	
-//	HUD.delegate = self;
-//	HUD.labelText = @"Loading";
-//    HUD.dimBackground = YES;
-//	
-////	[HUD showWhileExecuting:@selector(myTask) onTarget:self withObject:nil animated:YES];
-//    [HUD show:YES];
+////	HUD.delegate = self;
+////	HUD.labelText = @"Loading";
+////    HUD.dimBackground = YES;
+////	
+//////	[HUD showWhileExecuting:@selector(myTask) onTarget:self withObject:nil animated:YES];
+////    [HUD show:YES];
 //
 //}
 //
@@ -332,7 +322,6 @@
 //        [alertView autorelease];
 //        [alertView show];
 //        [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
-////        CCMessageBox(langForKey("buyFail", sGlobal->localizeJson).c_str(), "");
 //    }
 //	[[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 //    m_transaction=transaction;
@@ -372,22 +361,11 @@
 //        NSLog(@"Product id: %@" , product.productIdentifier);
 //        NSLog(@"当前币种: %@" , [product.priceLocale localeIdentifier]);
 //        NSString *moneyType=[product.priceLocale localeIdentifier];
-//        const char *charMoneyType= [moneyType UTF8String];
-//        AppStorePayment::shared()->setMoneyType(charMoneyType);
+////        const char *charMoneyType= [moneyType UTF8String];
+////        AppStorePayment::shared()->setMoneyType(charMoneyType);
 //        
 //    }
-//    
-////    NSString *product;
-////    if ([[NSBundle mainBundle].bundleIdentifier isEqualToString:@"com.feiliu.worldfeiliu"]) {
-////        product = [NSString stringWithFormat:@"gold.g%d.%d",_buyType, _buyType];
-////    }
-////    else{
-////        product = [NSString stringWithFormat:@"gold.g%d",_buyType];
-////    }
-////    
-////    SKPayment *payment = [SKPayment paymentWithProductIdentifier:product];
-////    [[SKPaymentQueue defaultQueue] addPayment:payment];
-//    
+//
 //}
 //
 //#pragma mark -

@@ -111,6 +111,8 @@
     }
     else
     {
+        
+
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请设置facebook账号信息，这里需要改"
                                                         message:@""
                                                        delegate:self
@@ -156,6 +158,8 @@
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
             [alert show];
+//            [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"prefs:root=TWITTER"]];
+
         }
         [slComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
             NSLog(@"start completion block");
