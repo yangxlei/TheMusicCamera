@@ -309,38 +309,38 @@
     [_musicBtn setEnabled:NO];
     cameraStop = YES;
     
-//  [self addHollowCloseToView:self.cameraView];
+  [self addHollowCloseToView:self.cameraView];
   
   //get connection
-//  AVCaptureConnection *videoConnection = nil;
-//  for (AVCaptureConnection *connection in _captureOutput.connections) {
-//    for (AVCaptureInputPort *port in [connection inputPorts]) {
-//      if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
-//        videoConnection = connection;
-//        break;
-//      }
-//    }
-//    if (videoConnection) { break; }
-//  }
+  AVCaptureConnection *videoConnection = nil;
+  for (AVCaptureConnection *connection in _captureOutput.connections) {
+    for (AVCaptureInputPort *port in [connection inputPorts]) {
+      if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
+        videoConnection = connection;
+        break;
+      }
+    }
+    if (videoConnection) { break; }
+  }
   
   //get UIImage
-//  [_captureOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
-//   ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
-////     _saveButton.hidden = NO;
-////     _cancelButton.hidden = NO;
-//     [self addHollowCloseToView:self.cameraView];
-//     [_session stopRunning];
-//     [self addHollowOpenToView:self.cameraView];
-//     CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
-//     if (exifAttachments) {
-//       // Do something with the attachments.
-//     }
-//     // Continue as appropriate.
-//     NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
-//     _finishImage = [[UIImage alloc] initWithData:imageData] ;
-//     [self.cameraView.layer removeAllAnimations];
-//     [cameraBtn setEnabled:NO];
-//   }];
+  [_captureOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
+   ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
+//     _saveButton.hidden = NO;
+//     _cancelButton.hidden = NO;
+     [self addHollowCloseToView:self.cameraView];
+     [_session stopRunning];
+     [self addHollowOpenToView:self.cameraView];
+     CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+     if (exifAttachments) {
+       // Do something with the attachments.
+     }
+     // Continue as appropriate.
+     NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
+     _finishImage = [[UIImage alloc] initWithData:imageData] ;
+     [self.cameraView.layer removeAllAnimations];
+     [cameraBtn setEnabled:NO];
+   }];
     
     
 //    UIGraphicsBeginImageContext(self.cameraView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为

@@ -1,4 +1,4 @@
-////
+////http://blog.csdn.net/ch_soft/article/details/7702034
 ////  StoreKitHelper.h
 ////  MonsterWar
 ////
