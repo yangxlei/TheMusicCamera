@@ -158,15 +158,7 @@
         {
             [self.mainTabBarController hidesTabBar:YES animated:YES];
           
-          UIImagePickerController* picker = [[UIImagePickerController alloc] init];
-          picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-          picker.delegate = self;
-          [self presentModalViewController:picker animated:YES];
-//
-//            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//            BeautifiedPictureViewController *bpVC = [storyboard instantiateViewControllerWithIdentifier:@"BeautifiedPictureViewController"];
-//            [(UINavigationController*)viewController pushViewController:bpVC animated:YES];
-            
+          [bpVC begin];
         }
     }
 
@@ -180,68 +172,5 @@
 
 }
 
--(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-  [picker dismissModalViewControllerAnimated:YES];
-  
-  UIImage * image = [info valueForKey:UIImagePickerControllerOriginalImage];
-  
-  UIImage *tmpimage =
-  [[UIImage alloc] initWithCGImage:image.CGImage
-                             scale:image.scale
-                       orientation:image.imageOrientation];
-  
-  [ProcessGLView sharedProcessGLView].backVideo = 0;
-  [self processImageFrame:[tmpimage fixOrientation].CGImage];
-  
-  bpVC.videoFrameSize = videoFrameSize;
-  bpVC.frameTexture = videoFrameTexture;
-  [bpVC beginEdit:SelectRectangl];
-
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)processImageFrame:(CGImageRef)spriteImage;
-{
-  if (spriteImage && videoFrameTexture) {
-    glDeleteTextures(1, &videoFrameTexture);
-    videoFrameTexture = 0;
-    videoFrameSize = CGSizeZero;
-  }
-  videoFrameTexture = [[ProcessGLView sharedProcessGLView] setupTextureFromImageRef:spriteImage];
-  
-  
-  // 2
-  size_t width = CGImageGetWidth(spriteImage);
-  size_t height = CGImageGetHeight(spriteImage);
-  
-  if (width > 1024 || height > 1024) {
-    if (width > height) {
-      height = height*1024.0f/width;
-      width = 1024;
-    } else {
-      width = width*1024.0f/height;
-      height = 1024;
-    }
-  }
-  
-  videoFrameSize = CGSizeMake(width, height);
-  
-}
-
-
-- (void)cancelProcessPhoto
-{
-  
-}
-
-- (void)useProcessPhoto:(NSDictionary*)dic
-{
-  
-}
 
 @end

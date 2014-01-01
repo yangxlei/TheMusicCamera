@@ -42,7 +42,9 @@
   rect.size = sourceImg.size;
   imageview.frame = rect;
   imageview.image = sourceImg;
+  imageview.center = self.view.center;
   self.navigationController.navigationBarHidden = NO;
+  
 }
 
 -(void) viewWillDisappear:(BOOL)animated

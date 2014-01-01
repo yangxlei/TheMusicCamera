@@ -11,13 +11,11 @@
 #import "BeautifiedPictureViewController.h"
 @class DataManager;
 
-@interface ViewController : UIViewController<UINavigationControllerDelegate, GTTabBarControllerDelegate, UIImagePickerControllerDelegate>
+@interface ViewController : UIViewController<UINavigationControllerDelegate, GTTabBarControllerDelegate>
 {
     DataManager *dataManager;
     BOOL firstEntry;//第一次启动进入app
   
-  GLuint videoFrameTexture;
-  CGSize videoFrameSize;
   BeautifiedPictureViewController* bpVC;
 }
 @property (nonatomic, strong) GTTabBarController *mainTabBarController;

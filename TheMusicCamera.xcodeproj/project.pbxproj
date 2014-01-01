@@ -189,6 +189,13 @@
 		9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44E185CA0CD003D3285 /* QuartzCore.framework */; };
 		95916A39186C847A001086A1 /* WaterImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95916A38186C847A001086A1 /* WaterImageController.m */; };
 		95916A3B186C8489001086A1 /* water_image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95916A3A186C8489001086A1 /* water_image.storyboard */; };
+		95AF8432187481E500C11897 /* GKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF8424187481E500C11897 /* GKImageCropper.m */; };
+		95AF8433187481E500C11897 /* GKImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF8426187481E500C11897 /* GKImagePicker.m */; };
+		95AF8434187481E500C11897 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF8429187481E500C11897 /* UIImage+Alpha.m */; };
+		95AF8435187481E500C11897 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF842B187481E500C11897 /* UIImage+FixOrientation.m */; };
+		95AF8436187481E500C11897 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF842D187481E500C11897 /* UIImage+Resize.m */; };
+		95AF8437187481E500C11897 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF842F187481E500C11897 /* UIImage+Rotate.m */; };
+		95AF8438187481E500C11897 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF8431187481E500C11897 /* UIImage+RoundedCorner.m */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -431,6 +438,20 @@
 		95916A37186C847A001086A1 /* WaterImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterImageController.h; sourceTree = "<group>"; };
 		95916A38186C847A001086A1 /* WaterImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterImageController.m; sourceTree = "<group>"; };
 		95916A3A186C8489001086A1 /* water_image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = water_image.storyboard; sourceTree = "<group>"; };
+		95AF8423187481E500C11897 /* GKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKImageCropper.h; sourceTree = "<group>"; };
+		95AF8424187481E500C11897 /* GKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKImageCropper.m; sourceTree = "<group>"; };
+		95AF8425187481E500C11897 /* GKImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKImagePicker.h; sourceTree = "<group>"; };
+		95AF8426187481E500C11897 /* GKImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKImagePicker.m; sourceTree = "<group>"; };
+		95AF8428187481E500C11897 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		95AF8429187481E500C11897 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		95AF842A187481E500C11897 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		95AF842B187481E500C11897 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		95AF842C187481E500C11897 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		95AF842D187481E500C11897 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		95AF842E187481E500C11897 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		95AF842F187481E500C11897 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		95AF8430187481E500C11897 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		95AF8431187481E500C11897 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		95C1172318633EF7008391BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -806,6 +827,7 @@
 		950C7EB61865E19B0021FE5D /* ColorTracking */ = {
 			isa = PBXGroup;
 			children = (
+				95AF8422187481E500C11897 /* GKImagePicker */,
 				950C7EF51865F3780021FE5D /* TileBG.h */,
 				950C7EF61865F3780021FE5D /* TileBG.m */,
 				950C7EEF1865E9BD0021FE5D /* PictureRangeSelectView.h */,
@@ -865,6 +887,35 @@
 				95916A3A186C8489001086A1 /* water_image.storyboard */,
 			);
 			path = camera;
+			sourceTree = "<group>";
+		};
+		95AF8422187481E500C11897 /* GKImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				95AF8423187481E500C11897 /* GKImageCropper.h */,
+				95AF8424187481E500C11897 /* GKImageCropper.m */,
+				95AF8425187481E500C11897 /* GKImagePicker.h */,
+				95AF8426187481E500C11897 /* GKImagePicker.m */,
+				95AF8427187481E500C11897 /* UIImage+ */,
+			);
+			path = GKImagePicker;
+			sourceTree = "<group>";
+		};
+		95AF8427187481E500C11897 /* UIImage+ */ = {
+			isa = PBXGroup;
+			children = (
+				95AF8428187481E500C11897 /* UIImage+Alpha.h */,
+				95AF8429187481E500C11897 /* UIImage+Alpha.m */,
+				95AF842A187481E500C11897 /* UIImage+FixOrientation.h */,
+				95AF842B187481E500C11897 /* UIImage+FixOrientation.m */,
+				95AF842C187481E500C11897 /* UIImage+Resize.h */,
+				95AF842D187481E500C11897 /* UIImage+Resize.m */,
+				95AF842E187481E500C11897 /* UIImage+Rotate.h */,
+				95AF842F187481E500C11897 /* UIImage+Rotate.m */,
+				95AF8430187481E500C11897 /* UIImage+RoundedCorner.h */,
+				95AF8431187481E500C11897 /* UIImage+RoundedCorner.m */,
+			);
+			path = "UIImage+";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1083,6 +1134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				950C7EF41865E9BD0021FE5D /* PictureRangeSelectViewHome.m in Sources */,
+				95AF8433187481E500C11897 /* GKImagePicker.m in Sources */,
 				2E693624185DF7B5000C95F5 /* DBAccress.m in Sources */,
 				356E6A6F185ADE76002A1014 /* PhontoViewController.m in Sources */,
 				2E693627185DF7B5000C95F5 /* FMDatabasePool.m in Sources */,
@@ -1092,6 +1144,7 @@
 				950C7EC51865E3370021FE5D /* MQCameraFocusView.m in Sources */,
 				3519A02C186C31F400FEC752 /* MBProgressHUD.m in Sources */,
 				2E44DAC0185CA7AA00C5C1DC /* SoundsListViewController.m in Sources */,
+				95AF8435187481E500C11897 /* UIImage+FixOrientation.m in Sources */,
 				2E693628185DF7B5000C95F5 /* FMDatabaseQueue.m in Sources */,
 				2E693625185DF7B5000C95F5 /* FMDatabase.m in Sources */,
 				2E693626185DF7B5000C95F5 /* FMDatabaseAdditions.m in Sources */,
@@ -1105,6 +1158,7 @@
 				2ED5B1DB186893BC007075EC /* StationViewController.m in Sources */,
 				2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */,
 				2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */,
+				95AF8432187481E500C11897 /* GKImageCropper.m in Sources */,
 				950C7EE61865E6700021FE5D /* MQRoundPatView.m in Sources */,
 				2E9C8AC418701FA50087F476 /* CustomButton.m in Sources */,
 				950C7EF31865E9BD0021FE5D /* PictureRangeSelectView.m in Sources */,
@@ -1112,16 +1166,20 @@
 				356E6A72185ADE88002A1014 /* SettingViewController.m in Sources */,
 				354467FE185AD419005AB0D9 /* AppDelegate.m in Sources */,
 				354467FA185AD419005AB0D9 /* main.m in Sources */,
+				95AF8437187481E500C11897 /* UIImage+Rotate.m in Sources */,
 				3519A026186C313B00FEC752 /* StoreKitHelper.mm in Sources */,
 				950C7EE51865E6700021FE5D /* MQRectCropPatView.m in Sources */,
+				95AF8438187481E500C11897 /* UIImage+RoundedCorner.m in Sources */,
 				35ADB3D91861B9DF009647C8 /* Music.m in Sources */,
 				950C7EE31865E6700021FE5D /* MQCropImageView.m in Sources */,
 				356E6A75185ADE97002A1014 /* ShareViewController.m in Sources */,
 				950C7EE41865E6700021FE5D /* MQCropPatView.m in Sources */,
 				356E6A8E185B15FC002A1014 /* DataManager.m in Sources */,
 				950C7ECB1865E3F60021FE5D /* ColorTrackingCamera.m in Sources */,
+				95AF8436187481E500C11897 /* UIImage+Resize.m in Sources */,
 				2E5C9F1A1871B21A00E6A680 /* ExplanationViewController.m in Sources */,
 				9571A226185C9C3A003D3285 /* CameraController.m in Sources */,
+				95AF8434187481E500C11897 /* UIImage+Alpha.m in Sources */,
 				356E6A66185AD973002A1014 /* GTTabBarController.m in Sources */,
 				2E1EBB431867E21D00F64A2E /* SoundsRecordListViewController.m in Sources */,
 				950C7EC21865E2C40021FE5D /* ProcessGLView.m in Sources */,
@@ -1263,6 +1321,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1284,6 +1346,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheMusicCamera/TheMusicCamera-Prefix.pch";
 				INFOPLIST_FILE = "TheMusicCamera/TheMusicCamera-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
