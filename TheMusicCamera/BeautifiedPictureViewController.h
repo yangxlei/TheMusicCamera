@@ -17,6 +17,7 @@
     
     DataManager *dataManager;
 
+    int selectBtnTag;
 }
 
 -(void) begin;

@@ -126,11 +126,6 @@
 //
 //}
 //
-//- (void)myTask {
-//	// Do something usefull in here instead of sleeping ...
-////	sleep(3);
-//}
-//
 //- (void) restoreTransaction: (SKPaymentTransaction *)transaction    
 //{
 //    NSLog(@" 交易恢复处理");    
@@ -145,54 +140,8 @@
 //    
 //    if ([self putStringToItunes:transaction.transactionReceipt]) {
 //        
-////        [self recordTransaction:product];
-////        [self provideContent:product];
-//
 //        
-//#pragma mark - 发给后台让去验证
-////        NSString *encodingStr=(NSString *)transaction.transactionReceipt;
-////        NSString *encodingStr = [[[NSString alloc] initWithData:transaction.transactionReceipt encoding:NSUTF8StringEncoding] autorelease];
-//        NSString *encodingStr =  [transaction.transactionReceipt base64EncodedString];
-////        NSLog(@"encodingStr=%@",encodingStr);
-//        std::string str=(std::string)encodingStr.cString;
-//        //NSLog(@"%s",str.c_str());
-////        NSLog(@"支付啦");
-//        AppStorePayment::shared()->buySuccess(str);
-////        NSLog(@"sssss%@",transaction.transactionReceipt);
-//        
-////
-////        NSString *backgroundCheckUrl = [NSString stringWithFormat:@"%s/app/admin/payment_appstore.php",SERVER_URL];
-////        
-////        NSURL *checkURL = [NSURL URLWithString:backgroundCheckUrl];
-////        
-////        ASIFormDataRequest *checkrequest = [[ASIFormDataRequest alloc] initWithURL:checkURL];
-////        [checkrequest addRequestHeader:@"HTTP_USER_AGENT" value:@"iPhone"];
-////        
-////        NSString *uid = [NSString stringWithCString:NetAPI::shareInstance()->getUserPid() encoding:NSUTF8StringEncoding];
-////        NSString *mid = [NSString stringWithCString:NetAPI::shareInstance()->getUserMid() encoding:NSUTF8StringEncoding];
-////        
-////        [checkrequest addPostValue:uid forKey:@"uid"];
-////        [checkrequest addPostValue:mid forKey:@"mid"];
-////
-////        [checkrequest addPostValue:encodingStr forKey:@"iapOrder"];
-////        //测试环境
-////        #if DEBUG
-////            [checkrequest addPostValue:[NSNumber numberWithBool:YES] forKey:@"sandbox"];
-////        #endif
-////        ////////////////////
-////        [checkrequest setRequestMethod:@"POST"];
-////        [checkrequest startAsynchronous];
-//#pragma mark -
-//        
-////        UIAlertView *alertView =  [[UIAlertView alloc] initWithTitle: nil
-////                                                             message: @"成功"
-////                                                            delegate: nil
-////                                                   cancelButtonTitle: @"OK"
-////                                                   otherButtonTitles: nil];
-////        [alertView autorelease];
-////        [alertView show];
-//        
-////        CCMessageBox(langForKey("buySuccess", sGlobal->localizeJson).c_str(), "");
+//    
 //    }
 //    else {
 //        UIAlertView *alertView =  [[UIAlertView alloc] initWithTitle: nil
@@ -202,7 +151,6 @@
 //                                                   otherButtonTitles: nil];
 //        [alertView autorelease];
 //        [alertView show];
-////        CCMessageBox(langForKey("buyFail", sGlobal->localizeJson).c_str(), "");
 //    }
 //   
 //    // Remove the transaction from the payment queue.
@@ -215,32 +163,32 @@
 //
 //
 //
-////记录交易
-//-(void)reco:(NSString *)product{
-//    NSLog(@"-----记录交易--------");
-//}    
-//
-////处理下载内容
-//-(void)provideContent:(NSString *)product{
-//    NSLog(@"-----下载--------");
-//    
-//    int length = [product length];
-//    int t = [[product substringWithRange:NSMakeRange(length-1, 1)] intValue];
-//    
-//    //TODO: 购买成功处理
-//
-//    
-//}
-//-(void) finishPay
-//{
-//    if (m_transaction)
-//    {
-//        [[SKPaymentQueue defaultQueue] finishTransaction: m_transaction];
-//    }
-//    m_transaction=Nil;
-//    
-//    
-//}
+//////记录交易
+////-(void)reco:(NSString *)product{
+////    NSLog(@"-----记录交易--------");
+////}    
+////
+//////处理下载内容
+////-(void)provideContent:(NSString *)product{
+////    NSLog(@"-----下载--------");
+////    
+////    int length = [product length];
+////    int t = [[product substringWithRange:NSMakeRange(length-1, 1)] intValue];
+////    
+////    //TODO: 购买成功处理
+////
+////    
+////}
+////-(void) finishPay
+////{
+////    if (m_transaction)
+////    {
+////        [[SKPaymentQueue defaultQueue] finishTransaction: m_transaction];
+////    }
+////    m_transaction=Nil;
+////    
+////    
+////}
 ////弹出错误信息
 //- (void)request:(SKRequest *)request didFailWithError:(NSError *)error{
 ////    NSLog(@"-------弹出错误信息----------");

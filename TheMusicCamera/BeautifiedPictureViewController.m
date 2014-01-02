@@ -44,6 +44,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     self.navigationController.navigationBarHidden = YES;
     dataManager = [DataManager sharedManager];
 
+    selectBtnTag = 1;
+    
     [self navgationImage:@"header"];
     
     UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 52, 28)];
@@ -71,6 +73,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 {
 
 }
+
 -(void) begin
 {
   if (picker == nil) {
@@ -97,6 +100,16 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 {
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNSHAREVC" object:nil];
+}
+
+- (IBAction)toolsBtn:(id)sender {
+    for (int i=1; i<5; i++) {
+        UIButton *button = (UIButton *)[self.view viewWithTag:i];
+        button.selected = NO;
+    }
+    UIButton *btn = (UIButton *)sender;
+    btn.selected = YES;
+
 }
 
 @end

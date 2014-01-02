@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -39,14 +39,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-pB-BCU">
-                                <rect key="frame" x="0.0" y="517" width="320" height="53"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="uDr-9G-xNo"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0OU-Ph-HIk">
                                 <rect key="frame" x="20" y="94" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,13 +50,56 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-pl-Sf8">
+                                <rect key="frame" x="0.0" y="517" width="80" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="decoration_tab_footer_stamp_off.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="decoration_tab_footer_stamp_on.png"/>
+                                <connections>
+                                    <action selector="toolsBtn:" destination="tUg-MK-pYY" eventType="touchUpInside" id="iD4-jc-szR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-mI-Vjx">
+                                <rect key="frame" x="80" y="517" width="80" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="decoration_tab_footer_frame_off.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="decoration_tab_footer_frame_on.png"/>
+                                <connections>
+                                    <action selector="toolsBtn:" destination="tUg-MK-pYY" eventType="touchUpInside" id="NdF-d1-nxK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fub-fQ-33v">
+                                <rect key="frame" x="160" y="517" width="80" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="decoration_tab_footer_age_off.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="decoration_tab_footer_age_on.png"/>
+                                <connections>
+                                    <action selector="toolsBtn:" destination="tUg-MK-pYY" eventType="touchUpInside" id="zxI-bY-QAd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DO-x3-ap2">
+                                <rect key="frame" x="240" y="517" width="80" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="decoration_tab_footer_mojiire_off.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="decoration_tab_ooter_mojiire_on.png"/>
+                                <connections>
+                                    <action selector="toolsBtn:" destination="tUg-MK-pYY" eventType="touchUpInside" id="Pyu-43-jPg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="J7q-pB-BCU" secondAttribute="trailing" id="K3Y-9u-iki"/>
-                            <constraint firstAttribute="bottom" secondItem="J7q-pB-BCU" secondAttribute="bottom" constant="-2" id="eGP-QU-lyy"/>
-                            <constraint firstItem="J7q-pB-BCU" firstAttribute="leading" secondItem="L8Y-JD-WDc" secondAttribute="leading" id="hib-Se-d2f"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Lot-Su-wug" id="QTx-9N-bpT"/>
@@ -879,6 +914,14 @@
         <image name="btn_setting_text .png" width="514" height="60"/>
         <image name="check.png" width="41" height="36"/>
         <image name="check_mark_blank.png" width="30" height="30"/>
+        <image name="decoration_tab_footer_age_off.png" width="160" height="102"/>
+        <image name="decoration_tab_footer_age_on.png" width="160" height="102"/>
+        <image name="decoration_tab_footer_frame_off.png" width="160" height="102"/>
+        <image name="decoration_tab_footer_frame_on.png" width="160" height="102"/>
+        <image name="decoration_tab_footer_mojiire_off.png" width="160" height="102"/>
+        <image name="decoration_tab_footer_stamp_off.png" width="160" height="102"/>
+        <image name="decoration_tab_footer_stamp_on.png" width="160" height="102"/>
+        <image name="decoration_tab_ooter_mojiire_on.png" width="160" height="102"/>
         <image name="howTo_nest.png" width="43" height="49"/>
         <image name="howTo_previous.png" width="42" height="48"/>
         <image name="info.png" width="521" height="407"/>
