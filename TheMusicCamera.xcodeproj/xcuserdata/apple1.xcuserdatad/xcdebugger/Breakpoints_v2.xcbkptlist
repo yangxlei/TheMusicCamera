@@ -121,11 +121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/BeautifiedPictureViewController.m"
-            timestampString = "410363776.128547"
+            timestampString = "410370046.984514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-imagePickerDidFinish:withImage:"
             landmarkType = "5">
          </BreakpointContent>
