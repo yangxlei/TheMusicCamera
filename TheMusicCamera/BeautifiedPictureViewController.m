@@ -14,7 +14,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 @interface BeautifiedPictureViewController ()
 {
-  GKImagePicker *picker;
+  CropperController* cropper;
 }
 @end
 
@@ -76,24 +76,18 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void) begin
 {
-  if (picker == nil) {
-    picker = [[GKImagePicker alloc] init];
-    picker.delegate = self;
-    picker.cropper.cropSize = CGSizeMake(320,320.);   // (Optional) Default: CGSizeMake(320., 320.)
-    picker.cropper.rescaleImage = YES;                // (Optional) Default: YES
-    picker.cropper.rescaleFactor = 2.0;               // (Optional) Default: 1.0
-    picker.cropper.dismissAnimated = YES;              // (Optional) Default: YES
-    picker.cropper.overlayColor = [UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:0.7];  // (Optional) Default: [UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:0.7]
-    picker.cropper.innerBorderColor = [UIColor colorWithRed:255./255. green:255./255. blue:255./255. alpha:0.7];   // (Optional) Default: [UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:0.7]
+  if (cropper == nil) {
+    cropper = [[CropperController alloc] init];
+    cropper.delegate = self;
   }
-  [picker presentPicker];
+  [self presentViewController:cropper animated:NO completion:nil];
+  [cropper begin];
 }
 
--(void) imagePickerDidFinish:(GKImagePicker *)imagePicker withImage:(UIImage *)image
+-(void) onDidFinishCrop:(UIImage *)image
 {
   imageView.image = image;
-    dataManager.shareImg = image;
-    
+  dataManager.shareImg = image;
 }
 
 - (void)okBtuuon

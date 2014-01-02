@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GKImagePicker.h"
+#import "CropperController.h"
 @class DataManager;
 
-@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate,GKImagePickerDelegate>
+@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, CropControllerDelegate>
 {
   IBOutlet UIImageView* imageView;
     IBOutlet UIView *mianView;

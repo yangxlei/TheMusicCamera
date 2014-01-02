@@ -118,13 +118,6 @@
 		3519A026186C313B00FEC752 /* StoreKitHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3519A025186C313B00FEC752 /* StoreKitHelper.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3519A028186C314900FEC752 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3519A027186C314900FEC752 /* StoreKit.framework */; };
 		3519A02C186C31F400FEC752 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3519A02B186C31F400FEC752 /* MBProgressHUD.m */; };
-		352B317918754B24004691A7 /* GKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 352B317618754B24004691A7 /* GKImageCropper.m */; };
-		352B317A18754B24004691A7 /* GKImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 352B317818754B24004691A7 /* GKImagePicker.m */; };
-		352B318518754B3B004691A7 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 352B317C18754B3B004691A7 /* UIImage+Alpha.m */; };
-		352B318618754B3B004691A7 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 352B317E18754B3B004691A7 /* UIImage+FixOrientation.m */; };
-		352B318718754B3B004691A7 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 352B318018754B3B004691A7 /* UIImage+Resize.m */; };
-		352B318818754B3B004691A7 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 352B318218754B3B004691A7 /* UIImage+Rotate.m */; };
-		352B318918754B3B004691A7 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 352B318418754B3B004691A7 /* UIImage+RoundedCorner.m */; };
 		352C015A1862D57B00C0C710 /* top_now_sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 352C01591862D57B00C0C710 /* top_now_sound.png */; };
 		354467EE185AD419005AB0D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354467ED185AD419005AB0D9 /* Foundation.framework */; };
 		354467F0185AD419005AB0D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354467EF185AD419005AB0D9 /* CoreGraphics.framework */; };
@@ -220,6 +213,9 @@
 		9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44E185CA0CD003D3285 /* QuartzCore.framework */; };
 		95916A39186C847A001086A1 /* WaterImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95916A38186C847A001086A1 /* WaterImageController.m */; };
 		95916A3B186C8489001086A1 /* water_image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95916A3A186C8489001086A1 /* water_image.storyboard */; };
+		95AF84541875C9BA00C11897 /* KICropImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF84511875C9BA00C11897 /* KICropImageView.m */; };
+		95AF84551875C9BA00C11897 /* UIImage+KIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF84531875C9BA00C11897 /* UIImage+KIAdditions.m */; };
+		95AF845B1875C9E700C11897 /* CropperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF845A1875C9E700C11897 /* CropperController.m */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -362,20 +358,6 @@
 		3519A027186C314900FEC752 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3519A02A186C31F400FEC752 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		3519A02B186C31F400FEC752 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		352B317518754B24004691A7 /* GKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKImageCropper.h; sourceTree = "<group>"; };
-		352B317618754B24004691A7 /* GKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKImageCropper.m; sourceTree = "<group>"; };
-		352B317718754B24004691A7 /* GKImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKImagePicker.h; sourceTree = "<group>"; };
-		352B317818754B24004691A7 /* GKImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKImagePicker.m; sourceTree = "<group>"; };
-		352B317B18754B3B004691A7 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
-		352B317C18754B3B004691A7 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
-		352B317D18754B3B004691A7 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
-		352B317E18754B3B004691A7 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
-		352B317F18754B3B004691A7 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		352B318018754B3B004691A7 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		352B318118754B3B004691A7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
-		352B318218754B3B004691A7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
-		352B318318754B3B004691A7 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
-		352B318418754B3B004691A7 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		352C01591862D57B00C0C710 /* top_now_sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_now_sound.png; sourceTree = "<group>"; };
 		354467EA185AD419005AB0D9 /* TheMusicCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMusicCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		354467ED185AD419005AB0D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -501,6 +483,12 @@
 		95916A37186C847A001086A1 /* WaterImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterImageController.h; sourceTree = "<group>"; };
 		95916A38186C847A001086A1 /* WaterImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterImageController.m; sourceTree = "<group>"; };
 		95916A3A186C8489001086A1 /* water_image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = water_image.storyboard; sourceTree = "<group>"; };
+		95AF84501875C9BA00C11897 /* KICropImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KICropImageView.h; sourceTree = "<group>"; };
+		95AF84511875C9BA00C11897 /* KICropImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KICropImageView.m; sourceTree = "<group>"; };
+		95AF84521875C9BA00C11897 /* UIImage+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KIAdditions.h"; sourceTree = "<group>"; };
+		95AF84531875C9BA00C11897 /* UIImage+KIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KIAdditions.m"; sourceTree = "<group>"; };
+		95AF84591875C9E700C11897 /* CropperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropperController.h; sourceTree = "<group>"; };
+		95AF845A1875C9E700C11897 /* CropperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropperController.m; sourceTree = "<group>"; };
 		95C1172318633EF7008391BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -909,7 +897,7 @@
 		950C7EB61865E19B0021FE5D /* ColorTracking */ = {
 			isa = PBXGroup;
 			children = (
-				95AF8422187481E500C11897 /* GKImagePicker */,
+				95AF844F1875C99800C11897 /* crop */,
 				950C7EF51865F3780021FE5D /* TileBG.h */,
 				950C7EF61865F3780021FE5D /* TileBG.m */,
 				950C7EEF1865E9BD0021FE5D /* PictureRangeSelectView.h */,
@@ -971,33 +959,17 @@
 			path = camera;
 			sourceTree = "<group>";
 		};
-		95AF8422187481E500C11897 /* GKImagePicker */ = {
+		95AF844F1875C99800C11897 /* crop */ = {
 			isa = PBXGroup;
 			children = (
-				352B317518754B24004691A7 /* GKImageCropper.h */,
-				352B317618754B24004691A7 /* GKImageCropper.m */,
-				352B317718754B24004691A7 /* GKImagePicker.h */,
-				352B317818754B24004691A7 /* GKImagePicker.m */,
-				95AF8427187481E500C11897 /* UIImage+ */,
+				95AF84501875C9BA00C11897 /* KICropImageView.h */,
+				95AF84511875C9BA00C11897 /* KICropImageView.m */,
+				95AF84521875C9BA00C11897 /* UIImage+KIAdditions.h */,
+				95AF84531875C9BA00C11897 /* UIImage+KIAdditions.m */,
+				95AF84591875C9E700C11897 /* CropperController.h */,
+				95AF845A1875C9E700C11897 /* CropperController.m */,
 			);
-			path = GKImagePicker;
-			sourceTree = "<group>";
-		};
-		95AF8427187481E500C11897 /* UIImage+ */ = {
-			isa = PBXGroup;
-			children = (
-				352B317B18754B3B004691A7 /* UIImage+Alpha.h */,
-				352B317C18754B3B004691A7 /* UIImage+Alpha.m */,
-				352B317D18754B3B004691A7 /* UIImage+FixOrientation.h */,
-				352B317E18754B3B004691A7 /* UIImage+FixOrientation.m */,
-				352B317F18754B3B004691A7 /* UIImage+Resize.h */,
-				352B318018754B3B004691A7 /* UIImage+Resize.m */,
-				352B318118754B3B004691A7 /* UIImage+Rotate.h */,
-				352B318218754B3B004691A7 /* UIImage+Rotate.m */,
-				352B318318754B3B004691A7 /* UIImage+RoundedCorner.h */,
-				352B318418754B3B004691A7 /* UIImage+RoundedCorner.m */,
-			);
-			path = "UIImage+";
+			path = crop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1238,19 +1210,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95AF845B1875C9E700C11897 /* CropperController.m in Sources */,
 				950C7EF41865E9BD0021FE5D /* PictureRangeSelectViewHome.m in Sources */,
 				2E693624185DF7B5000C95F5 /* DBAccress.m in Sources */,
 				2E2F71601875B15F001A7816 /* StampView.m in Sources */,
 				356E6A6F185ADE76002A1014 /* PhontoViewController.m in Sources */,
 				2E693627185DF7B5000C95F5 /* FMDatabasePool.m in Sources */,
 				950C7EC81865E3870021FE5D /* MQUIImage.m in Sources */,
-				352B317918754B24004691A7 /* GKImageCropper.m in Sources */,
 				95916A39186C847A001086A1 /* WaterImageController.m in Sources */,
 				356E6A65185AD973002A1014 /* GTTabBar.m in Sources */,
 				950C7EC51865E3370021FE5D /* MQCameraFocusView.m in Sources */,
 				3519A02C186C31F400FEC752 /* MBProgressHUD.m in Sources */,
 				2E44DAC0185CA7AA00C5C1DC /* SoundsListViewController.m in Sources */,
-				352B318618754B3B004691A7 /* UIImage+FixOrientation.m in Sources */,
 				2E693628185DF7B5000C95F5 /* FMDatabaseQueue.m in Sources */,
 				2E693625185DF7B5000C95F5 /* FMDatabase.m in Sources */,
 				2E693626185DF7B5000C95F5 /* FMDatabaseAdditions.m in Sources */,
@@ -1263,29 +1234,26 @@
 				950C7EF71865F3780021FE5D /* TileBG.m in Sources */,
 				2ED5B1DB186893BC007075EC /* StationViewController.m in Sources */,
 				2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */,
-				352B317A18754B24004691A7 /* GKImagePicker.m in Sources */,
 				2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */,
 				950C7EE61865E6700021FE5D /* MQRoundPatView.m in Sources */,
 				2E9C8AC418701FA50087F476 /* CustomButton.m in Sources */,
 				950C7EF31865E9BD0021FE5D /* PictureRangeSelectView.m in Sources */,
 				356E6A6C185ADE5E002A1014 /* SoundsViewController.m in Sources */,
 				356E6A72185ADE88002A1014 /* SettingViewController.m in Sources */,
+				95AF84551875C9BA00C11897 /* UIImage+KIAdditions.m in Sources */,
 				354467FE185AD419005AB0D9 /* AppDelegate.m in Sources */,
+				95AF84541875C9BA00C11897 /* KICropImageView.m in Sources */,
 				354467FA185AD419005AB0D9 /* main.m in Sources */,
-				352B318818754B3B004691A7 /* UIImage+Rotate.m in Sources */,
 				3519A026186C313B00FEC752 /* StoreKitHelper.mm in Sources */,
 				950C7EE51865E6700021FE5D /* MQRectCropPatView.m in Sources */,
-				352B318918754B3B004691A7 /* UIImage+RoundedCorner.m in Sources */,
 				35ADB3D91861B9DF009647C8 /* Music.m in Sources */,
 				950C7EE31865E6700021FE5D /* MQCropImageView.m in Sources */,
 				356E6A75185ADE97002A1014 /* ShareViewController.m in Sources */,
 				950C7EE41865E6700021FE5D /* MQCropPatView.m in Sources */,
 				356E6A8E185B15FC002A1014 /* DataManager.m in Sources */,
 				950C7ECB1865E3F60021FE5D /* ColorTrackingCamera.m in Sources */,
-				352B318718754B3B004691A7 /* UIImage+Resize.m in Sources */,
 				2E5C9F1A1871B21A00E6A680 /* ExplanationViewController.m in Sources */,
 				9571A226185C9C3A003D3285 /* CameraController.m in Sources */,
-				352B318518754B3B004691A7 /* UIImage+Alpha.m in Sources */,
 				356E6A66185AD973002A1014 /* GTTabBarController.m in Sources */,
 				2E1EBB431867E21D00F64A2E /* SoundsRecordListViewController.m in Sources */,
 				950C7EC21865E2C40021FE5D /* ProcessGLView.m in Sources */,
@@ -1417,8 +1385,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -1432,7 +1400,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1442,8 +1410,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -1457,7 +1425,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
