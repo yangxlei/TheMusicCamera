@@ -36,6 +36,7 @@
 		2E2F71781875B2BD001A7816 /* stamp_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F716B1875B2BD001A7816 /* stamp_11.png */; };
 		2E2F71791875B2BD001A7816 /* stamp_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F716C1875B2BD001A7816 /* stamp_12.png */; };
 		2E2F717A1875B2BD001A7816 /* stamp_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F716D1875B2BD001A7816 /* stamp_13.png */; };
+		2E2F717C1875BD27001A7816 /* decoration_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F717B1875BD27001A7816 /* decoration_stamp.png */; };
 		2E44DAA9185C9AA600C5C1DC /* sound_setting_now.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAA8185C9AA600C5C1DC /* sound_setting_now.png */; };
 		2E44DAAC185C9BB900C5C1DC /* record_sound_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAAA185C9BB900C5C1DC /* record_sound_setting.png */; };
 		2E44DAAD185C9BB900C5C1DC /* recorded_sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAAB185C9BB900C5C1DC /* recorded_sound.png */; };
@@ -261,6 +262,7 @@
 		2E2F716B1875B2BD001A7816 /* stamp_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_11.png; sourceTree = "<group>"; };
 		2E2F716C1875B2BD001A7816 /* stamp_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_12.png; sourceTree = "<group>"; };
 		2E2F716D1875B2BD001A7816 /* stamp_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_13.png; sourceTree = "<group>"; };
+		2E2F717B1875BD27001A7816 /* decoration_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decoration_stamp.png; sourceTree = "<group>"; };
 		2E44DAA8185C9AA600C5C1DC /* sound_setting_now.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_setting_now.png; sourceTree = "<group>"; };
 		2E44DAAA185C9BB900C5C1DC /* record_sound_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_sound_setting.png; sourceTree = "<group>"; };
 		2E44DAAB185C9BB900C5C1DC /* recorded_sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recorded_sound.png; sourceTree = "<group>"; };
@@ -592,6 +594,7 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2E2F717B1875BD27001A7816 /* decoration_stamp.png */,
 				2E2F71611875B2BD001A7816 /* stamp_1.png */,
 				2E2F71621875B2BD001A7816 /* stamp_2.png */,
 				2E2F71631875B2BD001A7816 /* stamp_3.png */,
@@ -1156,6 +1159,7 @@
 				2E2F716F1875B2BD001A7816 /* stamp_2.png in Resources */,
 				2E2F71751875B2BD001A7816 /* stamp_8.png in Resources */,
 				2E44DABC185CA63600C5C1DC /* button_back.png in Resources */,
+				2E2F717C1875BD27001A7816 /* decoration_stamp.png in Resources */,
 				2E5C9F281871BC7F00E6A680 /* howTo_previous.png in Resources */,
 				2ED5B1E81869C288007075EC /* A-OTF-Jun501Pro-Bold.otf in Resources */,
 				2E44DAAC185C9BB900C5C1DC /* record_sound_setting.png in Resources */,

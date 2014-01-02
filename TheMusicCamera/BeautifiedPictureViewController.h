@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CropperController.h"
 @class DataManager;
+@class StampView;
 
 @interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, CropControllerDelegate>
 {
@@ -18,6 +19,7 @@
     DataManager *dataManager;
 
     int selectBtnTag;
+    StampView *stampView;
 }
 
 -(void) begin;

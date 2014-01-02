@@ -9,6 +9,7 @@
 #import "BeautifiedPictureViewController.h"
 #import "WaterImageController.h"
 #import "DataManager.h"
+#import "StampView.h"
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
@@ -51,6 +52,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 52, 28)];
     [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
+    stampView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];
+    stampView.hidden = YES;
+    [stampView initWithType:1];
+    [self.view addSubview:stampView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,7 +108,37 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     }
     UIButton *btn = (UIButton *)sender;
     btn.selected = YES;
-
+    switch (btn.tag) {
+        case 1:
+        {
+            if (stampView.hidden) {
+                stampView.hidden = NO;
+            }
+            else
+            {
+                stampView.hidden = YES;
+            }
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+        case 4:
+        {
+            
+        }
+            break;
+  
+        default:
+            break;
+    }
 }
 
 @end
