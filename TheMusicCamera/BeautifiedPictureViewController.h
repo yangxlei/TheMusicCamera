@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "GKImagePicker.h"
+@class DataManager;
+
 @interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate,GKImagePickerDelegate>
 {
-  UIImageView* imageView;
+  IBOutlet UIImageView* imageView;
+    IBOutlet UIView *mianView;
+    
+    DataManager *dataManager;
+
 }
 
 -(void) begin;

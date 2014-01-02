@@ -24,13 +24,19 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    shareImage.image = dataManager.shareImg;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.hidesBottomBarWhenPushed = YES;
     [self navgationImage:@"header_share"];
-    
+    dataManager = [DataManager sharedManager];
+
     UIButton *btn = [self navgationButton:@"button_top" andFrame:CGRectMake(250, 10, 60, 28)];
     [btn addTarget:self action:@selector(topBtuuon) forControlEvents:UIControlEventTouchUpInside];
     

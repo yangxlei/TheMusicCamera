@@ -8,6 +8,7 @@
 
 #import "BeautifiedPictureViewController.h"
 #import "WaterImageController.h"
+#import "DataManager.h"
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
@@ -41,9 +42,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [super viewDidLoad];
     self.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBarHidden = YES;
-  
-  imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
-  [self.view addSubview:imageView];
+    dataManager = [DataManager sharedManager];
+
+    [self navgationImage:@"header"];
+    
+    UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 52, 28)];
+    [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,5 +89,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 -(void) imagePickerDidFinish:(GKImagePicker *)imagePicker withImage:(UIImage *)image
 {
   imageView.image = image;
+    dataManager.shareImg = image;
+    
 }
+
+- (void)okBtuuon
+{
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNSHAREVC" object:nil];
+}
+
 @end

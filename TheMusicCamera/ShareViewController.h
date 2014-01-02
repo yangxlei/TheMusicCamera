@@ -12,12 +12,14 @@
 #import <Accounts/Accounts.h>
 #import <MessageUI/MessageUI.h>
 #import<MessageUI/MFMailComposeViewController.h>
+@class DataManager;
 
 @interface ShareViewController : UIViewController<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
 {
     SLComposeViewController *slComposerSheet;
     IBOutlet UIImageView *shareImage;
-
+    DataManager *dataManager;
+    
 }
 
 @end

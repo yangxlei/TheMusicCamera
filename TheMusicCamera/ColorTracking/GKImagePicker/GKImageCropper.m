@@ -27,6 +27,7 @@
 #import "UIImage+Resize.h"
 #import "UIImage+Rotate.h"
 #import "UIImage+FixOrientation.h"
+#import "DataManager.h"
 
 @interface GKImageCropper () <UIScrollViewDelegate> {
     UIScrollView *scrollView;
@@ -102,6 +103,11 @@
  
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"header"] forBarMetrics:UIBarMetricsDefault];
+}
+
 -(void) reset
 {
   NSArray* views = [self.view subviews];
@@ -118,10 +124,35 @@
   // **********************************************
   // * Configure navigation item
   // **********************************************
-  self.navigationItem.title = @"Crop Image";
-  UIBarButtonItem *okButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(handleDoneButton)];
-  [self.navigationItem setRightBarButtonItem:okButton animated:NO];
+//  self.navigationItem.title = @"Crop Image";
+//  UIBarButtonItem *okButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(handleDoneButton)];
+//  [self.navigationItem setRightBarButtonItem:okButton animated:NO];
   
+//    [self navgationImage:@"header"];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"header"] forBarMetrics:UIBarMetricsDefault];
+
+    UIButton* backButton= [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(10, 7, 99, 33);
+    [backButton setImage:[UIImage imageNamed:@"button_camera_roll"] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* backButtonItem= [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+
+    UIButton* editBtn= [UIButton buttonWithType:UIButtonTypeCustom];
+    editBtn.frame = CGRectMake(260, 10, 52, 28);
+    [editBtn setImage:[UIImage imageNamed:@"button_finish"] forState:UIControlStateNormal];
+    [editBtn addTarget:self action:@selector(handleDoneButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* editButtonItem= [[UIBarButtonItem alloc] initWithCustomView:editBtn];
+    self.navigationItem.rightBarButtonItem = editButtonItem;
+
+//    UIButton *btn = [self navgationButton:@"button_camera_roll" andFrame:CGRectMake(10, 7, 99, 33)];
+//    [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
+
+//    UIButton *editBtn = [self navgationButton:@"button_finish" andFrame:CGRectMake(260, 10, 52, 28)];
+//    [editBtn addTarget:self action:@selector(handleDoneButton) forControlEvents:UIControlEventTouchUpInside];
+
+    
   // **********************************************
   // * Determine scroll zoom level
   // **********************************************
@@ -273,6 +304,12 @@ UIImage* imageFromView(UIImage* srcImage, CGRect* rect) {
 }
 
 #pragma mark - User interaction handle methods
+
+- (void)backBtuuon
+{
+    [(UIViewController *)self.delegate dismissViewControllerAnimated:YES completion:nil];
+
+}
 
 -(void)handleDoneButton {
     // **********************************************

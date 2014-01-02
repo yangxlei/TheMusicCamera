@@ -58,7 +58,9 @@
 {
     if (currentPage>=1) {
         currentPage--;
-        [scrollView setContentOffset:CGPointMake(320*currentPage, 0)];
+//        [scrollView setContentOffset:CGPointMake(320*currentPage, 0)];
+        [scrollView scrollRectToVisible:CGRectMake(320*currentPage,0,320,568) animated:YES];
+
     }
 }
 
@@ -66,7 +68,7 @@
 {
     if (currentPage<=2) {
         currentPage++;
-        [scrollView setContentOffset:CGPointMake(320*currentPage, 0)];
+        [scrollView scrollRectToVisible:CGRectMake(320*currentPage,0,320,568) animated:YES];
     }
 }
 

@@ -134,6 +134,14 @@
     }
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissModalViewControllerAnimated:NO];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
+
+}
+
 #pragma mark - GKImageCropper delegate methods
 
 - (void)imageCropperDidFinish:(GKImageCropper *)imageCropper withImage:(UIImage *)image {

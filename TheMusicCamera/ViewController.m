@@ -106,6 +106,7 @@
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(returnPhotoVC:) name:@"RETURNPHOTOVC" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(returnShareVC:) name:@"RETURNSHAREVC" object:nil];
 
 }
 
@@ -172,5 +173,10 @@
 
 }
 
+- (void) returnShareVC: (NSNotification*) aNotification
+{
+    [self.mainTabBarController hidesTabBar:NO animated:YES];
+    self.mainTabBarController.selectedIndex = 4;
+}
 
 @end
