@@ -64,28 +64,28 @@
 }
 
 - (void)updateZoomScale {
-    CGFloat width = _image.size.width;
-    CGFloat height = _image.size.height;
-    
-    [[self imageView] setFrame:CGRectMake(0, 0, width, height)];
-    
-    CGFloat xScale = (_cropSize.width /2)/ width;
-    CGFloat yScale = (_cropSize.height /2)/ height;
-    
-    CGFloat min = MAX(xScale, yScale);
-    CGFloat max = 1.0;
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
-        max = 1.0 / [[UIScreen mainScreen] scale];
-    }
-    
-    if (min > max) {
-        min = max;
-    }
-    
-    [[self scrollView] setMinimumZoomScale:min];
-    [[self scrollView] setMaximumZoomScale:max + 5.0f];
-    
-    [[self scrollView] setZoomScale:min animated:YES];
+  CGFloat width = _image.size.width;
+  CGFloat height = _image.size.height;
+  
+  [[self imageView] setFrame:CGRectMake(0, 0, width, height)];
+  
+  CGFloat xScale = _cropSize.width / width;
+  CGFloat yScale = _cropSize.height / height;
+  
+  CGFloat min = MAX(xScale, yScale);
+  CGFloat max = 1.0;
+  if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+    max = 1.0 / [[UIScreen mainScreen] scale];
+  }
+  
+  if (min > max) {
+    min = max;
+  }
+  
+  [[self scrollView] setMinimumZoomScale:0.5];
+  [[self scrollView] setMaximumZoomScale:max + 5.0f];
+  
+  [[self scrollView] setZoomScale:0.5 animated:YES];
 }
 
 - (void)setCropSize:(CGSize)size {
