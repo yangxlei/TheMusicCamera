@@ -278,7 +278,7 @@
   [overlayInnerBorder removeFromSuperview];
   overlayInnerBorder = [[UIImageView alloc] initWithFrame:CGRectMake(frameWidth/2.-self.cropSize.width/2. + offset, frameHeight/2.-self.cropSize.height/2., cropSize.width, self.cropSize.height)];
   overlayInnerBorder.backgroundColor = [UIColor clearColor];
-//  overlayInnerBorder.layer.masksToBounds = YES;
+  overlayInnerBorder.layer.masksToBounds = YES;
   overlayInnerBorder.layer.borderColor = self.innerBorderColor.CGColor;
   overlayInnerBorder.layer.borderWidth = 1;
   [self.view addSubview:overlayInnerBorder];

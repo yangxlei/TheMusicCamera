@@ -80,7 +80,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     picker.cropper.rescaleImage = YES;                // (Optional) Default: YES
     picker.cropper.rescaleFactor = 2.0;               // (Optional) Default: 1.0
     picker.cropper.dismissAnimated = YES;              // (Optional) Default: YES
-    picker.cropper.overlayColor = [UIColor clearColor];//[UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:0.7];  // (Optional) Default: [UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:0.7]
+    picker.cropper.overlayColor = [UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:0.7];  // (Optional) Default: [UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:0.7]
     picker.cropper.innerBorderColor = [UIColor colorWithRed:255./255. green:255./255. blue:255./255. alpha:0.7];   // (Optional) Default: [UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:0.7]
   }
   [picker presentPicker];
