@@ -9,7 +9,7 @@
 #import "BeautifiedPictureViewController.h"
 #import "WaterImageController.h"
 #import "DataManager.h"
-#import "StampView.h"
+//#import "StampView.h"
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
@@ -54,6 +54,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
     stampView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];
     stampView.hidden = YES;
+    stampView.delegate = self;
     [stampView initWithType:1];
     [self.view addSubview:stampView];
 }
@@ -139,6 +140,15 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         default:
             break;
     }
+}
+
+- (void)selectImageClick:(UIImage *)img
+{
+    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    image.image = img;
+    
+    [mianView addSubview:image];
+    
 }
 
 @end

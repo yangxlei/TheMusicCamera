@@ -11,5 +11,6 @@
 @interface CustomButton : UIButton
 
 @property (readwrite) int listNo;
+@property (assign, nonatomic) UIImage *btnImage;
 
 @end
