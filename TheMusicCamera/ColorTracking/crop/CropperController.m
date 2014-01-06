@@ -42,7 +42,25 @@
   [self.view addSubview:resizeBtn];
   
   self.view.backgroundColor = [UIColor grayColor];
+  
+  UIButton* done = [UIButton buttonWithType:UIButtonTypeCustom];
+  [done setTitle:@"Done" forState:UIControlStateNormal];
+  [done addTarget:self action:@selector(doneClick:) forControlEvents:UIControlEventTouchUpInside];
+  done.frame = CGRectMake(260, 10, 50, 30);
+  [self.view addSubview:done];
 }
+
+-(void) doneClick:(UIButton*) sender
+{
+  UIImage* image = [cropImageView cropImage];
+  if (delegate)
+  {
+    [delegate onDidFinishCrop:image];
+  }
+  
+  [self dismissModalViewControllerAnimated:YES];
+}
+
 
 -(void) resize:(UIButton*) sender
 {

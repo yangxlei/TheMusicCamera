@@ -82,10 +82,10 @@
     min = max;
   }
   
-  [[self scrollView] setMinimumZoomScale:0.5];
+  [[self scrollView] setMinimumZoomScale:min];
   [[self scrollView] setMaximumZoomScale:max + 5.0f];
   
-  [[self scrollView] setZoomScale:0.5 animated:YES];
+  [[self scrollView] setZoomScale:max animated:YES];
 }
 
 - (void)setCropSize:(CGSize)size {
