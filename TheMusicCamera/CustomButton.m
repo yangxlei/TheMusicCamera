@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
     }
     return self;
 }
@@ -27,5 +28,13 @@
     // Drawing code
 }
 */
+//- (void)setBtnImage:(UIImage *)btnImage
+//{
+//    UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+//    img.image = btnImage;
+//    img.contentMode = UIViewContentModeScaleAspectFit;
+//    [self addSubview:img];
+//    
+//}
 
 @end

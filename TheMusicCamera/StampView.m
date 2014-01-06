@@ -46,16 +46,15 @@
             int vertical = 14/3 + 1;
             
             for (int i=0; i<vertical; i++) {
-                //        stamp_1
                 for (int j=0; j<3; j++) {
                     CustomButton *button = [CustomButton buttonWithType:UIButtonTypeCustom];
                     button.frame = CGRectMake(25+100*i, 10+80*j, 60, 60);
-                    [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"stamp_%d",i*3+j+1]] forState:UIControlStateNormal];
+                    [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"stamp_%d",i*3+j+1]] forState:UIControlStateNormal];
+                    button.imageView.contentMode = UIViewContentModeScaleAspectFit;
                     button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"stamp_%d",i*3+j+1]];
                     [button addTarget:self action:@selector(stampSelect:) forControlEvents:UIControlEventTouchUpInside];
                     [scrollView addSubview:button];
                 }
-                
             }
 
         }

@@ -207,6 +207,7 @@
     [contentView removeFromSuperview];
     contentView = newContentView;
     contentView.backgroundColor = [UIColor clearColor];
+    contentView.contentMode = UIViewContentModeScaleAspectFit;
     contentView.frame = CGRectInset(self.bounds, kSPUserResizableViewGlobalInset + kSPUserResizableViewInteractiveBorderSize/2, kSPUserResizableViewGlobalInset + kSPUserResizableViewInteractiveBorderSize/2);
     contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self addSubview:contentView];
