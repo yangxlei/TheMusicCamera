@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CropperController.h"
-@class DataManager;
-@class StampView;
+#import "StampView.h"
 
-@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, CropControllerDelegate>
+@class DataManager;
+//@class StampView;
+
+@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, CropControllerDelegate,StampViewDelegate>
 {
   IBOutlet UIImageView* imageView;
     IBOutlet UIView *mianView;
@@ -20,6 +22,8 @@
 
     int selectBtnTag;
     StampView *stampView;
+    StampView *stampFrameView;
+
 }
 
 -(void) begin;

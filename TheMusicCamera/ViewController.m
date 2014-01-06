@@ -159,7 +159,7 @@
         {
             [self.mainTabBarController hidesTabBar:YES animated:YES];
           
-          [bpVC begin];
+//          [bpVC begin];//leileilei
         }
     }
 
