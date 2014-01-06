@@ -225,6 +225,10 @@
 		95AF84551875C9BA00C11897 /* UIImage+KIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF84531875C9BA00C11897 /* UIImage+KIAdditions.m */; };
 		95AF845B1875C9E700C11897 /* CropperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF845A1875C9E700C11897 /* CropperController.m */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
+		95FAA551187B04B1001FB0AD /* StampAgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FAA550187B04B1001FB0AD /* StampAgeController.m */; };
+		95FAA553187B057B001FB0AD /* stamp_age.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FAA552187B057B001FB0AD /* stamp_age.storyboard */; };
+		95FAA555187B0A2C001FB0AD /* decoration_age.png in Resources */ = {isa = PBXBuildFile; fileRef = 95FAA554187B0A2C001FB0AD /* decoration_age.png */; };
+		95FAA557187B0D35001FB0AD /* header_age_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 95FAA556187B0D35001FB0AD /* header_age_stamp.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -508,6 +512,11 @@
 		95AF84591875C9E700C11897 /* CropperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropperController.h; sourceTree = "<group>"; };
 		95AF845A1875C9E700C11897 /* CropperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropperController.m; sourceTree = "<group>"; };
 		95C1172318633EF7008391BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		95FAA54F187B04B1001FB0AD /* StampAgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StampAgeController.h; sourceTree = "<group>"; };
+		95FAA550187B04B1001FB0AD /* StampAgeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StampAgeController.m; sourceTree = "<group>"; };
+		95FAA552187B057B001FB0AD /* stamp_age.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = stamp_age.storyboard; sourceTree = "<group>"; };
+		95FAA554187B0A2C001FB0AD /* decoration_age.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decoration_age.png; sourceTree = "<group>"; };
+		95FAA556187B0D35001FB0AD /* header_age_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_age_stamp.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,6 +579,9 @@
 				356E6A68185ADE2A002A1014 /* BeautifiedPictureViewController.m */,
 				2E2F715E1875B15F001A7816 /* StampView.h */,
 				2E2F715F1875B15F001A7816 /* StampView.m */,
+				95FAA54F187B04B1001FB0AD /* StampAgeController.h */,
+				95FAA550187B04B1001FB0AD /* StampAgeController.m */,
+				95FAA552187B057B001FB0AD /* stamp_age.storyboard */,
 			);
 			name = BeautifiedPicture;
 			sourceTree = "<group>";
@@ -625,6 +637,8 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				95FAA556187B0D35001FB0AD /* header_age_stamp.png */,
+				95FAA554187B0A2C001FB0AD /* decoration_age.png */,
 				350B2730187A500D0084B7C0 /* decorathion_flame.png */,
 				2E2F717B1875BD27001A7816 /* decoration_stamp.png */,
 				2E2F71611875B2BD001A7816 /* stamp_1.png */,
@@ -1087,6 +1101,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95FAA553187B057B001FB0AD /* stamp_age.storyboard in Resources */,
 				2E44DAB0185C9D7000C5C1DC /* setting_sound_image_960.png in Resources */,
 				2E2F715918759FC7001A7816 /* decoration_tab_footer_mojiire_off.png in Resources */,
 				2E44DAB1185C9D7000C5C1DC /* setting_sound_image_1136.png in Resources */,
@@ -1110,6 +1125,7 @@
 				356E6A57185AD70F002A1014 /* Icon-Small-40@2x.png in Resources */,
 				2EB0A344185C585B00C226DF /* share_sns_mail.png in Resources */,
 				950C7EED1865E8B50021FE5D /* none.fsh.txt in Resources */,
+				95FAA557187B0D35001FB0AD /* header_age_stamp.png in Resources */,
 				356E6A58185AD70F002A1014 /* icon-small-50.png in Resources */,
 				3519A020186BCE6100FEC752 /* check_mark_dot.png in Resources */,
 				2E2F715C18759FC7001A7816 /* decoration_tab_ooter_mojiire_on.png in Resources */,
@@ -1176,6 +1192,7 @@
 				354467F8185AD419005AB0D9 /* InfoPlist.strings in Resources */,
 				2E5C9F211871B3DD00E6A680 /* howTo_02.png in Resources */,
 				2E6409CC1861F60D0080E903 /* list_2.png in Resources */,
+				95FAA555187B0A2C001FB0AD /* decoration_age.png in Resources */,
 				2E2F716E1875B2BD001A7816 /* stamp_1.png in Resources */,
 				2E44DABD185CA63600C5C1DC /* button_save.png in Resources */,
 				950C7ED81865E5D40021FE5D /* photo_cut_bottombar_cancle_btn@2x.png in Resources */,
@@ -1273,6 +1290,7 @@
 				2E693629185DF7B5000C95F5 /* FMResultSet.m in Sources */,
 				35446804185AD419005AB0D9 /* ViewController.m in Sources */,
 				2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */,
+				95FAA551187B04B1001FB0AD /* StampAgeController.m in Sources */,
 				950C7EF71865F3780021FE5D /* TileBG.m in Sources */,
 				2ED5B1DB186893BC007075EC /* StationViewController.m in Sources */,
 				2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */,

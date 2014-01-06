@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1Qp-Ls-c4y">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Stamp Age Controller-->
+        <scene sceneID="lT2-be-lxp">
+            <objects>
+                <viewController id="1Qp-Ls-c4y" customClass="StampAgeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5GW-lA-tsN"/>
+                        <viewControllerLayoutGuide type="bottom" id="LIj-cu-59E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="thc-AE-v7a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="recording_bg_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-nh-0vF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brk-qQ-FUm">
+                                <rect key="frame" x="85" y="60" width="150" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akD-5f-fXp">
+                                <rect key="frame" x="20" y="189" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_age.png" translatesAutoresizingMaskIntoConstraints="NO" id="UKH-in-TMQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-Zn-Jgn">
+                                        <rect key="frame" x="67" y="0.0" width="201" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9v-E1-6NQ">
+                                        <rect key="frame" x="0.0" y="-10" width="280" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ageClick:" destination="1Qp-Ls-c4y" eventType="touchUpInside" id="BFH-zy-pCh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-BH-xjn">
+                                <rect key="frame" x="0.0" y="240" width="320" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decorathion_flame.png" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-gc-FeP">
+                                        <rect key="frame" x="0.0" y="-1" width="320" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Os2-2H-nSf">
+                                        <rect key="frame" x="0.0" y="25" width="320" height="215"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="2hF-Nj-kid"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gLQ-BH-xjn" secondAttribute="bottom" id="94d-2W-XiP"/>
+                            <constraint firstAttribute="bottom" secondItem="aq8-nh-0vF" secondAttribute="bottom" id="DFA-Ma-cma"/>
+                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="centerX" secondItem="akD-5f-fXp" secondAttribute="centerX" id="Evj-eq-G8Z"/>
+                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="bottom" secondItem="aq8-nh-0vF" secondAttribute="bottom" id="Fsu-Dd-PzI"/>
+                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="leading" secondItem="aq8-nh-0vF" secondAttribute="leading" id="LwU-61-rBE"/>
+                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="trailing" secondItem="aq8-nh-0vF" secondAttribute="trailing" id="O5x-uq-OjK"/>
+                            <constraint firstItem="akD-5f-fXp" firstAttribute="leading" secondItem="thc-AE-v7a" secondAttribute="leading" constant="20" symbolic="YES" id="UPh-7y-Nlr"/>
+                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="leading" secondItem="thc-AE-v7a" secondAttribute="leading" id="UkF-OL-TGP"/>
+                            <constraint firstAttribute="trailing" secondItem="gLQ-BH-xjn" secondAttribute="trailing" id="gDM-d3-8mS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="age" destination="ImC-Zn-Jgn" id="o5d-Ux-WpK"/>
+                        <outlet property="demoView" destination="brk-qQ-FUm" id="ROr-Gg-e5G"/>
+                        <outlet property="scrollView" destination="Os2-2H-nSf" id="eid-xE-i3Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ve-Qf-vcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="-179"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="decorathion_flame.png" width="640" height="518"/>
+        <image name="decoration_age.png" width="608" height="82"/>
+        <image name="recording_bg_2.png" width="308" height="481"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

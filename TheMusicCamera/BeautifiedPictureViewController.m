@@ -118,6 +118,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     }
     UIButton *btn = (UIButton *)sender;
     btn.selected = YES;
+  UIStoryboard* storyboard = nil;
     switch (btn.tag) {
         case 1:
         {
@@ -150,7 +151,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             break;
         case 3:
         {
-            
+          storyboard = [UIStoryboard storyboardWithName:@"stamp_age" bundle:nil];
+          [self.navigationController pushViewController:[storyboard instantiateInitialViewController] animated:YES];
         }
             break;
         case 4:
