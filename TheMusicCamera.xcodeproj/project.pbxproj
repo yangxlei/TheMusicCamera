@@ -14,6 +14,12 @@
 		2E24856B187028080090634D /* btn_setting_text .png in Resources */ = {isa = PBXBuildFile; fileRef = 2E24856A187028080090634D /* btn_setting_text .png */; };
 		2E24856E1870287B0090634D /* btn_setting_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E24856C1870287B0090634D /* btn_setting_left.png */; };
 		2E24856F1870287B0090634D /* btn_setting_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E24856D1870287B0090634D /* btn_setting_right.png */; };
+		2E2C1B521879902D0002470A /* SPGripViewBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4B1879902D0002470A /* SPGripViewBorderView.m */; };
+		2E2C1B531879902D0002470A /* stamp_tool_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4C1879902D0002470A /* stamp_tool_1.png */; };
+		2E2C1B541879902D0002470A /* stamp_tool_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4D1879902D0002470A /* stamp_tool_2.png */; };
+		2E2C1B551879902D0002470A /* ZDBtn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4E1879902D0002470A /* ZDBtn2.png */; };
+		2E2C1B561879902D0002470A /* ZDBtn3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4F1879902D0002470A /* ZDBtn3.png */; };
+		2E2C1B571879902D0002470A /* ZDStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C1B511879902D0002470A /* ZDStickerView.m */; };
 		2E2F715518759FC7001A7816 /* decoration_tab_footer_age_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F714D18759FC7001A7816 /* decoration_tab_footer_age_off.png */; };
 		2E2F715618759FC7001A7816 /* decoration_tab_footer_age_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F714E18759FC7001A7816 /* decoration_tab_footer_age_on.png */; };
 		2E2F715718759FC7001A7816 /* decoration_tab_footer_frame_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F714F18759FC7001A7816 /* decoration_tab_footer_frame_off.png */; };
@@ -239,6 +245,14 @@
 		2E24856A187028080090634D /* btn_setting_text .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_setting_text .png"; sourceTree = "<group>"; };
 		2E24856C1870287B0090634D /* btn_setting_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_setting_left.png; sourceTree = "<group>"; };
 		2E24856D1870287B0090634D /* btn_setting_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_setting_right.png; sourceTree = "<group>"; };
+		2E2C1B4A1879902D0002470A /* SPGripViewBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGripViewBorderView.h; sourceTree = "<group>"; };
+		2E2C1B4B1879902D0002470A /* SPGripViewBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGripViewBorderView.m; sourceTree = "<group>"; };
+		2E2C1B4C1879902D0002470A /* stamp_tool_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_tool_1.png; sourceTree = "<group>"; };
+		2E2C1B4D1879902D0002470A /* stamp_tool_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_tool_2.png; sourceTree = "<group>"; };
+		2E2C1B4E1879902D0002470A /* ZDBtn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZDBtn2.png; sourceTree = "<group>"; };
+		2E2C1B4F1879902D0002470A /* ZDBtn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZDBtn3.png; sourceTree = "<group>"; };
+		2E2C1B501879902D0002470A /* ZDStickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDStickerView.h; sourceTree = "<group>"; };
+		2E2C1B511879902D0002470A /* ZDStickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDStickerView.m; sourceTree = "<group>"; };
 		2E2F714D18759FC7001A7816 /* decoration_tab_footer_age_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decoration_tab_footer_age_off.png; sourceTree = "<group>"; };
 		2E2F714E18759FC7001A7816 /* decoration_tab_footer_age_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decoration_tab_footer_age_on.png; sourceTree = "<group>"; };
 		2E2F714F18759FC7001A7816 /* decoration_tab_footer_frame_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decoration_tab_footer_frame_off.png; sourceTree = "<group>"; };
@@ -532,6 +546,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2C1B491879902D0002470A /* ZDStickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2E2C1B4A1879902D0002470A /* SPGripViewBorderView.h */,
+				2E2C1B4B1879902D0002470A /* SPGripViewBorderView.m */,
+				2E2C1B4C1879902D0002470A /* stamp_tool_1.png */,
+				2E2C1B4D1879902D0002470A /* stamp_tool_2.png */,
+				2E2C1B4E1879902D0002470A /* ZDBtn2.png */,
+				2E2C1B4F1879902D0002470A /* ZDBtn3.png */,
+				2E2C1B501879902D0002470A /* ZDStickerView.h */,
+				2E2C1B511879902D0002470A /* ZDStickerView.m */,
+			);
+			path = ZDStickerView;
+			sourceTree = "<group>";
+		};
 		2E2F715D1875B12B001A7816 /* BeautifiedPicture */ = {
 			isa = PBXGroup;
 			children = (
@@ -782,6 +811,7 @@
 		354467F3185AD419005AB0D9 /* TheMusicCamera */ = {
 			isa = PBXGroup;
 			children = (
+				2E2C1B491879902D0002470A /* ZDStickerView */,
 				950C7EB61865E19B0021FE5D /* ColorTracking */,
 				356E6A8C185B15FB002A1014 /* DataManager.h */,
 				356E6A8D185B15FB002A1014 /* DataManager.m */,
@@ -1060,9 +1090,11 @@
 				356E6A83185AE23E002A1014 /* main_tab_osusume_off.png in Resources */,
 				2E44DAC5185CAF7500C5C1DC /* header_sound_list.png in Resources */,
 				356E6A52185AD70F002A1014 /* icon-72.png in Resources */,
+				2E2C1B541879902D0002470A /* stamp_tool_2.png in Resources */,
 				2E2F71771875B2BD001A7816 /* stamp_10.png in Resources */,
 				356E6A80185AE23E002A1014 /* main_tab_camera.png in Resources */,
 				2EB0A339185C567800C226DF /* share_save_pop.png in Resources */,
+				2E2C1B561879902D0002470A /* ZDBtn3.png in Resources */,
 				2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */,
 				2E6409CF18633F900080E903 /* recording_dustbox.png in Resources */,
 				2EE5AF97186077BA00A35754 /* sound_setting_now_list2.png in Resources */,
@@ -1079,6 +1111,7 @@
 				3519A020186BCE6100FEC752 /* check_mark_dot.png in Resources */,
 				2E2F715C18759FC7001A7816 /* decoration_tab_ooter_mojiire_on.png in Resources */,
 				356E6A82185AE23E002A1014 /* main_tab_decoration_on.png in Resources */,
+				2E2C1B531879902D0002470A /* stamp_tool_1.png in Resources */,
 				356E6A5A185AD70F002A1014 /* icon-small.png in Resources */,
 				356E6A81185AE23E002A1014 /* main_tab_decoration_off.png in Resources */,
 				9571A21B185C975D003D3285 /* shoot_camera_button_bg.png in Resources */,
@@ -1105,6 +1138,7 @@
 				2E2F71731875B2BD001A7816 /* stamp_6.png in Resources */,
 				2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */,
 				9571A219185C975D003D3285 /* shoot_camera_button_1.png in Resources */,
+				2E2C1B551879902D0002470A /* ZDBtn2.png in Resources */,
 				2ED5B1D61868922B007075EC /* setting_info_text.png in Resources */,
 				9571A221185C975D003D3285 /* shot_kirikae.png in Resources */,
 				35563FF41871431700BA2BD6 /* list_middle_a.png in Resources */,
@@ -1240,6 +1274,8 @@
 				2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */,
 				2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */,
 				950C7EE61865E6700021FE5D /* MQRoundPatView.m in Sources */,
+				2E2C1B571879902D0002470A /* ZDStickerView.m in Sources */,
+				2E2C1B521879902D0002470A /* SPGripViewBorderView.m in Sources */,
 				2E9C8AC418701FA50087F476 /* CustomButton.m in Sources */,
 				950C7EF31865E9BD0021FE5D /* PictureRangeSelectView.m in Sources */,
 				356E6A6C185ADE5E002A1014 /* SoundsViewController.m in Sources */,

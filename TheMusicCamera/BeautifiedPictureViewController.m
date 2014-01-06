@@ -10,6 +10,7 @@
 #import "WaterImageController.h"
 #import "DataManager.h"
 //#import "StampView.h"
+#import "ZDStickerView.h"
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
@@ -57,6 +58,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     stampView.delegate = self;
     [stampView initWithType:1];
     [self.view addSubview:stampView];
+    
+    stampFrameView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];
+    stampFrameView.hidden = YES;
+    stampFrameView.delegate = self;
+    [stampFrameView initWithType:2];
+    [self.view addSubview:stampFrameView];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -123,7 +131,20 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             break;
         case 2:
         {
-            
+            if (stampView.hidden) {
+            }
+            else
+            {
+                stampView.hidden = YES;
+            }
+            if (stampFrameView.hidden) {
+                stampFrameView.hidden = NO;
+            }
+            else
+            {
+                stampFrameView.hidden = YES;
+            }
+
         }
             break;
         case 3:
@@ -144,11 +165,26 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)selectImageClick:(UIImage *)img
 {
-    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-    image.image = img;
+    UIImageView *imageV = [[UIImageView alloc]
+                              initWithImage:img];
     
-    [mianView addSubview:image];
+    CGRect gripFrame1 = CGRectMake(50, 50, 140, 140);
+    ZDStickerView *userResizableView1 = [[ZDStickerView alloc] initWithFrame:gripFrame1];
+    userResizableView1.contentView = imageV;
+    userResizableView1.preventsPositionOutsideSuperview = YES;
+    [userResizableView1 showEditingHandles];
+    [mianView addSubview:userResizableView1];
+
     
+    
+//    UITextView *textView = [[UITextView alloc] initWithFrame:gripFrame2];
+//    textView.text = @"ZDStickerView is Objective-C module for iOS and offer complete configurability, including movement, resizing, rotation and more, with one finger.";
+//    ZDStickerView *userResizableView2 = [[ZDStickerView alloc] initWithFrame:gripFrame2];
+//    userResizableView2.contentView = textView;
+//    userResizableView2.preventsPositionOutsideSuperview = NO;
+//    [userResizableView2 showEditingHandles];
+//    [self.view addSubview:userResizableView2];
+
 }
 
 @end

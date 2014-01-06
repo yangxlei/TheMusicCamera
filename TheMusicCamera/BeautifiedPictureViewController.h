@@ -22,6 +22,8 @@
 
     int selectBtnTag;
     StampView *stampView;
+    StampView *stampFrameView;
+
 }
 
 -(void) begin;
