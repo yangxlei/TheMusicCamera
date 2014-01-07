@@ -87,6 +87,7 @@
 		2E693629185DF7B5000C95F5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E693622185DF7B5000C95F5 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2E69362A185DF7B5000C95F5 /* TmpFile in Resources */ = {isa = PBXBuildFile; fileRef = 2E693623185DF7B5000C95F5 /* TmpFile */; };
 		2E69362C185DF8FD000C95F5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E69362B185DF8FD000C95F5 /* libsqlite3.dylib */; };
+		2E98CD1D187C42B70046CFDB /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E98CD1C187C42B70046CFDB /* lock.png */; };
 		2E9C8AC418701FA50087F476 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C8AC318701FA50087F476 /* CustomButton.m */; };
 		2EA58154186B234700AF2BB1 /* button_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA58153186B234700AF2BB1 /* button_edit.png */; };
 		2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB0A32E185C07C000C226DF /* mama_camera_top_1136.png */; };
@@ -338,6 +339,7 @@
 		2E693622185DF7B5000C95F5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		2E693623185DF7B5000C95F5 /* TmpFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TmpFile; sourceTree = "<group>"; };
 		2E69362B185DF8FD000C95F5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2E98CD1C187C42B70046CFDB /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		2E9C8AC218701FA50087F476 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		2E9C8AC318701FA50087F476 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		2EA58153186B234700AF2BB1 /* button_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_edit.png; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2E98CD1C187C42B70046CFDB /* lock.png */,
 				35808D4C187BF4A000A5BA34 /* flame_1_1.png */,
 				35808D4D187BF4A000A5BA34 /* flame_4_3.png */,
 				95FAA556187B0D35001FB0AD /* header_age_stamp.png */,
@@ -1109,6 +1112,7 @@
 			files = (
 				95FAA553187B057B001FB0AD /* stamp_age.storyboard in Resources */,
 				2E44DAB0185C9D7000C5C1DC /* setting_sound_image_960.png in Resources */,
+				2E98CD1D187C42B70046CFDB /* lock.png in Resources */,
 				2E2F715918759FC7001A7816 /* decoration_tab_footer_mojiire_off.png in Resources */,
 				2E44DAB1185C9D7000C5C1DC /* setting_sound_image_1136.png in Resources */,
 				356E6A83185AE23E002A1014 /* main_tab_osusume_off.png in Resources */,

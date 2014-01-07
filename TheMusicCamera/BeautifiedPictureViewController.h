@@ -25,7 +25,8 @@
     StampView *stampFrameView;
 
     NSMutableArray *stampArr;
-    
+    NSMutableArray *stampFrameArr;
+
 }
 
 -(void) begin;

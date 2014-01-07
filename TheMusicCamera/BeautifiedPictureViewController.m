@@ -45,11 +45,17 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     self.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBarHidden = YES;
     dataManager = [DataManager sharedManager];
+    
+    stampArr = [[NSMutableArray alloc]initWithCapacity:0];
+    stampFrameArr = [[NSMutableArray alloc]initWithCapacity:0];
 
     selectBtnTag = 1;
     
     [self navgationImage:@"header"];
     
+    UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
+    [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
+
     UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 52, 28)];
     [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
@@ -71,6 +77,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)backBtuuon
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
 }
 
 -(IBAction)cancelClick:(id)sender
@@ -107,7 +118,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)okBtuuon
 {
     for (int i=0; i<stampArr.count; i++) {
-        
+        ZDStickerView *zdsView = [stampArr objectAtIndex:i];
+        [zdsView hideEditingHandles];
     }
     
     UIGraphicsBeginImageContext(mianView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
@@ -192,9 +204,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     }
     else if (type==2)
     {
+        if (stampFrameArr.count!=0) {
+            [[stampFrameArr objectAtIndex:0]removeFromSuperview];
+        }
         UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
         image.image = img;
         [mianView addSubview:image];
+        [mianView insertSubview:image atIndex:0];
+        
         mianView.backgroundColor = [UIColor greenColor];
     }
 

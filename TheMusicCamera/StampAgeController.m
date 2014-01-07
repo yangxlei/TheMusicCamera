@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.hidesBottomBarWhenPushed = YES;
+
   [self navgationImage:@"header_age_stamp.png"];
   
   UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];

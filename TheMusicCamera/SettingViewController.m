@@ -11,6 +11,7 @@
 #import "StationViewController.h"
 #import "InfoViewController.h"
 #import "ExplanationViewController.h"
+#import "StoreKitHelper.h"
 
 @interface SettingViewController ()
 
@@ -53,6 +54,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 
 }
+
 - (IBAction)explanationBtn:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ExplanationViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ExplanationViewController"];
@@ -60,4 +62,24 @@
 
 }
 
+- (IBAction)inappStore:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                  message:@"这是一个简单的警告框！"
+                                                 delegate:self
+                                        cancelButtonTitle:@"确定"
+                                        otherButtonTitles:@"取消", nil];
+    [alertView show];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==0) {
+        NSLog(@"0");
+    }
+    else
+    {
+        NSLog(@"1");
+    }
+}
 @end
