@@ -12,7 +12,7 @@
 
 @protocol StampViewDelegate
 
-- (void)selectImageClick:(UIImage *)img;
+- (void)selectImageClick:(UIImage *)img andType:(int)type;
 
 @end
 

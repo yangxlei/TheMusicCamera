@@ -12,5 +12,6 @@
 
 @property (readwrite) int listNo;
 @property (assign, nonatomic) UIImage *btnImage;
+@property (readwrite) int type;
 
 @end

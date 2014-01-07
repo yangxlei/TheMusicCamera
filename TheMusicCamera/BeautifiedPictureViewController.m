@@ -107,6 +107,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)okBtuuon
 {
     
+    UIGraphicsBeginImageContext(mianView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
+    [mianView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();//返回一个基于当前图形上下文的图片
+    UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
+    UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
+    dataManager.shareImg = viewImage;
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNSHAREVC" object:nil];
   
 }
@@ -122,6 +129,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     switch (btn.tag) {
         case 1:
         {
+            stampFrameView.hidden = YES;
             if (stampView.hidden) {
                 stampView.hidden = NO;
             }
@@ -129,16 +137,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             {
                 stampView.hidden = YES;
             }
+            
+
         }
             break;
         case 2:
         {
-            if (stampView.hidden) {
-            }
-            else
-            {
-                stampView.hidden = YES;
-            }
+            stampView.hidden = YES;
             if (stampFrameView.hidden) {
                 stampFrameView.hidden = NO;
             }
@@ -166,17 +171,26 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     }
 }
 
-- (void)selectImageClick:(UIImage *)img
+- (void)selectImageClick:(UIImage *)img andType:(int)type
 {
-    UIImageView *imageV = [[UIImageView alloc]
-                              initWithImage:img];
-    
-    CGRect gripFrame1 = CGRectMake(50, 50, 140, 140);
-    ZDStickerView *userResizableView1 = [[ZDStickerView alloc] initWithFrame:gripFrame1];
-    userResizableView1.contentView = imageV;
-    userResizableView1.preventsPositionOutsideSuperview = YES;
-    [userResizableView1 showEditingHandles];
-    [mianView addSubview:userResizableView1];
+    if (type==1) {
+        UIImageView *imageV = [[UIImageView alloc]
+                               initWithImage:img];
+        
+        CGRect gripFrame1 = CGRectMake(50, 50, 140, 140);
+        ZDStickerView *userResizableView1 = [[ZDStickerView alloc] initWithFrame:gripFrame1];
+        userResizableView1.contentView = imageV;
+        userResizableView1.preventsPositionOutsideSuperview = YES;
+        [userResizableView1 showEditingHandles];
+        [mianView addSubview:userResizableView1];
+    }
+    else if (type==2)
+    {
+        UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+        image.image = img;
+        [mianView addSubview:image];
+        mianView.backgroundColor = [UIColor greenColor];
+    }
 
     
     

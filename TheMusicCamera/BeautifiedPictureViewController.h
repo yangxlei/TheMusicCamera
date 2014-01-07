@@ -24,6 +24,7 @@
     StampView *stampView;
     StampView *stampFrameView;
 
+    
 }
 
 -(void) begin;
