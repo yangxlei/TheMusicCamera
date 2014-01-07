@@ -15,7 +15,7 @@
 
 @interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, CropControllerDelegate,StampViewDelegate>
 {
-  IBOutlet UIImageView* imageView;
+    IBOutlet UIImageView* imageView;
     IBOutlet UIView *mianView;
     
     DataManager *dataManager;
@@ -24,6 +24,7 @@
     StampView *stampView;
     StampView *stampFrameView;
 
+    NSMutableArray *stampArr;
     
 }
 

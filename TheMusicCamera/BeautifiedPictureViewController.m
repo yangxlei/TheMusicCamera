@@ -106,6 +106,9 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)okBtuuon
 {
+    for (int i=0; i<stampArr.count; i++) {
+        
+    }
     
     UIGraphicsBeginImageContext(mianView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
     [mianView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
@@ -183,6 +186,9 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         userResizableView1.preventsPositionOutsideSuperview = YES;
         [userResizableView1 showEditingHandles];
         [mianView addSubview:userResizableView1];
+        
+        [stampArr addObject:userResizableView1];
+        
     }
     else if (type==2)
     {
