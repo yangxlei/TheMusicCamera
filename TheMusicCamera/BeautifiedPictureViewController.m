@@ -9,9 +9,7 @@
 #import "BeautifiedPictureViewController.h"
 #import "WaterImageController.h"
 #import "DataManager.h"
-//#import "StampView.h"
 #import "ZDStickerView.h"
-#import "TextFontViewController.h"
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
@@ -178,6 +176,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         {
             storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             TextFontViewController *textVC = [storyboard instantiateViewControllerWithIdentifier:@"TextFontViewController"];
+            textVC.delegate = self;
             [self.navigationController pushViewController:textVC animated:YES];
         }
             break;
@@ -225,6 +224,40 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 //    userResizableView2.preventsPositionOutsideSuperview = NO;
 //    [userResizableView2 showEditingHandles];
 //    [self.view addSubview:userResizableView2];
+
+}
+
+//- (void)selectColor:(UIColor *)color andFont:(UIFont *)fontStr
+//{
+//    CGRect gripFrame2 = CGRectMake(50, 200, 180, 140);
+//    UITextView *textView = [[UITextView alloc] initWithFrame:gripFrame2];
+//    textView.text = @"ZDStickerView is Objective-C module for iOS and offer complete configurability, including movement, resizing, rotation and more, with one finger.";
+//    textView.textColor = color;
+//    textView.font = fontStr;
+//    
+//    ZDStickerView *userResizableView2 = [[ZDStickerView alloc] initWithFrame:gripFrame2];
+//    userResizableView2.contentView = textView;
+//    userResizableView2.preventsPositionOutsideSuperview = NO;
+//    [userResizableView2 showEditingHandles];
+//    [mianView addSubview:userResizableView2];
+//
+//}
+
+- (void)selectTextView:(UITextView *)textView
+{
+    CGRect gripFrame2 = CGRectMake(50, 50, 140, 140);
+    UITextView *tv = [[UITextView alloc] initWithFrame:gripFrame2];
+    tv.textColor = textView.textColor;
+    tv.font = textView.font;
+    tv.text = textView.text;
+    
+    ZDStickerView *userResizableView2 = [[ZDStickerView alloc] initWithFrame:gripFrame2];
+    userResizableView2.contentView = tv;
+    userResizableView2.preventsPositionOutsideSuperview = YES;
+    [userResizableView2 showEditingHandles];
+    [mianView addSubview:userResizableView2];
+
+    [stampArr addObject:userResizableView2];
 
 }
 

@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    NSArray *fontArray = [UIFont familyNames];
+    NSLog(@"fontArray  %@",fontArray);
+    
     firstEntry = YES;
 
     [self loadMainView];

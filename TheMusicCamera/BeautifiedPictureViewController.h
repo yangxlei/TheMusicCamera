@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "CropperController.h"
 #import "StampView.h"
+#import "TextFontViewController.h"
 
 @class DataManager;
 //@class StampView;
 
-@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, CropControllerDelegate,StampViewDelegate>
+@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, CropControllerDelegate,StampViewDelegate,TextFontVCDelegate>
 {
     IBOutlet UIImageView* imageView;
     IBOutlet UIView *mianView;

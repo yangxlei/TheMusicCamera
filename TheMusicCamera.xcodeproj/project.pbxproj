@@ -43,6 +43,11 @@
 		2E2F71791875B2BD001A7816 /* stamp_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F716C1875B2BD001A7816 /* stamp_12.png */; };
 		2E2F717A1875B2BD001A7816 /* stamp_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F716D1875B2BD001A7816 /* stamp_13.png */; };
 		2E2F717C1875BD27001A7816 /* decoration_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F717B1875BD27001A7816 /* decoration_stamp.png */; };
+		2E3E0EFA187D8FFE0058C4C4 /* APJapanesefont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E3E0EF5187D8FFE0058C4C4 /* APJapanesefont.ttf */; };
+		2E3E0EFB187D8FFE0058C4C4 /* HuiFont29.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E3E0EF6187D8FFE0058C4C4 /* HuiFont29.ttf */; };
+		2E3E0EFC187D8FFE0058C4C4 /* MakibaFont13.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E3E0EF7187D8FFE0058C4C4 /* MakibaFont13.ttf */; };
+		2E3E0EFD187D8FFE0058C4C4 /* OhisamaFont11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E3E0EF8187D8FFE0058C4C4 /* OhisamaFont11.ttf */; };
+		2E3E0EFE187D8FFE0058C4C4 /* VL-Gothic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E3E0EF9187D8FFE0058C4C4 /* VL-Gothic-Regular.ttf */; };
 		2E44DAA9185C9AA600C5C1DC /* sound_setting_now.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAA8185C9AA600C5C1DC /* sound_setting_now.png */; };
 		2E44DAAC185C9BB900C5C1DC /* record_sound_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAAA185C9BB900C5C1DC /* record_sound_setting.png */; };
 		2E44DAAD185C9BB900C5C1DC /* recorded_sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAAB185C9BB900C5C1DC /* recorded_sound.png */; };
@@ -307,6 +312,11 @@
 		2E2F716C1875B2BD001A7816 /* stamp_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_12.png; sourceTree = "<group>"; };
 		2E2F716D1875B2BD001A7816 /* stamp_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_13.png; sourceTree = "<group>"; };
 		2E2F717B1875BD27001A7816 /* decoration_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decoration_stamp.png; sourceTree = "<group>"; };
+		2E3E0EF5187D8FFE0058C4C4 /* APJapanesefont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = APJapanesefont.ttf; sourceTree = "<group>"; };
+		2E3E0EF6187D8FFE0058C4C4 /* HuiFont29.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HuiFont29.ttf; sourceTree = "<group>"; };
+		2E3E0EF7187D8FFE0058C4C4 /* MakibaFont13.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MakibaFont13.ttf; sourceTree = "<group>"; };
+		2E3E0EF8187D8FFE0058C4C4 /* OhisamaFont11.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OhisamaFont11.ttf; sourceTree = "<group>"; };
+		2E3E0EF9187D8FFE0058C4C4 /* VL-Gothic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VL-Gothic-Regular.ttf"; sourceTree = "<group>"; };
 		2E44DAA8185C9AA600C5C1DC /* sound_setting_now.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_setting_now.png; sourceTree = "<group>"; };
 		2E44DAAA185C9BB900C5C1DC /* record_sound_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_sound_setting.png; sourceTree = "<group>"; };
 		2E44DAAB185C9BB900C5C1DC /* recorded_sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recorded_sound.png; sourceTree = "<group>"; };
@@ -973,6 +983,11 @@
 				354467F9185AD419005AB0D9 /* main.m */,
 				354467FB185AD419005AB0D9 /* TheMusicCamera-Prefix.pch */,
 				2ED5B1E71869C288007075EC /* A-OTF-Jun501Pro-Bold.otf */,
+				2E3E0EF5187D8FFE0058C4C4 /* APJapanesefont.ttf */,
+				2E3E0EF6187D8FFE0058C4C4 /* HuiFont29.ttf */,
+				2E3E0EF7187D8FFE0058C4C4 /* MakibaFont13.ttf */,
+				2E3E0EF8187D8FFE0058C4C4 /* OhisamaFont11.ttf */,
+				2E3E0EF9187D8FFE0058C4C4 /* VL-Gothic-Regular.ttf */,
 				35563FF51871497800BA2BD6 /* IMG_0086.JPG */,
 			);
 			name = "Supporting Files";
@@ -1218,6 +1233,7 @@
 				2EB0A339185C567800C226DF /* share_save_pop.png in Resources */,
 				2E2C1B561879902D0002470A /* ZDBtn3.png in Resources */,
 				2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */,
+				2E3E0EFD187D8FFE0058C4C4 /* OhisamaFont11.ttf in Resources */,
 				35CF5785187D379600FC536C /* color3.png in Resources */,
 				2E6409CF18633F900080E903 /* recording_dustbox.png in Resources */,
 				2EE5AF97186077BA00A35754 /* sound_setting_now_list2.png in Resources */,
@@ -1258,6 +1274,7 @@
 				2E44DAB9185CA3FE00C5C1DC /* header_recording.png in Resources */,
 				35D4DF171875577900BF9613 /* button_OK.png in Resources */,
 				2E6409CA1861F60D0080E903 /* check.png in Resources */,
+				2E3E0EFB187D8FFE0058C4C4 /* HuiFont29.ttf in Resources */,
 				9571A21F185C975D003D3285 /* shot_flash_off.png in Resources */,
 				35808D4F187BF4A000A5BA34 /* flame_4_3.png in Resources */,
 				2E6409C11861EA4F0080E903 /* default01.wav in Resources */,
@@ -1265,6 +1282,7 @@
 				2E2F71701875B2BD001A7816 /* stamp_3.png in Resources */,
 				95916A3B186C8489001086A1 /* water_image.storyboard in Resources */,
 				2E2F71731875B2BD001A7816 /* stamp_6.png in Resources */,
+				2E3E0EFC187D8FFE0058C4C4 /* MakibaFont13.ttf in Resources */,
 				2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */,
 				9571A219185C975D003D3285 /* shoot_camera_button_1.png in Resources */,
 				2E2C1B551879902D0002470A /* ZDBtn2.png in Resources */,
@@ -1343,6 +1361,7 @@
 				356E6A5B185AD70F002A1014 /* icon-small@2x.png in Resources */,
 				950C7ED91865E5D40021FE5D /* photo_cut_bottombar_bg@2x.png in Resources */,
 				2E6409CD1861F60D0080E903 /* list_3.png in Resources */,
+				2E3E0EFA187D8FFE0058C4C4 /* APJapanesefont.ttf in Resources */,
 				35CF5783187D379600FC536C /* color1.png in Resources */,
 				9571A21A185C975D003D3285 /* shoot_camera_button_2.png in Resources */,
 				2E693614185DE2D5000C95F5 /* recording_rec.png in Resources */,
@@ -1355,6 +1374,7 @@
 				35CF5774187CFD1F00FC536C /* decoration_mojiire_text.png in Resources */,
 				2E5C9F221871B3DD00E6A680 /* howTo_03.png in Resources */,
 				35CF5784187D379600FC536C /* color2.png in Resources */,
+				2E3E0EFE187D8FFE0058C4C4 /* VL-Gothic-Regular.ttf in Resources */,
 				3507027B187CEE5400BEB701 /* header_mojiire.png in Resources */,
 				2E1EBB491867E5FE00F64A2E /* header_record_sound.png in Resources */,
 				2E2F715718759FC7001A7816 /* decoration_tab_footer_frame_off.png in Resources */,
