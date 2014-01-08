@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -109,6 +109,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3D-cp-apm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-380" y="-651"/>
+        </scene>
+        <!--Text Font View Controller-->
+        <scene sceneID="SFk-mu-OBZ">
+            <objects>
+                <viewController storyboardIdentifier="TextFontViewController" id="QDg-Ez-aCY" customClass="TextFontViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ObL-ku-1a0"/>
+                        <viewControllerLayoutGuide type="bottom" id="949-6s-OoN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OSA-Rj-ufM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="RwV-Ed-jJk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_mojiire_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="BkC-yU-9Oj">
+                                <rect key="frame" x="13" y="72" width="295" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFe-Y2-H7y">
+                                <rect key="frame" x="41" y="237" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="color">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4G6-aV-Cxf">
+                                <rect key="frame" x="226" y="237" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="font">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-4G-8Pp">
+                                <rect key="frame" x="0.0" y="263" width="320" height="305"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_tab_color_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="vxh-Hw-vV4">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uiz-vM-5Q4">
+                                <rect key="frame" x="0.0" y="263" width="320" height="305"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_tab_font_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="OID-Y8-e2k">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPu-cd-fwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="-631"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="E2x-3d-Xoa">
@@ -917,6 +981,9 @@
         <image name="btn_setting_text .png" width="514" height="60"/>
         <image name="check.png" width="41" height="36"/>
         <image name="check_mark_blank.png" width="30" height="30"/>
+        <image name="decoration_mojiire_text.png" width="591" height="294"/>
+        <image name="decoration_tab_color_on.png" width="640" height="611"/>
+        <image name="decoration_tab_font_on.png" width="640" height="611"/>
         <image name="decoration_tab_footer_age_off.png" width="160" height="102"/>
         <image name="decoration_tab_footer_age_on.png" width="160" height="102"/>
         <image name="decoration_tab_footer_frame_off.png" width="160" height="102"/>

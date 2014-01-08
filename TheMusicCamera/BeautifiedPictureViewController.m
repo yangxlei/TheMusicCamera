@@ -11,6 +11,7 @@
 #import "DataManager.h"
 //#import "StampView.h"
 #import "ZDStickerView.h"
+#import "TextFontViewController.h"
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
@@ -153,7 +154,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
                 stampView.hidden = YES;
             }
             
-
         }
             break;
         case 2:
@@ -166,7 +166,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             {
                 stampFrameView.hidden = YES;
             }
-
         }
             break;
         case 3:
@@ -177,10 +176,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             break;
         case 4:
         {
-            
+            storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            TextFontViewController *textVC = [storyboard instantiateViewControllerWithIdentifier:@"TextFontViewController"];
+            [self.navigationController pushViewController:textVC animated:YES];
         }
             break;
-  
+            
         default:
             break;
     }
