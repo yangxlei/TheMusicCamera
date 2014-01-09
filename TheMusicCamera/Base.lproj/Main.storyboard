@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -130,43 +130,48 @@
                                 <rect key="frame" x="13" y="72" width="295" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFe-Y2-H7y">
-                                <rect key="frame" x="41" y="237" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFe-Y2-H7y">
+                                <rect key="frame" x="0.0" y="264" width="160" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="color">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="decoration_tab_color_on.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="decoration_tab_color_off.png"/>
+                                <state key="highlighted" backgroundImage="decoration_tab_color_off.png"/>
                                 <connections>
                                     <action selector="colorBtn:" destination="QDg-Ez-aCY" eventType="touchUpInside" id="58O-hh-HqE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4G6-aV-Cxf">
-                                <rect key="frame" x="226" y="237" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4G6-aV-Cxf">
+                                <rect key="frame" x="160" y="264" width="160" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="font">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="decoration_tab_font_on.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="decoration_tab_font_off.png"/>
                                 <connections>
                                     <action selector="fontBtn:" destination="QDg-Ez-aCY" eventType="touchUpInside" id="PnG-Hm-sRI"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-4G-8Pp">
-                                <rect key="frame" x="0.0" y="263" width="320" height="305"/>
+                                <rect key="frame" x="0.0" y="293" width="320" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_tab_color_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="vxh-Hw-vV4">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_tab_color_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="vxh-Hw-vV4">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="275"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uiz-vM-5Q4">
-                                <rect key="frame" x="0.0" y="263" width="320" height="305"/>
+                                <rect key="frame" x="0.0" y="293" width="320" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_tab_font_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="OID-Y8-e2k">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_tab_font_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="OID-Y8-e2k">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="275"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
@@ -183,7 +188,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="colorButton" destination="nFe-Y2-H7y" id="rcC-w0-7I3"/>
                         <outlet property="colorView" destination="8bs-4G-8Pp" id="fjJ-xm-Egj"/>
+                        <outlet property="fontButton" destination="4G6-aV-Cxf" id="daW-L4-cbJ"/>
                         <outlet property="fontView" destination="uiz-vM-5Q4" id="8Jm-o4-f1p"/>
                         <outlet property="textView" destination="nCj-80-mgW" id="3pt-DF-mie"/>
                     </connections>
@@ -1000,8 +1007,12 @@
         <image name="check.png" width="41" height="36"/>
         <image name="check_mark_blank.png" width="30" height="30"/>
         <image name="decoration_mojiire_text.png" width="591" height="294"/>
-        <image name="decoration_tab_color_on.png" width="640" height="611"/>
-        <image name="decoration_tab_font_on.png" width="640" height="611"/>
+        <image name="decoration_tab_color_bg.png" width="640" height="551"/>
+        <image name="decoration_tab_color_off.png" width="320" height="64"/>
+        <image name="decoration_tab_color_on.png" width="320" height="64"/>
+        <image name="decoration_tab_font_bg.png" width="640" height="550"/>
+        <image name="decoration_tab_font_off.png" width="320" height="64"/>
+        <image name="decoration_tab_font_on.png" width="320" height="64"/>
         <image name="decoration_tab_footer_age_off.png" width="160" height="102"/>
         <image name="decoration_tab_footer_age_on.png" width="160" height="102"/>
         <image name="decoration_tab_footer_frame_off.png" width="160" height="102"/>
@@ -1019,7 +1030,7 @@
         <image name="recorded_sound.png" width="160" height="29"/>
         <image name="recording_bg.png" width="640" height="1136"/>
         <image name="recording_bg_2.png" width="308" height="481"/>
-        <image name="recording_button.png" width="276" height="84"/>
+        <image name="recording_button.png" width="278" height="84"/>
         <image name="recording_dustbox.png" width="99" height="98"/>
         <image name="recording_rec.png" width="178" height="178"/>
         <image name="setting_info_text.png" width="220" height="25"/>

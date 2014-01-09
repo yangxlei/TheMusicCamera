@@ -22,6 +22,9 @@
     __weak IBOutlet UIView *fontView;
 
     __weak IBOutlet UITextView *textView;
+    __weak IBOutlet UIButton *colorButton;
+    __weak IBOutlet UIButton *fontButton;
+    
 }
 
 @property (nonatomic, strong) id<TextFontVCDelegate> delegate;

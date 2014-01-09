@@ -37,7 +37,7 @@
   UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
   [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
   
-  UIButton *editBtn = [self navgationButton:@"button_OK.png" andFrame:CGRectMake(260, 10, 52, 28)];
+  UIButton *editBtn = [self navgationButton:@"button_OK.png" andFrame:CGRectMake(260, 10, 57, 31)];
   [editBtn addTarget:self action:@selector(okBtn:) forControlEvents:UIControlEventTouchUpInside];
 
 }

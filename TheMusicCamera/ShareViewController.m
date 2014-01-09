@@ -37,7 +37,7 @@
     [self navgationImage:@"header_share"];
     dataManager = [DataManager sharedManager];
 
-    UIButton *btn = [self navgationButton:@"button_top" andFrame:CGRectMake(250, 10, 60, 28)];
+    UIButton *btn = [self navgationButton:@"button_top" andFrame:CGRectMake(250, 10, 62, 31)];
     [btn addTarget:self action:@selector(topBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
 }

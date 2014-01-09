@@ -55,7 +55,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
-    UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 52, 28)];
+    UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 57, 31)];
     [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
     stampView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];

@@ -31,12 +31,15 @@
 	// Do any additional setup after loading the view.
     self.hidesBottomBarWhenPushed = YES;
 
+    colorButton.selected = YES;
+    fontButton.selected = NO;
+
     [self navgationImage:@"header_mojiire"];
     
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 52, 28)];
+    UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 57, 31)];
     [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
     for (int i=0; i<2; i++) {
@@ -53,7 +56,7 @@
     
     for (int q=0; q<5; q++) {
         CustomButton *button = [CustomButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(25, 70+40*q, 135, 40);
+        button.frame = CGRectMake(25, 30+40*q, 135, 40);
         button.tag = q+11;
         button.titleLabel.font = [UIFont fontWithName:[fontArray objectAtIndex:q] size:22];
         button.fontStr = [fontArray objectAtIndex:q];
@@ -162,13 +165,16 @@
     
     colorView.hidden = NO;
     fontView.hidden = YES;
-
+    colorButton.selected = YES;
+    fontButton.selected = NO;
 }
 
 - (IBAction)fontBtn:(id)sender
 {
     fontView.hidden = NO;
     colorView.hidden = YES;
+    colorButton.selected = NO;
+    fontButton.selected = YES;
 
 }
 
