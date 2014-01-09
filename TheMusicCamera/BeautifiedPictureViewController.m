@@ -106,13 +106,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     cropper.delegate = self;
     cropperNavi = [[UINavigationController alloc] initWithRootViewController:cropper];
   }
-  [self presentViewController:cropperNavi animated:NO completion:nil];
+  [self presentViewController:cropper animated:NO completion:nil];
   [cropper begin];
-  imageView.image = nil;
+//  imageView.image = nil;
 }
 
 -(void) didFinishImagePickerAndCrop:(UIImage *)image
-{
+{       
   imageView.image = image;
   CGRect rect = imageView.frame;
   rect.size = image.size;
