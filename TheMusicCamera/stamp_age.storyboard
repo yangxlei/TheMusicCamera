@@ -22,8 +22,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brk-qQ-FUm">
-                                <rect key="frame" x="85" y="60" width="150" height="106"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stamp_age_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="brk-qQ-FUm">
+                                <rect key="frame" x="85" y="31" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -103,6 +103,7 @@
         <image name="bg_1136.png" width="640" height="1136"/>
         <image name="decorathion_flame.png" width="640" height="518"/>
         <image name="decoration_age.png" width="608" height="82"/>
+        <image name="stamp_age_1.png" width="307" height="309"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

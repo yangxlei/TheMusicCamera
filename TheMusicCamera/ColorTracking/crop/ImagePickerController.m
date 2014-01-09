@@ -79,6 +79,7 @@
 -(void) onCacnel
 {
   [delegate didCacnel];
+  [self dismissModalViewControllerAnimated:NO];
 }
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -97,8 +98,8 @@
 
 -(void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-  [delegate didCacnel];
-  [picker dismissModalViewControllerAnimated:YES];
+  [self onCacnel];
+  [picker dismissModalViewControllerAnimated:NO];
 }
 
 @end

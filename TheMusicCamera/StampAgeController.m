@@ -39,6 +39,10 @@
   
   UIButton *editBtn = [self navgationButton:@"button_OK.png" andFrame:CGRectMake(260, 10, 57, 31)];
   [editBtn addTarget:self action:@selector(okBtn:) forControlEvents:UIControlEventTouchUpInside];
+  
+  UIImageView* icon = [[UIImageView alloc] initWithFrame:CGRectMake(26, 15, 154, 154)];
+  icon.image = [UIImage imageNamed:@"stamp_age_1.png"];
+  [scrollView addSubview:icon];
 
 }
 

@@ -123,7 +123,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void) didCacnel
 {
-  [cropperNavi dismissViewControllerAnimated:YES completion:nil];
+  [cropperNavi dismissViewControllerAnimated:NO completion:nil];
+//  [self backBtuuon];
+  [cropperNavi removeFromParentViewController];
+  cropper = nil;
+  cropperNavi = nil;
 }
 
 - (void)okBtuuon
