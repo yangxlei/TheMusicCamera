@@ -15,6 +15,7 @@
 {
     id __unsafe_unretained _delegate;
     DataManager *dataManager;
+    NSMutableArray *mArr;
 }
 
 @property (nonatomic, retain) UIImageView *backgroundView;

@@ -8,7 +8,7 @@
 
 #import "GTTabBarController.h"
 #import "GTTabBar.h"
-#define kTabBarHeight 50.0f
+#define kTabBarHeight 60.0f
 
 static GTTabBarController *gtTabBarController;
 

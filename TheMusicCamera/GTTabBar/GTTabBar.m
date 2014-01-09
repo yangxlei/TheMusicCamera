@@ -30,12 +30,20 @@
 		self.buttons = [NSMutableArray arrayWithCapacity:[imageArray count]];
 		UIButton *btn;
 		CGFloat width = 320.0f / [imageArray count];
+        
+        mArr = [[NSMutableArray alloc]initWithCapacity:0];
+        [mArr addObject:[NSValue valueWithCGRect:CGRectMake(0, 0, 60, 60)]];
+        [mArr addObject:[NSValue valueWithCGRect:CGRectMake(60, 0, 60, 60)]];
+        [mArr addObject:[NSValue valueWithCGRect:CGRectMake(120, 0, 80, 60)]];
+        [mArr addObject:[NSValue valueWithCGRect:CGRectMake(200, 0, 60, 60)]];
+        [mArr addObject:[NSValue valueWithCGRect:CGRectMake(260, 0, 60, 60)]];
+
 		for (int i = 0; i < [imageArray count]; i++)
 		{
 			btn = [UIButton buttonWithType:UIButtonTypeCustom];
 			btn.showsTouchWhenHighlighted = YES;
 			btn.tag = i;
-			btn.frame = CGRectMake(width * i, 0, width, frame.size.height);
+			btn.frame = [[mArr objectAtIndex:i] CGRectValue];
 			[btn setImage:[[imageArray objectAtIndex:i] objectForKey:@"Default"] forState:UIControlStateNormal];
 			[btn setImage:[[imageArray objectAtIndex:i] objectForKey:@"Highlighted"] forState:UIControlStateHighlighted];
 			[btn setImage:[[imageArray objectAtIndex:i] objectForKey:@"Seleted"] forState:UIControlStateSelected];

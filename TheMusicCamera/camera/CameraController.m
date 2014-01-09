@@ -382,6 +382,12 @@
         [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];//静音下可以播放
         [[AVAudioSession sharedInstance] setActive: YES error:nil];
         
+        
+        
+        AVAudioSession *audioSession = [AVAudioSession sharedInstance];//控制音量小的问题？？？
+        NSError *err = nil;
+        [audioSession setCategory :AVAudioSessionCategoryPlayback error:&err];
+
         NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
         int selectNO = [[[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"] intValue];
         NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@", savePath,[dataManager selectMusicWithID:selectNO]];
