@@ -106,7 +106,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     cropper.delegate = self;
     cropperNavi = [[UINavigationController alloc] initWithRootViewController:cropper];
   }
-  [self presentViewController:cropper animated:NO completion:nil];
+  [self presentViewController:cropperNavi animated:NO completion:nil];
   [cropper begin];
 //  imageView.image = nil;
 }
@@ -226,7 +226,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
         image.image = img;
         [mianView addSubview:image];
-        [mianView insertSubview:image atIndex:0];
+        [mianView insertSubview:image atIndex:1];
         
         mianView.backgroundColor = [UIColor greenColor];
     }
