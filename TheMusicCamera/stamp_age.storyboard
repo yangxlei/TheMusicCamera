@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="recording_bg_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-nh-0vF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-nh-0vF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -100,9 +100,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_1136.png" width="640" height="1136"/>
         <image name="decorathion_flame.png" width="640" height="518"/>
         <image name="decoration_age.png" width="608" height="82"/>
-        <image name="recording_bg_2.png" width="308" height="481"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -15,7 +15,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 @interface BeautifiedPictureViewController ()
 {
-  CropperController* cropper;
+  ImagePickerController* cropper;
+  UINavigationController* cropperNavi;
 }
 @end
 
@@ -100,18 +101,29 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void) begin
 {
-  if (cropper == nil) {
-    cropper = [[CropperController alloc] init];
+  if (cropperNavi == nil) {
+    cropper  = [[ImagePickerController alloc] init];
     cropper.delegate = self;
+    cropperNavi = [[UINavigationController alloc] initWithRootViewController:cropper];
   }
-  [self presentViewController:cropper animated:NO completion:nil];
+  [self presentViewController:cropperNavi animated:NO completion:nil];
   [cropper begin];
+  imageView.image = nil;
 }
 
--(void) onDidFinishCrop:(UIImage *)image
+-(void) didFinishImagePickerAndCrop:(UIImage *)image
 {
   imageView.image = image;
+  CGRect rect = imageView.frame;
+  rect.size = image.size;
+  imageView.frame =rect;
   dataManager.shareImg = image;
+  [cropperNavi dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) didCacnel
+{
+  [cropperNavi dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)okBtuuon

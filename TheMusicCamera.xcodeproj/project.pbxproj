@@ -239,6 +239,9 @@
 		950C7EF31865E9BD0021FE5D /* PictureRangeSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7EF01865E9BD0021FE5D /* PictureRangeSelectView.m */; };
 		950C7EF41865E9BD0021FE5D /* PictureRangeSelectViewHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7EF21865E9BD0021FE5D /* PictureRangeSelectViewHome.m */; };
 		950C7EF71865F3780021FE5D /* TileBG.m in Sources */ = {isa = PBXBuildFile; fileRef = 950C7EF61865F3780021FE5D /* TileBG.m */; };
+		956FFD17187EEFEA0051D5A8 /* ImaeCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 956FFD12187EEFEA0051D5A8 /* ImaeCropper.m */; };
+		956FFD18187EEFEA0051D5A8 /* ImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 956FFD14187EEFEA0051D5A8 /* ImagePickerController.m */; };
+		956FFD19187EEFEA0051D5A8 /* CropMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 956FFD16187EEFEA0051D5A8 /* CropMask.m */; };
 		9571A20D185C917A003D3285 /* camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9571A20C185C917A003D3285 /* camera.storyboard */; };
 		9571A219185C975D003D3285 /* shoot_camera_button_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A20E185C975D003D3285 /* shoot_camera_button_1.png */; };
 		9571A21A185C975D003D3285 /* shoot_camera_button_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9571A20F185C975D003D3285 /* shoot_camera_button_2.png */; };
@@ -260,9 +263,6 @@
 		9571A44F185CA0CD003D3285 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9571A44E185CA0CD003D3285 /* QuartzCore.framework */; };
 		95916A39186C847A001086A1 /* WaterImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95916A38186C847A001086A1 /* WaterImageController.m */; };
 		95916A3B186C8489001086A1 /* water_image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95916A3A186C8489001086A1 /* water_image.storyboard */; };
-		95AF84541875C9BA00C11897 /* KICropImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF84511875C9BA00C11897 /* KICropImageView.m */; };
-		95AF84551875C9BA00C11897 /* UIImage+KIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF84531875C9BA00C11897 /* UIImage+KIAdditions.m */; };
-		95AF845B1875C9E700C11897 /* CropperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AF845A1875C9E700C11897 /* CropperController.m */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
 		95FAA551187B04B1001FB0AD /* StampAgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FAA550187B04B1001FB0AD /* StampAgeController.m */; };
 		95FAA553187B057B001FB0AD /* stamp_age.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FAA552187B057B001FB0AD /* stamp_age.storyboard */; };
@@ -569,6 +569,12 @@
 		950C7EF21865E9BD0021FE5D /* PictureRangeSelectViewHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureRangeSelectViewHome.m; sourceTree = "<group>"; };
 		950C7EF51865F3780021FE5D /* TileBG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileBG.h; sourceTree = "<group>"; };
 		950C7EF61865F3780021FE5D /* TileBG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileBG.m; sourceTree = "<group>"; };
+		956FFD11187EEFEA0051D5A8 /* ImaeCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImaeCropper.h; sourceTree = "<group>"; };
+		956FFD12187EEFEA0051D5A8 /* ImaeCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImaeCropper.m; sourceTree = "<group>"; };
+		956FFD13187EEFEA0051D5A8 /* ImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerController.h; sourceTree = "<group>"; };
+		956FFD14187EEFEA0051D5A8 /* ImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerController.m; sourceTree = "<group>"; };
+		956FFD15187EEFEA0051D5A8 /* CropMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropMask.h; sourceTree = "<group>"; };
+		956FFD16187EEFEA0051D5A8 /* CropMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropMask.m; sourceTree = "<group>"; };
 		9571A20C185C917A003D3285 /* camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = camera.storyboard; sourceTree = "<group>"; };
 		9571A20E185C975D003D3285 /* shoot_camera_button_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoot_camera_button_1.png; sourceTree = "<group>"; };
 		9571A20F185C975D003D3285 /* shoot_camera_button_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoot_camera_button_2.png; sourceTree = "<group>"; };
@@ -592,12 +598,6 @@
 		95916A37186C847A001086A1 /* WaterImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterImageController.h; sourceTree = "<group>"; };
 		95916A38186C847A001086A1 /* WaterImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterImageController.m; sourceTree = "<group>"; };
 		95916A3A186C8489001086A1 /* water_image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = water_image.storyboard; sourceTree = "<group>"; };
-		95AF84501875C9BA00C11897 /* KICropImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KICropImageView.h; sourceTree = "<group>"; };
-		95AF84511875C9BA00C11897 /* KICropImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KICropImageView.m; sourceTree = "<group>"; };
-		95AF84521875C9BA00C11897 /* UIImage+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KIAdditions.h"; sourceTree = "<group>"; };
-		95AF84531875C9BA00C11897 /* UIImage+KIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KIAdditions.m"; sourceTree = "<group>"; };
-		95AF84591875C9E700C11897 /* CropperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropperController.h; sourceTree = "<group>"; };
-		95AF845A1875C9E700C11897 /* CropperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropperController.m; sourceTree = "<group>"; };
 		95C1172318633EF7008391BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		95FAA54F187B04B1001FB0AD /* StampAgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StampAgeController.h; sourceTree = "<group>"; };
 		95FAA550187B04B1001FB0AD /* StampAgeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StampAgeController.m; sourceTree = "<group>"; };
@@ -1155,12 +1155,12 @@
 		95AF844F1875C99800C11897 /* crop */ = {
 			isa = PBXGroup;
 			children = (
-				95AF84501875C9BA00C11897 /* KICropImageView.h */,
-				95AF84511875C9BA00C11897 /* KICropImageView.m */,
-				95AF84521875C9BA00C11897 /* UIImage+KIAdditions.h */,
-				95AF84531875C9BA00C11897 /* UIImage+KIAdditions.m */,
-				95AF84591875C9E700C11897 /* CropperController.h */,
-				95AF845A1875C9E700C11897 /* CropperController.m */,
+				956FFD11187EEFEA0051D5A8 /* ImaeCropper.h */,
+				956FFD12187EEFEA0051D5A8 /* ImaeCropper.m */,
+				956FFD13187EEFEA0051D5A8 /* ImagePickerController.h */,
+				956FFD14187EEFEA0051D5A8 /* ImagePickerController.m */,
+				956FFD15187EEFEA0051D5A8 /* CropMask.h */,
+				956FFD16187EEFEA0051D5A8 /* CropMask.m */,
 			);
 			path = crop;
 			sourceTree = "<group>";
@@ -1443,7 +1443,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95AF845B1875C9E700C11897 /* CropperController.m in Sources */,
 				950C7EF41865E9BD0021FE5D /* PictureRangeSelectViewHome.m in Sources */,
 				2E693624185DF7B5000C95F5 /* DBAccress.m in Sources */,
 				2E2F71601875B15F001A7816 /* StampView.m in Sources */,
@@ -1451,6 +1450,7 @@
 				2E693627185DF7B5000C95F5 /* FMDatabasePool.m in Sources */,
 				950C7EC81865E3870021FE5D /* MQUIImage.m in Sources */,
 				35070273187CE78A00BEB701 /* SBJsonBase.m in Sources */,
+				956FFD17187EEFEA0051D5A8 /* ImaeCropper.m in Sources */,
 				95916A39186C847A001086A1 /* WaterImageController.m in Sources */,
 				356E6A65185AD973002A1014 /* GTTabBar.m in Sources */,
 				950C7EC51865E3370021FE5D /* MQCameraFocusView.m in Sources */,
@@ -1458,6 +1458,7 @@
 				3519A02C186C31F400FEC752 /* MBProgressHUD.m in Sources */,
 				2E44DAC0185CA7AA00C5C1DC /* SoundsListViewController.m in Sources */,
 				2E693628185DF7B5000C95F5 /* FMDatabaseQueue.m in Sources */,
+				956FFD19187EEFEA0051D5A8 /* CropMask.m in Sources */,
 				2E693625185DF7B5000C95F5 /* FMDatabase.m in Sources */,
 				2E693626185DF7B5000C95F5 /* FMDatabaseAdditions.m in Sources */,
 				950C7EE91865E6E90021FE5D /* ColorTracking.m in Sources */,
@@ -1479,12 +1480,11 @@
 				2E2C1B521879902D0002470A /* SPGripViewBorderView.m in Sources */,
 				2E9C8AC418701FA50087F476 /* CustomButton.m in Sources */,
 				950C7EF31865E9BD0021FE5D /* PictureRangeSelectView.m in Sources */,
+				956FFD18187EEFEA0051D5A8 /* ImagePickerController.m in Sources */,
 				356E6A6C185ADE5E002A1014 /* SoundsViewController.m in Sources */,
 				356E6A72185ADE88002A1014 /* SettingViewController.m in Sources */,
 				35070276187CE78A00BEB701 /* NSData+Base64.m in Sources */,
-				95AF84551875C9BA00C11897 /* UIImage+KIAdditions.m in Sources */,
 				354467FE185AD419005AB0D9 /* AppDelegate.m in Sources */,
-				95AF84541875C9BA00C11897 /* KICropImageView.m in Sources */,
 				354467FA185AD419005AB0D9 /* main.m in Sources */,
 				3519A026186C313B00FEC752 /* StoreKitHelper.mm in Sources */,
 				950C7EE51865E6700021FE5D /* MQRectCropPatView.m in Sources */,
@@ -1629,8 +1629,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -1644,7 +1644,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1654,8 +1654,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -1669,7 +1669,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

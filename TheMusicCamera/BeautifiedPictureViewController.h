@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CropperController.h"
 #import "StampView.h"
 #import "TextFontViewController.h"
+#import "ImagePickerController.h"
 
 @class DataManager;
 //@class StampView;
 
-@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, CropControllerDelegate,StampViewDelegate,TextFontVCDelegate>
+@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, ImagePickerControllerDelegate,StampViewDelegate,TextFontVCDelegate>
 {
     IBOutlet UIImageView* imageView;
     IBOutlet UIView *mianView;
