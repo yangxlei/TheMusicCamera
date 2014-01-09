@@ -101,11 +101,11 @@ static StoreKitHelper *storeKitHelperInstance;
     _buyType = tp;
     
     NSString *product;
-    if ([[NSBundle mainBundle].bundleIdentifier isEqualToString:@"com.lvmax.appstore.tank"]) {
-        product = [NSString stringWithFormat:@"tk_gold_%d",tp];
+    if ([[NSBundle mainBundle].bundleIdentifier isEqualToString:@"com.p-nest.mamacamera"]) {
+        product = [NSString stringWithFormat:@"pnest_mamacamera"];
     }
     else{
-        product = [NSString stringWithFormat:@"tk_gold_%d",tp];
+        product = [NSString stringWithFormat:@"pnest_mamacamera"];
     }
 
     

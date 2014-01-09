@@ -95,55 +95,55 @@
     switch (button.tag) {
         case 1:
         {
-            textView.textColor = [UIColor redColor];
+            textView.textColor = [UIColor colorWithRed:255/255.f green:102/255.f blue:98/255.f alpha:1];
         }
             break;
         case 2:
         {
-            textView.textColor = [UIColor blackColor];
+            textView.textColor = [UIColor colorWithRed:255/255.f green:183/255.f blue:98/255.f alpha:1];
 
         }
             break;
         case 3:
         {
-            textView.textColor = [UIColor blueColor];
+            textView.textColor = [UIColor colorWithRed:255/255.f green:238/255.f blue:98/255.f alpha:1];
 
         }
             break;
         case 4:
         {
-            textView.textColor = [UIColor greenColor];
+            textView.textColor = [UIColor colorWithRed:168/255.f green:255/255.f blue:98/255.f alpha:1];
 
         }
             break;
         case 5:
         {
-            
+            textView.textColor = [UIColor colorWithRed:98/255.f green:255/255.f blue:201/255.f alpha:1];
         }
             break;
         case 6:
         {
-            
+            textView.textColor = [UIColor colorWithRed:98/255.f green:139/255.f blue:255/255.f alpha:1];
         }
             break;
         case 7:
         {
-            
+            textView.textColor = [UIColor colorWithRed:187/255.f green:98/255.f blue:255/255.f alpha:1];
         }
             break;
         case 8:
         {
-            
+            textView.textColor = [UIColor colorWithRed:255/255.f green:98/255.f blue:187/255.f alpha:1];
         }
             break;
         case 9:
         {
-            
+            textView.textColor = [UIColor colorWithRed:255/255.f green:255/255.f blue:255/255.f alpha:1];
         }
             break;
         case 10:
         {
-            
+            textView.textColor = [UIColor colorWithRed:65/255.f green:65/255.f blue:65/255.f alpha:1];
         }
             break;
 
