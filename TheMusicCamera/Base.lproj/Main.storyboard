@@ -216,22 +216,22 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_setting_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-rV-73Z">
-                                <rect key="frame" x="20" y="50" width="66" height="14"/>
+                                <rect key="frame" x="20" y="63" width="66" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_ver_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="eU4-AQ-Kyb">
-                                <rect key="frame" x="20" y="136" width="110" height="13"/>
+                                <rect key="frame" x="20" y="149" width="110" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_info_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="RhN-bI-Hfg">
-                                <rect key="frame" x="10" y="265" width="110" height="13"/>
+                                <rect key="frame" x="18" y="287" width="110" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esl-om-A9g">
-                                <rect key="frame" x="10" y="291" width="300" height="40"/>
+                                <rect key="frame" x="10" y="319" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="list_middle_a.png">
+                                <state key="normal" backgroundImage="setting_04.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -239,10 +239,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKm-eX-3eC">
-                                <rect key="frame" x="10" y="339" width="300" height="40"/>
+                                <rect key="frame" x="10" y="361" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="list_middle_a.png">
+                                <state key="normal" backgroundImage="setting_05.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -250,10 +250,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJu-yt-AF4">
-                                <rect key="frame" x="10" y="217" width="300" height="40"/>
+                                <rect key="frame" x="10" y="224" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="list_middle_a.png">
+                                <state key="normal" backgroundImage="setting_03.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -261,18 +261,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGJ-yq-haz">
-                                <rect key="frame" x="10" y="169" width="300" height="40"/>
+                                <rect key="frame" x="10" y="182" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="list_middle_a.png">
+                                <state key="normal" backgroundImage="setting_02.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-dG-Fwe">
-                                <rect key="frame" x="10" y="72" width="300" height="43"/>
+                                <rect key="frame" x="10" y="85" width="302" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="list_middle_a.png">
+                                <state key="normal" backgroundImage="setting_01.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -349,6 +349,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="WGv-6D-ATc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share_11_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pn2-yY-JRd">
+                                <rect key="frame" x="52" y="133" width="215" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_save_pop.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-i7-Pee">
                                 <rect key="frame" x="38" y="79" width="244" height="41"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -357,8 +365,8 @@
                                     <constraint firstAttribute="height" constant="41" id="HKI-I3-1ao"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="lg3-EV-wlq">
-                                <rect key="frame" x="20" y="325" width="46" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="share_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="lg3-EV-wlq">
+                                <rect key="frame" x="12" y="325" width="46" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="ni3-D0-HAs"/>
@@ -434,8 +442,8 @@
                                     <action selector="lineBtn:" destination="hYD-YR-ave" eventType="touchUpInside" id="tAM-Pk-cOo"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_0086.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-SZ-l1H">
-                                <rect key="frame" x="60" y="146" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-SZ-l1H">
+                                <rect key="frame" x="69" y="152" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -709,7 +717,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00/10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEw-YJ-pms">
-                                <rect key="frame" x="60" y="361" width="214" height="39"/>
+                                <rect key="frame" x="40" y="361" width="240" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.65098039215686276" green="0.45490196078431372" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
@@ -845,9 +853,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGf-5a-jSy" customClass="CustomButton">
-                                                    <rect key="frame" x="267" y="11" width="20" height="18"/>
+                                                    <rect key="frame" x="233" y="5" width="62" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" backgroundImage="check.png">
+                                                    <state key="normal" backgroundImage="btn_delete.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
@@ -999,15 +1007,23 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_0086.JPG" width="3264" height="2448"/>
         <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="btn_delete.png" width="124" height="62"/>
         <image name="btn_setting_left.png" width="223" height="334"/>
         <image name="btn_setting_right.png" width="223" height="334"/>
         <image name="btn_setting_text .png" width="514" height="60"/>
         <image name="check.png" width="41" height="36"/>
+        <image name="check.png" width="41" height="36"/>
         <image name="check_mark_blank.png" width="30" height="30"/>
         <image name="decoration_mojiire_text.png" width="591" height="294"/>
         <image name="decoration_tab_color_bg.png" width="640" height="551"/>
+        <image name="decoration_tab_color_off.png" width="320" height="64"/>
         <image name="decoration_tab_color_off.png" width="320" height="64"/>
         <image name="decoration_tab_color_on.png" width="320" height="64"/>
         <image name="decoration_tab_font_bg.png" width="640" height="550"/>
@@ -1025,7 +1041,8 @@
         <image name="howTo_previous.png" width="42" height="48"/>
         <image name="info.png" width="521" height="407"/>
         <image name="list_2.png" width="606" height="81"/>
-        <image name="list_middle_a.png" width="603" height="80"/>
+        <image name="list_2.png" width="606" height="81"/>
+        <image name="list_2.png" width="606" height="81"/>
         <image name="record_sound_setting.png" width="608" height="72"/>
         <image name="recorded_sound.png" width="160" height="29"/>
         <image name="recording_bg.png" width="640" height="1136"/>
@@ -1033,10 +1050,16 @@
         <image name="recording_button.png" width="278" height="84"/>
         <image name="recording_dustbox.png" width="99" height="98"/>
         <image name="recording_rec.png" width="178" height="178"/>
+        <image name="setting_01.png" width="604" height="84"/>
+        <image name="setting_02.png" width="604" height="83"/>
+        <image name="setting_03.png" width="604" height="81"/>
+        <image name="setting_04.png" width="604" height="83"/>
+        <image name="setting_05.png" width="604" height="81"/>
         <image name="setting_info_text.png" width="220" height="25"/>
         <image name="setting_setting_text.png" width="110" height="27"/>
         <image name="setting_sound_image_1136.png" width="562" height="505"/>
         <image name="setting_ver_text.png" width="223" height="27"/>
+        <image name="share_11_bg.png" width="430" height="430"/>
         <image name="share_announce.png" width="496" height="46"/>
         <image name="share_arrow.png" width="93" height="144"/>
         <image name="share_save_pop.png" width="488" height="82"/>

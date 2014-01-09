@@ -141,7 +141,6 @@
         }
         else
         {
-            
             AVAudioSession *session = [AVAudioSession sharedInstance];
             NSError *sessionError;
             [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
@@ -182,9 +181,6 @@
         [timer fire];
         
     }
-
-
-    
 }
 
 - (void)showTimer:(NSTimer *)theTimer

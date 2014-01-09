@@ -36,7 +36,7 @@
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *editBtn = [self navgationButton:@"button_edit" andFrame:CGRectMake(260, 10, 62, 31)];
+    UIButton *editBtn = [self navgationButton:@"button_edit" andFrame:CGRectMake(250, 7, 62, 31)];
     [editBtn addTarget:self action:@selector(editBtuuon:) forControlEvents:UIControlEventTouchUpInside];
 
     dataManager = [DataManager sharedManager];
