@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="LIj-cu-59E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="thc-AE-v7a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-nh-0vF">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -57,7 +57,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-BH-xjn">
-                                <rect key="frame" x="0.0" y="240" width="320" height="240"/>
+                                <rect key="frame" x="0.0" y="328" width="320" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decorathion_flame.png" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-gc-FeP">
@@ -96,7 +96,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ve-Qf-vcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="-179"/>
+            <point key="canvasLocation" x="-191" y="-172"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NzQ-uj-2Il">
+            <objects>
+                <viewController id="Wtr-Z4-xjs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ATF-eG-Obe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bit-Ux-m4w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sT6-bl-2gy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lf7-60-kAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="-37"/>
         </scene>
     </scenes>
     <resources>
@@ -108,6 +127,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

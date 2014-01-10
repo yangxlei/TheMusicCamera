@@ -40,9 +40,38 @@
   UIButton *editBtn = [self navgationButton:@"button_OK.png" andFrame:CGRectMake(250, 10, 62, 31)];
   [editBtn addTarget:self action:@selector(okBtn:) forControlEvents:UIControlEventTouchUpInside];
   
-  UIImageView* icon = [[UIImageView alloc] initWithFrame:CGRectMake(26, 15, 154, 154)];
-  icon.image = [UIImage imageNamed:@"stamp_age_1.png"];
-  [scrollView addSubview:icon];
+  
+  int right_margin = 30;
+  for (int i = 1; i <= 8 ; ++ i)
+  {
+    UIImageView* icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"age_stamp_%d.png",i]]];
+    
+    [scrollView addSubview:icon];
+    CGRect rect = icon.frame;
+    rect.origin.x = right_margin;
+    
+    rect.size.width = rect.size.width/2;
+    rect.size.height = rect.size.height/2;
+    rect.origin.y = (scrollView.frame.size.height - rect.size.height)/2;
+    icon.frame = rect;
+    
+    UIButton* icon_btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    icon_btn.frame = rect;
+    icon_btn.tag = 30 + i;
+    [icon_btn addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:icon_btn];
+    
+    [scrollView addSubview:icon_btn];
+    
+    right_margin += rect.size.width + 30;
+  }
+  
+  [scrollView setContentSize:CGSizeMake(right_margin, 160)];
+
+}
+
+-(void) selectItem:(UIButton*)sender
+{
 
 }
 
