@@ -161,7 +161,7 @@
         else if (tabBarController.selectedIndex == 0)
         {
             [self.mainTabBarController hidesTabBar:YES animated:YES];
-            [self performSelector:@selector(laterBegin) withObject:nil afterDelay:1];
+            [self performSelector:@selector(laterBegin) withObject:nil afterDelay:0.4];
         }
     }
 }
