@@ -61,13 +61,35 @@
     UIButton* cropBtn = [self navgationButton:@"button_OK.png" andFrame:CGRectMake(260, 10, 52, 28)];
     [cropBtn addTarget:self action:@selector(cropBtn:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton* changebtn = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height-45, 60, 40)];
-    changebtn.backgroundColor = [UIColor redColor];
-    changebtn.titleLabel.textColor = [UIColor whiteColor];
-    [changebtn setTitle:@"4:3" forState:UIControlStateNormal];
-    [changebtn addTarget:self action:@selector(changeSize:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:changebtn];
+//    UIButton* changebtn = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height-45, 60, 40)];
+//    changebtn.backgroundColor = [UIColor redColor];
+//    changebtn.titleLabel.textColor = [UIColor whiteColor];
+//    [changebtn setTitle:@"4:3" forState:UIControlStateNormal];
+//      [changebtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+//    [changebtn addTarget:self action:@selector(changeSize:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:changebtn];
     
+      
+      onebtn = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height-45, 28, 28)];
+//      onebtn.backgroundColor = [UIColor redColor];
+      onebtn.titleLabel.textColor = [UIColor whiteColor];
+//      [changebtn setTitle:@"4:3" forState:UIControlStateNormal];
+      [onebtn setImage:[UIImage imageNamed:@"trimming_1_1_off"] forState:UIControlStateNormal];
+      [onebtn setImage:[UIImage imageNamed:@"trimming_1_1_on"] forState:UIControlStateSelected];
+      [onebtn addTarget:self action:@selector(changeSize:) forControlEvents:UIControlEventTouchUpInside];
+      onebtn.selected = YES;
+      [self.view addSubview:onebtn];
+
+      fourbtn = [[UIButton alloc] initWithFrame:CGRectMake(48, self.view.frame.size.height-45, 28, 35)];
+//      fourbtn.backgroundColor = [UIColor redColor];
+      fourbtn.titleLabel.textColor = [UIColor whiteColor];
+//      [changebtn setTitle:@"4:3" forState:UIControlStateNormal];
+      [fourbtn setImage:[UIImage imageNamed:@"trimming_4_3_off"] forState:UIControlStateNormal];
+      [fourbtn setImage:[UIImage imageNamed:@"trimming_4_3_on"] forState:UIControlStateSelected];
+      [fourbtn addTarget:self action:@selector(changeSize:) forControlEvents:UIControlEventTouchUpInside];
+      [self.view addSubview:fourbtn];
+
+      sizeFlag = NO;
 //    self.view.backgroundColor = [UIColor colorWithRed:112/255 green:83/255 blue:87/255 alpha:0];
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -80,15 +102,22 @@
 {
   if (sizeFlag)
   {
+      sizeFlag = NO;
+      onebtn.selected = YES;
+      fourbtn.selected = NO;
+
     [mask setCropSize:CGSizeMake(300, 300)];
-    [sender setTitle:@"4:3" forState:UIControlStateNormal];
+//    [sender setTitle:@"4:3" forState:UIControlStateNormal];
   }
   else
   {
+      sizeFlag = YES;
+      onebtn.selected = NO;
+      fourbtn.selected = YES;
+
     [mask setCropSize:CGSizeMake(300, 400)];
-    [sender setTitle:@"1:1" forState: UIControlStateNormal];
+//    [sender setTitle:@"1:1" forState: UIControlStateNormal];
   }
-  sizeFlag = !sizeFlag;
 
 }
 
@@ -177,6 +206,14 @@
 
 -(void) cropBtn:(id)sender
 {
+    if (sizeFlag) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"imageSize"];
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"imageSize"];
+    }
+
   [delegate didCropImage:[self cropImage]];
   [self.navigationController popViewControllerAnimated:NO];
 }

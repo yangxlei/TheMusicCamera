@@ -31,11 +31,32 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     }
     return self;
 }
+- (void)viewDidAppear:(BOOL)animated
+{
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==0) {
+        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
+        imageView.frame = CGRectMake(0, 0, 300, 300);
+    }
+    else
+    {
+        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
+        imageView.frame = CGRectMake(0, 0, 300, 400);
+    }
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
     [UIApplication sharedApplication].statusBarHidden=YES;
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==0) {
+        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
+        imageView.frame = CGRectMake(0, 0, 300, 300);
+    }
+    else
+    {
+        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
+        imageView.frame = CGRectMake(0, 0, 300, 400);
+    }
 
 }
 
@@ -94,6 +115,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
   
  
 }
+
 -(IBAction) changeSize:(id)sender
 {
 
@@ -112,11 +134,20 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 }
 
 -(void) didFinishImagePickerAndCrop:(UIImage *)image
-{       
+{
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==0) {
+        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
+        imageView.frame = CGRectMake(0, 0, 300, 300);
+    }
+    else
+    {
+        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
+        imageView.frame = CGRectMake(0, 0, 300, 400);
+    }
   imageView.image = image;
-  CGRect rect = imageView.frame;
-  rect.size = image.size;
-  imageView.frame =rect;
+//  CGRect rect = imageView.frame;
+//  rect.size = image.size;
+//  imageView.frame =rect;
   dataManager.shareImg = image;
   [cropperNavi dismissViewControllerAnimated:YES completion:nil];
 }
@@ -228,7 +259,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         [mianView addSubview:image];
         [mianView insertSubview:image atIndex:1];
         
-        mianView.backgroundColor = [UIColor greenColor];
     }
 
     

@@ -37,7 +37,7 @@
     
     dateString = [dateString stringByReplacingOccurrencesOfString:@"-" withString:@"."];
     
-    NSLog(@"date: %@", dateString);
+//    NSLog(@"date: %@", dateString);
 
 }
 

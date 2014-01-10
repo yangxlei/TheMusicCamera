@@ -180,6 +180,10 @@
 		3544680F185AD419005AB0D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354467F1185AD419005AB0D9 /* UIKit.framework */; };
 		35446817185AD419005AB0D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35446815185AD419005AB0D9 /* InfoPlist.strings */; };
 		35446819185AD419005AB0D9 /* TheMusicCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35446818185AD419005AB0D9 /* TheMusicCameraTests.m */; };
+		35452A6E187F8E1E0093CB9D /* trimming_1_1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 35452A6A187F8E1E0093CB9D /* trimming_1_1_off.png */; };
+		35452A6F187F8E1E0093CB9D /* trimming_1_1_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 35452A6B187F8E1E0093CB9D /* trimming_1_1_on.png */; };
+		35452A70187F8E1E0093CB9D /* trimming_4_3_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 35452A6C187F8E1E0093CB9D /* trimming_4_3_off.png */; };
+		35452A71187F8E1E0093CB9D /* trimming_4_3_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 35452A6D187F8E1E0093CB9D /* trimming_4_3_on.png */; };
 		35563FF41871431700BA2BD6 /* list_middle_a.png in Resources */ = {isa = PBXBuildFile; fileRef = 35563FF31871431700BA2BD6 /* list_middle_a.png */; };
 		35563FF61871497800BA2BD6 /* IMG_0086.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 35563FF51871497800BA2BD6 /* IMG_0086.JPG */; };
 		356207C4186956F80091737A /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356207C3186956F80091737A /* Twitter.framework */; };
@@ -491,6 +495,10 @@
 		35446814185AD419005AB0D9 /* TheMusicCameraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheMusicCameraTests-Info.plist"; sourceTree = "<group>"; };
 		35446816185AD419005AB0D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35446818185AD419005AB0D9 /* TheMusicCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheMusicCameraTests.m; sourceTree = "<group>"; };
+		35452A6A187F8E1E0093CB9D /* trimming_1_1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trimming_1_1_off.png; sourceTree = "<group>"; };
+		35452A6B187F8E1E0093CB9D /* trimming_1_1_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trimming_1_1_on.png; sourceTree = "<group>"; };
+		35452A6C187F8E1E0093CB9D /* trimming_4_3_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trimming_4_3_off.png; sourceTree = "<group>"; };
+		35452A6D187F8E1E0093CB9D /* trimming_4_3_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trimming_4_3_on.png; sourceTree = "<group>"; };
 		35563FF31871431700BA2BD6 /* list_middle_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_middle_a.png; sourceTree = "<group>"; };
 		35563FF51871497800BA2BD6 /* IMG_0086.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0086.JPG; sourceTree = "<group>"; };
 		356207C3186956F80091737A /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
@@ -734,6 +742,10 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				35452A6A187F8E1E0093CB9D /* trimming_1_1_off.png */,
+				35452A6B187F8E1E0093CB9D /* trimming_1_1_on.png */,
+				35452A6C187F8E1E0093CB9D /* trimming_4_3_off.png */,
+				35452A6D187F8E1E0093CB9D /* trimming_4_3_on.png */,
 				95DFD2C9187F097500C916BA /* stamp_age_1.png */,
 				2E15978A187F030A00B70C7C /* share_11_bg.png */,
 				2E15978B187F030A00B70C7C /* share_34_bg.png */,
@@ -1272,6 +1284,7 @@
 				2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */,
 				2E7013A3187EE60300A641E6 /* setting_04.png in Resources */,
 				2E3E0EFD187D8FFE0058C4C4 /* OhisamaFont11.ttf in Resources */,
+				35452A6F187F8E1E0093CB9D /* trimming_1_1_on.png in Resources */,
 				2E6409CF18633F900080E903 /* recording_dustbox.png in Resources */,
 				2EE5AF97186077BA00A35754 /* sound_setting_now_list2.png in Resources */,
 				356E6A5D185AD70F002A1014 /* icon@2x.png in Resources */,
@@ -1352,6 +1365,7 @@
 				9571A220185C975D003D3285 /* shot_flash_on.png in Resources */,
 				2E701387187EDF2B00A641E6 /* color3.png in Resources */,
 				2E44DAA9185C9AA600C5C1DC /* sound_setting_now.png in Resources */,
+				35452A70187F8E1E0093CB9D /* trimming_4_3_off.png in Resources */,
 				356E6A88185AE23E002A1014 /* main_tab_sound_on.png in Resources */,
 				3519A01F186BCE6100FEC752 /* check_mark_blank.png in Resources */,
 				2E6409C51861EA4F0080E903 /* music.sqlite in Resources */,
@@ -1384,6 +1398,7 @@
 				350B2731187A500D0084B7C0 /* decorathion_flame.png in Resources */,
 				2E70138C187EDF2B00A641E6 /* color8.png in Resources */,
 				352C015A1862D57B00C0C710 /* top_now_sound.png in Resources */,
+				35452A6E187F8E1E0093CB9D /* trimming_1_1_off.png in Resources */,
 				2E5C9F271871BC7F00E6A680 /* howTo_nest.png in Resources */,
 				35D4DF15187551C300BF9613 /* header.png in Resources */,
 				2E2F716F1875B2BD001A7816 /* stamp_2.png in Resources */,
@@ -1431,6 +1446,7 @@
 				2E2F715718759FC7001A7816 /* decoration_tab_footer_frame_off.png in Resources */,
 				2E701392187EE21200A641E6 /* decoration_tab_font_bg.png in Resources */,
 				356E6A85185AE23E002A1014 /* main_tab_setting_off.png in Resources */,
+				35452A71187F8E1E0093CB9D /* trimming_4_3_on.png in Resources */,
 				2E1EBB481867E5FE00F64A2E /* bg.png in Resources */,
 				2E70138D187EDF2B00A641E6 /* color9.png in Resources */,
 				356E6A55185AD70F002A1014 /* icon-76@2x.png in Resources */,
@@ -1583,8 +1599,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: LI KE (PDSSUVSVXA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1623,8 +1639,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: LI KE (PDSSUVSVXA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

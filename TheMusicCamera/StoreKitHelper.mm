@@ -132,7 +132,7 @@ static StoreKitHelper *storeKitHelperInstance;
     
 }
 
-- (void) completeTransaction: (SKPaymentTransaction *)transaction    
+- (void) completeTransaction: (SKPaymentTransaction *)transaction
 {
     NSLog(@"-----completeTransaction--------");
     // Your application should implement these two methods.

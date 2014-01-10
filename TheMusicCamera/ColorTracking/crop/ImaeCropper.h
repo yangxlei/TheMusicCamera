@@ -18,6 +18,8 @@
 @interface ImaeCropper : UIViewController<UIScrollViewDelegate>
 {
   BOOL sizeFlag;
+    UIButton* onebtn;
+    UIButton* fourbtn;
 }
 
 -(id) initWithImage:(UIImage*) image;

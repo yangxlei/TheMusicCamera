@@ -42,6 +42,7 @@
 
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicOFF"];
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicstation"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"imageSize"];
 
     }
     dataManager = [DataManager sharedManager];
@@ -160,11 +161,14 @@
         else if (tabBarController.selectedIndex == 0)
         {
             [self.mainTabBarController hidesTabBar:YES animated:YES];
-          
-          [bpVC begin];//leileilei
+            [self performSelector:@selector(laterBegin) withObject:nil afterDelay:1];
         }
     }
+}
 
+- (void)laterBegin
+{
+    [bpVC begin];//leileilei
 }
 
 - (void) returnPhotoVC: (NSNotification*) aNotification
