@@ -15,7 +15,7 @@
   UIImageView* imageView;
   UIScrollView* scrollView;
   CropMask *mask ;
-  
+  UIImageOrientation orientation;
 }
 
 @end
@@ -28,6 +28,9 @@
   self = [super init];
   if(self)
   {
+    orientation = image.imageOrientation;
+    image = [UIImage imageWithCGImage:image.CGImage scale:1.0f orientation:UIImageOrientationUp];
+    
     scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 40, 320, 460)];
     scrollView.delegate = self;
     [scrollView setShowsHorizontalScrollIndicator:NO];
@@ -125,10 +128,8 @@
 	
 	CGImageRelease(cr);
 
-//  UIImage* result = [self rotatedImage:cropped andRotation:1];
-  
-//  return result;
-  return cropped;
+  UIImage* result = [UIImage imageWithCGImage:cropped.CGImage scale:1.0f orientation: orientation];
+  return result;
 }
 
 - (UIImage *)rotatedImage:(UIImage *)imageToRotate andRotation:(int) rotation
