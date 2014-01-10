@@ -77,7 +77,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
-    UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(260, 10, 57, 31)];
+    UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(250, 10, 62, 31)];
     [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
     stampView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];
@@ -235,6 +235,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)selectImageClick:(UIImage *)img andType:(int)type
 {
+    stampView.hidden = YES;
+    stampFrameView.hidden = YES;
+    for (int i=1; i<5; i++) {
+        UIButton *button = (UIButton *)[self.view viewWithTag:i];
+        button.selected = NO;
+    }
+
     if (type==1) {
         UIImageView *imageV = [[UIImageView alloc]
                                initWithImage:img];
@@ -291,6 +298,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)selectTextView:(UITextView *)textView
 {
+    
     CGRect gripFrame2 = CGRectMake(50, 50, 140, 140);
     UITextView *tv = [[UITextView alloc] initWithFrame:gripFrame2];
     tv.textColor = textView.textColor;

@@ -27,9 +27,15 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [UIApplication sharedApplication].statusBarHidden=YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [UIApplication sharedApplication].statusBarHidden=YES;
 
 //  imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 50, 300, 300)];
 //  [self.view addSubview:imageView];
@@ -84,6 +90,8 @@
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    [UIApplication sharedApplication].statusBarHidden=YES;
+
   UIImage* image = [info valueForKey:UIImagePickerControllerOriginalImage];
   [self presentCropper:image];
    [picker dismissModalViewControllerAnimated:YES];

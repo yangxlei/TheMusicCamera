@@ -58,7 +58,7 @@
     [btn addTarget:self action:@selector(backButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
-    UIButton* cropBtn = [self navgationButton:@"button_OK.png" andFrame:CGRectMake(260, 10, 52, 28)];
+    UIButton* cropBtn = [self navgationButton:@"button_OK.png" andFrame:CGRectMake(250, 10, 62, 31)];
     [cropBtn addTarget:self action:@selector(cropBtn:) forControlEvents:UIControlEventTouchUpInside];
     
 //    UIButton* changebtn = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height-45, 60, 40)];
