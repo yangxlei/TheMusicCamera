@@ -31,6 +31,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     }
     return self;
 }
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==0) {
@@ -102,6 +108,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)backBtuuon
 {
+    for (UIView *subview in mianView.subviews) {
+        [subview removeFromSuperview];
+	}
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
 }
 
@@ -176,7 +186,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     dataManager.shareImg = viewImage;
 
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNSHAREVC" object:nil];
-  
+  	for (UIView *subview in mianView.subviews) {
+        [subview removeFromSuperview];
+	}
+
 }
 
 - (IBAction)toolsBtn:(id)sender {
@@ -197,6 +210,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             else
             {
                 stampView.hidden = YES;
+                btn.selected = NO;
             }
             
         }
@@ -210,17 +224,20 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             else
             {
                 stampFrameView.hidden = YES;
+                btn.selected = NO;
             }
         }
             break;
         case 3:
         {
+            btn.selected = NO;
           storyboard = [UIStoryboard storyboardWithName:@"stamp_age" bundle:nil];
           [self.navigationController pushViewController:[storyboard instantiateInitialViewController] animated:YES];
         }
             break;
         case 4:
         {
+            btn.selected = NO;
             storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             TextFontViewController *textVC = [storyboard instantiateViewControllerWithIdentifier:@"TextFontViewController"];
             textVC.delegate = self;

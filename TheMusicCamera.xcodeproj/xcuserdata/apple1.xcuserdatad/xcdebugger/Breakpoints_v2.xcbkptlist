@@ -121,11 +121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/BeautifiedPictureViewController.m"
-            timestampString = "410888697.210742"
+            timestampString = "411061396.835821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-cancelClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -185,11 +185,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/BeautifiedPictureViewController.m"
-            timestampString = "410979386.256563"
+            timestampString = "411061396.835821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "-useClick:"
             landmarkType = "5">
          </BreakpointContent>
