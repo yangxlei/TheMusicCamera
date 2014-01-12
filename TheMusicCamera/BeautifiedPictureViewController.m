@@ -16,7 +16,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 @interface BeautifiedPictureViewController ()
 {
   ImagePickerController* cropper;
-  UINavigationController* cropperNavi;
+//  UINavigationController* cropperNavi;
 }
 @end
 
@@ -135,12 +135,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void) begin
 {
-  if (cropperNavi == nil) {
+  if (cropper == nil) {
     cropper  = [[ImagePickerController alloc] init];
     cropper.delegate = self;
-    cropperNavi = [[UINavigationController alloc] initWithRootViewController:cropper];
+//    cropperNavi = [[UINavigationController alloc] initWithRootViewController:cropper];
   }
-  [self presentViewController:cropperNavi animated:NO completion:nil];
+//  [self presentViewController:cropperNavi animated:NO completion:nil];
+  [self.navigationController pushViewController:cropper animated:YES];
   [cropper begin];
 //  imageView.image = nil;
 }
@@ -167,16 +168,16 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 //  rect.size = image.size;
 //  imageView.frame =rect;
   dataManager.shareImg = image;
-  [cropperNavi dismissViewControllerAnimated:YES completion:nil];
+//  [cropperNavi dismissViewControllerAnimated:NO completion:nil];
 }
 
 -(void) didCacnel
 {
-  [cropperNavi dismissViewControllerAnimated:NO completion:nil];
+//  [cropperNavi dismissViewControllerAnimated:NO completion:nil];
 //  [self backBtuuon];
-  [cropperNavi removeFromParentViewController];
+//  [cropperNavi removeFromParentViewController];
   cropper = nil;
-  cropperNavi = nil;
+//  cropperNavi = nil;
 }
 
 - (void)okBtuuon

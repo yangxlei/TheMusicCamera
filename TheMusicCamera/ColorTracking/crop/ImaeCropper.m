@@ -214,8 +214,8 @@
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"imageSize"];
     }
 
+    [self.navigationController popViewControllerAnimated:YES];
   [delegate didCropImage:[self cropImage]];
-  [self.navigationController popViewControllerAnimated:NO];
 }
 
 

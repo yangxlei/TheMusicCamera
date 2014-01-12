@@ -79,13 +79,13 @@
 {
 //  imageView.image = image;
   [delegate didFinishImagePickerAndCrop:image];
-  [self dismissModalViewControllerAnimated:NO];
+  [self.navigationController popViewControllerAnimated:NO];
 }
 
 -(void) onCacnel
 {
   [delegate didCacnel];
-  [self dismissModalViewControllerAnimated:NO];
+  [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
