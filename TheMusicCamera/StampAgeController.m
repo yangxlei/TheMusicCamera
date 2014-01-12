@@ -9,6 +9,10 @@
 #import "StampAgeController.h"
 
 @interface StampAgeController ()
+{
+  int year ;
+  int month;
+}
 
 @end
 
@@ -68,6 +72,8 @@
   
   [scrollView setContentSize:CGSizeMake(right_margin, 160)];
 
+  year = -1 ;
+  month = -1;
 }
 
 -(void) selectItem:(UIButton*)sender
@@ -91,8 +97,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) didFinishSetAge:(int)_year andMonth:(int)_month
+{
+  year = _year;
+  month = _month;
+}
+
 -(IBAction)ageClick:(id)sender
 {
+  UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"stamp_age" bundle:nil];
+  SetAgeViewController* controller = [storyboard instantiateViewControllerWithIdentifier:@"SetAgeViewController"];
+  controller.delegate = self;
+  [self.navigationController pushViewController:controller animated:YES];
 
 }
 

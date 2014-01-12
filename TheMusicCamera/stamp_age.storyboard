@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="-191" y="-172"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Age View Controller-->
         <scene sceneID="NzQ-uj-2Il">
             <objects>
-                <viewController id="Wtr-Z4-xjs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetAgeViewController" id="Wtr-Z4-xjs" customClass="SetAgeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ATF-eG-Obe"/>
                         <viewControllerLayoutGuide type="bottom" id="Bit-Ux-m4w"/>
@@ -109,9 +109,38 @@
                     <view key="view" contentMode="scaleToFill" id="sT6-bl-2gy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="年龄" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycm-oa-1D8">
+                                <rect key="frame" x="10" y="227" width="106" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aan-ND-NeK">
+                                <rect key="frame" x="182" y="227" width="118" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6t-9B-nGQ">
+                                <rect key="frame" x="0.0" y="213" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ageClick:" destination="Wtr-Z4-xjs" eventType="touchUpInside" id="j7x-DW-8sO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="age" destination="Aan-ND-NeK" id="g09-KF-nng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lf7-60-kAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -341,6 +341,18 @@
 		957DAAE8188053AB00A1FC06 /* age_stamp_7_number.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAD9188053AB00A1FC06 /* age_stamp_7_number.png */; };
 		957DAAE9188053AB00A1FC06 /* age_stamp_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAADA188053AB00A1FC06 /* age_stamp_8.png */; };
 		957DAAEA188053AB00A1FC06 /* age_stamp_8_number.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAADB188053AB00A1FC06 /* age_stamp_8_number.png */; };
+		957DAAED1882BE5000A1FC06 /* SetAgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 957DAAEB1882BE5000A1FC06 /* SetAgeViewController.m */; };
+		957DAAF11882C5D600A1FC06 /* TSLocateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 957DAAEF1882C5D600A1FC06 /* TSLocateView.m */; };
+		957DAAF21882C5D600A1FC06 /* TSLocateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF01882C5D600A1FC06 /* TSLocateView.xib */; };
+		957DAAFA1882C96C00A1FC06 /* bg_023@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF31882C96C00A1FC06 /* bg_023@2x.png */; };
+		957DAAFB1882C96C00A1FC06 /* btn_020.disable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF41882C96C00A1FC06 /* btn_020.disable@2x.png */; };
+		957DAAFC1882C96C00A1FC06 /* btn_020.press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF51882C96C00A1FC06 /* btn_020.press@2x.png */; };
+		957DAAFD1882C96C00A1FC06 /* btn_020@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF61882C96C00A1FC06 /* btn_020@2x.png */; };
+		957DAAFE1882C96C00A1FC06 /* btn_021.disable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF71882C96C00A1FC06 /* btn_021.disable@2x.png */; };
+		957DAAFF1882C96C00A1FC06 /* btn_021.press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF81882C96C00A1FC06 /* btn_021.press@2x.png */; };
+		957DAB001882C96C00A1FC06 /* btn_021@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF91882C96C00A1FC06 /* btn_021@2x.png */; };
+		957DAB271882DCA500A1FC06 /* AgeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 957DAB261882DCA500A1FC06 /* AgeUtil.m */; };
+		957DAB291882DCC200A1FC06 /* age_stamp_1_number.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAB281882DCC200A1FC06 /* age_stamp_1_number.png */; };
 		95916A39186C847A001086A1 /* WaterImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95916A38186C847A001086A1 /* WaterImageController.m */; };
 		95916A3B186C8489001086A1 /* water_image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95916A3A186C8489001086A1 /* water_image.storyboard */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
@@ -756,6 +768,21 @@
 		957DAAD9188053AB00A1FC06 /* age_stamp_7_number.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_stamp_7_number.png; sourceTree = "<group>"; };
 		957DAADA188053AB00A1FC06 /* age_stamp_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_stamp_8.png; sourceTree = "<group>"; };
 		957DAADB188053AB00A1FC06 /* age_stamp_8_number.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_stamp_8_number.png; sourceTree = "<group>"; };
+		957DAAEB1882BE5000A1FC06 /* SetAgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAgeViewController.m; sourceTree = "<group>"; };
+		957DAAEC1882BE5000A1FC06 /* SetAgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAgeViewController.h; sourceTree = "<group>"; };
+		957DAAEE1882C5B800A1FC06 /* TSLocateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLocateView.h; sourceTree = "<group>"; };
+		957DAAEF1882C5D600A1FC06 /* TSLocateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLocateView.m; sourceTree = "<group>"; };
+		957DAAF01882C5D600A1FC06 /* TSLocateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSLocateView.xib; sourceTree = "<group>"; };
+		957DAAF31882C96C00A1FC06 /* bg_023@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_023@2x.png"; sourceTree = "<group>"; };
+		957DAAF41882C96C00A1FC06 /* btn_020.disable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_020.disable@2x.png"; sourceTree = "<group>"; };
+		957DAAF51882C96C00A1FC06 /* btn_020.press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_020.press@2x.png"; sourceTree = "<group>"; };
+		957DAAF61882C96C00A1FC06 /* btn_020@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_020@2x.png"; sourceTree = "<group>"; };
+		957DAAF71882C96C00A1FC06 /* btn_021.disable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_021.disable@2x.png"; sourceTree = "<group>"; };
+		957DAAF81882C96C00A1FC06 /* btn_021.press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_021.press@2x.png"; sourceTree = "<group>"; };
+		957DAAF91882C96C00A1FC06 /* btn_021@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_021@2x.png"; sourceTree = "<group>"; };
+		957DAB251882DCA500A1FC06 /* AgeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgeUtil.h; sourceTree = "<group>"; };
+		957DAB261882DCA500A1FC06 /* AgeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgeUtil.m; sourceTree = "<group>"; };
+		957DAB281882DCC200A1FC06 /* age_stamp_1_number.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_stamp_1_number.png; sourceTree = "<group>"; };
 		95916A37186C847A001086A1 /* WaterImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterImageController.h; sourceTree = "<group>"; };
 		95916A38186C847A001086A1 /* WaterImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterImageController.m; sourceTree = "<group>"; };
 		95916A3A186C8489001086A1 /* water_image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = water_image.storyboard; sourceTree = "<group>"; };
@@ -824,6 +851,13 @@
 		2E2F715D1875B12B001A7816 /* BeautifiedPicture */ = {
 			isa = PBXGroup;
 			children = (
+				957DAB251882DCA500A1FC06 /* AgeUtil.h */,
+				957DAB261882DCA500A1FC06 /* AgeUtil.m */,
+				957DAAEF1882C5D600A1FC06 /* TSLocateView.m */,
+				957DAAF01882C5D600A1FC06 /* TSLocateView.xib */,
+				957DAAEE1882C5B800A1FC06 /* TSLocateView.h */,
+				957DAAEB1882BE5000A1FC06 /* SetAgeViewController.m */,
+				957DAAEC1882BE5000A1FC06 /* SetAgeViewController.h */,
 				356E6A67185ADE2A002A1014 /* BeautifiedPictureViewController.h */,
 				356E6A68185ADE2A002A1014 /* BeautifiedPictureViewController.m */,
 				2E2F715E1875B15F001A7816 /* StampView.h */,
@@ -888,6 +922,13 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				957DAAF31882C96C00A1FC06 /* bg_023@2x.png */,
+				957DAAF41882C96C00A1FC06 /* btn_020.disable@2x.png */,
+				957DAAF51882C96C00A1FC06 /* btn_020.press@2x.png */,
+				957DAAF61882C96C00A1FC06 /* btn_020@2x.png */,
+				957DAAF71882C96C00A1FC06 /* btn_021.disable@2x.png */,
+				957DAAF81882C96C00A1FC06 /* btn_021.press@2x.png */,
+				957DAAF91882C96C00A1FC06 /* btn_021@2x.png */,
 				957DAACC188053AB00A1FC06 /* agestamp */,
 				2E8A8A3D18804EAA006387A5 /* frame_13_1_1.png */,
 				2E8A8A3E18804EAA006387A5 /* frame_13_4_3.png */,
@@ -1384,6 +1425,7 @@
 		957DAACC188053AB00A1FC06 /* agestamp */ = {
 			isa = PBXGroup;
 			children = (
+				957DAB281882DCC200A1FC06 /* age_stamp_1_number.png */,
 				957DAACD188053AB00A1FC06 /* age_stamp_1.png */,
 				957DAACE188053AB00A1FC06 /* age_stamp_2.png */,
 				957DAACF188053AB00A1FC06 /* age_stamp_2_number.png */,
@@ -1511,6 +1553,7 @@
 				356E6A80185AE23E002A1014 /* main_tab_camera.png in Resources */,
 				2EB0A339185C567800C226DF /* share_save_pop.png in Resources */,
 				2E2C1B561879902D0002470A /* ZDBtn3.png in Resources */,
+				957DAAFF1882C96C00A1FC06 /* btn_021.press@2x.png in Resources */,
 				2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */,
 				2E7013A3187EE60300A641E6 /* setting_04.png in Resources */,
 				2E3E0EFD187D8FFE0058C4C4 /* OhisamaFont11.ttf in Resources */,
@@ -1531,6 +1574,7 @@
 				2E24856B187028080090634D /* btn_setting_text .png in Resources */,
 				2EB0A347185C5A3800C226DF /* share_announce.png in Resources */,
 				356E6A57185AD70F002A1014 /* Icon-Small-40@2x.png in Resources */,
+				957DAB001882C96C00A1FC06 /* btn_021@2x.png in Resources */,
 				957DAAE8188053AB00A1FC06 /* age_stamp_7_number.png in Resources */,
 				2EB0A344185C585B00C226DF /* share_sns_mail.png in Resources */,
 				2E8A8A5118804EAA006387A5 /* frame_16_1_1.png in Resources */,
@@ -1575,6 +1619,7 @@
 				2E701399187EE32A00A641E6 /* decoration_tab_font_off.png in Resources */,
 				35D4DF171875577900BF9613 /* button_OK.png in Resources */,
 				2E6409CA1861F60D0080E903 /* check.png in Resources */,
+				957DAAFD1882C96C00A1FC06 /* btn_020@2x.png in Resources */,
 				2E701385187EDF2B00A641E6 /* color1.png in Resources */,
 				2E8A8A3318804E9C006387A5 /* frame_8_1_1.png in Resources */,
 				2E3E0EFB187D8FFE0058C4C4 /* HuiFont29.ttf in Resources */,
@@ -1590,7 +1635,9 @@
 				2E2F71731875B2BD001A7816 /* stamp_6.png in Resources */,
 				2E3E0EFC187D8FFE0058C4C4 /* MakibaFont13.ttf in Resources */,
 				2EB41C33188043CE005F7AF5 /* stamp_27.png in Resources */,
+				957DAAF21882C5D600A1FC06 /* TSLocateView.xib in Resources */,
 				2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */,
+				957DAB291882DCC200A1FC06 /* age_stamp_1_number.png in Resources */,
 				9571A219185C975D003D3285 /* shoot_camera_button_1.png in Resources */,
 				2E2C1B551879902D0002470A /* ZDBtn2.png in Resources */,
 				2ED5B1D61868922B007075EC /* setting_info_text.png in Resources */,
@@ -1619,6 +1666,7 @@
 				356E6A53185AD70F002A1014 /* Icon-72@2x.png in Resources */,
 				2E70138A187EDF2B00A641E6 /* color6.png in Resources */,
 				2E701397187EE32A00A641E6 /* decoration_tab_color_off.png in Resources */,
+				957DAAFB1882C96C00A1FC06 /* btn_020.disable@2x.png in Resources */,
 				957DAAE2188053AB00A1FC06 /* age_stamp_4_number.png in Resources */,
 				2E8A8A2E18804E9C006387A5 /* frame_5_4_3.png in Resources */,
 				2E2F715518759FC7001A7816 /* decoration_tab_footer_age_off.png in Resources */,
@@ -1627,6 +1675,7 @@
 				9571A220185C975D003D3285 /* shot_flash_on.png in Resources */,
 				2E701387187EDF2B00A641E6 /* color3.png in Resources */,
 				2E44DAA9185C9AA600C5C1DC /* sound_setting_now.png in Resources */,
+				957DAAFE1882C96C00A1FC06 /* btn_021.disable@2x.png in Resources */,
 				35452A70187F8E1E0093CB9D /* trimming_4_3_off.png in Resources */,
 				356E6A88185AE23E002A1014 /* main_tab_sound_on.png in Resources */,
 				2E8A8A3A18804E9C006387A5 /* frame_11_4_3.png in Resources */,
@@ -1660,6 +1709,7 @@
 				2E69362A185DF7B5000C95F5 /* TmpFile in Resources */,
 				9571A21D185C975D003D3285 /* shot_back.png in Resources */,
 				2EB0A331185C07C000C226DF /* mama_camera_top_960.png in Resources */,
+				957DAAFC1882C96C00A1FC06 /* btn_020.press@2x.png in Resources */,
 				2EB41C27188043CE005F7AF5 /* stamp_15.png in Resources */,
 				2ED5B1E018689454007075EC /* info.png in Resources */,
 				2EB0A343185C585B00C226DF /* share_sns_line.png in Resources */,
@@ -1741,6 +1791,7 @@
 				2EB41C2D188043CE005F7AF5 /* stamp_21.png in Resources */,
 				2E701392187EE21200A641E6 /* decoration_tab_font_bg.png in Resources */,
 				957DAADE188053AB00A1FC06 /* age_stamp_2_number.png in Resources */,
+				957DAAFA1882C96C00A1FC06 /* bg_023@2x.png in Resources */,
 				356E6A85185AE23E002A1014 /* main_tab_setting_off.png in Resources */,
 				35452A71187F8E1E0093CB9D /* trimming_4_3_on.png in Resources */,
 				2E1EBB481867E5FE00F64A2E /* bg.png in Resources */,
@@ -1801,6 +1852,7 @@
 				35070270187CE78A00BEB701 /* NSObject+SBJSON.m in Sources */,
 				35446804185AD419005AB0D9 /* ViewController.m in Sources */,
 				2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */,
+				957DAAED1882BE5000A1FC06 /* SetAgeViewController.m in Sources */,
 				95FAA551187B04B1001FB0AD /* StampAgeController.m in Sources */,
 				950C7EF71865F3780021FE5D /* TileBG.m in Sources */,
 				2ED5B1DB186893BC007075EC /* StationViewController.m in Sources */,
@@ -1823,8 +1875,10 @@
 				35ADB3D91861B9DF009647C8 /* Music.m in Sources */,
 				950C7EE31865E6700021FE5D /* MQCropImageView.m in Sources */,
 				356E6A75185ADE97002A1014 /* ShareViewController.m in Sources */,
+				957DAB271882DCA500A1FC06 /* AgeUtil.m in Sources */,
 				950C7EE41865E6700021FE5D /* MQCropPatView.m in Sources */,
 				356E6A8E185B15FC002A1014 /* DataManager.m in Sources */,
+				957DAAF11882C5D600A1FC06 /* TSLocateView.m in Sources */,
 				35070274187CE78A00BEB701 /* SBJsonParser.m in Sources */,
 				950C7ECB1865E3F60021FE5D /* ColorTrackingCamera.m in Sources */,
 				35070279187CECB700BEB701 /* TextFontViewController.m in Sources */,

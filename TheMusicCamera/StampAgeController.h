@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DataManager.h"
+#import "SetAgeViewController.h"
 
-@interface StampAgeController : UIViewController
+@interface StampAgeController : UIViewController<SetAgeViewControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, strong) IBOutlet UILabel* age;
