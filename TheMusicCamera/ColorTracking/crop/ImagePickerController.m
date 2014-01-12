@@ -63,7 +63,8 @@
   cropper = [[ImaeCropper alloc] initWithImage:image];
   cropper.delegate = self;
 //  [self.navigationController pushViewController:cropper animated:YES];
-  [self presentViewController:cropper animated:YES completion:^{}];
+//  [self presentViewController:cropper animated:YES completion:^{}];
+  [self.view addSubview:cropper.view];
 }
 
 -(void) begin

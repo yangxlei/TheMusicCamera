@@ -149,28 +149,27 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void) didFinishImagePickerAndCrop:(UIImage *)image
 {
+
+  [cropper dismissViewControllerAnimated:YES completion:^{
     if (imageView!=nil) {
-        [imageView removeFromSuperview];
+    [imageView removeFromSuperview];
     }
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
-        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
-        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
-        [mianView addSubview:imageView];
+    mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
+    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+    [mianView addSubview:imageView];
     }
     else
     {
-        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
-        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
-        [mianView addSubview:imageView];
+    mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
+    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+    [mianView addSubview:imageView];
     }
-
-    imageView.image = image;
-//  CGRect rect = imageView.frame;
-//  rect.size = image.size;
-//  imageView.frame =rect;
-  dataManager.shareImg = image;
-//  [cropperNavi dismissViewControllerAnimated:NO completion:nil];
-  [cropper dismissViewControllerAnimated:NO completion:^{}];
+    
+   imageView.image = image;
+    dataManager.shareImg = image;
+    
+  }];
   cropper = nil;
 }
 
