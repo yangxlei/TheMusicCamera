@@ -100,8 +100,11 @@
 
 -(void) okBtn:(id) sender
 {
-  [delegate finishSetAge:demoView.image];
-  [self.navigationController popViewControllerAnimated:YES];
+  if (year >= 0 && month >= 0)
+  {
+    [delegate finishSetAge:demoView.image];
+    [self.navigationController popViewControllerAnimated:YES];
+  }
 }
 
 -(void) backBtuuon
