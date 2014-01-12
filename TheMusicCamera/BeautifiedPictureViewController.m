@@ -355,6 +355,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     ageView.preventsPositionOutsideSuperview = YES;
     [ageView showEditingHandles];
     [mianView addSubview:ageView];
+    [stampArr addObject:ageView];
 
 }
 
