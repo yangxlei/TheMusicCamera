@@ -206,12 +206,12 @@
 
 -(void) cropBtn:(id)sender
 {
-    if (sizeFlag) {
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"imageSize"];
+    if (sizeFlag) {//4:3
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:3] forKey:@"imageSize"];
     }
     else
     {
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"imageSize"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"imageSize"];
     }
 
   [delegate didCropImage:[self cropImage]];

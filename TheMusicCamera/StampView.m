@@ -101,8 +101,8 @@
                         CustomButton *button = [CustomButton buttonWithType:UIButtonTypeCustom];
                         button.type = type;
                         button.frame = CGRectMake(35+95*i+(i/3*35), 10+80*j, 60, 60);
-                        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_1",i*3+j+1]] forState:UIControlStateNormal];
-                        button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_1",i*3+j+1]];
+                        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*3+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]] forState:UIControlStateNormal];
+                        button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*3+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]];
                         [button addTarget:self action:@selector(stampSelect:) forControlEvents:UIControlEventTouchUpInside];
                         [scrollView addSubview:button];
                         
