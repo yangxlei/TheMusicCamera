@@ -10,11 +10,12 @@
 #import "StampView.h"
 #import "TextFontViewController.h"
 #import "ImagePickerController.h"
+#import "StampAgeController.h"
 
 @class DataManager;
 //@class StampView;
 
-@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, ImagePickerControllerDelegate,StampViewDelegate,TextFontVCDelegate>
+@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, ImagePickerControllerDelegate,StampViewDelegate,TextFontVCDelegate, StampAgeControllerDelegate>
 {
     IBOutlet UIImageView* imageView;
     IBOutlet UIView *mianView;

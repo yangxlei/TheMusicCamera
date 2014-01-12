@@ -234,7 +234,9 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         {
             btn.selected = NO;
           storyboard = [UIStoryboard storyboardWithName:@"stamp_age" bundle:nil];
-          [self.navigationController pushViewController:[storyboard instantiateInitialViewController] animated:YES];
+          StampAgeController* controller = [storyboard instantiateInitialViewController];
+          controller.delegate = self;
+          [self.navigationController pushViewController:controller animated:YES];
         }
             break;
         case 4:
@@ -333,6 +335,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     stampFrameView.delegate = self;
     [stampFrameView initWithType:2];
     [self.view addSubview:stampFrameView];
+
+}
+
+-(void) finishSetAge:(UIImage *)image
+{
 
 }
 

@@ -54,7 +54,7 @@
   if (year >= 0 && month >= 0)
   {
     [delegate didFinishSetAge:year andMonth:month];
-    [self.navigationController popViewControllerAnimated:year];
+    [self.navigationController popViewControllerAnimated:YES];
   }
 }
 

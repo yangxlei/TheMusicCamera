@@ -7,11 +7,13 @@
 //
 
 #import "StampAgeController.h"
+#import "AgeUtil.h"
 
 @interface StampAgeController ()
 {
   int year ;
   int month;
+  int stampItem ;
 }
 
 @end
@@ -20,6 +22,7 @@
 @synthesize scrollView;
 @synthesize age;
 @synthesize demoView;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -72,18 +75,33 @@
   
   [scrollView setContentSize:CGSizeMake(right_margin, 160)];
 
-  year = -1 ;
-  month = -1;
+  year = 0 ;
+  month = 0;
+  stampItem = 0;
 }
 
 -(void) selectItem:(UIButton*)sender
 {
+  stampItem = sender.tag-30;
+  [self setAgeImage];
+}
 
+-(void) setAgeImage
+{
+  demoView.image = nil;
+  UIImage* result= [AgeUtil generateAgeStampImage:stampItem andYear:year andMonth:month];
+//  UIImage* result = [UIImage imageWithCGImage:image.CGImage scale:image.scale*0.1 orientation:image.imageOrientation];
+  demoView.image = result;
+  CGRect rect = demoView.frame;
+  rect.size = result.size;
+  rect.origin.x = (320 - result.size.width)/2;
+  demoView.frame = rect;
 }
 
 -(void) okBtn:(id) sender
 {
-
+  [delegate finishSetAge:demoView.image];
+  [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) backBtuuon
@@ -101,6 +119,8 @@
 {
   year = _year;
   month = _month;
+ age.text = [NSString stringWithFormat:@"%d歳 %dか月",year,month];
+  [self setAgeImage];
 }
 
 -(IBAction)ageClick:(id)sender
