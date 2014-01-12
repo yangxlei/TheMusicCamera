@@ -8,6 +8,8 @@
 
 #import "StampView.h"
 #import "CustomButton.h"
+#import "StoreKitHelper.h"
+#import "DataManager.h"
 
 @implementation StampView
 
@@ -31,6 +33,8 @@
 
 - (void)initWithType:(int)type
 {
+    dataManager = [DataManager sharedManager];
+
     switch (type) {
         case 1:
         {
@@ -57,11 +61,19 @@
                         [button addTarget:self action:@selector(stampSelect:) forControlEvents:UIControlEventTouchUpInside];
                         [scrollView addSubview:button];
                         
-                        if (i*3+j>=9) {
+                        if (i*3+j>=9 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"appStore"] intValue]==0) {
                             [button setUserInteractionEnabled:NO];
-                            UIImageView *interdictionImg = [[UIImageView alloc]initWithFrame:CGRectMake(35+95*i+(i/3*35), 10+80*j, 71, 45)];
-                            interdictionImg.image = [UIImage imageNamed:@"lock"];
-                            [scrollView addSubview:interdictionImg];
+//                            UIImageView *interdictionImg = [[UIImageView alloc]initWithFrame:CGRectMake(35+95*i+(i/3*35), 10+80*j, 71, 45)];
+//                            interdictionImg.image = [UIImage imageNamed:@"lock"];
+//                            [scrollView addSubview:interdictionImg];
+                            
+                            UIButton *interdictionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+                            interdictionBtn.frame = CGRectMake(35+95*i+(i/3*35), 10+80*j, 71, 45);
+                            [interdictionBtn setBackgroundImage:[UIImage imageNamed:@"lock"] forState:UIControlStateNormal];
+                            //                            interdictionImg.image = [UIImage imageNamed:@"lock"];
+                            [interdictionBtn addTarget:self action:@selector(interdictionBtn:) forControlEvents:UIControlEventTouchUpInside];
+                            [scrollView addSubview:interdictionBtn];
+
                         }
                     }
                 }
@@ -89,15 +101,21 @@
                         CustomButton *button = [CustomButton buttonWithType:UIButtonTypeCustom];
                         button.type = type;
                         button.frame = CGRectMake(35+95*i+(i/3*35), 10+80*j, 60, 60);
-                        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_1_1",i*3+j+1]] forState:UIControlStateNormal];
-                        button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_1_1",i*3+j+1]];
+                        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_1",i*3+j+1]] forState:UIControlStateNormal];
+                        button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_1",i*3+j+1]];
                         [button addTarget:self action:@selector(stampSelect:) forControlEvents:UIControlEventTouchUpInside];
                         [scrollView addSubview:button];
-                        if (i*3+j>=9) {
+                        
+                        if (i*3+j>=9 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"appStore"] intValue]==0) {
                             [button setUserInteractionEnabled:NO];
-                            UIImageView *interdictionImg = [[UIImageView alloc]initWithFrame:CGRectMake(35+95*i+(i/3*35), 10+80*j, 71, 45)];
-                            interdictionImg.image = [UIImage imageNamed:@"lock"];
-                            [scrollView addSubview:interdictionImg];
+                            
+                            UIButton *interdictionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+                            interdictionBtn.frame = CGRectMake(35+95*i+(i/3*35), 10+80*j, 71, 45);
+                            [interdictionBtn setBackgroundImage:[UIImage imageNamed:@"lock"] forState:UIControlStateNormal];
+//                            interdictionImg.image = [UIImage imageNamed:@"lock"];
+                            [interdictionBtn addTarget:self action:@selector(interdictionBtn:) forControlEvents:UIControlEventTouchUpInside];
+                            [scrollView addSubview:interdictionBtn];
+                            
                         }
 
                     }
@@ -114,6 +132,31 @@
 - (void)stampSelect:(CustomButton *)button 
 {
     [self.delegate selectImageClick:button.btnImage andType:button.type];
+}
+
+- (void)interdictionBtn:(UIButton *)button
+{
+    dataManager.fromNo = 1;
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                       message:@"这是一个简单的警告框！"
+                                                      delegate:self
+                                             cancelButtonTitle:@"确定"
+                                             otherButtonTitles:@"取消", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==0) {
+        NSLog(@"0");
+        StoreKitHelper *store = [[StoreKitHelper alloc]init];
+        [store buyItemWithType:0];
+        
+    }
+    else
+    {
+        NSLog(@"1");
+    }
 }
 
 @end

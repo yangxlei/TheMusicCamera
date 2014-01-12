@@ -14,7 +14,8 @@
 #import "NSString+SBJSON.h"
 #import "NSData+Base64.h"
 #import "SBJson.h"
-//
+#import "DataManager.h"
+
 //#import "ASIHTTPRequest.h"
 //#import "ASIFormDataRequest.h"
 //#include "AppStorePayment.h"
@@ -50,7 +51,7 @@ static StoreKitHelper *storeKitHelperInstance;
 
 -(BOOL)putStringToItunes:(NSData*)iapData {
     
-    
+
    NSString *encodingStr =  [iapData base64EncodedString];
     
 #if DEBUG
@@ -97,7 +98,8 @@ static StoreKitHelper *storeKitHelperInstance;
     if (HUD) {
         return;
     }
-    
+    dataManager = [DataManager sharedManager];
+
     _buyType = tp;
     
     NSString *product;
@@ -141,10 +143,9 @@ static StoreKitHelper *storeKitHelperInstance;
     // Your application should implement these two methods.
     NSString *product = transaction.payment.productIdentifier;
     
-    if ([self putStringToItunes:transaction.transactionReceipt]) {
-        
-        
-    
+    if ([self putStringToItunes:transaction.transactionReceipt])
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"appStore"];
     }
     else {
         UIAlertView *alertView =  [[UIAlertView alloc] initWithTitle: nil
@@ -155,13 +156,11 @@ static StoreKitHelper *storeKitHelperInstance;
         [alertView autorelease];
         [alertView show];
     }
-   
     // Remove the transaction from the payment queue.
     m_transaction=transaction;
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
     
     [self dismissHUD];
-    
 }
 
 
@@ -209,6 +208,14 @@ static StoreKitHelper *storeKitHelperInstance;
 		switch (transaction.transactionState) {
             case SKPaymentTransactionStatePurchasing:
                 NSLog(@"SKPaymentTransactionStatePurchasing");
+                [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"appStore"];
+                if (dataManager.fromNo==1) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"FROMRETURNVC" object:nil];
+                }else
+                {
+                
+                }
+                
                 break;
 			case SKPaymentTransactionStatePurchased: 
                 [self completeTransaction:transaction];

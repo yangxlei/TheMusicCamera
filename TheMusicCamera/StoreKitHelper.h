@@ -11,14 +11,18 @@
 
 #import "MBProgressHUD.h"
 
+@class DataManager;
+
 @interface StoreKitHelper : NSObject <SKPaymentTransactionObserver,SKProductsRequestDelegate,UIAlertViewDelegate,MBProgressHUDDelegate> {
 
     MBProgressHUD *HUD;
     int _buyType;
     SKPaymentTransaction *m_transaction;
     
+    DataManager *dataManager;
+
 }
- 
+
 + (StoreKitHelper *)shareInstance;
 
 - (BOOL)canMakePay;

@@ -29,6 +29,22 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [UIApplication sharedApplication].statusBarHidden=YES;
+    soundsName.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
+    soundsName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    
+    if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"musicrepeat"]intValue]==1) {
+        repeatName.text = [NSString stringWithFormat:@"あり"];
+    }
+    else{
+        repeatName.text = [NSString stringWithFormat:@"なし"];
+    }
+    repeatName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -43,6 +43,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicOFF"];
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicstation"];
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"imageSize"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"appStore"];
 
     }
     dataManager = [DataManager sharedManager];

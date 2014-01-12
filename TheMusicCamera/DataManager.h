@@ -25,6 +25,7 @@
 @property (strong, nonatomic) UIImage *shareImg;
 
 @property (readwrite) BOOL isPhotoView;
+@property (readwrite) int fromNo;
 
 - (int)getMusicId;
 - (void) getLoadMusicList;
