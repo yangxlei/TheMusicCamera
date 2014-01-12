@@ -76,6 +76,16 @@
   
   //2.创建、配置输入设备
   _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+  
+  if (!isFront)
+  {
+    _device = [self cameraWithPosition:AVCaptureDevicePositionBack];
+  }
+  else
+  {
+    _device = [self cameraWithPosition:AVCaptureDevicePositionFront];
+  }
+  
   [_device lockForConfiguration:nil];
   if([_device flashMode] == AVCaptureFlashModeOff){
     [flashBtn setSelected:NO];
@@ -131,7 +141,7 @@
     // Find a suitable AVCaptureDevice
     AVCaptureDevice *device = [AVCaptureDevice
                                defaultDeviceWithMediaType:AVMediaTypeVideo];//这里默认是使用后置摄像头，你可以改成前置摄像头
-    
+  
     // Create a device input with the device and add it to the session.
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device
                                                                         error:&error];
@@ -216,6 +226,7 @@
 
 -(IBAction) frontCamera:(id)sender
 {
+  isFront = !isFront;
   //添加动画
   CATransition *animation = [CATransition animation];
   animation.delegate = self;
@@ -341,6 +352,7 @@
        UIImageWriteToSavedPhotosAlbum(_finishImage, nil, nil, nil);//然后将该图片保存到图片图
      [self.cameraView.layer removeAllAnimations];
      [cameraBtn setEnabled:NO];
+     [self performSelector:@selector(resetCamear) withObject:nil afterDelay:0.8];
    }];
     
     
@@ -350,6 +362,15 @@
 //    UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
 //    UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
 
+}
+
+- (void) resetCamear
+{
+  [cameraBtn setEnabled:YES];
+  [_musicBtn setEnabled:YES];
+  cameraStop = NO;
+  
+  [self initialize];
 }
 
 - (void)addHollowOpenToView:(UIView *)view

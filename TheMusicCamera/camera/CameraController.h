@@ -17,6 +17,8 @@
     BOOL isPlay;
     DataManager *dataManager;
     BOOL cameraStop;
+  
+  BOOL isFront ;
     
 }
 
