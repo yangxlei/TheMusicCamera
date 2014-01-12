@@ -353,17 +353,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share_11_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pn2-yY-JRd">
-                                <rect key="frame" x="52" y="133" width="215" height="215"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="share_11_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pn2-yY-JRd">
+                                <rect key="frame" x="52" y="123" width="215" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_save_pop.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-i7-Pee">
-                                <rect key="frame" x="38" y="79" width="244" height="41"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="share_save_pop.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-i7-Pee">
+                                <rect key="frame" x="38" y="67" width="244" height="41"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="244" id="1jI-KY-azq"/>
-                                    <constraint firstAttribute="height" constant="41" id="HKI-I3-1ao"/>
-                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="share_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="lg3-EV-wlq">
                                 <rect key="frame" x="12" y="325" width="46" height="72"/>
@@ -388,7 +384,7 @@
                                     <constraint firstAttribute="height" constant="23" id="S67-7w-Usq"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eju-Li-MVZ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eju-Li-MVZ">
                                 <rect key="frame" x="38" y="481" width="39" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -442,14 +438,15 @@
                                     <action selector="lineBtn:" destination="hYD-YR-ave" eventType="touchUpInside" id="tAM-Pk-cOo"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-SZ-l1H">
-                                <rect key="frame" x="69" y="152" width="180" height="180"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-SZ-l1H">
+                                <rect key="frame" x="69" y="142" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.036863209190000003" green="0.50196081400000003" blue="0.033278981399999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="iGC-0g-uFO" firstAttribute="baseline" secondItem="2ZX-UM-CLr" secondAttribute="baseline" id="2gt-1S-eTw"/>
+                            <constraint firstItem="Fk8-SZ-l1H" firstAttribute="top" secondItem="3VE-F6-eu3" secondAttribute="top" constant="142" id="3kD-LB-eMw"/>
                             <constraint firstItem="2ZX-UM-CLr" firstAttribute="leading" secondItem="3VE-F6-eu3" secondAttribute="leading" constant="95" id="49q-cU-Q7A"/>
                             <constraint firstItem="UmX-i7-Pee" firstAttribute="leading" secondItem="Eju-Li-MVZ" secondAttribute="leading" id="4O5-KQ-TBY"/>
                             <constraint firstItem="UmX-i7-Pee" firstAttribute="centerX" secondItem="ybH-ry-750" secondAttribute="centerX" id="5cV-5x-JQF"/>
@@ -469,6 +466,7 @@
                             <constraint firstItem="UmX-i7-Pee" firstAttribute="centerX" secondItem="3VE-F6-eu3" secondAttribute="centerX" id="lvJ-WH-j4A"/>
                             <constraint firstItem="iGC-0g-uFO" firstAttribute="leading" secondItem="HwX-8R-DWw" secondAttribute="trailing" constant="25" id="mdC-DL-PIm"/>
                             <constraint firstItem="iGC-0g-uFO" firstAttribute="trailing" secondItem="VEx-Rf-kvp" secondAttribute="trailing" id="ozn-lx-eXL"/>
+                            <constraint firstItem="Pn2-yY-JRd" firstAttribute="top" secondItem="3VE-F6-eu3" secondAttribute="top" constant="123" id="pMD-7E-6qZ"/>
                             <constraint firstAttribute="bottom" secondItem="2ZX-UM-CLr" secondAttribute="bottom" constant="36" id="qHp-qa-96b"/>
                             <constraint firstItem="2ZX-UM-CLr" firstAttribute="leading" secondItem="Eju-Li-MVZ" secondAttribute="trailing" constant="18" id="rBG-aI-uqb"/>
                             <constraint firstItem="2ZX-UM-CLr" firstAttribute="baseline" secondItem="iGC-0g-uFO" secondAttribute="baseline" id="uQ0-IT-Tb9"/>
@@ -477,6 +475,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="shareB" destination="Pn2-yY-JRd" id="lGx-Lz-5yg"/>
                         <outlet property="shareImage" destination="Fk8-SZ-l1H" id="sId-XO-hjt"/>
                     </connections>
                 </viewController>

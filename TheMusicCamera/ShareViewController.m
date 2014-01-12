@@ -27,6 +27,21 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     shareImage.image = dataManager.shareImg;
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
+        shareB.frame = CGRectMake(shareB.frame.origin.x, shareB.frame.origin.y, 215, 215);
+        shareB.image = [UIImage imageNamed:@"share_11_bg"];
+        
+        shareImage.frame = CGRectMake(shareImage.frame.origin.x, shareImage.frame.origin.y, 180, 180);
+        //        imageView.frame = CGRectMake(0, 0, 300, 300);
+    }
+    else
+    {
+        shareB.frame = CGRectMake(shareB.frame.origin.x, shareB.frame.origin.y, 215, 305);
+        shareB.image = [UIImage imageNamed:@"share_34_bg"];
+
+        shareImage.frame = CGRectMake(shareImage.frame.origin.x, shareImage.frame.origin.y, 180, 240);
+        //        imageView.frame = CGRectMake(0, 0, 300, 400);
+    }
 }
 
 - (void)viewDidLoad
