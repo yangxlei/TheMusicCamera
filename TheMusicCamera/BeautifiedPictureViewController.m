@@ -39,14 +39,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==0) {
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
         mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
-        imageView.frame = CGRectMake(0, 0, 300, 300);
+//        imageView.frame = CGRectMake(0, 0, 300, 300);
     }
     else
     {
         mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
-        imageView.frame = CGRectMake(0, 0, 300, 400);
+//        imageView.frame = CGRectMake(0, 0, 300, 400);
     }
 }
 
@@ -54,14 +54,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 {
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
     [UIApplication sharedApplication].statusBarHidden=YES;
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==0) {
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
         mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
-        imageView.frame = CGRectMake(0, 0, 300, 300);
+//        imageView.frame = CGRectMake(0, 0, 300, 300);
     }
     else
     {
         mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
-        imageView.frame = CGRectMake(0, 0, 300, 400);
+//        imageView.frame = CGRectMake(0, 0, 300, 400);
     }
 
 }
@@ -147,16 +147,22 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void) didFinishImagePickerAndCrop:(UIImage *)image
 {
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==0) {
+    if (imageView!=nil) {
+        [imageView removeFromSuperview];
+    }
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
         mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
-        imageView.frame = CGRectMake(0, 0, 300, 300);
+        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+        [mianView addSubview:imageView];
     }
     else
     {
         mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
-        imageView.frame = CGRectMake(0, 0, 300, 400);
+        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+        [mianView addSubview:imageView];
     }
-  imageView.image = image;
+
+    imageView.image = image;
 //  CGRect rect = imageView.frame;
 //  rect.size = image.size;
 //  imageView.frame =rect;
