@@ -888,9 +888,7 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				957DAACC188053AB00A1FC06 /* agestamp */,
-=======
 				2E8A8A3D18804EAA006387A5 /* frame_13_1_1.png */,
 				2E8A8A3E18804EAA006387A5 /* frame_13_4_3.png */,
 				2E8A8A3F18804EAA006387A5 /* frame_14_1_1.png */,
@@ -929,7 +927,6 @@
 				2E8A8A2218804E9C006387A5 /* frame_11_4_3.png */,
 				2E8A8A2318804E9C006387A5 /* frame_12_1_1.png */,
 				2E8A8A2418804E9C006387A5 /* frame_12_4_3.png */,
->>>>>>> 8eeae5e8c6eaa912f87b12a45d1706620503339e
 				35452A6A187F8E1E0093CB9D /* trimming_1_1_off.png */,
 				35452A6B187F8E1E0093CB9D /* trimming_1_1_on.png */,
 				35452A6C187F8E1E0093CB9D /* trimming_4_3_off.png */,
@@ -1525,12 +1522,9 @@
 				356E6A5D185AD70F002A1014 /* icon@2x.png in Resources */,
 				2E8A8A2A18804E9C006387A5 /* frame_3_4_3.png in Resources */,
 				2EA58154186B234700AF2BB1 /* button_edit.png in Resources */,
-<<<<<<< HEAD
 				957DAAE1188053AB00A1FC06 /* age_stamp_4.png in Resources */,
-=======
 				2E8A8A3118804E9C006387A5 /* frame_7_1_1.png in Resources */,
 				2EB41C2C188043CE005F7AF5 /* stamp_20.png in Resources */,
->>>>>>> 8eeae5e8c6eaa912f87b12a45d1706620503339e
 				2EB0A340185C585B00C226DF /* share_arrow.png in Resources */,
 				2E7013A0187EE60300A641E6 /* setting_01.png in Resources */,
 				3519A022186BD36F00FEC752 /* button_finish.png in Resources */,
@@ -1561,11 +1555,8 @@
 				2E8A8A3518804E9C006387A5 /* frame_9_1_1.png in Resources */,
 				356E6A5E185AD70F002A1014 /* icon_117.png in Resources */,
 				2E2F71761875B2BD001A7816 /* stamp_9.png in Resources */,
-<<<<<<< HEAD
 				957DAAE5188053AB00A1FC06 /* age_stamp_6.png in Resources */,
-=======
 				2EB41C28188043CE005F7AF5 /* stamp_16.png in Resources */,
->>>>>>> 8eeae5e8c6eaa912f87b12a45d1706620503339e
 				2EB0A341185C585B00C226DF /* share_sns_bg.png in Resources */,
 				95DFD2CA187F097500C916BA /* stamp_age_1.png in Resources */,
 				2E1EBB471867E5FE00F64A2E /* bg_1136.png in Resources */,
@@ -1591,11 +1582,8 @@
 				2E8A8A2C18804E9C006387A5 /* frame_4_4_3.png in Resources */,
 				35808D4F187BF4A000A5BA34 /* flame_4_3.png in Resources */,
 				2E6409C11861EA4F0080E903 /* default01.wav in Resources */,
-<<<<<<< HEAD
 				957DAADF188053AB00A1FC06 /* age_stamp_3.png in Resources */,
-=======
 				2E8A8A2818804E9C006387A5 /* frame_2_4_3.png in Resources */,
->>>>>>> 8eeae5e8c6eaa912f87b12a45d1706620503339e
 				2EB0A345185C585B00C226DF /* share_sns_twitter.png in Resources */,
 				2E2F71701875B2BD001A7816 /* stamp_3.png in Resources */,
 				95916A3B186C8489001086A1 /* water_image.storyboard in Resources */,
@@ -1616,11 +1604,8 @@
 				2E5C9F201871B3DD00E6A680 /* howTo_01.png in Resources */,
 				2EE5AF96186077BA00A35754 /* sound_setting_now_list1.png in Resources */,
 				2E44DAAD185C9BB900C5C1DC /* recorded_sound.png in Resources */,
-<<<<<<< HEAD
 				957DAAE7188053AB00A1FC06 /* age_stamp_7.png in Resources */,
-=======
 				2E8A8A2518804E9C006387A5 /* flame_1_1_1.png in Resources */,
->>>>>>> 8eeae5e8c6eaa912f87b12a45d1706620503339e
 				356E6A84185AE23E002A1014 /* main_tab_osusume_on.png in Resources */,
 				2E70138B187EDF2B00A641E6 /* color7.png in Resources */,
 				35446806185AD419005AB0D9 /* Images.xcassets in Resources */,
@@ -1634,11 +1619,8 @@
 				356E6A53185AD70F002A1014 /* Icon-72@2x.png in Resources */,
 				2E70138A187EDF2B00A641E6 /* color6.png in Resources */,
 				2E701397187EE32A00A641E6 /* decoration_tab_color_off.png in Resources */,
-<<<<<<< HEAD
 				957DAAE2188053AB00A1FC06 /* age_stamp_4_number.png in Resources */,
-=======
 				2E8A8A2E18804E9C006387A5 /* frame_5_4_3.png in Resources */,
->>>>>>> 8eeae5e8c6eaa912f87b12a45d1706620503339e
 				2E2F715518759FC7001A7816 /* decoration_tab_footer_age_off.png in Resources */,
 				9571A21C185C975D003D3285 /* shoot_sound_button.png in Resources */,
 				2EE5AF9B1860781000A35754 /* sleep_mode_on.png in Resources */,
@@ -1765,11 +1747,8 @@
 				2E70138D187EDF2B00A641E6 /* color9.png in Resources */,
 				2E8A8A3618804E9C006387A5 /* frame_9_4_3.png in Resources */,
 				356E6A55185AD70F002A1014 /* icon-76@2x.png in Resources */,
-<<<<<<< HEAD
 				957DAAE4188053AB00A1FC06 /* age_stamp_5_number.png in Resources */,
-=======
 				2EB41C38188043CE005F7AF5 /* stamp_32.png in Resources */,
->>>>>>> 8eeae5e8c6eaa912f87b12a45d1706620503339e
 				2E2F71741875B2BD001A7816 /* stamp_7.png in Resources */,
 				2E5C9F231871B3DD00E6A680 /* howTo_04.png in Resources */,
 				356E6A86185AE23E002A1014 /* main_tab_setting_on.png in Resources */,

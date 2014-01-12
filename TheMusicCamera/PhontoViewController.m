@@ -57,6 +57,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [UIApplication sharedApplication].statusBarHidden=YES;
     musicLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
     musicLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 }

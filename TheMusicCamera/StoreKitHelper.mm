@@ -112,10 +112,13 @@ static StoreKitHelper *storeKitHelperInstance;
     SKPayment *payment = [SKPayment paymentWithProductIdentifier:product];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
     
-//    RootViewController *rootViewControll = [AppController shareRootViewController];
-//    
-//    HUD = [[MBProgressHUD alloc] initWithView:rootViewControll.view];
-//	[rootViewControll.view addSubview:HUD];
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];//[[[UIApplication sharedApplication] windows] lastObject];
+    //[MBProgressHUD hideHUDForView:window animated:YES];
+    for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
+        [MBProgressHUD hideHUDForView:window animated:YES];
+    }
+    MBProgressHUD *mbp = [MBProgressHUD showHUDAddedTo:window animated:YES];
+    mbp.labelText = @"   购买中,请稍后...   ";
 	
 //	HUD.delegate = self;
 //	HUD.labelText = @"Loading";
@@ -321,22 +324,22 @@ static StoreKitHelper *storeKitHelperInstance;
 
 - (void)hudWasHidden:(MBProgressHUD *)hud {
 	// Remove HUD from screen when the HUD was hidded
-	[HUD removeFromSuperview];
-	[HUD release];
-	HUD = nil;
+//	[HUD removeFromSuperview];
+//	[HUD release];
+//	HUD = nil;
 }
 
 #pragma mark -
 
 - (void)dismissHUD {
 
-    if (!HUD) {
-        return;
-    }
-    
-    [HUD removeFromSuperview];
-	[HUD release];
-	HUD = nil;
+//    if (!HUD) {
+//        return;
+//    }
+//    
+//    [HUD removeFromSuperview];
+//	[HUD release];
+//	HUD = nil;
     
 }
 
