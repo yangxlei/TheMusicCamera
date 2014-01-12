@@ -73,6 +73,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     self.navigationController.navigationBarHidden = YES;
     dataManager = [DataManager sharedManager];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fromReturnVC:) name:@"FROMRETURNVC" object:nil];
+
     stampArr = [[NSMutableArray alloc]initWithCapacity:0];
     stampFrameArr = [[NSMutableArray alloc]initWithCapacity:0];
 
@@ -275,43 +277,21 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     }
     else if (type==2)
     {
+        
         if (stampFrameArr.count!=0) {
+            for (UIImageView *mView in stampFrameArr) {
+                [mView removeFromSuperview];
+            }
             [[stampFrameArr objectAtIndex:0]removeFromSuperview];
         }
         UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
         image.image = img;
         [mianView addSubview:image];
         [mianView insertSubview:image atIndex:1];
-        
+        [stampFrameArr addObject:image];
     }
 
-    
-    
-//    UITextView *textView = [[UITextView alloc] initWithFrame:gripFrame2];
-//    textView.text = @"ZDStickerView is Objective-C module for iOS and offer complete configurability, including movement, resizing, rotation and more, with one finger.";
-//    ZDStickerView *userResizableView2 = [[ZDStickerView alloc] initWithFrame:gripFrame2];
-//    userResizableView2.contentView = textView;
-//    userResizableView2.preventsPositionOutsideSuperview = NO;
-//    [userResizableView2 showEditingHandles];
-//    [self.view addSubview:userResizableView2];
-
 }
-
-//- (void)selectColor:(UIColor *)color andFont:(UIFont *)fontStr
-//{
-//    CGRect gripFrame2 = CGRectMake(50, 200, 180, 140);
-//    UITextView *textView = [[UITextView alloc] initWithFrame:gripFrame2];
-//    textView.text = @"ZDStickerView is Objective-C module for iOS and offer complete configurability, including movement, resizing, rotation and more, with one finger.";
-//    textView.textColor = color;
-//    textView.font = fontStr;
-//    
-//    ZDStickerView *userResizableView2 = [[ZDStickerView alloc] initWithFrame:gripFrame2];
-//    userResizableView2.contentView = textView;
-//    userResizableView2.preventsPositionOutsideSuperview = NO;
-//    [userResizableView2 showEditingHandles];
-//    [mianView addSubview:userResizableView2];
-//
-//}
 
 - (void)selectTextView:(UITextView *)textView
 {
@@ -329,6 +309,30 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [mianView addSubview:userResizableView2];
 
     [stampArr addObject:userResizableView2];
+
+}
+
+- (void) fromReturnVC: (NSNotification*) aNotification
+{
+    for (int i=1; i<5; i++) {
+        UIButton *button = (UIButton *)[self.view viewWithTag:i];
+        button.selected = NO;
+    }
+
+    [stampView removeFromSuperview];
+    [stampFrameView removeFromSuperview];
+    
+    stampView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];
+    stampView.hidden = YES;
+    stampView.delegate = self;
+    [stampView initWithType:1];
+    [self.view addSubview:stampView];
+    
+    stampFrameView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];
+    stampFrameView.hidden = YES;
+    stampFrameView.delegate = self;
+    [stampFrameView initWithType:2];
+    [self.view addSubview:stampFrameView];
 
 }
 

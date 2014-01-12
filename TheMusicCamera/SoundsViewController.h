@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SoundsViewController : UIViewController
+{
+    __weak IBOutlet UILabel *soundsName;
+    __weak IBOutlet UILabel *repeatName;
+
+}
 
 @end

@@ -121,11 +121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/BeautifiedPictureViewController.m"
-            timestampString = "411061396.835821"
+            timestampString = "411227261.319878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-cancelClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -137,11 +137,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/StoreKitHelper.mm"
-            timestampString = "410971275.370189"
+            timestampString = "411228062.479446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "-handleFailedTransaction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -185,11 +185,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/BeautifiedPictureViewController.m"
-            timestampString = "411061396.835821"
+            timestampString = "411227261.319878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-useClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -216,13 +216,59 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheMusicCamera/ColorTracking/crop/ImagePickerController.m"
-            timestampString = "411055627.990765"
+            filePath = "TheMusicCamera/StoreKitHelper.mm"
+            timestampString = "411228062.479446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "-paymentQueue:updatedTransactions:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[StoreKitHelper paymentQueue:updatedTransactions:]"
+                  moduleName = "TheMusicCamera"
+                  urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/StoreKitHelper.mm"
+                  timestampString = "411228453.475195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[StoreKitHelper paymentQueue:updatedTransactions:]"
+                  moduleName = "TheMusicCamera"
+                  urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/StoreKitHelper.mm"
+                  timestampString = "411228453.475434"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "804">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMusicCamera/StampView.m"
+            timestampString = "411228280.772141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "-interdictionBtn:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -232,13 +278,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheMusicCamera/ColorTracking/crop/ImagePickerController.m"
-            timestampString = "411055629.048875"
+            filePath = "TheMusicCamera/StampView.m"
+            timestampString = "411228348.485383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -248,14 +294,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheMusicCamera/ColorTracking/crop/ImagePickerController.m"
-            timestampString = "411055676.799746"
+            filePath = "TheMusicCamera/BeautifiedPictureViewController.m"
+            timestampString = "411228371.287541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
+            landmarkName = "-fromReturnVC:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BeautifiedPictureViewController fromReturnVC:]"
+                  moduleName = "TheMusicCamera"
+                  urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/BeautifiedPictureViewController.m"
+                  timestampString = "411228453.476188"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "317"
+                  endingLineNumber = "317"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BeautifiedPictureViewController fromReturnVC:]"
+                  moduleName = "TheMusicCamera"
+                  urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/BeautifiedPictureViewController.m"
+                  timestampString = "411228453.476419"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "317"
+                  endingLineNumber = "317"
+                  offsetFromSymbolStart = "210">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

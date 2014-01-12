@@ -88,13 +88,13 @@
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
     if (indexPath.row==0) {
         bgImg.image = [UIImage imageNamed:@"list_1"];
-        nameLabel.text = [NSString stringWithFormat:@"なし无"];
+        nameLabel.text = [NSString stringWithFormat:@"なし"];
 
     }
     else
     {
         UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
-        nameLabel.text = [NSString stringWithFormat:@"あり有"];
+        nameLabel.text = [NSString stringWithFormat:@"あり"];
         
         bgImg.image = [UIImage imageNamed:@"list_3"];
     }

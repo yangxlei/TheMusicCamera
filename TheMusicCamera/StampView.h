@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class CustomButton;
+@class DataManager;
 
 @protocol StampViewDelegate
 
@@ -16,7 +17,10 @@
 
 @end
 
-@interface StampView : UIView
+@interface StampView : UIView<UIAlertViewDelegate>
+{
+    DataManager *dataManager;
+}
 
 @property (nonatomic, strong) id<StampViewDelegate> delegate;
 
