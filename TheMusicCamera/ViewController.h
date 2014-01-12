@@ -20,4 +20,5 @@
 }
 @property (nonatomic, strong) GTTabBarController *mainTabBarController;
 
++(UIViewController*) shareInstance;
 @end

@@ -213,16 +213,15 @@
     {
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"imageSize"];
     }
-
-    [self.navigationController popViewControllerAnimated:YES];
   [delegate didCropImage:[self cropImage]];
+  [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 
 -(void) backButton:(id)sender
 {
   [delegate onCacnel];
-  [self.navigationController popViewControllerAnimated:NO];
+  [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 -(void) viewWillAppear:(BOOL)animated

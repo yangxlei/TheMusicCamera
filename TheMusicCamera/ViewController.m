@@ -16,7 +16,7 @@
 #import "CameraController.h"
 #import "ProcessGLView.h"
 #import "MQUIImage.h"
-
+ViewController *_viewController;
 @interface ViewController ()
 
 @end
@@ -26,6 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
+  _viewController = self;
+  
     NSArray *fontArray = [UIFont familyNames];
     NSLog(@"fontArray  %@",fontArray);
     
@@ -184,6 +187,11 @@
 {
     [self.mainTabBarController hidesTabBar:NO animated:YES];
     self.mainTabBarController.selectedIndex = 4;
+}
+
++(UIViewController*) shareInstance
+{
+  return _viewController;
 }
 
 @end

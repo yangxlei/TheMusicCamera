@@ -62,7 +62,8 @@
 {
   cropper = [[ImaeCropper alloc] initWithImage:image];
   cropper.delegate = self;
-  [self.navigationController pushViewController:cropper animated:YES];
+//  [self.navigationController pushViewController:cropper animated:YES];
+  [self presentViewController:cropper animated:YES completion:^{}];
 }
 
 -(void) begin
@@ -79,13 +80,11 @@
 {
 //  imageView.image = image;
   [delegate didFinishImagePickerAndCrop:image];
-  [self.navigationController popViewControllerAnimated:NO];
 }
 
 -(void) onCacnel
 {
   [delegate didCacnel];
-  [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -106,8 +105,8 @@
 
 -(void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-  [self onCacnel];
   [picker dismissModalViewControllerAnimated:NO];
+  [self onCacnel];
 }
 
 @end

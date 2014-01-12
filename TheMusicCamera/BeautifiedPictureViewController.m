@@ -11,6 +11,8 @@
 #import "DataManager.h"
 #import "ZDStickerView.h"
 
+#import "ViewController.h"
+
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 @interface BeautifiedPictureViewController ()
@@ -140,10 +142,9 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     cropper.delegate = self;
 //    cropperNavi = [[UINavigationController alloc] initWithRootViewController:cropper];
   }
-//  [self presentViewController:cropperNavi animated:NO completion:nil];
-  [self.navigationController pushViewController:cropper animated:YES];
+  [self presentViewController:cropper animated:NO completion:nil];
+//  [self.navigationController pushViewController:cropper animated:YES];
   [cropper begin];
-//  imageView.image = nil;
 }
 
 -(void) didFinishImagePickerAndCrop:(UIImage *)image
@@ -169,15 +170,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 //  imageView.frame =rect;
   dataManager.shareImg = image;
 //  [cropperNavi dismissViewControllerAnimated:NO completion:nil];
+  [cropper dismissViewControllerAnimated:NO completion:^{}];
+  cropper = nil;
 }
 
 -(void) didCacnel
 {
-//  [cropperNavi dismissViewControllerAnimated:NO completion:nil];
-//  [self backBtuuon];
-//  [cropperNavi removeFromParentViewController];
-  cropper = nil;
-//  cropperNavi = nil;
+  [cropper dismissViewControllerAnimated:NO completion:^{}];
+ cropper = nil;
 }
 
 - (void)okBtuuon
