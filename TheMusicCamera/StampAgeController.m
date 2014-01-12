@@ -92,10 +92,11 @@
   UIImage* result= [AgeUtil generateAgeStampImage:stampItem andYear:year andMonth:month];
 //  UIImage* result = [UIImage imageWithCGImage:image.CGImage scale:image.scale*0.1 orientation:image.imageOrientation];
   demoView.image = result;
-  CGRect rect = demoView.frame;
-  rect.size = result.size;
-  rect.origin.x = (320 - result.size.width)/2;
-  demoView.frame = rect;
+  demoView.contentMode = UIViewContentModeScaleAspectFit;
+//  CGRect rect = demoView.frame;
+//  rect.size = result.size;
+//  rect.origin.x = (320 - result.size.width)/2;
+//  demoView.frame = rect;
 }
 
 -(void) okBtn:(id) sender
