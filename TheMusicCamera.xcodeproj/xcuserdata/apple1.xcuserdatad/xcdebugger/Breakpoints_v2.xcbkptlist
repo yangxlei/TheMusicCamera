@@ -232,7 +232,7 @@
                   symbolName = "-[StoreKitHelper paymentQueue:updatedTransactions:]"
                   moduleName = "TheMusicCamera"
                   urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/StoreKitHelper.mm"
-                  timestampString = "411229930.39135"
+                  timestampString = "411237926.440234"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "207"
@@ -246,7 +246,7 @@
                   symbolName = "-[StoreKitHelper paymentQueue:updatedTransactions:]"
                   moduleName = "TheMusicCamera"
                   urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/StoreKitHelper.mm"
-                  timestampString = "411229930.392529"
+                  timestampString = "411237926.440504"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "207"
@@ -302,36 +302,6 @@
             endingLineNumber = "317"
             landmarkName = "-selectTextView:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BeautifiedPictureViewController fromReturnVC:]"
-                  moduleName = "TheMusicCamera"
-                  urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/BeautifiedPictureViewController.m"
-                  timestampString = "411229930.394149"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "317"
-                  endingLineNumber = "317"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BeautifiedPictureViewController fromReturnVC:]"
-                  moduleName = "TheMusicCamera"
-                  urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/BeautifiedPictureViewController.m"
-                  timestampString = "411229930.394552"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "317"
-                  endingLineNumber = "317"
-                  offsetFromSymbolStart = "210">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
