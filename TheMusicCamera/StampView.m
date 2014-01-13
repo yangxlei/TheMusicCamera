@@ -149,8 +149,7 @@
 {
     if (buttonIndex==0) {
         NSLog(@"0");
-        StoreKitHelper *store = [[StoreKitHelper alloc]init];
-        [store buyItemWithType:0];
+        [[StoreKitHelper shareInstance] getAppstoreLocal];
         
     }
     else

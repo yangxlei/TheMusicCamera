@@ -12,6 +12,7 @@
 #import "InfoViewController.h"
 #import "ExplanationViewController.h"
 #import "StoreKitHelper.h"
+#import "DataManager.h"
 
 @interface SettingViewController ()
 
@@ -33,6 +34,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self navgationImage:@"header_sound_setting"];
+
+    dataManager = [DataManager sharedManager];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fromSetReturnVC:) name:@"FROMSETRETURNVC" object:nil];
 
 }
 
@@ -63,11 +68,11 @@
 }
 
 - (IBAction)inappStore:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示"
-                                                  message:@"这是一个简单的警告框！"
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"ママカメラProアップグレード"
+                                                       message:@"■録音件数が10件まで可能\n■全スタンプ使用可能\n■全フレーム使用可能\n■全年齢スタンプ使用可能\n■広告バナー削除"
                                                  delegate:self
-                                        cancelButtonTitle:@"确定"
-                                        otherButtonTitles:@"取消", nil];
+                                        cancelButtonTitle:@"YES"
+                                        otherButtonTitles:@"NO", nil];
     [alertView show];
     
 }
@@ -76,14 +81,26 @@
 {
     if (buttonIndex==0) {
         NSLog(@"0");
-        StoreKitHelper *store = [[StoreKitHelper alloc]init];
-        [store buyItemWithType:0];
+        
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        MBProgressHUD *mbp = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        mbp.labelText = @"   购买中,请稍后...   ";
+        dataManager.fromNo = 2;
+
+        [[StoreKitHelper shareInstance] getAppstoreLocal];
         
     }
     else
     {
         NSLog(@"1");
     }
+}
+
+- (void) fromSetReturnVC: (NSNotification*) aNotification
+{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+
 }
 
 @end

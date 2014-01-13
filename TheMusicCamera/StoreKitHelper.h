@@ -14,13 +14,14 @@
 @class DataManager;
 
 @interface StoreKitHelper : NSObject <SKPaymentTransactionObserver,SKProductsRequestDelegate,UIAlertViewDelegate,MBProgressHUDDelegate> {
-
+    
     MBProgressHUD *HUD;
     int _buyType;
     SKPaymentTransaction *m_transaction;
+    SKProduct *buyId;
     
     DataManager *dataManager;
-
+    
 }
 
 + (StoreKitHelper *)shareInstance;

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class DataManager;
+
 @interface SettingViewController : UIViewController<UIAlertViewDelegate>
+{
+    DataManager *dataManager;
+    
+}
 
 @end

@@ -2026,7 +2026,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4F814665-B7BB-451F-8B9A-F37E27E6DCBF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2051,7 +2051,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4F814665-B7BB-451F-8B9A-F37E27E6DCBF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
