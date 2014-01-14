@@ -187,6 +187,7 @@ ViewController *_viewController;
 {
     [self.mainTabBarController hidesTabBar:NO animated:YES];
     self.mainTabBarController.selectedIndex = 4;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SHAREVC" object:nil];
 }
 
 +(UIViewController*) shareInstance

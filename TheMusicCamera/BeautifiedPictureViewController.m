@@ -10,6 +10,7 @@
 #import "WaterImageController.h"
 #import "DataManager.h"
 #import "ZDStickerView.h"
+#import "MBProgressHUD.h"
 
 #import "ViewController.h"
 
@@ -301,6 +302,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 }
 
+- (void)selectImageWating
+{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    MBProgressHUD *mbp = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    mbp.labelText = @"   购买中,请稍后...   ";
+
+}
+
 - (void)selectTextView:(UITextView *)textView
 {
     
@@ -322,6 +331,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void) fromReturnVC: (NSNotification*) aNotification
 {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+
     for (int i=1; i<5; i++) {
         UIButton *button = (UIButton *)[self.view viewWithTag:i];
         button.selected = NO;

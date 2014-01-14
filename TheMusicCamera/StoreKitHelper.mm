@@ -278,13 +278,6 @@ static StoreKitHelper *storeKitHelperInstance;
 		switch (transaction.transactionState) {
             case SKPaymentTransactionStatePurchasing:
                 NSLog(@"SKPaymentTransactionStatePurchasing");
-                //                [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"appStore"];
-                //                if (dataManager.fromNo==1) {
-                //                    [[NSNotificationCenter defaultCenter] postNotificationName:@"FROMRETURNVC" object:nil];
-                //                }else
-                //                {
-                //
-                //                }
                 
                 break;
 			case SKPaymentTransactionStatePurchased:
@@ -350,6 +343,15 @@ static StoreKitHelper *storeKitHelperInstance;
         [alertView autorelease];
         [alertView show];
         [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+        
+        if (dataManager.fromNo==1) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"FROMRETURNVC" object:nil];
+        }else if(dataManager.fromNo==2)
+        {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"FROMSETRETURNVC" object:nil];
+            
+        }
+
     }
 	[[SKPaymentQueue defaultQueue] finishTransaction: transaction];
     m_transaction=transaction;

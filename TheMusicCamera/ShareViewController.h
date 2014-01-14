@@ -18,6 +18,8 @@
 {
     SLComposeViewController *slComposerSheet;
     IBOutlet UIImageView *shareImage;
+    
+    __weak IBOutlet UIImageView *threeShareImg;
     __weak IBOutlet UIImageView *shareB;
     
     DataManager *dataManager;

@@ -121,6 +121,7 @@
 		2E6409CC1861F60D0080E903 /* list_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409C81861F60D0080E903 /* list_2.png */; };
 		2E6409CD1861F60D0080E903 /* list_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409C91861F60D0080E903 /* list_3.png */; };
 		2E6409CF18633F900080E903 /* recording_dustbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6409CE18633F900080E903 /* recording_dustbox.png */; };
+		2E661A49188588C100985717 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E661A48188588C100985717 /* Line.m */; };
 		2E69360E185DE05B000C95F5 /* recording_bg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E69360C185DE05B000C95F5 /* recording_bg_2.png */; };
 		2E69360F185DE05B000C95F5 /* recording_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E69360D185DE05B000C95F5 /* recording_bg.png */; };
 		2E693613185DE2D5000C95F5 /* recording_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E693610185DE2D5000C95F5 /* recording_play.png */; };
@@ -495,6 +496,8 @@
 		2E6409C81861F60D0080E903 /* list_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_2.png; sourceTree = "<group>"; };
 		2E6409C91861F60D0080E903 /* list_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_3.png; sourceTree = "<group>"; };
 		2E6409CE18633F900080E903 /* recording_dustbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_dustbox.png; sourceTree = "<group>"; };
+		2E661A47188588C100985717 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		2E661A48188588C100985717 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 		2E69360C185DE05B000C95F5 /* recording_bg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_bg_2.png; sourceTree = "<group>"; };
 		2E69360D185DE05B000C95F5 /* recording_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_bg.png; sourceTree = "<group>"; };
 		2E693610185DE2D5000C95F5 /* recording_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_play.png; sourceTree = "<group>"; };
@@ -897,6 +900,15 @@
 			name = data;
 			sourceTree = "<group>";
 		};
+		2E661A46188588C100985717 /* LineKit */ = {
+			isa = PBXGroup;
+			children = (
+				2E661A47188588C100985717 /* Line.h */,
+				2E661A48188588C100985717 /* Line.m */,
+			);
+			path = LineKit;
+			sourceTree = "<group>";
+		};
 		2E693616185DF7B5000C95F5 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -1191,6 +1203,7 @@
 		354467F3185AD419005AB0D9 /* TheMusicCamera */ = {
 			isa = PBXGroup;
 			children = (
+				2E661A46188588C100985717 /* LineKit */,
 				35070260187CE78A00BEB701 /* JSON */,
 				3507026E187CE78A00BEB701 /* NSData+Base64.h */,
 				3507026F187CE78A00BEB701 /* NSData+Base64.m */,
@@ -1861,6 +1874,7 @@
 				2E9C8AC418701FA50087F476 /* CustomButton.m in Sources */,
 				950C7EF31865E9BD0021FE5D /* PictureRangeSelectView.m in Sources */,
 				956FFD18187EEFEA0051D5A8 /* ImagePickerController.m in Sources */,
+				2E661A49188588C100985717 /* Line.m in Sources */,
 				356E6A6C185ADE5E002A1014 /* SoundsViewController.m in Sources */,
 				356E6A72185ADE88002A1014 /* SettingViewController.m in Sources */,
 				35070276187CE78A00BEB701 /* NSData+Base64.m in Sources */,
@@ -1949,8 +1963,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI KE (PDSSUVSVXA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1989,8 +2003,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI KE (PDSSUVSVXA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2011,8 +2025,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2026,7 +2040,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2036,8 +2050,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI KE (PDSSUVSVXA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2051,7 +2065,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

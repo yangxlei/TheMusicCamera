@@ -149,6 +149,7 @@
 {
     if (buttonIndex==0) {
         NSLog(@"0");
+        [self.delegate selectImageWating];
         [[StoreKitHelper shareInstance] getAppstoreLocal];
         
     }

@@ -8,6 +8,7 @@
 
 #import "ShareViewController.h"
 #import "DataManager.h"
+#import "Line.h"
 
 @interface ShareViewController ()
 
@@ -26,22 +27,20 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    shareImage.image = dataManager.shareImg;
+    dataManager = [DataManager sharedManager];
+    
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
-        shareB.frame = CGRectMake(shareB.frame.origin.x, shareB.frame.origin.y, 215, 215);
-        shareB.image = [UIImage imageNamed:@"share_11_bg"];
-        
-        shareImage.frame = CGRectMake(shareImage.frame.origin.x, shareImage.frame.origin.y, 180, 180);
-        //        imageView.frame = CGRectMake(0, 0, 300, 300);
+        shareImage.hidden = NO;
+        threeShareImg.hidden = YES;
+        shareImage.image = dataManager.shareImg;
     }
     else
     {
-        shareB.frame = CGRectMake(shareB.frame.origin.x, shareB.frame.origin.y, 215, 305);
-        shareB.image = [UIImage imageNamed:@"share_34_bg"];
-
-        shareImage.frame = CGRectMake(shareImage.frame.origin.x, shareImage.frame.origin.y, 180, 240);
-        //        imageView.frame = CGRectMake(0, 0, 300, 400);
+        shareImage.hidden = YES;
+        threeShareImg.hidden = NO;
+        threeShareImg.image = dataManager.shareImg;
     }
+  
 }
 
 - (void)viewDidLoad
@@ -54,13 +53,31 @@
 
     UIButton *btn = [self navgationButton:@"button_top" andFrame:CGRectMake(250, 10, 62, 31)];
     [btn addTarget:self action:@selector(topBtuuon) forControlEvents:UIControlEventTouchUpInside];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shareVC:) name:@"SHAREVC" object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) shareVC: (NSNotification*) aNotification
+{
+    dataManager = [DataManager sharedManager];
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
+        shareImage.hidden = NO;
+        threeShareImg.hidden = YES;
+        shareImage.image = dataManager.shareImg;
+    }
+    else
+    {
+        shareImage.hidden = YES;
+        threeShareImg.hidden = NO;
+        threeShareImg.image = dataManager.shareImg;
+    }
 }
 
 - (void)topBtuuon
@@ -100,7 +117,7 @@
     NSArray *toRecipients = [NSArray arrayWithObject:@""];
     
     [picker setToRecipients:toRecipients];
-    NSData *imageData = UIImageJPEGRepresentation(shareImage.image, 1);    // jpeg
+    NSData *imageData = UIImageJPEGRepresentation(dataManager.shareImg, 1);    // jpeg
     
     [picker addAttachmentData:imageData mimeType:@"" fileName:@"image.jpg"];
     
@@ -126,7 +143,7 @@
     {
     slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     [slComposerSheet setInitialText:@"this is facebook"];
-    [slComposerSheet addImage:shareImage.image];
+    [slComposerSheet addImage:dataManager.shareImg];
     [slComposerSheet addURL:[NSURL URLWithString:@"http://www.facebook.com/"]];
     [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
     }
@@ -167,7 +184,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         [slComposerSheet setInitialText:@"this is ios6 twitter"];
-        [slComposerSheet addImage:shareImage.image];
+        [slComposerSheet addImage:dataManager.shareImg];
         [slComposerSheet addURL:[NSURL URLWithString:@"http://www.twitter.com/"]];
         [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
     }
@@ -206,19 +223,19 @@
 }
 
 - (IBAction)lineBtn:(id)sender {
-    UIApplication *ourApplication = [UIApplication sharedApplication];
-    
-    NSString *ourPath = @"line://";
-    NSURL *ourURL = [NSURL URLWithString:ourPath];
-    if ([ourApplication canOpenURL:ourURL]) {
-        [ourApplication openURL:ourURL];
+    if ([self checkIfLineInstalled]) {
+        [Line shareImage:dataManager.shareImg];
     }
-    else {
-        //Display error
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Line App Not Found" message:@"The Line App is not installed.  first you have to install Line App." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
-    }
+}
 
+- (BOOL)checkIfLineInstalled {
+    BOOL isInstalled = [Line isLineInstalled];
+    
+    if (!isInstalled) {
+        [[[UIAlertView alloc] initWithTitle:@"Line is not installed." message:@"Please download Line from App Store, and try again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
+    
+    return isInstalled;
 }
 
 -  (void)mailComposeController:(MFMailComposeViewController*)controller
