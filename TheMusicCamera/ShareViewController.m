@@ -97,7 +97,7 @@
     picker.mailComposeDelegate =self;
     [picker setSubject:@"文件分享"];
     // Set up recipients
-    NSArray *toRecipients = [NSArray arrayWithObject:@"317295583@qq.com"];
+    NSArray *toRecipients = [NSArray arrayWithObject:@""];
     
     [picker setToRecipients:toRecipients];
     NSData *imageData = UIImageJPEGRepresentation(shareImage.image, 1);    // jpeg
@@ -206,7 +206,19 @@
 }
 
 - (IBAction)lineBtn:(id)sender {
+    UIApplication *ourApplication = [UIApplication sharedApplication];
     
+    NSString *ourPath = @"line://";
+    NSURL *ourURL = [NSURL URLWithString:ourPath];
+    if ([ourApplication canOpenURL:ourURL]) {
+        [ourApplication openURL:ourURL];
+    }
+    else {
+        //Display error
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Line App Not Found" message:@"The Line App is not installed.  first you have to install Line App." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+
 }
 
 -  (void)mailComposeController:(MFMailComposeViewController*)controller
