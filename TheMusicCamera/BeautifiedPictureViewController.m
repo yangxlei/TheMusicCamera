@@ -91,13 +91,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(250, 10, 62, 31)];
     [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
-    stampView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];
+    stampView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-269, 320, 269)];
     stampView.hidden = YES;
     stampView.delegate = self;
     [stampView initWithType:1];
     [self.view addSubview:stampView];
     
-    stampFrameView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-260, 320, 260)];
+    stampFrameView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-269, 320, 269)];
     stampFrameView.hidden = YES;
     stampFrameView.delegate = self;
     [stampFrameView initWithType:2];
@@ -209,6 +209,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIButton *btn = (UIButton *)sender;
     btn.selected = YES;
   UIStoryboard* storyboard = nil;
+    
+    stampView.hidden = YES;
+    stampView.hidden = YES;
+
     switch (btn.tag) {
         case 1:
         {
@@ -239,6 +243,9 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             break;
         case 3:
         {
+            stampView.hidden = YES;
+            stampFrameView.hidden = YES;
+
             btn.selected = NO;
           storyboard = [UIStoryboard storyboardWithName:@"stamp_age" bundle:nil];
           StampAgeController* controller = [storyboard instantiateInitialViewController];
@@ -248,6 +255,9 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             break;
         case 4:
         {
+            stampView.hidden = YES;
+            stampFrameView.hidden = YES;
+
             btn.selected = NO;
             storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             TextFontViewController *textVC = [storyboard instantiateViewControllerWithIdentifier:@"TextFontViewController"];

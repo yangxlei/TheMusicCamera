@@ -28,6 +28,18 @@
     }
     return self;
 }
+//[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicstation"];
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"musicstation"]intValue]==1) {
+        stationLab.text = @"左";
+    }
+    else
+    {
+        stationLab.text = @"右";
+    }
+}
 
 - (void)viewDidLoad
 {
@@ -36,6 +48,7 @@
     [self navgationImage:@"header_sound_setting"];
 
     dataManager = [DataManager sharedManager];
+    stationLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fromSetReturnVC:) name:@"FROMSETRETURNVC" object:nil];
 

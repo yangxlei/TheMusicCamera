@@ -88,7 +88,7 @@
                   symbolName = "-[StoreKitHelper paymentQueue:updatedTransactions:]"
                   moduleName = "TheMusicCamera"
                   urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/StoreKitHelper.mm"
-                  timestampString = "411407978.892014"
+                  timestampString = "411493875.728535"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "277"
@@ -102,7 +102,7 @@
                   symbolName = "-[StoreKitHelper paymentQueue:updatedTransactions:]"
                   moduleName = "TheMusicCamera"
                   urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/StoreKitHelper.mm"
-                  timestampString = "411407978.892254"
+                  timestampString = "411493875.728779"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "277"
@@ -205,6 +205,22 @@
             startingLineNumber = "68"
             endingLineNumber = "68"
             landmarkName = "-shareVC:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMusicCamera/BeautifiedPictureViewController.m"
+            timestampString = "411493875.126184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "-toolsBtn:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

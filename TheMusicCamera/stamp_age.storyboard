@@ -151,7 +151,7 @@
     </scenes>
     <resources>
         <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="decorathion_flame.png" width="640" height="518"/>
+        <image name="decorathion_flame.png" width="640" height="538"/>
         <image name="decoration_age.png" width="608" height="82"/>
         <image name="stamp_age_1.png" width="307" height="309"/>
     </resources>

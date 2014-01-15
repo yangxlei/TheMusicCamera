@@ -99,8 +99,6 @@
 		2E45B8861882CCCE00253AF3 /* frame_17_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B8611882CCCE00253AF3 /* frame_17_3.png */; };
 		2E45B8871882CCCE00253AF3 /* frame_18_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B8621882CCCE00253AF3 /* frame_18_1.png */; };
 		2E45B8881882CCCE00253AF3 /* frame_18_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B8631882CCCE00253AF3 /* frame_18_3.png */; };
-		2E45B8891882CCCE00253AF3 /* frame_19_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B8641882CCCE00253AF3 /* frame_19_1.png */; };
-		2E45B88A1882CCCE00253AF3 /* frame_19_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B8651882CCCE00253AF3 /* frame_19_3.png */; };
 		2E45B88C1882CD0E00253AF3 /* recording_playsound_name_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B88B1882CD0E00253AF3 /* recording_playsound_name_back.png */; };
 		2E45B8911882CF0900253AF3 /* frame_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B88F1882CF0900253AF3 /* frame_1_1.png */; };
 		2E45B8921882CF0900253AF3 /* frame_1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B8901882CF0900253AF3 /* frame_1_3.png */; };
@@ -193,6 +191,7 @@
 		2EB41C37188043CE005F7AF5 /* stamp_31.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB41C23188043CE005F7AF5 /* stamp_31.png */; };
 		2EB41C38188043CE005F7AF5 /* stamp_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB41C24188043CE005F7AF5 /* stamp_32.png */; };
 		2EB41C39188043CE005F7AF5 /* stamp_33.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB41C25188043CE005F7AF5 /* stamp_33.png */; };
+		2ECD4DCB1886E0ED00E66807 /* stamp_34.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECD4DCA1886E0ED00E66807 /* stamp_34.png */; };
 		2ED5B1D218689105007075EC /* header_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1D018689105007075EC /* header_setting.png */; };
 		2ED5B1D318689105007075EC /* setting_setting_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1D118689105007075EC /* setting_setting_text.png */; };
 		2ED5B1D61868922B007075EC /* setting_info_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED5B1D41868922B007075EC /* setting_info_text.png */; };
@@ -473,8 +472,6 @@
 		2E45B8611882CCCE00253AF3 /* frame_17_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_17_3.png; path = TheMusicCamera/image/frame_17_3.png; sourceTree = SOURCE_ROOT; };
 		2E45B8621882CCCE00253AF3 /* frame_18_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_18_1.png; path = TheMusicCamera/image/frame_18_1.png; sourceTree = SOURCE_ROOT; };
 		2E45B8631882CCCE00253AF3 /* frame_18_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_18_3.png; path = TheMusicCamera/image/frame_18_3.png; sourceTree = SOURCE_ROOT; };
-		2E45B8641882CCCE00253AF3 /* frame_19_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_19_1.png; path = TheMusicCamera/image/frame_19_1.png; sourceTree = SOURCE_ROOT; };
-		2E45B8651882CCCE00253AF3 /* frame_19_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_19_3.png; path = TheMusicCamera/image/frame_19_3.png; sourceTree = SOURCE_ROOT; };
 		2E45B88B1882CD0E00253AF3 /* recording_playsound_name_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recording_playsound_name_back.png; path = TheMusicCamera/image/recording_playsound_name_back.png; sourceTree = SOURCE_ROOT; };
 		2E45B88F1882CF0900253AF3 /* frame_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_1_1.png; path = TheMusicCamera/image/frame_1_1.png; sourceTree = SOURCE_ROOT; };
 		2E45B8901882CF0900253AF3 /* frame_1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_1_3.png; path = TheMusicCamera/image/frame_1_3.png; sourceTree = SOURCE_ROOT; };
@@ -576,6 +573,7 @@
 		2EB41C23188043CE005F7AF5 /* stamp_31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_31.png; sourceTree = "<group>"; };
 		2EB41C24188043CE005F7AF5 /* stamp_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_32.png; sourceTree = "<group>"; };
 		2EB41C25188043CE005F7AF5 /* stamp_33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_33.png; sourceTree = "<group>"; };
+		2ECD4DCA1886E0ED00E66807 /* stamp_34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_34.png; sourceTree = "<group>"; };
 		2ED5B1D018689105007075EC /* header_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_setting.png; sourceTree = "<group>"; };
 		2ED5B1D118689105007075EC /* setting_setting_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_setting_text.png; sourceTree = "<group>"; };
 		2ED5B1D41868922B007075EC /* setting_info_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_info_text.png; sourceTree = "<group>"; };
@@ -1009,6 +1007,7 @@
 				2EB41C23188043CE005F7AF5 /* stamp_31.png */,
 				2EB41C24188043CE005F7AF5 /* stamp_32.png */,
 				2EB41C25188043CE005F7AF5 /* stamp_33.png */,
+				2ECD4DCA1886E0ED00E66807 /* stamp_34.png */,
 				2E2F714D18759FC7001A7816 /* decoration_tab_footer_age_off.png */,
 				2E2F714E18759FC7001A7816 /* decoration_tab_footer_age_on.png */,
 				2E2F714F18759FC7001A7816 /* decoration_tab_footer_frame_off.png */,
@@ -1434,8 +1433,6 @@
 				2E45B8611882CCCE00253AF3 /* frame_17_3.png */,
 				2E45B8621882CCCE00253AF3 /* frame_18_1.png */,
 				2E45B8631882CCCE00253AF3 /* frame_18_3.png */,
-				2E45B8641882CCCE00253AF3 /* frame_19_1.png */,
-				2E45B8651882CCCE00253AF3 /* frame_19_3.png */,
 				957DAACD188053AB00A1FC06 /* age_stamp_1.png */,
 				957DAACE188053AB00A1FC06 /* age_stamp_2.png */,
 				957DAACF188053AB00A1FC06 /* age_stamp_2_number.png */,
@@ -1570,6 +1567,7 @@
 				2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */,
 				2E7013A3187EE60300A641E6 /* setting_04.png in Resources */,
 				2E3E0EFD187D8FFE0058C4C4 /* OhisamaFont11.ttf in Resources */,
+				2ECD4DCB1886E0ED00E66807 /* stamp_34.png in Resources */,
 				35452A6F187F8E1E0093CB9D /* trimming_1_1_on.png in Resources */,
 				2E6409CF18633F900080E903 /* recording_dustbox.png in Resources */,
 				2EE5AF97186077BA00A35754 /* sound_setting_now_list2.png in Resources */,
@@ -1717,7 +1715,6 @@
 				9571A21D185C975D003D3285 /* shot_back.png in Resources */,
 				2EB0A331185C07C000C226DF /* mama_camera_top_960.png in Resources */,
 				957DAAFC1882C96C00A1FC06 /* btn_020.press@2x.png in Resources */,
-				2E45B88A1882CCCE00253AF3 /* frame_19_3.png in Resources */,
 				2EB41C27188043CE005F7AF5 /* stamp_15.png in Resources */,
 				2ED5B1E018689454007075EC /* info.png in Resources */,
 				2EB0A343185C585B00C226DF /* share_sns_line.png in Resources */,
@@ -1767,7 +1764,6 @@
 				356E6A5B185AD70F002A1014 /* icon-small@2x.png in Resources */,
 				950C7ED91865E5D40021FE5D /* photo_cut_bottombar_bg@2x.png in Resources */,
 				2E6409CD1861F60D0080E903 /* list_3.png in Resources */,
-				2E45B8891882CCCE00253AF3 /* frame_19_1.png in Resources */,
 				2E3E0EFA187D8FFE0058C4C4 /* APJapanesefont.ttf in Resources */,
 				9571A21A185C975D003D3285 /* shoot_camera_button_2.png in Resources */,
 				2E159789187F015A00B70C7C /* btn_delete.png in Resources */,
@@ -2027,8 +2023,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2042,7 +2038,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2052,8 +2048,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2067,7 +2063,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

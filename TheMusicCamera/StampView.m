@@ -43,15 +43,15 @@
             [self addSubview:backImg];
             
             UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 29, 320, self.frame.size.height-29)];
-            scrollView.contentSize =CGSizeMake(320*(34/9 +1), self.frame.size.height-29);
+            scrollView.contentSize =CGSizeMake(320*(35/9 +1), self.frame.size.height-29);
             scrollView.pagingEnabled = YES;
             [self addSubview:scrollView];
             
-            int vertical = 34/3 + 1;
+            int vertical = 35/3 + 1;
             
             for (int i=0; i<vertical; i++) {
                 for (int j=0; j<3; j++) {
-                    if (i*3+j+1<34) {
+                    if (i*3+j+1<35) {
                         CustomButton *button = [CustomButton buttonWithType:UIButtonTypeCustom];
                         button.type = type;
                         button.frame = CGRectMake(35+95*i+(i/3*35), 10+80*j, 60, 60);
@@ -88,29 +88,29 @@
             [self addSubview:backImg];
             
             UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 29, 320, self.frame.size.height-29)];
-            scrollView.contentSize =CGSizeMake(320*(13/9 +1), self.frame.size.height-29);
+            scrollView.contentSize =CGSizeMake(320*(17/6 +1), self.frame.size.height-29);
             scrollView.pagingEnabled = YES;
             [self addSubview:scrollView];
             
-            int vertical = 13/3 + 1;
+            int vertical = 19/2 + 1;
             
             for (int i=0; i<vertical; i++) {
                 //        stamp_1
-                for (int j=0; j<3; j++) {
-                    if (i*3+j<13) {
+                for (int j=0; j<2; j++) {
+                    if (i*2+j<18) {
                         CustomButton *button = [CustomButton buttonWithType:UIButtonTypeCustom];
                         button.type = type;
-                        button.frame = CGRectMake(35+95*i+(i/3*35), 10+80*j, 60, 60);
-                        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*3+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]] forState:UIControlStateNormal];
-                        button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*3+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]];
+                        button.frame = CGRectMake(35+95*i+(i/3*35), 40+100*j, 60, 60);
+                        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*2+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]] forState:UIControlStateNormal];
+                        button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*2+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]];
                         [button addTarget:self action:@selector(stampSelect:) forControlEvents:UIControlEventTouchUpInside];
                         [scrollView addSubview:button];
                         
-                        if (i*3+j>=9 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"appStore"] intValue]==0) {
+                        if (i*2+j>=6 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"appStore"] intValue]==0) {
                             [button setUserInteractionEnabled:NO];
                             
                             UIButton *interdictionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-                            interdictionBtn.frame = CGRectMake(35+95*i+(i/3*35), 10+80*j, 71, 45);
+                            interdictionBtn.frame = CGRectMake(35+95*i+(i/3*35), 50+100*j, 71, 45);
                             [interdictionBtn setBackgroundImage:[UIImage imageNamed:@"lock"] forState:UIControlStateNormal];
 //                            interdictionImg.image = [UIImage imageNamed:@"lock"];
                             [interdictionBtn addTarget:self action:@selector(interdictionBtn:) forControlEvents:UIControlEventTouchUpInside];

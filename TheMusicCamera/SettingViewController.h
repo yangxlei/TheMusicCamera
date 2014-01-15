@@ -13,6 +13,7 @@
 @interface SettingViewController : UIViewController<UIAlertViewDelegate>
 {
     DataManager *dataManager;
+    __weak IBOutlet UILabel *stationLab;
     
 }
 

@@ -127,12 +127,12 @@
         }
         
         /* Rotation */
-//        float ang = atan2([recognizer locationInView:self.superview].y - self.center.y,
-//                          [recognizer locationInView:self.superview].x - self.center.x);
-//        float angleDiff = deltaAngle - ang;
-//        if (NO == preventsResizing) {
-//            self.transform = CGAffineTransformMakeRotation(-angleDiff);
-//        }
+        float ang = atan2([recognizer locationInView:self.superview].y - self.center.y,
+                          [recognizer locationInView:self.superview].x - self.center.x);
+        float angleDiff = deltaAngle - ang;
+        if (NO == preventsResizing) {
+            self.transform = CGAffineTransformMakeRotation(-angleDiff);
+        }
         
         borderView.frame = CGRectInset(self.bounds, kSPUserResizableViewGlobalInset, kSPUserResizableViewGlobalInset);
         [borderView setNeedsDisplay];

@@ -48,9 +48,13 @@
 
 - (IBAction)leftBtn:(id)sender {
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicstation"];
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 - (IBAction)rightBtn:(id)sender {
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"musicstation"];
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 @end

@@ -60,7 +60,7 @@
         button.tag = q+11;
         button.titleLabel.font = [UIFont fontWithName:[fontArray objectAtIndex:q] size:22];
         button.fontStr = [fontArray objectAtIndex:q];
-        [button setTitle:@"■ TOPボタン" forState:UIControlStateNormal];
+        [button setTitle:@"■あいうabc" forState:UIControlStateNormal];
 //        button.tintColor = [UIColor colorWithRed:166/255.f green:116/255.f blue:63/255.f alpha:1];
         [button setTitleColor:[UIColor colorWithRed:166/255.f green:116/255.f blue:63/255.f alpha:1] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(fontButton:) forControlEvents:UIControlEventTouchUpInside];
