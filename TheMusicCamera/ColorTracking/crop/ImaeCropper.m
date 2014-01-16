@@ -54,7 +54,7 @@
     
     [self navgationImage:@"header.png"];
     
-    UIButton *btn = [self navgationButton:@"button_back.png" andFrame:CGRectMake(10, 7, 46, 31)];
+    UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
     [btn addTarget:self action:@selector(backButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     

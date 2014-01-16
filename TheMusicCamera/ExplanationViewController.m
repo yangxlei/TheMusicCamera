@@ -30,7 +30,7 @@
 	// Do any additional setup after loading the view.
     [self navgationImage:@"header_howto"];
 
-    UIButton *btn = [self navgationButton:@"info_close" andFrame:CGRectMake(260, 7, 33, 33)];
+    UIButton *btn = [self navgationButton:@"info_close" andFrame:CGRectMake(270, 7, 33, 33)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
     for (int i=0; i<4; i++) {

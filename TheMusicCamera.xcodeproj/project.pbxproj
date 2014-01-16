@@ -59,7 +59,6 @@
 		2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAB2185C9EAE00C5C1DC /* recording_button.png */; };
 		2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DAB6185CA34C00C5C1DC /* SoundsRecordViewController.m */; };
 		2E44DAB9185CA3FE00C5C1DC /* header_recording.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAB8185CA3FE00C5C1DC /* header_recording.png */; };
-		2E44DABC185CA63600C5C1DC /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DABA185CA63600C5C1DC /* button_back.png */; };
 		2E44DABD185CA63600C5C1DC /* button_save.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DABB185CA63600C5C1DC /* button_save.png */; };
 		2E44DAC0185CA7AA00C5C1DC /* SoundsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DABF185CA7AA00C5C1DC /* SoundsListViewController.m */; };
 		2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */; };
@@ -157,6 +156,7 @@
 		2E7013A2187EE60300A641E6 /* setting_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E70139D187EE60300A641E6 /* setting_03.png */; };
 		2E7013A3187EE60300A641E6 /* setting_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E70139E187EE60300A641E6 /* setting_04.png */; };
 		2E7013A4187EE60300A641E6 /* setting_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E70139F187EE60300A641E6 /* setting_05.png */; };
+		2E8F1CDB18881EEF0005783E /* btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8F1CDA18881EEF0005783E /* btn_back.png */; };
 		2E98CD1D187C42B70046CFDB /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E98CD1C187C42B70046CFDB /* lock.png */; };
 		2E9C8AC418701FA50087F476 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C8AC318701FA50087F476 /* CustomButton.m */; };
 		2EA58154186B234700AF2BB1 /* button_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA58153186B234700AF2BB1 /* button_edit.png */; };
@@ -433,7 +433,6 @@
 		2E44DAB5185CA34C00C5C1DC /* SoundsRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundsRecordViewController.h; sourceTree = "<group>"; };
 		2E44DAB6185CA34C00C5C1DC /* SoundsRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsRecordViewController.m; sourceTree = "<group>"; };
 		2E44DAB8185CA3FE00C5C1DC /* header_recording.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_recording.png; sourceTree = "<group>"; };
-		2E44DABA185CA63600C5C1DC /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_back.png; sourceTree = "<group>"; };
 		2E44DABB185CA63600C5C1DC /* button_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_save.png; sourceTree = "<group>"; };
 		2E44DABE185CA7A900C5C1DC /* SoundsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundsListViewController.h; sourceTree = "<group>"; };
 		2E44DABF185CA7AA00C5C1DC /* SoundsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsListViewController.m; sourceTree = "<group>"; };
@@ -541,6 +540,7 @@
 		2E70139D187EE60300A641E6 /* setting_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_03.png; sourceTree = "<group>"; };
 		2E70139E187EE60300A641E6 /* setting_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_04.png; sourceTree = "<group>"; };
 		2E70139F187EE60300A641E6 /* setting_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_05.png; sourceTree = "<group>"; };
+		2E8F1CDA18881EEF0005783E /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back.png; sourceTree = "<group>"; };
 		2E98CD1C187C42B70046CFDB /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		2E9C8AC218701FA50087F476 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		2E9C8AC318701FA50087F476 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
@@ -937,6 +937,7 @@
 			isa = PBXGroup;
 			children = (
 				2E6BA88B188811D9006E740A /* arrow_left.png */,
+				2E8F1CDA18881EEF0005783E /* btn_back.png */,
 				2E6BA88C188811D9006E740A /* arrow_right.png */,
 				957DAAF31882C96C00A1FC06 /* bg_023@2x.png */,
 				957DAAF41882C96C00A1FC06 /* btn_020.disable@2x.png */,
@@ -1071,7 +1072,6 @@
 				2E69360D185DE05B000C95F5 /* recording_bg.png */,
 				2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */,
 				2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */,
-				2E44DABA185CA63600C5C1DC /* button_back.png */,
 				2E44DABB185CA63600C5C1DC /* button_save.png */,
 				2E44DAB8185CA3FE00C5C1DC /* header_recording.png */,
 				2E44DAB2185C9EAE00C5C1DC /* recording_button.png */,
@@ -1588,6 +1588,7 @@
 				2E7013A0187EE60300A641E6 /* setting_01.png in Resources */,
 				3519A022186BD36F00FEC752 /* button_finish.png in Resources */,
 				2E45B86B1882CCCE00253AF3 /* frame_4_1.png in Resources */,
+				2E8F1CDB18881EEF0005783E /* btn_back.png in Resources */,
 				2E24856B187028080090634D /* btn_setting_text .png in Resources */,
 				2EB0A347185C5A3800C226DF /* share_announce.png in Resources */,
 				356E6A57185AD70F002A1014 /* Icon-Small-40@2x.png in Resources */,
@@ -1746,7 +1747,6 @@
 				2E2F716F1875B2BD001A7816 /* stamp_2.png in Resources */,
 				2E701398187EE32A00A641E6 /* decoration_tab_color_on.png in Resources */,
 				2E2F71751875B2BD001A7816 /* stamp_8.png in Resources */,
-				2E44DABC185CA63600C5C1DC /* button_back.png in Resources */,
 				2E45B8711882CCCE00253AF3 /* frame_7_1.png in Resources */,
 				2E701386187EDF2B00A641E6 /* color2.png in Resources */,
 				2E2F717C1875BD27001A7816 /* decoration_stamp.png in Resources */,
