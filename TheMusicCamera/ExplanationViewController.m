@@ -41,7 +41,8 @@
     scrollView.contentSize =CGSizeMake(320*4, 568);
     scrollView.delegate = self;
     currentPage = 0;
-    
+    self.hidesBottomBarWhenPushed = YES;
+
 }
 
 - (void)didReceiveMemoryWarning

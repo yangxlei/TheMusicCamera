@@ -88,7 +88,7 @@
                   symbolName = "-[StoreKitHelper paymentQueue:updatedTransactions:]"
                   moduleName = "TheMusicCamera"
                   urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/StoreKitHelper.mm"
-                  timestampString = "411493875.728535"
+                  timestampString = "411573443.406243"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "277"
@@ -102,7 +102,7 @@
                   symbolName = "-[StoreKitHelper paymentQueue:updatedTransactions:]"
                   moduleName = "TheMusicCamera"
                   urlString = "file://localhost/Users/apple1/Desktop/TheMusicCamera/TheMusicCamera/StoreKitHelper.mm"
-                  timestampString = "411493875.728779"
+                  timestampString = "411573443.406442"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "277"
@@ -215,12 +215,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/BeautifiedPictureViewController.m"
-            timestampString = "411493875.126184"
+            timestampString = "411571752.13248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "-toolsBtn:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMusicCamera/StampView.m"
+            timestampString = "411571461.494231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-leftBtn:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

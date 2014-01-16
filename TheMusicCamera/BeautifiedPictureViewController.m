@@ -210,8 +210,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     btn.selected = YES;
   UIStoryboard* storyboard = nil;
     
-    stampView.hidden = YES;
-    stampView.hidden = YES;
 
     switch (btn.tag) {
         case 1:

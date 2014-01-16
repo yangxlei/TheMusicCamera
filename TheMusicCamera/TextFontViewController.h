@@ -15,7 +15,7 @@
 
 @end
 
-@interface TextFontViewController : UIViewController
+@interface TextFontViewController : UIViewController<UITextViewDelegate>
 {
     __weak IBOutlet UIView *colorView;
 
@@ -24,7 +24,7 @@
     __weak IBOutlet UITextView *textView;
     __weak IBOutlet UIButton *colorButton;
     __weak IBOutlet UIButton *fontButton;
-    
+    UIButton *editBtn;
 }
 
 @property (nonatomic, strong) id<TextFontVCDelegate> delegate;

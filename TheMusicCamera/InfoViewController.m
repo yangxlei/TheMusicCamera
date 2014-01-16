@@ -32,6 +32,7 @@
 
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
+    self.hidesBottomBarWhenPushed = YES;
 
 }
 

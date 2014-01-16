@@ -18,9 +18,13 @@
 
 @end
 
-@interface StampView : UIView<UIAlertViewDelegate>
+@interface StampView : UIView<UIAlertViewDelegate,UIScrollViewDelegate>
 {
     DataManager *dataManager;
+    int currentPage;
+    UIScrollView *scrollView;
+    int totaolPage;
+    
 }
 
 @property (nonatomic, strong) id<StampViewDelegate> delegate;

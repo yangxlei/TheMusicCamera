@@ -39,9 +39,10 @@
     UIButton *btn = [self navgationButton:@"button_back" andFrame:CGRectMake(10, 7, 46, 31)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(250, 10, 62, 31)];
+    editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(250, 10, 62, 31)];
     [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
-
+    editBtn.hidden = YES;
+    
     for (int i=0; i<2; i++) {
         for (int j=0; j<5; j++) {
             CustomButton *button = [CustomButton buttonWithType:UIButtonTypeCustom];
@@ -56,7 +57,7 @@
     
     for (int q=0; q<5; q++) {
         CustomButton *button = [CustomButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(25, 30+40*q, 135, 40);
+        button.frame = CGRectMake(25, 50+35*q, 135, 35);
         button.tag = q+11;
         button.titleLabel.font = [UIFont fontWithName:[fontArray objectAtIndex:q] size:22];
         button.fontStr = [fontArray objectAtIndex:q];
@@ -67,6 +68,11 @@
         [fontView addSubview:button];
     }
 
+    textView.text = @"スタンプにする文字を入れてください";
+    textView.delegate = self;
+    textView.textColor = [UIColor lightGrayColor];
+    
+
     UITapGestureRecognizer *t = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
     [self.view addGestureRecognizer:t];
 
@@ -76,6 +82,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL)textViewShouldBeginEditing:(UITextView *)tv
+{
+    textView.text=@"";
+    textView.textColor = [UIColor blackColor];
+    
+    return YES;
+}
+
+- (void)textViewDidChange:(UITextView *)tv
+{
+    if (![tv.text isEqualToString:@""]) {
+        editBtn.hidden = NO;
+    }
 }
 
 - (void)backBtuuon

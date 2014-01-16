@@ -42,12 +42,15 @@
             backImg.image = [UIImage imageNamed:@"decoration_stamp"];
             [self addSubview:backImg];
             
-            UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 29, 320, self.frame.size.height-29)];
+            scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 29, 320, self.frame.size.height-29)];
             scrollView.contentSize =CGSizeMake(320*(35/9 +1), self.frame.size.height-29);
+            scrollView.delegate = self;
             scrollView.pagingEnabled = YES;
             [self addSubview:scrollView];
             
             int vertical = 35/3 + 1;
+            
+            totaolPage = (35/9 +1);
             
             for (int i=0; i<vertical; i++) {
                 for (int j=0; j<3; j++) {
@@ -87,13 +90,15 @@
             backImg.image = [UIImage imageNamed:@"decorathion_flame"];
             [self addSubview:backImg];
             
-            UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 29, 320, self.frame.size.height-29)];
+            scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 29, 320, self.frame.size.height-29)];
             scrollView.contentSize =CGSizeMake(320*(17/6 +1), self.frame.size.height-29);
             scrollView.pagingEnabled = YES;
+            scrollView.delegate = self;
             [self addSubview:scrollView];
             
             int vertical = 19/2 + 1;
-            
+            totaolPage = (17/6 +1);
+
             for (int i=0; i<vertical; i++) {
                 //        stamp_1
                 for (int j=0; j<2; j++) {
@@ -127,6 +132,37 @@
         default:
             break;
     }
+    UIButton *leftArrow = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftArrow.frame = CGRectMake(10, 130, 20, 21);
+    [leftArrow setBackgroundImage:[UIImage imageNamed:@"arrow_left"] forState:UIControlStateNormal];
+    [leftArrow addTarget:self action:@selector(leftBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:leftArrow];
+    
+    UIButton *rightArrow = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightArrow.frame = CGRectMake(290, 130, 20, 21);
+    [rightArrow setBackgroundImage:[UIImage imageNamed:@"arrow_right"] forState:UIControlStateNormal];
+    [rightArrow addTarget:self action:@selector(rightBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:rightArrow];
+
+    
+}
+
+- (void)leftBtn:(UIButton *)button
+{
+    if (currentPage>=1) {
+        currentPage--;
+        //        [scrollView setContentOffset:CGPointMake(320*currentPage, 0)];
+        [scrollView scrollRectToVisible:CGRectMake(320*currentPage,0,320,self.frame.size.height-29) animated:YES];
+        
+    }
+}
+
+- (void)rightBtn:(UIButton *)button
+{
+    if (currentPage<=totaolPage) {
+        currentPage++;
+        [scrollView scrollRectToVisible:CGRectMake(320*currentPage,0,320,self.frame.size.height-29) animated:YES];
+    }
 }
 
 - (void)stampSelect:(CustomButton *)button 
@@ -157,6 +193,16 @@
     {
         NSLog(@"1");
     }
+}
+
+- (void) scrollViewDidScroll:(UIScrollView *)sender {
+    // 得到每页宽度
+    CGFloat pageWidth = sender.frame.size.width;
+    // 根据当前的x坐标和页宽度计算出当前页数
+    currentPage = floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    NSLog(@"currentPage  %d",currentPage);
+    
+    
 }
 
 @end
