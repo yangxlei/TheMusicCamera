@@ -10,6 +10,12 @@
 #import <AVFoundation/AVFoundation.h>
 @class DataManager;
 
+@protocol RecordDelegate
+
+- (void)recordDelegateEvent;
+
+@end
+
 @interface SoundsRecordViewController : UIViewController<AVAudioPlayerDelegate>
 {
     __weak IBOutlet UIImageView *timeImage;
@@ -26,12 +32,13 @@
     __weak IBOutlet UIButton *deleteBtn;
     UIButton *saveBtn;//保存按钮
     __weak IBOutlet UIButton *recordBtn;
-    int intTime;//秒数计数
+    float intTime;//秒数计数
     NSTimer   *timer ;
     __weak IBOutlet UILabel *timeLabel;
 }
 
 @property (nonatomic) BOOL isRecording;
 @property (nonatomic) BOOL isPlaying;
+@property (nonatomic, assign) id<RecordDelegate> delegate;
 
 @end

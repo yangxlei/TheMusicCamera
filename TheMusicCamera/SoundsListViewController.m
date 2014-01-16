@@ -33,6 +33,8 @@
 
     UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.hidesBottomBarWhenPushed = YES;
 
     
     dataManager = [DataManager sharedManager];
@@ -91,15 +93,15 @@
     
     UIImageView *bgImg = (UIImageView *)[cell viewWithTag:1];
     if (indexPath.row==0) {
-        bgImg.image = [UIImage imageNamed:@"list_1"];
+        bgImg.image = [UIImage imageNamed:@"list_top"];
     }
     else if (indexPath.row==dataManager.musicList.count-1)
     {
-        bgImg.image = [UIImage imageNamed:@"list_3"];
+        bgImg.image = [UIImage imageNamed:@"list_bottom"];
     }
     else
     {
-        bgImg.image = [UIImage imageNamed:@"list_2"];
+        bgImg.image = [UIImage imageNamed:@"list_middle"];
     }
     
     UIImageView *checkImg = (UIImageView *)[cell viewWithTag:2];
@@ -139,6 +141,7 @@
     
     [tableViews reloadData];
     
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
 
