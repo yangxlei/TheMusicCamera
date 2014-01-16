@@ -40,8 +40,9 @@
     imageView = [[UIImageView alloc] initWithImage:image];
     
     [scrollView setContentSize:image.size];
-		[scrollView setMinimumZoomScale:[scrollView frame].size.width / image.size.width];
-		[scrollView setZoomScale:[scrollView minimumZoomScale]];
+    CGFloat scale = [scrollView frame].size.width / image.size.width;
+		[scrollView setMinimumZoomScale: scale ] ;
+		[scrollView setZoomScale:scale];
 		[scrollView addSubview:imageView];
     
     [self.view addSubview:scrollView];

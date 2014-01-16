@@ -355,6 +355,8 @@
 		957DAB001882C96C00A1FC06 /* btn_021@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAAF91882C96C00A1FC06 /* btn_021@2x.png */; };
 		957DAB271882DCA500A1FC06 /* AgeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 957DAB261882DCA500A1FC06 /* AgeUtil.m */; };
 		957DAB291882DCC200A1FC06 /* age_stamp_1_number.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAB281882DCC200A1FC06 /* age_stamp_1_number.png */; };
+		957DAB2B188834E900A1FC06 /* decorationage_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAB2A188834E900A1FC06 /* decorationage_stamp.png */; };
+		957DAB2E188841E400A1FC06 /* MQEditField.m in Sources */ = {isa = PBXBuildFile; fileRef = 957DAB2D188841E400A1FC06 /* MQEditField.m */; };
 		95916A39186C847A001086A1 /* WaterImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95916A38186C847A001086A1 /* WaterImageController.m */; };
 		95916A3B186C8489001086A1 /* water_image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95916A3A186C8489001086A1 /* water_image.storyboard */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
@@ -788,6 +790,9 @@
 		957DAB251882DCA500A1FC06 /* AgeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgeUtil.h; sourceTree = "<group>"; };
 		957DAB261882DCA500A1FC06 /* AgeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgeUtil.m; sourceTree = "<group>"; };
 		957DAB281882DCC200A1FC06 /* age_stamp_1_number.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_stamp_1_number.png; sourceTree = "<group>"; };
+		957DAB2A188834E900A1FC06 /* decorationage_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decorationage_stamp.png; sourceTree = "<group>"; };
+		957DAB2C188841E400A1FC06 /* MQEditField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQEditField.h; sourceTree = "<group>"; };
+		957DAB2D188841E400A1FC06 /* MQEditField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQEditField.m; sourceTree = "<group>"; };
 		95916A37186C847A001086A1 /* WaterImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterImageController.h; sourceTree = "<group>"; };
 		95916A38186C847A001086A1 /* WaterImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterImageController.m; sourceTree = "<group>"; };
 		95916A3A186C8489001086A1 /* water_image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = water_image.storyboard; sourceTree = "<group>"; };
@@ -856,6 +861,8 @@
 		2E2F715D1875B12B001A7816 /* BeautifiedPicture */ = {
 			isa = PBXGroup;
 			children = (
+				957DAB2C188841E400A1FC06 /* MQEditField.h */,
+				957DAB2D188841E400A1FC06 /* MQEditField.m */,
 				957DAB251882DCA500A1FC06 /* AgeUtil.h */,
 				957DAB261882DCA500A1FC06 /* AgeUtil.m */,
 				957DAAEF1882C5D600A1FC06 /* TSLocateView.m */,
@@ -936,6 +943,7 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				957DAB2A188834E900A1FC06 /* decorationage_stamp.png */,
 				2E6BA88B188811D9006E740A /* arrow_left.png */,
 				2E8F1CDA18881EEF0005783E /* btn_back.png */,
 				2E6BA88C188811D9006E740A /* arrow_right.png */,
@@ -1701,6 +1709,7 @@
 				2E6409C51861EA4F0080E903 /* music.sqlite in Resources */,
 				2E45B8681882CCCE00253AF3 /* frame_2_3.png in Resources */,
 				9571A222185C975D003D3285 /* shot_size_1_1.png in Resources */,
+				957DAB2B188834E900A1FC06 /* decorationage_stamp.png in Resources */,
 				356E6A56185AD70F002A1014 /* Icon-Small-40.png in Resources */,
 				2E45B8761882CCCE00253AF3 /* frame_9_3.png in Resources */,
 				2E2F715B18759FC7001A7816 /* decoration_tab_footer_stamp_on.png in Resources */,
@@ -1845,6 +1854,7 @@
 			files = (
 				950C7EF41865E9BD0021FE5D /* PictureRangeSelectViewHome.m in Sources */,
 				2E693624185DF7B5000C95F5 /* DBAccress.m in Sources */,
+				957DAB2E188841E400A1FC06 /* MQEditField.m in Sources */,
 				2E2F71601875B15F001A7816 /* StampView.m in Sources */,
 				356E6A6F185ADE76002A1014 /* PhontoViewController.m in Sources */,
 				2E693627185DF7B5000C95F5 /* FMDatabasePool.m in Sources */,
@@ -2035,8 +2045,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2050,7 +2060,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2060,8 +2070,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2075,7 +2085,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

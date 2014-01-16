@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1Qp-Ls-c4y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="1Qp-Ls-c4y">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -9,40 +9,36 @@
         <scene sceneID="lT2-be-lxp">
             <objects>
                 <viewController id="1Qp-Ls-c4y" customClass="StampAgeController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5GW-lA-tsN"/>
-                        <viewControllerLayoutGuide type="bottom" id="LIj-cu-59E"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="thc-AE-v7a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-nh-0vF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_1136.png" id="aq8-nh-0vF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stamp_age_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="brk-qQ-FUm">
-                                <rect key="frame" x="85" y="31" width="150" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stamp_age_1.png" id="brk-qQ-FUm">
+                                <rect key="frame" x="100" y="61" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akD-5f-fXp">
-                                <rect key="frame" x="20" y="189" width="280" height="40"/>
+                            <view contentMode="scaleToFill" id="akD-5f-fXp">
+                                <rect key="frame" x="20" y="198" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_age.png" translatesAutoresizingMaskIntoConstraints="NO" id="UKH-in-TMQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decoration_age.png" id="UKH-in-TMQ">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-Zn-Jgn">
-                                        <rect key="frame" x="67" y="0.0" width="201" height="40"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="お子さんの年齢を入力してね" textAlignment="right" minimumFontSize="17" id="J6e-zM-Ifs" customClass="MQEditField">
+                                        <rect key="frame" x="75" y="5" width="201" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.45151068239795922" green="0.2995259038204825" blue="0.25120462663843557" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9v-E1-6NQ">
+                                        <color key="textColor" red="0.60716700000000001" green="0.40950649482928025" blue="0.35217687607344944" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c9v-E1-6NQ">
                                         <rect key="frame" x="0.0" y="-10" width="280" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -56,40 +52,48 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-BH-xjn">
+                            <view contentMode="scaleToFill" id="gLQ-BH-xjn">
                                 <rect key="frame" x="0.0" y="328" width="320" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decorathion_flame.png" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-gc-FeP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decorationage_stamp.png" id="x0d-gc-FeP">
                                         <rect key="frame" x="0.0" y="-1" width="320" height="240"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Os2-2H-nSf">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Os2-2H-nSf">
                                         <rect key="frame" x="0.0" y="25" width="320" height="215"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tP6-HG-vUQ">
+                                        <rect key="frame" x="15" y="110" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" backgroundImage="arrow_left.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="arrowLeft:" destination="1Qp-Ls-c4y" eventType="touchUpInside" id="pCo-In-498"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V8b-Fo-eeO">
+                                        <rect key="frame" x="285" y="110" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" backgroundImage="arrow_right.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="arrowRight:" destination="1Qp-Ls-c4y" eventType="touchUpInside" id="ZvY-eM-vOk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="2hF-Nj-kid"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="gLQ-BH-xjn" secondAttribute="bottom" id="94d-2W-XiP"/>
-                            <constraint firstAttribute="bottom" secondItem="aq8-nh-0vF" secondAttribute="bottom" id="DFA-Ma-cma"/>
-                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="centerX" secondItem="akD-5f-fXp" secondAttribute="centerX" id="Evj-eq-G8Z"/>
-                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="bottom" secondItem="aq8-nh-0vF" secondAttribute="bottom" id="Fsu-Dd-PzI"/>
-                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="leading" secondItem="aq8-nh-0vF" secondAttribute="leading" id="LwU-61-rBE"/>
-                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="trailing" secondItem="aq8-nh-0vF" secondAttribute="trailing" id="O5x-uq-OjK"/>
-                            <constraint firstItem="akD-5f-fXp" firstAttribute="leading" secondItem="thc-AE-v7a" secondAttribute="leading" constant="20" symbolic="YES" id="UPh-7y-Nlr"/>
-                            <constraint firstItem="gLQ-BH-xjn" firstAttribute="leading" secondItem="thc-AE-v7a" secondAttribute="leading" id="UkF-OL-TGP"/>
-                            <constraint firstAttribute="trailing" secondItem="gLQ-BH-xjn" secondAttribute="trailing" id="gDM-d3-8mS"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="age" destination="ImC-Zn-Jgn" id="o5d-Ux-WpK"/>
+                        <outlet property="age" destination="J6e-zM-Ifs" id="nKa-5h-TtQ"/>
                         <outlet property="demoView" destination="brk-qQ-FUm" id="ROr-Gg-e5G"/>
                         <outlet property="scrollView" destination="Os2-2H-nSf" id="eid-xE-i3Z"/>
                     </connections>
@@ -102,30 +106,26 @@
         <scene sceneID="NzQ-uj-2Il">
             <objects>
                 <viewController storyboardIdentifier="SetAgeViewController" id="Wtr-Z4-xjs" customClass="SetAgeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ATF-eG-Obe"/>
-                        <viewControllerLayoutGuide type="bottom" id="Bit-Ux-m4w"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sT6-bl-2gy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="1XL-Or-3Yn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_1136.png" id="1XL-Or-3Yn">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decoration_age.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oou-Yo-Qjm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decoration_age.png" id="Oou-Yo-Qjm">
                                 <rect key="frame" x="20" y="223" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aan-ND-NeK">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aan-ND-NeK">
                                 <rect key="frame" x="175" y="227" width="118" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.44886001275510201" green="0.33670468537458942" blue="0.28921102814386862" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6t-9B-nGQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="s6t-9B-nGQ">
                                 <rect key="frame" x="0.0" y="213" width="320" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -150,9 +150,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow_left.png" width="39" height="43"/>
+        <image name="arrow_right.png" width="39" height="43"/>
         <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="decorathion_flame.png" width="640" height="538"/>
         <image name="decoration_age.png" width="608" height="82"/>
+        <image name="decorationage_stamp.png" width="640" height="538"/>
         <image name="stamp_age_1.png" width="307" height="309"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

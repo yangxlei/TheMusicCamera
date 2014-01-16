@@ -41,6 +41,12 @@
 
   [self navgationImage:@"header_age_stamp.png"];
   
+  demoView.contentMode = UIViewContentModeScaleAspectFit;
+  age.userInteractionEnabled = NO;
+  age.backgroundColor = [UIColor clearColor];
+  age.background = nil;
+  age.placeHolderColor = [UIColor colorWithRed:214/255 green:214/255 blue:214/255 alpha:1.f];
+  
   UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
   [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
   
@@ -48,18 +54,26 @@
   [editBtn addTarget:self action:@selector(okBtn:) forControlEvents:UIControlEventTouchUpInside];
   
   
-  int right_margin = 30;
-  for (int i = 1; i <= 8 ; ++ i)
+  int right_margin = 0;
+  int width = (320 - 60) / 2 ;
+  int height = (scrollView.frame.size.height - 30) /2 ;
+  for (int i = 0; i <= 7 ; ++ i)
   {
-    UIImageView* icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"age_stamp_%d.png",i]]];
+    UIImageView* icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"age_stamp_%d.png",i+1]]];
+    [icon setContentMode:UIViewContentModeScaleAspectFit];
     
     [scrollView addSubview:icon];
     CGRect rect = icon.frame;
-    rect.origin.x = right_margin;
+    rect.origin.x = (i % 2)*(width + 20) + 20 + right_margin;
     
-    rect.size.width = rect.size.width/2;
-    rect.size.height = rect.size.height/2;
-    rect.origin.y = (scrollView.frame.size.height - rect.size.height)/2;
+    rect.size.width = width;
+    rect.size.height = height;
+    if (i == 0 || i == 1 || i == 4 || i == 5) {
+      rect.origin.y = 10;
+    }
+    else {
+      rect.origin.y = height + 20;
+    }
     icon.frame = rect;
     
     UIButton* icon_btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -70,7 +84,7 @@
     
     [scrollView addSubview:icon_btn];
     
-    right_margin += rect.size.width + 30;
+    right_margin = ((i+1) / 4) * 320 ;
   }
   
   [scrollView setContentSize:CGSizeMake(right_margin, 160)];
@@ -82,7 +96,7 @@
 
 -(void) selectItem:(UIButton*)sender
 {
-  stampItem = sender.tag-30;
+  stampItem = sender.tag-30 + 1;
   [self setAgeImage];
 }
 
@@ -92,7 +106,7 @@
   UIImage* result= [AgeUtil generateAgeStampImage:stampItem andYear:year andMonth:month];
 //  UIImage* result = [UIImage imageWithCGImage:image.CGImage scale:image.scale*0.1 orientation:image.imageOrientation];
   demoView.image = result;
-  demoView.contentMode = UIViewContentModeScaleAspectFit;
+
 //  CGRect rect = demoView.frame;
 //  rect.size = result.size;
 //  rect.origin.x = (320 - result.size.width)/2;
@@ -134,6 +148,16 @@
   controller.delegate = self;
   [self.navigationController pushViewController:controller animated:YES];
 
+}
+
+-(IBAction) arrowLeft:(id)sender
+{
+  [scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+}
+
+-(IBAction) arrowRight:(id)sender
+{
+  [scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
 }
 
 @end
