@@ -173,11 +173,11 @@
 - (void)interdictionBtn:(UIButton *)button
 {
     dataManager.fromNo = 1;
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示"
-                                                       message:@"这是一个简单的警告框！"
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"ママカメラProアップグレード"
+                                                       message:@"■録音件数が10件まで可能\n■全スタンプ使用可能\n■全フレーム使用可能\n■全年齢スタンプ使用可能\n■広告バナー削除"
                                                       delegate:self
-                                             cancelButtonTitle:@"确定"
-                                             otherButtonTitles:@"取消", nil];
+                                             cancelButtonTitle:@"YES"
+                                             otherButtonTitles:@"NO", nil];
     [alertView show];
 }
 
