@@ -39,6 +39,8 @@
     UIButton *editBtn = [self navgationButton:@"button_edit" andFrame:CGRectMake(250, 7, 62, 31)];
     [editBtn addTarget:self action:@selector(editBtuuon:) forControlEvents:UIControlEventTouchUpInside];
 
+    self.hidesBottomBarWhenPushed = YES;
+
     dataManager = [DataManager sharedManager];
 
     [dataManager getLoadRecordMusicList];

@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SoundsRecordViewController.h"
 
-@interface SoundsViewController : UIViewController
+@interface SoundsViewController : UIViewController<RecordDelegate>
 {
     __weak IBOutlet UILabel *soundsName;
     __weak IBOutlet UILabel *repeatName;
-
+    UIImageView *fadeImage;
+    
 }
 
 @end

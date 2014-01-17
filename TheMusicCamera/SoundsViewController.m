@@ -9,7 +9,6 @@
 #import "SoundsViewController.h"
 #import "DataManager.h"
 #import "Public.h"
-#import "SoundsRecordViewController.h"
 #import "SoundsListViewController.h"
 #import "SoundsRepeatViewController.h"
 #import "SoundsRecordListViewController.h"
@@ -77,6 +76,11 @@
         
 
     }
+    fadeImage = [[UIImageView alloc]initWithFrame:CGRectMake(33, 180, 254, 209)];
+    fadeImage.image = [UIImage imageNamed:@"recording_popup"];
+    [self.view addSubview:fadeImage];
+    fadeImage.alpha = 0;
+    
     
 }
 
@@ -84,6 +88,7 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     SoundsRecordViewController *srVC = [storyboard instantiateViewControllerWithIdentifier:@"SoundsRecordViewController"];
+    srVC.delegate = self;
     [self.navigationController pushViewController:srVC animated:YES];
 
 }
@@ -92,6 +97,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)recordDelegateEvent
+{
+    
+    [UIView setAnimationRepeatCount:1];
+    [UIView animateWithDuration:1.0
+                     animations:^{[fadeImage setAlpha:1];}
+                     completion:^(BOOL finished){
+                         [UIView animateWithDuration:2.0 animations:^{[fadeImage setAlpha:0];}];}];
 }
 
 - (IBAction)gotoSoundsList:(id)sender

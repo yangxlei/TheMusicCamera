@@ -118,6 +118,8 @@
     [dataManager insertMusicInfo:music];
 
     [self.navigationController popViewControllerAnimated:YES];
+    
+    [self.delegate recordDelegateEvent];
 }
 
 - (IBAction)recordVoice:(id)sender {
@@ -171,7 +173,7 @@
         
         musicNameText.enabled = NO;
         
-        NSTimeInterval timeInterval =1.0 ;
+        NSTimeInterval timeInterval =0.01 ;
         //定时器
         timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
                                                                target:self
@@ -185,11 +187,16 @@
 
 - (void)showTimer:(NSTimer *)theTimer
 {
-    intTime++;
+//    intTime++;
+    intTime = intTime+0.01;
+    
+    NSString *timeStr = [NSString stringWithFormat:@"%.2f",intTime];
+    
+    timeStr = [timeStr stringByReplacingOccurrencesOfString :@"." withString:@":"];
+    
+    timeLabel.text = [NSString stringWithFormat:@"%@/10:00",timeStr];
 
-    timeLabel.text = [NSString stringWithFormat:@"%d:00/10:00",intTime];
-
-    if (intTime==10) {
+    if ((int)intTime==10) {
         [timer invalidate];
         
         _isPlaying = YES;
@@ -201,7 +208,7 @@
         musicNameText.enabled = YES;
 
     }
-    timeImage.frame = CGRectMake(timeImage.frame.origin.x, timeImage.frame.origin.y-21, timeImage.frame.size.width, 481);
+    timeImage.frame = CGRectMake(timeImage.frame.origin.x, timeImage.frame.origin.y-0.21f, timeImage.frame.size.width, 481);
     
     NSLog(@"%f   %f   %f   %f   ",timeImage.frame.origin.x,timeImage.frame.origin.y,timeImage.frame.size.width,timeImage.frame.size.height);
     
@@ -215,6 +222,8 @@
     
     saveBtn.hidden = YES;
     deleteBtn.hidden = YES;
+    intTime = 0.00;
+    timeLabel.text = [NSString stringWithFormat:@"0:00/10:00"];
 
     [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_rec"] forState:UIControlStateNormal];
     timeImage.frame = CGRectMake(timeImage.frame.origin.x, 346, timeImage.frame.size.width, 481);

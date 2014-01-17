@@ -33,7 +33,8 @@
     UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
-    
+    self.hidesBottomBarWhenPushed = YES;
+
     
     tableViews.delegate = self;
     tableViews.dataSource = self;
@@ -87,7 +88,7 @@
     UIImageView *bgImg = (UIImageView *)[cell viewWithTag:1];
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
     if (indexPath.row==0) {
-        bgImg.image = [UIImage imageNamed:@"list_1"];
+        bgImg.image = [UIImage imageNamed:@"list_top"];
         nameLabel.text = [NSString stringWithFormat:@"なし"];
 
     }
@@ -96,8 +97,9 @@
         UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
         nameLabel.text = [NSString stringWithFormat:@"あり"];
         
-        bgImg.image = [UIImage imageNamed:@"list_3"];
+        bgImg.image = [UIImage imageNamed:@"list_bottom"];
     }
+    
     nameLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
 
     UIImageView *checkImg = (UIImageView *)[cell viewWithTag:2];
@@ -127,7 +129,8 @@
     
     [tableViews reloadData];
     
-    
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 @end
