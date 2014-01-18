@@ -26,7 +26,7 @@
         [self checkAndCreateDatabase];
 
         _musicList = [[NSMutableArray alloc] init];
-
+        _recordMusicList = [[NSMutableArray alloc] init];
         
     }
 	return self;
@@ -90,10 +90,10 @@
 
 - (void) getLoadRecordMusicList
 {
-    [_musicList removeAllObjects];
+    [_recordMusicList removeAllObjects];
     
     DBAccress *dBAccress=[[DBAccress alloc] init];
-    [dBAccress getLoadRecordMusicList:_musicList];
+    [dBAccress getLoadRecordMusicList:_recordMusicList];
 }
 
 - (void) insertMusicInfo:(Music*)music

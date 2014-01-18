@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSString *databaseName;
 @property (strong, nonatomic) NSString *path;
 @property (strong, nonatomic) NSMutableArray *musicList;
+@property (strong, nonatomic) NSMutableArray *recordMusicList;
 @property (strong, nonatomic) UIImage *shareImg;
 
 @property (readwrite) BOOL isPhotoView;

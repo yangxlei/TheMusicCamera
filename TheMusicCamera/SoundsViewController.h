@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "SoundsRecordViewController.h"
 
+@class DataManager;
+
 @interface SoundsViewController : UIViewController<RecordDelegate>
 {
     __weak IBOutlet UILabel *soundsName;
     __weak IBOutlet UILabel *repeatName;
+    __weak IBOutlet UILabel *recordListLab;
     UIImageView *fadeImage;
     
+    DataManager *dataManager;
 }
 
 @end

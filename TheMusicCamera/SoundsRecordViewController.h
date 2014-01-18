@@ -16,7 +16,7 @@
 
 @end
 
-@interface SoundsRecordViewController : UIViewController<AVAudioPlayerDelegate>
+@interface SoundsRecordViewController : UIViewController<AVAudioPlayerDelegate,UIAlertViewDelegate>
 {
     __weak IBOutlet UIImageView *timeImage;
     AVAudioRecorder *recorder;

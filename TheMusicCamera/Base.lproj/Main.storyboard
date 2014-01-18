@@ -760,6 +760,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="recordListLab" destination="IDu-C2-9vj" id="Cyf-4n-7pq"/>
                         <outlet property="repeatName" destination="HH4-Bq-woi" id="FDa-qb-UwK"/>
                         <outlet property="soundsName" destination="nwa-06-HUf" id="Yrz-RU-Lrp"/>
                     </connections>
@@ -836,13 +837,22 @@
                                 <color key="textColor" red="0.65098039215686276" green="0.45490196078431372" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2013" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5W8-W8-iPQ">
-                                <rect key="frame" x="32" y="68" width="257" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recording_playsound_name_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qof-hP-Hbm">
+                                <rect key="frame" x="50" y="77" width="221" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="1" green="0.71009675090000002" blue="0.41348278910000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2013" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5W8-W8-iPQ">
+                                <rect key="frame" x="62" y="78" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recording_playsound_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZZx-Ip-deI">
+                                <rect key="frame" x="57" y="60" width="147" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1141,15 +1151,27 @@
     </scenes>
     <resources>
         <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
         <image name="btn_delete.png" width="124" height="62"/>
         <image name="btn_setting_left.png" width="223" height="334"/>
         <image name="btn_setting_right.png" width="223" height="334"/>
         <image name="btn_setting_text .png" width="514" height="60"/>
         <image name="check.png" width="41" height="36"/>
+        <image name="check.png" width="41" height="36"/>
         <image name="check_mark_blank.png" width="30" height="30"/>
         <image name="decoration_mojiire_text.png" width="496" height="236"/>
         <image name="decoration_tab_color_bg.png" width="640" height="551"/>
         <image name="decoration_tab_color_off.png" width="320" height="64"/>
+        <image name="decoration_tab_color_on.png" width="320" height="64"/>
         <image name="decoration_tab_color_on.png" width="320" height="64"/>
         <image name="decoration_tab_font_bg.png" width="640" height="550"/>
         <image name="decoration_tab_font_off.png" width="320" height="64"/>
@@ -1166,12 +1188,16 @@
         <image name="howTo_previous.png" width="42" height="48"/>
         <image name="info.png" width="521" height="407"/>
         <image name="list_middle.png" width="604" height="80"/>
+        <image name="list_middle.png" width="604" height="80"/>
+        <image name="list_middle.png" width="604" height="80"/>
         <image name="record_sound_setting.png" width="608" height="72"/>
         <image name="recorded_sound.png" width="160" height="29"/>
         <image name="recording_bg.png" width="640" height="1136"/>
         <image name="recording_bg_2.png" width="308" height="481"/>
         <image name="recording_button.png" width="278" height="84"/>
         <image name="recording_dustbox.png" width="99" height="98"/>
+        <image name="recording_playsound_name_back.png" width="442" height="66"/>
+        <image name="recording_playsound_text.png" width="294" height="127"/>
         <image name="recording_rec.png" width="178" height="178"/>
         <image name="setting_01.png" width="604" height="84"/>
         <image name="setting_02.png" width="604" height="83"/>

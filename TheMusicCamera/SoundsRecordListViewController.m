@@ -95,7 +95,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return dataManager.musicList.count;
+    return dataManager.recordMusicList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,7 +107,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-    Music *music = (Music *)[dataManager.musicList objectAtIndex:indexPath.row];
+    Music *music = (Music *)[dataManager.recordMusicList objectAtIndex:indexPath.row];
     
     static NSString *CellIdentifier = @"Cell";
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -116,18 +116,21 @@
     }
     
     UIImageView *bgImg = (UIImageView *)[cell viewWithTag:1];
-    if (indexPath.row==0 && dataManager.musicList.count!=1) {
-        bgImg.image = [UIImage imageNamed:@"list_1"];
+    if (indexPath.row==0 && dataManager.recordMusicList.count!=1) {
+        bgImg.image = [UIImage imageNamed:@"list_top"];
     }
-    else if (indexPath.row==dataManager.musicList.count-1 && dataManager.musicList.count!=1)
+    else if (indexPath.row==0 && dataManager.recordMusicList.count==1)
     {
-        bgImg.image = [UIImage imageNamed:@"list_3"];
+        bgImg.image = [UIImage imageNamed:@"list"];
+    }
+    else if (indexPath.row==dataManager.recordMusicList.count-1 && dataManager.recordMusicList.count!=1)
+    {
+        bgImg.image = [UIImage imageNamed:@"list_bottom"];
     }
     else
     {
-        bgImg.image = [UIImage imageNamed:@"list_2"];
+        bgImg.image = [UIImage imageNamed:@"list_middle"];
     }
-    
     
     UIImageView *editImg = (UIImageView *)[cell viewWithTag:4];
     if (!isEdit) {
@@ -156,12 +159,12 @@
 
     deleteBtn.listNo = indexPath.row+10;
     [deleteBtn addTarget:self action:@selector(deleteBtn:) forControlEvents:UIControlEventTouchUpInside];
-    if (!isEdit) {
-        deleteBtn.hidden = YES;
+    if (isEdit && selectIndex == indexPath.row) {
+        deleteBtn.hidden = NO;
     }
     else
     {
-        deleteBtn.hidden = NO;
+        deleteBtn.hidden = YES;
     }
 
     
@@ -206,8 +209,8 @@
 - (void)deleteBtn:(CustomButton *)button
 {
 //tableViews deleteRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:<#(UITableViewRowAnimation)#>
-    Music *music = (Music *)[dataManager.musicList objectAtIndex:button.listNo-10];
-    [dataManager.musicList removeObjectAtIndex:button.listNo-10];
+    Music *music = (Music *)[dataManager.recordMusicList objectAtIndex:button.listNo-10];
+    [dataManager.recordMusicList removeObjectAtIndex:button.listNo-10];
     [dataManager deleteMusicWithID:music.ID];
     
     [dataManager getLoadRecordMusicList];

@@ -159,6 +159,8 @@
 		2E8F1CE2188833770005783E /* list_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8F1CDE188833770005783E /* list_middle.png */; };
 		2E8F1CE3188833770005783E /* list_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8F1CDF188833770005783E /* list_top.png */; };
 		2E8F1CE518883B1D0005783E /* recording_popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8F1CE418883B1D0005783E /* recording_popup.png */; };
+		2E8F1CE7188AD5A10005783E /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8F1CE6188AD5A00005783E /* list.png */; };
+		2E8F1CE9188ADA160005783E /* recording_playsound_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8F1CE8188ADA160005783E /* recording_playsound_text.png */; };
 		2E98CD1D187C42B70046CFDB /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E98CD1C187C42B70046CFDB /* lock.png */; };
 		2E9C8AC418701FA50087F476 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C8AC318701FA50087F476 /* CustomButton.m */; };
 		2EA58154186B234700AF2BB1 /* button_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA58153186B234700AF2BB1 /* button_edit.png */; };
@@ -547,6 +549,8 @@
 		2E8F1CDE188833770005783E /* list_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_middle.png; sourceTree = "<group>"; };
 		2E8F1CDF188833770005783E /* list_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_top.png; sourceTree = "<group>"; };
 		2E8F1CE418883B1D0005783E /* recording_popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_popup.png; sourceTree = "<group>"; };
+		2E8F1CE6188AD5A00005783E /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		2E8F1CE8188ADA160005783E /* recording_playsound_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_playsound_text.png; sourceTree = "<group>"; };
 		2E98CD1C187C42B70046CFDB /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		2E9C8AC218701FA50087F476 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		2E9C8AC318701FA50087F476 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
@@ -947,6 +951,8 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2E8F1CE8188ADA160005783E /* recording_playsound_text.png */,
+				2E8F1CE6188AD5A00005783E /* list.png */,
 				957DAB2A188834E900A1FC06 /* decorationage_stamp.png */,
 				2E8F1CDC188833770005783E /* list_a.png */,
 				2E8F1CE418883B1D0005783E /* recording_popup.png */,
@@ -1708,6 +1714,7 @@
 				2EE5AF9B1860781000A35754 /* sleep_mode_on.png in Resources */,
 				9571A220185C975D003D3285 /* shot_flash_on.png in Resources */,
 				2E701387187EDF2B00A641E6 /* color3.png in Resources */,
+				2E8F1CE9188ADA160005783E /* recording_playsound_text.png in Resources */,
 				2E44DAA9185C9AA600C5C1DC /* sound_setting_now.png in Resources */,
 				957DAAFE1882C96C00A1FC06 /* btn_021.disable@2x.png in Resources */,
 				35452A70187F8E1E0093CB9D /* trimming_4_3_off.png in Resources */,
@@ -1782,6 +1789,7 @@
 				2ED5B1D318689105007075EC /* setting_setting_text.png in Resources */,
 				957DAADC188053AB00A1FC06 /* age_stamp_1.png in Resources */,
 				35563FF61871497800BA2BD6 /* IMG_0086.JPG in Resources */,
+				2E8F1CE7188AD5A10005783E /* list.png in Resources */,
 				2E69360E185DE05B000C95F5 /* recording_bg_2.png in Resources */,
 				2E45B8911882CF0900253AF3 /* frame_1_1.png in Resources */,
 				9571A21E185C975D003D3285 /* shot_button_bg.png in Resources */,
@@ -2053,8 +2061,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2068,7 +2076,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2078,8 +2086,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2093,7 +2101,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

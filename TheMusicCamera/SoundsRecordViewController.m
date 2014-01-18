@@ -217,25 +217,43 @@
 
 - (IBAction)deleteSounds:(id)sender
 {
-    _isRecording = NO;
-    _isPlaying = NO;
-    
-    saveBtn.hidden = YES;
-    deleteBtn.hidden = YES;
-    intTime = 0.00;
-    timeLabel.text = [NSString stringWithFormat:@"0:00/10:00"];
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@""
+                                                       message:@"保存をせずに削除してよろしいですか？"
+                                                      delegate:self
+                                             cancelButtonTitle:@"NO"
+                                             otherButtonTitles:@"YES", nil];
+    [alertView show];
 
-    [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_rec"] forState:UIControlStateNormal];
-    timeImage.frame = CGRectMake(timeImage.frame.origin.x, 346, timeImage.frame.size.width, 481);
+}
 
-    NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
-    NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", savePath,dateString];
-
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    [fileManager removeItemAtPath:recorderFilePath error:nil];
-    
-    [dataManager deleteMusicWithName:[NSString stringWithFormat:@"%@.caf",dateString]];
-
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==0) {
+        NSLog(@"0");
+        
+        
+    }
+    else
+    {
+        _isRecording = NO;
+        _isPlaying = NO;
+        
+        saveBtn.hidden = YES;
+        deleteBtn.hidden = YES;
+        intTime = 0.00;
+        timeLabel.text = [NSString stringWithFormat:@"0:00/10:00"];
+        
+        [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_rec"] forState:UIControlStateNormal];
+        timeImage.frame = CGRectMake(timeImage.frame.origin.x, 346, timeImage.frame.size.width, 481);
+        
+        NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
+        NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", savePath,dateString];
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        [fileManager removeItemAtPath:recorderFilePath error:nil];
+        
+        [dataManager deleteMusicWithName:[NSString stringWithFormat:@"%@.caf",dateString]];
+    }
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag

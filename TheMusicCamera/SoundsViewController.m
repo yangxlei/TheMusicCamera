@@ -12,6 +12,7 @@
 #import "SoundsListViewController.h"
 #import "SoundsRepeatViewController.h"
 #import "SoundsRecordListViewController.h"
+#import "DataManager.h"
 
 @interface SoundsViewController ()
 
@@ -42,6 +43,9 @@
     }
     repeatName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 
+    dataManager = [DataManager sharedManager];
+    [dataManager getLoadRecordMusicList];
+    recordListLab.text = [NSString stringWithFormat:@"%d件",dataManager.recordMusicList.count];
 }
 
 - (void)viewDidLoad
