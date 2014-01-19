@@ -361,6 +361,7 @@
 		957DAB291882DCC200A1FC06 /* age_stamp_1_number.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAB281882DCC200A1FC06 /* age_stamp_1_number.png */; };
 		957DAB2B188834E900A1FC06 /* decorationage_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 957DAB2A188834E900A1FC06 /* decorationage_stamp.png */; };
 		957DAB2E188841E400A1FC06 /* MQEditField.m in Sources */ = {isa = PBXBuildFile; fileRef = 957DAB2D188841E400A1FC06 /* MQEditField.m */; };
+		957DAB30188BFEB200A1FC06 /* ages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 957DAB2F188BFEB200A1FC06 /* ages.plist */; };
 		95916A39186C847A001086A1 /* WaterImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95916A38186C847A001086A1 /* WaterImageController.m */; };
 		95916A3B186C8489001086A1 /* water_image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95916A3A186C8489001086A1 /* water_image.storyboard */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
@@ -801,6 +802,7 @@
 		957DAB2A188834E900A1FC06 /* decorationage_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decorationage_stamp.png; sourceTree = "<group>"; };
 		957DAB2C188841E400A1FC06 /* MQEditField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQEditField.h; sourceTree = "<group>"; };
 		957DAB2D188841E400A1FC06 /* MQEditField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQEditField.m; sourceTree = "<group>"; };
+		957DAB2F188BFEB200A1FC06 /* ages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ages.plist; sourceTree = "<group>"; };
 		95916A37186C847A001086A1 /* WaterImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterImageController.h; sourceTree = "<group>"; };
 		95916A38186C847A001086A1 /* WaterImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterImageController.m; sourceTree = "<group>"; };
 		95916A3A186C8489001086A1 /* water_image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = water_image.storyboard; sourceTree = "<group>"; };
@@ -1477,6 +1479,7 @@
 				957DAAD9188053AB00A1FC06 /* age_stamp_7_number.png */,
 				957DAADA188053AB00A1FC06 /* age_stamp_8.png */,
 				957DAADB188053AB00A1FC06 /* age_stamp_8_number.png */,
+				957DAB2F188BFEB200A1FC06 /* ages.plist */,
 			);
 			path = agestamp;
 			sourceTree = "<group>";
@@ -1801,6 +1804,7 @@
 				356E6A5B185AD70F002A1014 /* icon-small@2x.png in Resources */,
 				950C7ED91865E5D40021FE5D /* photo_cut_bottombar_bg@2x.png in Resources */,
 				2E3E0EFA187D8FFE0058C4C4 /* APJapanesefont.ttf in Resources */,
+				957DAB30188BFEB200A1FC06 /* ages.plist in Resources */,
 				9571A21A185C975D003D3285 /* shoot_camera_button_2.png in Resources */,
 				2E159789187F015A00B70C7C /* btn_delete.png in Resources */,
 				2E45B8791882CCCE00253AF3 /* frame_11_1.png in Resources */,
