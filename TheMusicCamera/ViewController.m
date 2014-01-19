@@ -165,15 +165,17 @@ ViewController *_viewController;
         else if (tabBarController.selectedIndex == 0)
         {
             [self.mainTabBarController hidesTabBar:YES animated:YES];
-            [self performSelector:@selector(laterBegin) withObject:nil afterDelay:1];
+//            [self performSelector:@selector(laterBegin) withObject:nil afterDelay:1];
+            [bpVC begin];//leileilei
+
         }
     }
 }
 
-- (void)laterBegin
-{
-    [bpVC begin];//leileilei
-}
+//- (void)laterBegin
+//{
+//    [bpVC begin];//leileilei
+//}
 
 - (void) returnPhotoVC: (NSNotification*) aNotification
 {

@@ -10,6 +10,7 @@
 #import "DataManager.h"
 #import "DataManager.h"
 #import "Music.h"
+#import "Public.h"
 
 @interface SoundsRecordViewController ()
 
@@ -173,6 +174,14 @@
         
         musicNameText.enabled = NO;
         
+        if (iPhone5) {
+            
+        }
+        else
+        {
+            timeImage.frame = CGRectMake(timeImage.frame.origin.x, timeImage.frame.origin.y-50, timeImage.frame.size.width, 481);
+        }
+
         NSTimeInterval timeInterval =0.01 ;
         //定时器
         timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
@@ -208,7 +217,14 @@
         musicNameText.enabled = YES;
 
     }
-    timeImage.frame = CGRectMake(timeImage.frame.origin.x, timeImage.frame.origin.y-0.21f, timeImage.frame.size.width, 481);
+    if (iPhone5) {
+        timeImage.frame = CGRectMake(timeImage.frame.origin.x, timeImage.frame.origin.y-0.21f, timeImage.frame.size.width, 481);
+    }
+    else
+    {
+        timeImage.frame = CGRectMake(timeImage.frame.origin.x, timeImage.frame.origin.y-0.19f, timeImage.frame.size.width, 481);
+    }
+
     
     NSLog(@"%f   %f   %f   %f   ",timeImage.frame.origin.x,timeImage.frame.origin.y,timeImage.frame.size.width,timeImage.frame.size.height);
     
