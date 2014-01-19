@@ -31,8 +31,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="お子さんの年齢を入力してね" textAlignment="right" minimumFontSize="17" id="J6e-zM-Ifs" customClass="MQEditField">
-                                        <rect key="frame" x="75" y="5" width="201" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="お子さんの年齢を入力してね" textAlignment="right" minimumFontSize="17" id="J6e-zM-Ifs" customClass="MQEditField">
+                                        <rect key="frame" x="75" y="7" width="201" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.60716700000000001" green="0.40950649482928025" blue="0.35217687607344944" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -153,6 +153,8 @@
         <image name="arrow_left.png" width="39" height="43"/>
         <image name="arrow_right.png" width="39" height="43"/>
         <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="decoration_age.png" width="608" height="82"/>
         <image name="decoration_age.png" width="608" height="82"/>
         <image name="decorationage_stamp.png" width="640" height="538"/>
         <image name="stamp_age_1.png" width="307" height="309"/>
