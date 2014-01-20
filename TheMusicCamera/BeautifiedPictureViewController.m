@@ -40,6 +40,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
 }
 
+-(void) viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+//  self.hidesBottomBarWhenPushed = NO;
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
@@ -55,6 +61,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
     [UIApplication sharedApplication].statusBarHidden=YES;
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
@@ -72,7 +79,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.hidesBottomBarWhenPushed = YES;
+//        self.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBarHidden = YES;
     dataManager = [DataManager sharedManager];
     
@@ -178,6 +185,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 {
   [cropper dismissViewControllerAnimated:NO completion:^{}];
  cropper = nil;
+  
+  [self backBtuuon];
 }
 
 - (void)okBtuuon
