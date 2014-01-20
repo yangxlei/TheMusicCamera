@@ -153,8 +153,6 @@
         <image name="arrow_left.png" width="39" height="43"/>
         <image name="arrow_right.png" width="39" height="43"/>
         <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="decoration_age.png" width="608" height="82"/>
         <image name="decoration_age.png" width="608" height="82"/>
         <image name="decorationage_stamp.png" width="640" height="538"/>
         <image name="stamp_age_1.png" width="307" height="309"/>

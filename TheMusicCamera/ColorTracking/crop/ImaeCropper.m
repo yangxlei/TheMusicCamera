@@ -49,6 +49,7 @@
     
     mask = [[CropMask alloc] initWithFrame:CGRectMake(0, 40, 320, 460)];
     [mask setCropSize:CGSizeMake(300, 300)];
+    mask.userInteractionEnabled = NO;
     
     [self.view addSubview:mask];
     
@@ -94,9 +95,21 @@
 //    self.view.backgroundColor = [UIColor colorWithRed:112/255 green:83/255 blue:87/255 alpha:0];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    UIPanGestureRecognizer* pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(_pan:)];
+    [imageView addGestureRecognizer:pan];
   }
   
   return self;
+}
+
+-(void) _pan:(UIPanGestureRecognizer*) gesture {
+  if (gesture.state == UIGestureRecognizerStateChanged) {
+    CGPoint translation = [gesture translationInView:self.view];
+    CGPoint center =  imageView.center;
+    center.x += translation.x;
+    center.y += translation.y;
+    imageView.center = center;
+  }
 }
 
 -(void) changeSize:(UIButton*) sender
