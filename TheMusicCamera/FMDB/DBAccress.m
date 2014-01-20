@@ -113,6 +113,25 @@
     
 }
 
+- (void) updateMusicInfo:(Music*)music
+{
+    [self openDatabase];
+    
+    int musicId = 0;
+    
+    FMResultSet *rs = [db executeQuery:@"select max(id) from musicList"];
+    
+    while ([rs next]) {
+        musicId = [rs intForColumnIndex:0];
+    }
+    
+    if(![db executeUpdate:@"update musicList set path =?,name =?,defaultValue =0 where item = 'datainfo_update_time'",music.path,music.name]) {
+        
+    }
+    
+    [self closeDatabase];
+}
+
 - (void)deleteMusicWithID:(int)musicID
 {
     [self openDatabase];

@@ -21,6 +21,7 @@
 - (void) getLoadMusicList:(NSMutableArray*)list;
 - (void) getLoadRecordMusicList:(NSMutableArray*)list;
 - (void) insertMusicInfo:(Music*)music;
+- (void) updateMusicInfo:(Music*)music;
 - (void)deleteMusicWithID:(int)musicID;
 - (void)deleteMusicWithName:(NSString *)musicName;
 - (NSString *)selectMusicWithID:(int)musicID;

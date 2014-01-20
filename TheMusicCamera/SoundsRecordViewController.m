@@ -113,10 +113,18 @@
 
 - (void)saveBtuuon
 {
+    
     Music *music = [[Music alloc]init];
     music.name = musicNameText.text;
     music.path = [NSString stringWithFormat:@"%@.caf",musicNameText.text];
-    [dataManager insertMusicInfo:music];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"appStore"] intValue]==0) {
+        [dataManager deleteMusicWithID:4];
+        [dataManager insertMusicInfo:music];
+    }
+    else
+    {
+        [dataManager insertMusicInfo:music];
+    }
 
     [self.navigationController popViewControllerAnimated:YES];
     

@@ -103,6 +103,13 @@
 
 }
 
+- (void) updateMusicInfo:(Music*)music
+{
+    DBAccress *dBAccress=[[DBAccress alloc] init];
+    [dBAccress updateMusicInfo:music];
+    
+}
+
 - (void)deleteMusicWithID:(int)musicID
 {
     DBAccress *dBAccress=[[DBAccress alloc] init];

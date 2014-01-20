@@ -32,6 +32,7 @@
 - (void) getLoadMusicList;
 - (void) getLoadRecordMusicList;
 - (void) insertMusicInfo:(Music*)music;
+- (void) updateMusicInfo:(Music*)music;
 - (void)deleteMusicWithID:(int)musicID;
 - (void)deleteMusicWithName:(NSString *)musicName;
 - (int)selectMusicDate;
