@@ -10,6 +10,7 @@
 #import "DataManager.h"
 #import "SetAgeViewController.h"
 #import "MQEditField.h"
+#import "AgeDialog.h"
 
 @protocol StampAgeControllerDelegate <NSObject>
 
@@ -17,7 +18,7 @@
 
 @end
 
-@interface StampAgeController : UIViewController<SetAgeViewControllerDelegate>
+@interface StampAgeController : UIViewController<AgeDialogDelegate>
 
 @property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, strong) IBOutlet MQEditField* age;

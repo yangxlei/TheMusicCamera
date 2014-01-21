@@ -364,6 +364,12 @@
 		957DAB30188BFEB200A1FC06 /* ages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 957DAB2F188BFEB200A1FC06 /* ages.plist */; };
 		95916A39186C847A001086A1 /* WaterImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95916A38186C847A001086A1 /* WaterImageController.m */; };
 		95916A3B186C8489001086A1 /* water_image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95916A3A186C8489001086A1 /* water_image.storyboard */; };
+		95AFDA9F188EC71300145338 /* AgeDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AFDA9E188EC71300145338 /* AgeDialog.m */; };
+		95AFDAA1188EC72100145338 /* AgeDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AFDAA0188EC72100145338 /* AgeDialog.xib */; };
+		95AFDAA6188EC77800145338 /* age_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AFDAA2188EC77800145338 /* age_btn.png */; };
+		95AFDAA7188EC77800145338 /* age_popup_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AFDAA3188EC77800145338 /* age_popup_minus.png */; };
+		95AFDAA8188EC77800145338 /* age_popup_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AFDAA4188EC77800145338 /* age_popup_plus.png */; };
+		95AFDAA9188EC77800145338 /* age_popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AFDAA5188EC77800145338 /* age_popup.png */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
 		95DFD2CA187F097500C916BA /* stamp_age_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DFD2C9187F097500C916BA /* stamp_age_1.png */; };
 		95FAA551187B04B1001FB0AD /* StampAgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FAA550187B04B1001FB0AD /* StampAgeController.m */; };
@@ -806,6 +812,13 @@
 		95916A37186C847A001086A1 /* WaterImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterImageController.h; sourceTree = "<group>"; };
 		95916A38186C847A001086A1 /* WaterImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterImageController.m; sourceTree = "<group>"; };
 		95916A3A186C8489001086A1 /* water_image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = water_image.storyboard; sourceTree = "<group>"; };
+		95AFDA9D188EC71300145338 /* AgeDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgeDialog.h; sourceTree = "<group>"; };
+		95AFDA9E188EC71300145338 /* AgeDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgeDialog.m; sourceTree = "<group>"; };
+		95AFDAA0188EC72100145338 /* AgeDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgeDialog.xib; sourceTree = "<group>"; };
+		95AFDAA2188EC77800145338 /* age_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_btn.png; sourceTree = "<group>"; };
+		95AFDAA3188EC77800145338 /* age_popup_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_popup_minus.png; sourceTree = "<group>"; };
+		95AFDAA4188EC77800145338 /* age_popup_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_popup_plus.png; sourceTree = "<group>"; };
+		95AFDAA5188EC77800145338 /* age_popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_popup.png; sourceTree = "<group>"; };
 		95C1172318633EF7008391BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		95DFD2C9187F097500C916BA /* stamp_age_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_age_1.png; sourceTree = "<group>"; };
 		95FAA54F187B04B1001FB0AD /* StampAgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StampAgeController.h; sourceTree = "<group>"; };
@@ -1233,6 +1246,7 @@
 		354467F3185AD419005AB0D9 /* TheMusicCamera */ = {
 			isa = PBXGroup;
 			children = (
+				95AFDA9C188EC70300145338 /* age_dialog */,
 				2E661A46188588C100985717 /* LineKit */,
 				35070260187CE78A00BEB701 /* JSON */,
 				3507026E187CE78A00BEB701 /* NSData+Base64.h */,
@@ -1497,6 +1511,20 @@
 			path = crop;
 			sourceTree = "<group>";
 		};
+		95AFDA9C188EC70300145338 /* age_dialog */ = {
+			isa = PBXGroup;
+			children = (
+				95AFDAA2188EC77800145338 /* age_btn.png */,
+				95AFDAA3188EC77800145338 /* age_popup_minus.png */,
+				95AFDAA4188EC77800145338 /* age_popup_plus.png */,
+				95AFDAA5188EC77800145338 /* age_popup.png */,
+				95AFDA9D188EC71300145338 /* AgeDialog.h */,
+				95AFDA9E188EC71300145338 /* AgeDialog.m */,
+				95AFDAA0188EC72100145338 /* AgeDialog.xib */,
+			);
+			path = age_dialog;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1601,6 +1629,7 @@
 				2E3E0EFD187D8FFE0058C4C4 /* OhisamaFont11.ttf in Resources */,
 				2ECD4DCB1886E0ED00E66807 /* stamp_34.png in Resources */,
 				35452A6F187F8E1E0093CB9D /* trimming_1_1_on.png in Resources */,
+				95AFDAA1188EC72100145338 /* AgeDialog.xib in Resources */,
 				2E6409CF18633F900080E903 /* recording_dustbox.png in Resources */,
 				2EE5AF97186077BA00A35754 /* sound_setting_now_list2.png in Resources */,
 				356E6A5D185AD70F002A1014 /* icon@2x.png in Resources */,
@@ -1626,6 +1655,7 @@
 				3519A020186BCE6100FEC752 /* check_mark_dot.png in Resources */,
 				2EB41C29188043CE005F7AF5 /* stamp_17.png in Resources */,
 				2EB41C36188043CE005F7AF5 /* stamp_30.png in Resources */,
+				95AFDAA7188EC77800145338 /* age_popup_minus.png in Resources */,
 				2E45B8691882CCCE00253AF3 /* frame_3_1.png in Resources */,
 				2E2F715C18759FC7001A7816 /* decoration_tab_ooter_mojiire_on.png in Resources */,
 				356E6A82185AE23E002A1014 /* main_tab_decoration_on.png in Resources */,
@@ -1639,6 +1669,7 @@
 				957DAAE9188053AB00A1FC06 /* age_stamp_8.png in Resources */,
 				2E45B86A1882CCCE00253AF3 /* frame_3_3.png in Resources */,
 				2EB0A333185C2FB400C226DF /* header_sound_setting.png in Resources */,
+				95AFDAA9188EC77800145338 /* age_popup.png in Resources */,
 				356E6A5E185AD70F002A1014 /* icon_117.png in Resources */,
 				2E45B87B1882CCCE00253AF3 /* frame_12_1.png in Resources */,
 				2E2F71761875B2BD001A7816 /* stamp_9.png in Resources */,
@@ -1716,6 +1747,7 @@
 				9571A21C185C975D003D3285 /* shoot_sound_button.png in Resources */,
 				2EE5AF9B1860781000A35754 /* sleep_mode_on.png in Resources */,
 				9571A220185C975D003D3285 /* shot_flash_on.png in Resources */,
+				95AFDAA8188EC77800145338 /* age_popup_plus.png in Resources */,
 				2E701387187EDF2B00A641E6 /* color3.png in Resources */,
 				2E8F1CE9188ADA160005783E /* recording_playsound_text.png in Resources */,
 				2E44DAA9185C9AA600C5C1DC /* sound_setting_now.png in Resources */,
@@ -1773,6 +1805,7 @@
 				2E2F716F1875B2BD001A7816 /* stamp_2.png in Resources */,
 				2E701398187EE32A00A641E6 /* decoration_tab_color_on.png in Resources */,
 				2E2F71751875B2BD001A7816 /* stamp_8.png in Resources */,
+				95AFDAA6188EC77800145338 /* age_btn.png in Resources */,
 				2E45B8711882CCCE00253AF3 /* frame_7_1.png in Resources */,
 				2E701386187EDF2B00A641E6 /* color2.png in Resources */,
 				2E2F717C1875BD27001A7816 /* decoration_stamp.png in Resources */,
@@ -1875,6 +1908,7 @@
 				950C7EF41865E9BD0021FE5D /* PictureRangeSelectViewHome.m in Sources */,
 				2E693624185DF7B5000C95F5 /* DBAccress.m in Sources */,
 				957DAB2E188841E400A1FC06 /* MQEditField.m in Sources */,
+				95AFDA9F188EC71300145338 /* AgeDialog.m in Sources */,
 				2E2F71601875B15F001A7816 /* StampView.m in Sources */,
 				356E6A6F185ADE76002A1014 /* PhontoViewController.m in Sources */,
 				2E693627185DF7B5000C95F5 /* FMDatabasePool.m in Sources */,

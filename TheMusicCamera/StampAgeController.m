@@ -143,11 +143,16 @@
 
 -(IBAction)ageClick:(id)sender
 {
-  UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"stamp_age" bundle:nil];
-  SetAgeViewController* controller = [storyboard instantiateViewControllerWithIdentifier:@"SetAgeViewController"];
-  controller.delegate = self;
-  [self.navigationController pushViewController:controller animated:YES];
-
+//  UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"stamp_age" bundle:nil];
+//  SetAgeViewController* controller = [storyboard instantiateViewControllerWithIdentifier:@"SetAgeViewController"];
+//  controller.delegate = self;
+//  [self.navigationController pushViewController:controller animated:YES];
+  
+  NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"AgeDialog" owner:self options:nil];
+  
+  AgeDialog *dialog= [nib objectAtIndex:0];
+  dialog.delegate = self;
+  [self.view addSubview:dialog];
 }
 
 -(IBAction) arrowLeft:(id)sender
