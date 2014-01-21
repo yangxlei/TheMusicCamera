@@ -246,7 +246,13 @@ static GTTabBarController *gtTabBarController;
     
     if (index ==4)
     {
-        return;
+        if ([[NSUserDefaults standardUserDefaults]objectForKey:@"shareImage"]==0) {
+            return;
+        }
+        else
+        {
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"shareImage"];
+        }
     }
 
     NSLog(@"Display View.");

@@ -203,6 +203,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
     dataManager.shareImg = viewImage;
 
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"shareImage"];
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNSHAREVC" object:nil];
   	for (UIView *subview in mianView.subviews) {
         [subview removeFromSuperview];
