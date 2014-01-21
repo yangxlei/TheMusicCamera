@@ -294,7 +294,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         CGRect gripFrame1 = CGRectMake(50, 50, 140, 140);
         ZDStickerView *userResizableView1 = [[ZDStickerView alloc] initWithFrame:gripFrame1];
         userResizableView1.contentView = imageV;
-        userResizableView1.preventsPositionOutsideSuperview = YES;
+        userResizableView1.preventsPositionOutsideSuperview = NO;
         [userResizableView1 showEditingHandles];
         [mianView addSubview:userResizableView1];
         
@@ -338,7 +338,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     ZDStickerView *userResizableView2 = [[ZDStickerView alloc] initWithFrame:gripFrame2];
     userResizableView2.contentView = tv;
-    userResizableView2.preventsPositionOutsideSuperview = YES;
+    userResizableView2.preventsPositionOutsideSuperview = NO;
     [userResizableView2 showEditingHandles];
     [mianView addSubview:userResizableView2];
 
@@ -380,7 +380,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     CGRect gripFrame1 = CGRectMake(100, 50, 140, 140);
     ZDStickerView *ageView = [[ZDStickerView alloc] initWithFrame:gripFrame1];
     ageView.contentView = imageV;
-    ageView.preventsPositionOutsideSuperview = YES;
+    ageView.preventsPositionOutsideSuperview = NO;
     [ageView showEditingHandles];
     [mianView addSubview:ageView];
     [stampArr addObject:ageView];
