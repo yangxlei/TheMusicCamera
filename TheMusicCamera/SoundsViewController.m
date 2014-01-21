@@ -46,6 +46,8 @@
     dataManager = [DataManager sharedManager];
     [dataManager getLoadRecordMusicList];
     recordListLab.text = [NSString stringWithFormat:@"%d件",dataManager.recordMusicList.count];
+    recordListLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+
 }
 
 - (void)viewDidLoad
@@ -80,7 +82,7 @@
         
 
     }
-    fadeImage = [[UIImageView alloc]initWithFrame:CGRectMake(33, 180, 254, 209)];
+    fadeImage = [[UIImageView alloc]initWithFrame:CGRectMake(33, 180, 254, 108)];
     fadeImage.image = [UIImage imageNamed:@"recording_popup"];
     [self.view addSubview:fadeImage];
     fadeImage.alpha = 0;

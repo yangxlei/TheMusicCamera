@@ -79,7 +79,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//        self.hidesBottomBarWhenPushed = YES;
+        self.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBarHidden = YES;
     dataManager = [DataManager sharedManager];
     
@@ -203,6 +203,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
     dataManager.shareImg = viewImage;
 
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"shareImage"];
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNSHAREVC" object:nil];
   	for (UIView *subview in mianView.subviews) {
         [subview removeFromSuperview];
@@ -291,10 +293,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         UIImageView *imageV = [[UIImageView alloc]
                                initWithImage:img];
         
-        CGRect gripFrame1 = CGRectMake(50, 50, 140, 140);
+        CGRect gripFrame1 = CGRectMake(50, 50, img.size.width, img.size.height);
         ZDStickerView *userResizableView1 = [[ZDStickerView alloc] initWithFrame:gripFrame1];
         userResizableView1.contentView = imageV;
-        userResizableView1.preventsPositionOutsideSuperview = YES;
+        userResizableView1.preventsPositionOutsideSuperview = NO;
         [userResizableView1 showEditingHandles];
         [mianView addSubview:userResizableView1];
         
@@ -338,7 +340,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     ZDStickerView *userResizableView2 = [[ZDStickerView alloc] initWithFrame:gripFrame2];
     userResizableView2.contentView = tv;
-    userResizableView2.preventsPositionOutsideSuperview = YES;
+    userResizableView2.preventsPositionOutsideSuperview = NO;
     [userResizableView2 showEditingHandles];
     [mianView addSubview:userResizableView2];
 
@@ -380,7 +382,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     CGRect gripFrame1 = CGRectMake(100, 50, 140, 140);
     ZDStickerView *ageView = [[ZDStickerView alloc] initWithFrame:gripFrame1];
     ageView.contentView = imageV;
-    ageView.preventsPositionOutsideSuperview = YES;
+    ageView.preventsPositionOutsideSuperview = NO;
     [ageView showEditingHandles];
     [mianView addSubview:ageView];
     [stampArr addObject:ageView];

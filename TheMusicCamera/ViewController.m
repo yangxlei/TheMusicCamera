@@ -47,6 +47,7 @@ ViewController *_viewController;
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicstation"];
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"imageSize"];
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"appStore"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"shareImage"];
 
     }
     dataManager = [DataManager sharedManager];
@@ -96,8 +97,11 @@ ViewController *_viewController;
 	[imgDic4 setObject:[UIImage imageNamed:@"main_tab_setting_on.png"] forKey:@"Seleted"];
 	NSMutableDictionary *imgDic5 = [NSMutableDictionary dictionaryWithCapacity:3];
 	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_off.png"] forKey:@"Default"];
-	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_on.png"] forKey:@"Highlighted"];
-	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_on.png"] forKey:@"Seleted"];
+//	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_on.png"] forKey:@"Highlighted"];
+//	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_on.png"] forKey:@"Seleted"];
+	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_off.png"] forKey:@"Highlighted"];
+	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_off.png"] forKey:@"Seleted"];
+
 	NSArray *imgArr = [NSArray arrayWithObjects:imgDic,imgDic2,imgDic3,imgDic4,imgDic5,nil];
     
 	self.mainTabBarController = [[GTTabBarController alloc] initWithViewControllers:ctrlArr imageArray:imgArr];

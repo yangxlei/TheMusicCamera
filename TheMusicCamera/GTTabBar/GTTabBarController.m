@@ -232,14 +232,29 @@ static GTTabBarController *gtTabBarController;
     {
         if (![self.delegate tabBarController:self shouldSelectViewController:[self.viewControllers objectAtIndex:index]])
         {
+            
             return;
         }
     }
     // If target index if equal to current index, do nothing.
     if (selectedIndex == index && [[transitionView subviews] count] != 0 && index != 2)
     {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
+
         return;
     }
+    
+    if (index ==4)
+    {
+        if ([[NSUserDefaults standardUserDefaults]objectForKey:@"shareImage"]==0) {
+            return;
+        }
+        else
+        {
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"shareImage"];
+        }
+    }
+
     NSLog(@"Display View.");
     selectedIndex = index;
     

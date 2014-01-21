@@ -233,8 +233,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
             endingLineNumber = "137"
-            landmarkName = "@implementation BeautifiedPictureViewController"
-            landmarkType = "3">
+            landmarkName = "-useClick:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
