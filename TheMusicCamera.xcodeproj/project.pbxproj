@@ -17,6 +17,8 @@
 		2E24856B187028080090634D /* btn_setting_text .png in Resources */ = {isa = PBXBuildFile; fileRef = 2E24856A187028080090634D /* btn_setting_text .png */; };
 		2E24856E1870287B0090634D /* btn_setting_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E24856C1870287B0090634D /* btn_setting_left.png */; };
 		2E24856F1870287B0090634D /* btn_setting_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E24856D1870287B0090634D /* btn_setting_right.png */; };
+		2E2A5BF9188E9E46003254A0 /* VPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5BF8188E9E46003254A0 /* VPViewController.m */; };
+		2E2A5BFC188E9F0A003254A0 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5BFB188E9F0A003254A0 /* VPImageCropperViewController.m */; };
 		2E2C1B521879902D0002470A /* SPGripViewBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4B1879902D0002470A /* SPGripViewBorderView.m */; };
 		2E2C1B531879902D0002470A /* stamp_tool_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4C1879902D0002470A /* stamp_tool_1.png */; };
 		2E2C1B541879902D0002470A /* stamp_tool_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4D1879902D0002470A /* stamp_tool_2.png */; };
@@ -394,6 +396,10 @@
 		2E24856A187028080090634D /* btn_setting_text .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_setting_text .png"; sourceTree = "<group>"; };
 		2E24856C1870287B0090634D /* btn_setting_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_setting_left.png; sourceTree = "<group>"; };
 		2E24856D1870287B0090634D /* btn_setting_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_setting_right.png; sourceTree = "<group>"; };
+		2E2A5BF7188E9E46003254A0 /* VPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPViewController.h; sourceTree = "<group>"; };
+		2E2A5BF8188E9E46003254A0 /* VPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPViewController.m; sourceTree = "<group>"; };
+		2E2A5BFA188E9F0A003254A0 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		2E2A5BFB188E9F0A003254A0 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		2E2C1B4A1879902D0002470A /* SPGripViewBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGripViewBorderView.h; sourceTree = "<group>"; };
 		2E2C1B4B1879902D0002470A /* SPGripViewBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGripViewBorderView.m; sourceTree = "<group>"; };
 		2E2C1B4C1879902D0002470A /* stamp_tool_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_tool_1.png; sourceTree = "<group>"; };
@@ -889,6 +895,10 @@
 				95FAA552187B057B001FB0AD /* stamp_age.storyboard */,
 				35070277187CECB700BEB701 /* TextFontViewController.h */,
 				35070278187CECB700BEB701 /* TextFontViewController.m */,
+				2E2A5BF7188E9E46003254A0 /* VPViewController.h */,
+				2E2A5BF8188E9E46003254A0 /* VPViewController.m */,
+				2E2A5BFA188E9F0A003254A0 /* VPImageCropperViewController.h */,
+				2E2A5BFB188E9F0A003254A0 /* VPImageCropperViewController.m */,
 			);
 			name = BeautifiedPicture;
 			sourceTree = "<group>";
@@ -1890,6 +1900,7 @@
 				2E693628185DF7B5000C95F5 /* FMDatabaseQueue.m in Sources */,
 				956FFD19187EEFEA0051D5A8 /* CropMask.m in Sources */,
 				2E693625185DF7B5000C95F5 /* FMDatabase.m in Sources */,
+				2E2A5BF9188E9E46003254A0 /* VPViewController.m in Sources */,
 				2E693626185DF7B5000C95F5 /* FMDatabaseAdditions.m in Sources */,
 				950C7EE91865E6E90021FE5D /* ColorTracking.m in Sources */,
 				356E6A69185ADE2A002A1014 /* BeautifiedPictureViewController.m in Sources */,
@@ -1906,6 +1917,7 @@
 				35070272187CE78A00BEB701 /* SBJSON.m in Sources */,
 				2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */,
 				2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */,
+				2E2A5BFC188E9F0A003254A0 /* VPImageCropperViewController.m in Sources */,
 				950C7EE61865E6700021FE5D /* MQRoundPatView.m in Sources */,
 				2E2C1B571879902D0002470A /* ZDStickerView.m in Sources */,
 				2E2C1B521879902D0002470A /* SPGripViewBorderView.m in Sources */,

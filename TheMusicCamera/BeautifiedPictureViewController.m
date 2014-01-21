@@ -79,7 +79,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//        self.hidesBottomBarWhenPushed = YES;
+        self.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBarHidden = YES;
     dataManager = [DataManager sharedManager];
     
@@ -291,7 +291,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         UIImageView *imageV = [[UIImageView alloc]
                                initWithImage:img];
         
-        CGRect gripFrame1 = CGRectMake(50, 50, 140, 140);
+        CGRect gripFrame1 = CGRectMake(50, 50, img.size.width, img.size.height);
         ZDStickerView *userResizableView1 = [[ZDStickerView alloc] initWithFrame:gripFrame1];
         userResizableView1.contentView = imageV;
         userResizableView1.preventsPositionOutsideSuperview = NO;
