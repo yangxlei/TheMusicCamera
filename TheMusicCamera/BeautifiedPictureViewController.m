@@ -379,7 +379,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIImageView *imageV = [[UIImageView alloc]
                            initWithImage:image];
     
-    CGRect gripFrame1 = CGRectMake(100, 50, 140, 140);
+    CGRect gripFrame1 = CGRectMake(100, 50, image.size.width, image.size.height);
     ZDStickerView *ageView = [[ZDStickerView alloc] initWithFrame:gripFrame1];
     ageView.contentView = imageV;
     ageView.preventsPositionOutsideSuperview = NO;

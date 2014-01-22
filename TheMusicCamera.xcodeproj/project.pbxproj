@@ -254,6 +254,7 @@
 		35563FF41871431700BA2BD6 /* list_middle_a.png in Resources */ = {isa = PBXBuildFile; fileRef = 35563FF31871431700BA2BD6 /* list_middle_a.png */; };
 		35563FF61871497800BA2BD6 /* IMG_0086.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 35563FF51871497800BA2BD6 /* IMG_0086.JPG */; };
 		355B42B5188F5C3200B51AAA /* btn_save.png in Resources */ = {isa = PBXBuildFile; fileRef = 355B42B4188F5C3200B51AAA /* btn_save.png */; };
+		355CA318188F63DF0045CBAA /* sound_setting_now_list3.png in Resources */ = {isa = PBXBuildFile; fileRef = 355CA317188F63DF0045CBAA /* sound_setting_now_list3.png */; };
 		356207C4186956F80091737A /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356207C3186956F80091737A /* Twitter.framework */; };
 		356207C6186957040091737A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356207C5186957040091737A /* Social.framework */; };
 		356207C81869570C0091737A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356207C71869570C0091737A /* Accounts.framework */; };
@@ -674,6 +675,7 @@
 		35563FF31871431700BA2BD6 /* list_middle_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_middle_a.png; sourceTree = "<group>"; };
 		35563FF51871497800BA2BD6 /* IMG_0086.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0086.JPG; sourceTree = "<group>"; };
 		355B42B4188F5C3200B51AAA /* btn_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_save.png; sourceTree = "<group>"; };
+		355CA317188F63DF0045CBAA /* sound_setting_now_list3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_setting_now_list3.png; sourceTree = "<group>"; };
 		356207C3186956F80091737A /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		356207C5186957040091737A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		356207C71869570C0091737A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -976,6 +978,7 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				355CA317188F63DF0045CBAA /* sound_setting_now_list3.png */,
 				355B42B4188F5C3200B51AAA /* btn_save.png */,
 				2E8F1CE8188ADA160005783E /* recording_playsound_text.png */,
 				2E8F1CE6188AD5A00005783E /* list.png */,
@@ -1719,6 +1722,7 @@
 				2EB41C33188043CE005F7AF5 /* stamp_27.png in Resources */,
 				957DAAF21882C5D600A1FC06 /* TSLocateView.xib in Resources */,
 				2EB0A330185C07C000C226DF /* mama_camera_top_1136.png in Resources */,
+				355CA318188F63DF0045CBAA /* sound_setting_now_list3.png in Resources */,
 				957DAB291882DCC200A1FC06 /* age_stamp_1_number.png in Resources */,
 				9571A219185C975D003D3285 /* shoot_camera_button_1.png in Resources */,
 				2E2C1B551879902D0002470A /* ZDBtn2.png in Resources */,
