@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="1Qp-Ls-c4y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="1Qp-Ls-c4y">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -10,11 +10,11 @@
             <objects>
                 <viewController id="1Qp-Ls-c4y" customClass="StampAgeController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="thc-AE-v7a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_1136.png" id="aq8-nh-0vF">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -24,16 +24,16 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="gLQ-BH-xjn">
-                                <rect key="frame" x="0.0" y="328" width="320" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="240" width="320" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decorationage_stamp.png" id="x0d-gc-FeP">
                                         <rect key="frame" x="0.0" y="-1" width="320" height="240"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Os2-2H-nSf">
                                         <rect key="frame" x="0.0" y="25" width="320" height="215"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     </scrollView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tP6-HG-vUQ">
                                         <rect key="frame" x="15" y="110" width="20" height="20"/>
@@ -61,8 +61,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QdO-fO-Ssg">
-                                <rect key="frame" x="95" y="228" width="130" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="95" y="188" width="130" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Button" image="age_btn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,6 +76,8 @@
                     </view>
                     <connections>
                         <outlet property="demoView" destination="brk-qQ-FUm" id="ROr-Gg-e5G"/>
+                        <outlet property="leftArrow" destination="tP6-HG-vUQ" id="E1W-ti-PBi"/>
+                        <outlet property="rightArrow" destination="V8b-Fo-eeO" id="fbU-SV-5ym"/>
                         <outlet property="scrollView" destination="Os2-2H-nSf" id="eid-xE-i3Z"/>
                     </connections>
                 </viewController>
@@ -88,7 +90,7 @@
             <objects>
                 <viewController storyboardIdentifier="SetAgeViewController" id="Wtr-Z4-xjs" customClass="SetAgeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sT6-bl-2gy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_1136.png" id="1XL-Or-3Yn">
@@ -135,6 +137,7 @@
         <image name="arrow_left.png" width="39" height="43"/>
         <image name="arrow_right.png" width="39" height="43"/>
         <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
         <image name="decoration_age.png" width="608" height="82"/>
         <image name="decorationage_stamp.png" width="640" height="538"/>
         <image name="stamp_age_1.png" width="307" height="309"/>
@@ -142,6 +145,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

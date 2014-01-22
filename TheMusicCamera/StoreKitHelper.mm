@@ -313,12 +313,14 @@ static StoreKitHelper *storeKitHelperInstance;
     
     [alerView show];
     [alerView release];
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"FROMRETURNVC" object:nil];
+
     NSString *encodingStr = [[[NSString alloc] initWithData:transaction.transactionReceipt encoding:NSUTF8StringEncoding] autorelease];
     //NSLog(@"哈哈哈%@",encodingStr);
     switch (transaction.error.code) {
         case SKErrorUnknown:
             NSLog(@"SKErrorUnknown");
+            
             break;
         case SKErrorClientInvalid:
             NSLog(@"SKErrorClientInvalid");
