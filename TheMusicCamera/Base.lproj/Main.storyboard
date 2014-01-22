@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="hI0-CN-AdA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="hI0-CN-AdA">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -50,7 +50,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-pl-Sf8">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-pl-Sf8">
                                 <rect key="frame" x="0.0" y="517" width="80" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -66,7 +66,7 @@
                                     <action selector="toolsBtn:" destination="tUg-MK-pYY" eventType="touchUpInside" id="iD4-jc-szR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-mI-Vjx">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-mI-Vjx">
                                 <rect key="frame" x="80" y="517" width="80" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -82,7 +82,7 @@
                                     <action selector="toolsBtn:" destination="tUg-MK-pYY" eventType="touchUpInside" id="NdF-d1-nxK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fub-fQ-33v">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fub-fQ-33v">
                                 <rect key="frame" x="160" y="517" width="80" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -98,7 +98,7 @@
                                     <action selector="toolsBtn:" destination="tUg-MK-pYY" eventType="touchUpInside" id="zxI-bY-QAd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DO-x3-ap2">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DO-x3-ap2">
                                 <rect key="frame" x="240" y="517" width="80" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -117,10 +117,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fub-fQ-33v" firstAttribute="bottom" secondItem="hI0-CN-AdA" secondAttribute="bottom" id="51z-SG-n3G"/>
                             <constraint firstAttribute="bottom" secondItem="Ray-pl-Sf8" secondAttribute="bottom" id="8Tj-hB-mLy"/>
+                            <constraint firstItem="8DO-x3-ap2" firstAttribute="leading" secondItem="fub-fQ-33v" secondAttribute="trailing" id="EGx-oN-KfD"/>
+                            <constraint firstAttribute="trailing" secondItem="fub-fQ-33v" secondAttribute="trailing" constant="80" id="LwC-yA-fah"/>
                             <constraint firstAttribute="bottom" secondItem="S3a-mI-Vjx" secondAttribute="bottom" id="Vrv-tA-K15"/>
+                            <constraint firstItem="Ray-pl-Sf8" firstAttribute="leading" secondItem="L8Y-JD-WDc" secondAttribute="leading" id="ewB-KT-xIE"/>
+                            <constraint firstItem="fub-fQ-33v" firstAttribute="leading" secondItem="S3a-mI-Vjx" secondAttribute="trailing" id="mCE-vh-JOP"/>
                             <constraint firstAttribute="bottom" secondItem="fub-fQ-33v" secondAttribute="bottom" id="vHX-KR-4zY"/>
                             <constraint firstAttribute="bottom" secondItem="8DO-x3-ap2" secondAttribute="bottom" id="vog-Rg-EN5"/>
+                            <constraint firstItem="Ray-pl-Sf8" firstAttribute="leading" secondItem="hI0-CN-AdA" secondAttribute="leading" id="x9Y-3c-u9c"/>
                         </constraints>
                     </view>
                     <connections>

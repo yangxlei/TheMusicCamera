@@ -452,7 +452,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage
 {
   if (imageView!=nil) {
-    [imageView removeFromSuperview];
+//    [imageView removeFromSuperview];
+    cleanRemoveFromSuperview(imageView);
   }
   if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
     mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
@@ -550,5 +551,22 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
   return newImage;
 }
 
+void cleanRemoveFromSuperview( UIView * view ) {
+  if(!view || !view.superview) return;
+  
+  //First remove any constraints on the superview
+  NSMutableArray * constraints_to_remove = [NSMutableArray new];
+  UIView * superview = view.superview;
+  
+  for( NSLayoutConstraint * constraint in superview.constraints) {
+    if( constraint.firstItem == view ||constraint.secondItem == view ) {
+      [constraints_to_remove addObject:constraint];
+    }
+  }
+  [superview removeConstraints:constraints_to_remove];
+  
+  //Then remove the view itself.
+  [view removeFromSuperview];
+}
 
 @end

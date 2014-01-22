@@ -207,13 +207,15 @@
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
         [self.delegate imageCropperDidCancel:self];
     }
-  [self removeFromParentViewController];
+  [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)confirm:(id)sender {
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
         [self.delegate imageCropper:self didFinished:[self getSubImage]];
     }
+  
+  [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)overlayClipping
@@ -363,5 +365,6 @@
     UIGraphicsEndImageContext();
     return smallImage;
 }
+
 
 @end
