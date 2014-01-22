@@ -61,7 +61,6 @@
 		2E44DAB3185C9EAE00C5C1DC /* recording_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAB2185C9EAE00C5C1DC /* recording_button.png */; };
 		2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DAB6185CA34C00C5C1DC /* SoundsRecordViewController.m */; };
 		2E44DAB9185CA3FE00C5C1DC /* header_recording.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAB8185CA3FE00C5C1DC /* header_recording.png */; };
-		2E44DABD185CA63600C5C1DC /* button_save.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DABB185CA63600C5C1DC /* button_save.png */; };
 		2E44DAC0185CA7AA00C5C1DC /* SoundsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DABF185CA7AA00C5C1DC /* SoundsListViewController.m */; };
 		2E44DAC3185CADEC00C5C1DC /* SoundsRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E44DAC2185CADEC00C5C1DC /* SoundsRepeatViewController.m */; };
 		2E44DAC5185CAF7500C5C1DC /* header_sound_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */; };
@@ -254,6 +253,7 @@
 		35452A71187F8E1E0093CB9D /* trimming_4_3_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 35452A6D187F8E1E0093CB9D /* trimming_4_3_on.png */; };
 		35563FF41871431700BA2BD6 /* list_middle_a.png in Resources */ = {isa = PBXBuildFile; fileRef = 35563FF31871431700BA2BD6 /* list_middle_a.png */; };
 		35563FF61871497800BA2BD6 /* IMG_0086.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 35563FF51871497800BA2BD6 /* IMG_0086.JPG */; };
+		355B42B5188F5C3200B51AAA /* btn_save.png in Resources */ = {isa = PBXBuildFile; fileRef = 355B42B4188F5C3200B51AAA /* btn_save.png */; };
 		356207C4186956F80091737A /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356207C3186956F80091737A /* Twitter.framework */; };
 		356207C6186957040091737A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356207C5186957040091737A /* Social.framework */; };
 		356207C81869570C0091737A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356207C71869570C0091737A /* Accounts.framework */; };
@@ -452,7 +452,6 @@
 		2E44DAB5185CA34C00C5C1DC /* SoundsRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundsRecordViewController.h; sourceTree = "<group>"; };
 		2E44DAB6185CA34C00C5C1DC /* SoundsRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsRecordViewController.m; sourceTree = "<group>"; };
 		2E44DAB8185CA3FE00C5C1DC /* header_recording.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_recording.png; sourceTree = "<group>"; };
-		2E44DABB185CA63600C5C1DC /* button_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_save.png; sourceTree = "<group>"; };
 		2E44DABE185CA7A900C5C1DC /* SoundsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundsListViewController.h; sourceTree = "<group>"; };
 		2E44DABF185CA7AA00C5C1DC /* SoundsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundsListViewController.m; sourceTree = "<group>"; };
 		2E44DAC1185CADEC00C5C1DC /* SoundsRepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundsRepeatViewController.h; sourceTree = "<group>"; };
@@ -674,6 +673,7 @@
 		35452A6D187F8E1E0093CB9D /* trimming_4_3_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trimming_4_3_on.png; sourceTree = "<group>"; };
 		35563FF31871431700BA2BD6 /* list_middle_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_middle_a.png; sourceTree = "<group>"; };
 		35563FF51871497800BA2BD6 /* IMG_0086.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0086.JPG; sourceTree = "<group>"; };
+		355B42B4188F5C3200B51AAA /* btn_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_save.png; sourceTree = "<group>"; };
 		356207C3186956F80091737A /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		356207C5186957040091737A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		356207C71869570C0091737A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -976,6 +976,7 @@
 		2EB0A32D185C07C000C226DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				355B42B4188F5C3200B51AAA /* btn_save.png */,
 				2E8F1CE8188ADA160005783E /* recording_playsound_text.png */,
 				2E8F1CE6188AD5A00005783E /* list.png */,
 				957DAB2A188834E900A1FC06 /* decorationage_stamp.png */,
@@ -1117,7 +1118,6 @@
 				2E69360D185DE05B000C95F5 /* recording_bg.png */,
 				2E44DAC6185CB0B900C5C1DC /* header_sound_re.png */,
 				2E44DAC4185CAF7500C5C1DC /* header_sound_list.png */,
-				2E44DABB185CA63600C5C1DC /* button_save.png */,
 				2E44DAB8185CA3FE00C5C1DC /* header_recording.png */,
 				2E44DAB2185C9EAE00C5C1DC /* recording_button.png */,
 				2E44DAAE185C9D7000C5C1DC /* setting_sound_image_960.png */,
@@ -1789,7 +1789,6 @@
 				95FAA555187B0A2C001FB0AD /* decoration_age.png in Resources */,
 				2E45B8821882CCCE00253AF3 /* frame_15_3.png in Resources */,
 				2E2F716E1875B2BD001A7816 /* stamp_1.png in Resources */,
-				2E44DABD185CA63600C5C1DC /* button_save.png in Resources */,
 				950C7ED81865E5D40021FE5D /* photo_cut_bottombar_cancle_btn@2x.png in Resources */,
 				35446801185AD419005AB0D9 /* Main.storyboard in Resources */,
 				2E69362A185DF7B5000C95F5 /* TmpFile in Resources */,
@@ -1897,6 +1896,7 @@
 				2E70139A187EE32A00A641E6 /* decoration_tab_font_on.png in Resources */,
 				356E6A54185AD70F002A1014 /* icon-76.png in Resources */,
 				2E2F715818759FC7001A7816 /* decoration_tab_footer_frame_on.png in Resources */,
+				355B42B5188F5C3200B51AAA /* btn_save.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
