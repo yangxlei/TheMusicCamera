@@ -1184,6 +1184,7 @@
                     </view>
                     <connections>
                         <outlet property="musicLabel" destination="4Rq-Cm-wDS" id="1Wu-Ak-lw8"/>
+                        <outlet property="soundBtn" destination="7tb-D5-hwO" id="n26-6D-pv9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUg-yJ-8pL" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,6 +15,7 @@
     BOOL soundsOff;
     IBOutlet UILabel *musicLabel;
     
+    __weak IBOutlet UIButton *soundBtn;
 }
 
 @end
