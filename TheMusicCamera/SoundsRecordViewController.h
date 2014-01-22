@@ -33,6 +33,7 @@
     UIButton *saveBtn;//保存按钮
     __weak IBOutlet UIButton *recordBtn;
     float intTime;//秒数计数
+    float intPlayTime;//播放秒数计数
     NSTimer   *timer ;
     __weak IBOutlet UILabel *timeLabel;
 }

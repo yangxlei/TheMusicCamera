@@ -62,11 +62,13 @@
     musicLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] integerValue]==1) {
         soundsOff = YES;
+        [soundBtn setImage:[UIImage imageNamed:@"sleep_mode_off"] forState:UIControlStateNormal];
     }
     else
     {
         soundsOff = NO;
         musicLabel.text = @"おやすみモード";
+        [soundBtn setImage:[UIImage imageNamed:@"sleep_mode_on"] forState:UIControlStateNormal];
     }
 }
 
