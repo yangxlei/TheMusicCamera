@@ -19,7 +19,7 @@
 
 @interface ImagePickerController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIScrollViewDelegate,ImageCropperDelegate>
 {
-  ImaeCropper * cropper ;
+//  ImaeCropper * cropper ;
 }
 
 

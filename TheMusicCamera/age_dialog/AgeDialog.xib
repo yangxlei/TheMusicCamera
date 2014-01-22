@@ -96,8 +96,6 @@
     <resources>
         <image name="age_popup.png" width="440" height="390"/>
         <image name="age_popup_minus.png" width="88" height="56"/>
-        <image name="age_popup_minus.png" width="88" height="56"/>
-        <image name="age_popup_plus.png" width="88" height="57"/>
         <image name="age_popup_plus.png" width="88" height="57"/>
         <image name="button_OK.png" width="124" height="62"/>
     </resources>

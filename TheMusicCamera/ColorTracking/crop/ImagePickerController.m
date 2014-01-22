@@ -7,6 +7,7 @@
 //
 
 #import "ImagePickerController.h"
+#import "VPImageCropperViewController.h"
 
 @interface ImagePickerController ()
 {
@@ -14,7 +15,6 @@
 }
 
 @end
-
 @implementation ImagePickerController
 @synthesize delegate;
 
@@ -60,11 +60,16 @@
 
 -(void) presentCropper:(UIImage*) image
 {
-  cropper = [[ImaeCropper alloc] initWithImage:image];
-  cropper.delegate = self;
+//  cropper = [[ImaeCropper alloc] initWithImage:image];
+//  cropper.delegate = self;
 //  [self.navigationController pushViewController:cropper animated:YES];
 //  [self presentViewController:cropper animated:YES completion:^{}];
-  [self.view addSubview:cropper.view];
+//  [self.view addSubview:cropper.view];
+//  
+//   UIImage* portraitImg = [self imageByScalingToMaxSize:image];
+//  // 裁剪
+//  VPImageCropperViewController *imgEditorVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 100.0f, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:3.0];
+//  imgEditorVC.delegate = self;
 }
 
 -(void) begin
@@ -109,5 +114,7 @@
   [picker dismissModalViewControllerAnimated:NO];
   [self onCacnel];
 }
+
+
 
 @end

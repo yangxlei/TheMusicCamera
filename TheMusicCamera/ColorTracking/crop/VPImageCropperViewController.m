@@ -7,6 +7,7 @@
 //
 
 #import "VPImageCropperViewController.h"
+#import "DataManager.h"
 
 #define SCALE_FRAME_Y 100.0f
 #define BOUNDCE_DURATION 0.3f
@@ -17,6 +18,7 @@
 @property (nonatomic, retain) UIImage *editedImage;
 
 @property (nonatomic, retain) UIImageView *showImgView;
+@property (nonatomic, retain) UIView *frame ;
 @property (nonatomic, retain) UIView *overlayView;
 @property (nonatomic, retain) UIView *ratioView;
 
@@ -36,13 +38,14 @@
     self.editedImage = nil;
     self.overlayView = nil;
     self.ratioView = nil;
+  self.frame = nil;
 }
 
 - (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio {
     self = [super init];
     if (self) {
 //        self.cropFrame = cropFrame;
-        self.cropFrame = CGRectMake(10, 100, 300, 400);
+        self.cropFrame = CGRectMake(10, 40, 300, 400);
         self.limitRatio = limitRatio;
         self.originalImage = originalImage;
     }
@@ -52,10 +55,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  self.hidesBottomBarWhenPushed = YES;
-    self.view.backgroundColor = [UIColor blackColor];
+  
+  self.view.backgroundColor = [UIColor whiteColor];
+  
+  [self navgationImage:@"header.png"];
+  UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
+  [btn addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:btn];
+  
+  UIButton* cropBtn = [self navgationButton:@"button_OK.png" andFrame:CGRectMake(250, 10, 62, 31)];
+  [cropBtn addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
+  
+  
+  UIButton* onebtn = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height-45, 28, 28)];
+  //      onebtn.backgroundColor = [UIColor redColor];
+  onebtn.titleLabel.textColor = [UIColor whiteColor];
+  //      [changebtn setTitle:@"4:3" forState:UIControlStateNormal];
+  [onebtn setImage:[UIImage imageNamed:@"trimming_1_1_off"] forState:UIControlStateNormal];
+  [onebtn setImage:[UIImage imageNamed:@"trimming_1_1_on"] forState:UIControlStateSelected];
+  [onebtn addTarget:self action:@selector(oneEvent:) forControlEvents:UIControlEventTouchUpInside];
+  onebtn.selected = YES;
+  [self.view addSubview:onebtn];
+  
+  UIButton* fourbtn = [[UIButton alloc] initWithFrame:CGRectMake(48, self.view.frame.size.height-45, 28, 35)];
+  //      fourbtn.backgroundColor = [UIColor redColor];
+  fourbtn.titleLabel.textColor = [UIColor whiteColor];
+  //      [changebtn setTitle:@"4:3" forState:UIControlStateNormal];
+  [fourbtn setImage:[UIImage imageNamed:@"trimming_4_3_off"] forState:UIControlStateNormal];
+  [fourbtn setImage:[UIImage imageNamed:@"trimming_4_3_on"] forState:UIControlStateSelected];
+  [fourbtn addTarget:self action:@selector(fourEvent:) forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:fourbtn];
+  
+//  sizeFlag = NO;
+  
+  self.frame = [[UIView alloc] initWithFrame:CGRectMake(0, 50, 320, self.view.frame.size.height-100)];
+  self.frame.clipsToBounds = YES;
+  [self.view addSubview:self.frame];
     [self initView];
-    [self initControlBtn];
+//    [self initControlBtn];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
@@ -63,6 +100,7 @@
 }
 
 - (void)initView {
+  
     self.showImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, 300, 480)];
     [self.showImgView setMultipleTouchEnabled:YES];
     [self.showImgView setUserInteractionEnabled:YES];
@@ -82,14 +120,15 @@
     self.largeFrame = CGRectMake(0, 0, self.limitRatio * self.oldFrame.size.width, self.limitRatio * self.oldFrame.size.height);
     
     [self addGestureRecognizers];
-    [self.view addSubview:self.showImgView];
-    
-    self.overlayView = [[UIView alloc] initWithFrame:self.view.bounds];
+//    [self.view addSubview:self.showImgView];
+  [self.frame addSubview:self.showImgView];
+  
+    self.overlayView = [[UIView alloc] initWithFrame:self.frame.bounds];
     self.overlayView.alpha = .5f;
     self.overlayView.backgroundColor = [UIColor blackColor];
     self.overlayView.userInteractionEnabled = NO;
     self.overlayView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    [self.view addSubview:self.overlayView];
+    [self.frame addSubview:self.overlayView];
     
     
     NSLog(@"%f--%f--%f--%f",self.cropFrame.origin.x,self.cropFrame.origin.y,self.cropFrame.size.width,self.cropFrame.size.height);
@@ -97,7 +136,7 @@
     self.ratioView.layer.borderColor = [UIColor yellowColor].CGColor;
     self.ratioView.layer.borderWidth = 1.0f;
     self.ratioView.autoresizingMask = UIViewAutoresizingNone;
-    [self.view addSubview:self.ratioView];
+    [self.frame addSubview:self.ratioView];
     
     [self overlayClipping];
 }
@@ -148,7 +187,7 @@
     [self.overlayView removeFromSuperview];
     [self.showImgView removeFromSuperview];
     
-    self.cropFrame = CGRectMake(10, 100, 300, 300);
+    self.cropFrame = CGRectMake(10, 40, 300, 300);
 
     [self initView];
 }
@@ -159,7 +198,7 @@
     [self.overlayView removeFromSuperview];
     [self.showImgView removeFromSuperview];
 
-    self.cropFrame = CGRectMake(10, 100, 300, 400);
+    self.cropFrame = CGRectMake(10, 40, 300, 400);
 
     [self initView];
 }
@@ -168,6 +207,7 @@
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
         [self.delegate imageCropperDidCancel:self];
     }
+  [self removeFromParentViewController];
 }
 
 - (void)confirm:(id)sender {

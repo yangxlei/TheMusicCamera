@@ -23,7 +23,6 @@
 		2E24856E1870287B0090634D /* btn_setting_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E24856C1870287B0090634D /* btn_setting_left.png */; };
 		2E24856F1870287B0090634D /* btn_setting_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E24856D1870287B0090634D /* btn_setting_right.png */; };
 		2E2A5BF9188E9E46003254A0 /* VPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5BF8188E9E46003254A0 /* VPViewController.m */; };
-		2E2A5BFC188E9F0A003254A0 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A5BFB188E9F0A003254A0 /* VPImageCropperViewController.m */; };
 		2E2C1B521879902D0002470A /* SPGripViewBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4B1879902D0002470A /* SPGripViewBorderView.m */; };
 		2E2C1B531879902D0002470A /* stamp_tool_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4C1879902D0002470A /* stamp_tool_1.png */; };
 		2E2C1B541879902D0002470A /* stamp_tool_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C1B4D1879902D0002470A /* stamp_tool_2.png */; };
@@ -377,6 +376,7 @@
 		95AFDAA7188EC77800145338 /* age_popup_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AFDAA3188EC77800145338 /* age_popup_minus.png */; };
 		95AFDAA8188EC77800145338 /* age_popup_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AFDAA4188EC77800145338 /* age_popup_plus.png */; };
 		95AFDAA9188EC77800145338 /* age_popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AFDAA5188EC77800145338 /* age_popup.png */; };
+		95AFDAAC1890210A00145338 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AFDAAB1890210A00145338 /* VPImageCropperViewController.m */; };
 		95C1172418633EF7008391BB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1172318633EF7008391BB /* CoreFoundation.framework */; };
 		95DFD2CA187F097500C916BA /* stamp_age_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DFD2C9187F097500C916BA /* stamp_age_1.png */; };
 		95FAA551187B04B1001FB0AD /* StampAgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FAA550187B04B1001FB0AD /* StampAgeController.m */; };
@@ -836,6 +836,8 @@
 		95AFDAA3188EC77800145338 /* age_popup_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_popup_minus.png; sourceTree = "<group>"; };
 		95AFDAA4188EC77800145338 /* age_popup_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_popup_plus.png; sourceTree = "<group>"; };
 		95AFDAA5188EC77800145338 /* age_popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age_popup.png; sourceTree = "<group>"; };
+		95AFDAAA1890210A00145338 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		95AFDAAB1890210A00145338 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		95C1172318633EF7008391BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		95DFD2C9187F097500C916BA /* stamp_age_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp_age_1.png; sourceTree = "<group>"; };
 		95FAA54F187B04B1001FB0AD /* StampAgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StampAgeController.h; sourceTree = "<group>"; };
@@ -1528,6 +1530,8 @@
 		95AF844F1875C99800C11897 /* crop */ = {
 			isa = PBXGroup;
 			children = (
+				95AFDAAA1890210A00145338 /* VPImageCropperViewController.h */,
+				95AFDAAB1890210A00145338 /* VPImageCropperViewController.m */,
 				956FFD11187EEFEA0051D5A8 /* ImaeCropper.h */,
 				956FFD12187EEFEA0051D5A8 /* ImaeCropper.m */,
 				956FFD13187EEFEA0051D5A8 /* ImagePickerController.h */,
@@ -1936,6 +1940,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95AFDAAC1890210A00145338 /* VPImageCropperViewController.m in Sources */,
 				950C7EF41865E9BD0021FE5D /* PictureRangeSelectViewHome.m in Sources */,
 				2E693624185DF7B5000C95F5 /* DBAccress.m in Sources */,
 				957DAB2E188841E400A1FC06 /* MQEditField.m in Sources */,
@@ -1972,7 +1977,6 @@
 				35070272187CE78A00BEB701 /* SBJSON.m in Sources */,
 				2ED5B1DE186893C7007075EC /* InfoViewController.m in Sources */,
 				2E44DAB7185CA34C00C5C1DC /* SoundsRecordViewController.m in Sources */,
-				2E2A5BFC188E9F0A003254A0 /* VPImageCropperViewController.m in Sources */,
 				950C7EE61865E6700021FE5D /* MQRoundPatView.m in Sources */,
 				2E2C1B571879902D0002470A /* ZDStickerView.m in Sources */,
 				2E2C1B521879902D0002470A /* SPGripViewBorderView.m in Sources */,
@@ -2133,8 +2137,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2148,7 +2152,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2158,8 +2162,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Can (VAP6RMPQC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Can (VAP6RMPQC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera,
@@ -2173,7 +2177,7 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4D6F13A6-EA8D-405D-9FAB-A89164CC6A26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

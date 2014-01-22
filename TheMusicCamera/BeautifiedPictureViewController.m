@@ -15,12 +15,12 @@
 #import "ViewController.h"
 #import "Public.h"
 
+#import "VPImageCropperViewController.h"
+
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 @interface BeautifiedPictureViewController ()
 {
-  ImagePickerController* cropper;
-//  UINavigationController* cropperNavi;
 }
 @end
 
@@ -166,19 +166,18 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void) begin
 {
-  if (cropper == nil) {
-    cropper  = [[ImagePickerController alloc] init];
-    cropper.delegate = self;
-//    cropperNavi = [[UINavigationController alloc] initWithRootViewController:cropper];
-  }
-  [self presentViewController:cropper animated:NO completion:nil];
-//  [self.navigationController pushViewController:cropper animated:YES];
-  [cropper begin];
+  UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
+  imagePicker.delegate = self;
+  imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+  imagePicker.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+  imagePicker.allowsEditing = NO;
+  [self presentModalViewController:imagePicker animated:YES];
 }
 
 -(void) didFinishImagePickerAndCrop:(UIImage *)image
 {
 
+  /*
   [cropper dismissViewControllerAnimated:YES completion:^{
     if (imageView!=nil) {
     [imageView removeFromSuperview];
@@ -207,13 +206,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     dataManager.shareImg = image;
     
   }];
-  cropper = nil;
+   */
 }
 
 -(void) didCacnel
 {
-  [cropper dismissViewControllerAnimated:NO completion:^{}];
- cropper = nil;
   
   [self backBtuuon];
 }
@@ -417,5 +414,142 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [stampArr addObject:ageView];
 
 }
+
+
+#pragma picker image 
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+  [UIApplication sharedApplication].statusBarHidden=YES;
+  
+  UIImage* image = [info valueForKey:UIImagePickerControllerOriginalImage];
+  [picker dismissModalViewControllerAnimated:YES];
+  
+  [self pushToCropImage: image];
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+  
+  [picker dismissModalViewControllerAnimated:YES];
+  
+  [self pushToCropImage:image];
+}
+
+-(void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+  [picker dismissModalViewControllerAnimated:NO];
+  [self backBtuuon];
+}
+
+-(void) pushToCropImage:(UIImage*) image {
+  UIImage* portraitImg = [self imageByScalingToMaxSize:image];
+  // 裁剪
+  VPImageCropperViewController *imgEditorVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 100.0f, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:3.0];
+  imgEditorVC.delegate = self;
+  
+  [self.navigationController pushViewController:imgEditorVC animated:YES];
+}
+
+- (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage
+{
+  if (imageView!=nil) {
+    [imageView removeFromSuperview];
+  }
+  if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
+    mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
+    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+    [mianView addSubview:imageView];
+  }
+  else
+  {
+    if (iPhone5) {
+      mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
+      imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+    }
+    else
+    {
+      mianView.frame = CGRectMake(25, 60, 270, 360);
+      imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+      
+    }
+    [mianView addSubview:imageView];
+  }
+  
+  imageView.image = editedImage;
+  dataManager.shareImg = editedImage;
+  
+}
+- (void)imageCropperDidCancel:(VPImageCropperViewController *)cropperViewController
+{
+  [self backBtuuon];
+}
+
+
+#pragma mark image scale utility
+- (UIImage *)imageByScalingToMaxSize:(UIImage *)sourceImage {
+  if (sourceImage.size.width < ORIGINAL_MAX_WIDTH) return sourceImage;
+  CGFloat btWidth = 0.0f;
+  CGFloat btHeight = 0.0f;
+  if (sourceImage.size.width > sourceImage.size.height) {
+    btHeight = ORIGINAL_MAX_WIDTH;
+    btWidth = sourceImage.size.width * (ORIGINAL_MAX_WIDTH / sourceImage.size.height);
+  } else {
+    btWidth = ORIGINAL_MAX_WIDTH;
+    btHeight = sourceImage.size.height * (ORIGINAL_MAX_WIDTH / sourceImage.size.width);
+  }
+  CGSize targetSize = CGSizeMake(btWidth, btHeight);
+  return [self imageByScalingAndCroppingForSourceImage:sourceImage targetSize:targetSize];
+}
+
+- (UIImage *)imageByScalingAndCroppingForSourceImage:(UIImage *)sourceImage targetSize:(CGSize)targetSize {
+  UIImage *newImage = nil;
+  CGSize imageSize = sourceImage.size;
+  CGFloat width = imageSize.width;
+  CGFloat height = imageSize.height;
+  CGFloat targetWidth = targetSize.width;
+  CGFloat targetHeight = targetSize.height;
+  CGFloat scaleFactor = 0.0;
+  CGFloat scaledWidth = targetWidth;
+  CGFloat scaledHeight = targetHeight;
+  CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+  if (CGSizeEqualToSize(imageSize, targetSize) == NO)
+  {
+    CGFloat widthFactor = targetWidth / width;
+    CGFloat heightFactor = targetHeight / height;
+    
+    if (widthFactor > heightFactor)
+      scaleFactor = widthFactor; // scale to fit height
+    else
+      scaleFactor = heightFactor; // scale to fit width
+    scaledWidth  = width * scaleFactor;
+    scaledHeight = height * scaleFactor;
+    
+    // center the image
+    if (widthFactor > heightFactor)
+    {
+      thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+    }
+    else
+      if (widthFactor < heightFactor)
+      {
+        thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+      }
+  }
+  UIGraphicsBeginImageContext(targetSize); // this will crop
+  CGRect thumbnailRect = CGRectZero;
+  thumbnailRect.origin = thumbnailPoint;
+  thumbnailRect.size.width  = scaledWidth;
+  thumbnailRect.size.height = scaledHeight;
+  
+  [sourceImage drawInRect:thumbnailRect];
+  
+  newImage = UIGraphicsGetImageFromCurrentImageContext();
+  if(newImage == nil) NSLog(@"could not scale image");
+  
+  //pop the context to get back to the default
+  UIGraphicsEndImageContext();
+  return newImage;
+}
+
 
 @end
