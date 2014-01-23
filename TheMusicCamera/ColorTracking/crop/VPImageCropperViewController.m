@@ -8,6 +8,7 @@
 
 #import "VPImageCropperViewController.h"
 #import "DataManager.h"
+#import "Public.h"
 
 #define SCALE_FRAME_Y 100.0f
 #define BOUNDCE_DURATION 0.3f
@@ -45,7 +46,9 @@
     self = [super init];
     if (self) {
 //        self.cropFrame = cropFrame;
-        self.cropFrame = CGRectMake(10, 40, 300, 400);
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"imageSize"];
+
+        self.cropFrame = CGRectMake(10, 10, 300, 300);
         self.limitRatio = limitRatio;
         self.originalImage = originalImage;
     }
@@ -67,7 +70,7 @@
   [cropBtn addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
   
   
-  UIButton* onebtn = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height-45, 28, 28)];
+  onebtn = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height-45, 28, 28)];
   //      onebtn.backgroundColor = [UIColor redColor];
   onebtn.titleLabel.textColor = [UIColor whiteColor];
   //      [changebtn setTitle:@"4:3" forState:UIControlStateNormal];
@@ -77,7 +80,7 @@
   onebtn.selected = YES;
   [self.view addSubview:onebtn];
   
-  UIButton* fourbtn = [[UIButton alloc] initWithFrame:CGRectMake(48, self.view.frame.size.height-45, 28, 35)];
+  fourbtn = [[UIButton alloc] initWithFrame:CGRectMake(48, self.view.frame.size.height-45, 28, 35)];
   //      fourbtn.backgroundColor = [UIColor redColor];
   fourbtn.titleLabel.textColor = [UIColor whiteColor];
   //      [changebtn setTitle:@"4:3" forState:UIControlStateNormal];
@@ -141,45 +144,45 @@
     [self overlayClipping];
 }
 
-- (void)initControlBtn {
-    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50.0f, 100, 50)];
-    cancelBtn.backgroundColor = [UIColor blackColor];
-    cancelBtn.titleLabel.textColor = [UIColor whiteColor];
-    [cancelBtn setTitle:@"Cancel" forState:UIControlStateNormal];
-    [cancelBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
-    [cancelBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [cancelBtn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    [cancelBtn.titleLabel setNumberOfLines:0];
-    [cancelBtn setTitleEdgeInsets:UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f)];
-    [cancelBtn addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:cancelBtn];
-    
-    UIButton *confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100.0f, self.view.frame.size.height - 50.0f, 100, 50)];
-    confirmBtn.backgroundColor = [UIColor blackColor];
-    confirmBtn.titleLabel.textColor = [UIColor whiteColor];
-    [confirmBtn setTitle:@"OK" forState:UIControlStateNormal];
-    [confirmBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
-    [confirmBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    confirmBtn.titleLabel.textColor = [UIColor whiteColor];
-    [confirmBtn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    [confirmBtn.titleLabel setNumberOfLines:0];
-    [confirmBtn setTitleEdgeInsets:UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f)];
-    [confirmBtn addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:confirmBtn];
-    
-    UIButton *oneBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    oneBtn.frame = CGRectMake(0, 0 , 100, 50);
-    [oneBtn setTitle:@"1:1" forState:UIControlStateNormal];
-    [oneBtn addTarget:self action:@selector(oneEvent:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:oneBtn];
- 
-    UIButton *fourBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    fourBtn.frame = CGRectMake(150, 0 , 100, 50);
-    [fourBtn setTitle:@"3:4" forState:UIControlStateNormal];
-    [fourBtn addTarget:self action:@selector(fourEvent:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:fourBtn];
-
-}
+//- (void)initControlBtn {
+//    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50.0f, 100, 50)];
+//    cancelBtn.backgroundColor = [UIColor blackColor];
+//    cancelBtn.titleLabel.textColor = [UIColor whiteColor];
+//    [cancelBtn setTitle:@"Cancel" forState:UIControlStateNormal];
+//    [cancelBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
+//    [cancelBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
+//    [cancelBtn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+//    [cancelBtn.titleLabel setNumberOfLines:0];
+//    [cancelBtn setTitleEdgeInsets:UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f)];
+//    [cancelBtn addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:cancelBtn];
+//    
+//    UIButton *confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100.0f, self.view.frame.size.height - 50.0f, 100, 50)];
+//    confirmBtn.backgroundColor = [UIColor blackColor];
+//    confirmBtn.titleLabel.textColor = [UIColor whiteColor];
+//    [confirmBtn setTitle:@"OK" forState:UIControlStateNormal];
+//    [confirmBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
+//    [confirmBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
+//    confirmBtn.titleLabel.textColor = [UIColor whiteColor];
+//    [confirmBtn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+//    [confirmBtn.titleLabel setNumberOfLines:0];
+//    [confirmBtn setTitleEdgeInsets:UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f)];
+//    [confirmBtn addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:confirmBtn];
+//    
+//    UIButton *oneBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    oneBtn.frame = CGRectMake(0, 0 , 100, 50);
+//    [oneBtn setTitle:@"1:1" forState:UIControlStateNormal];
+//    [oneBtn addTarget:self action:@selector(oneEvent:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:oneBtn];
+// 
+//    UIButton *fourBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    fourBtn.frame = CGRectMake(150, 0 , 100, 50);
+//    [fourBtn setTitle:@"3:4" forState:UIControlStateNormal];
+//    [fourBtn addTarget:self action:@selector(fourEvent:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:fourBtn];
+//
+//}
 
 - (void)oneEvent:(UIButton *)button
 {
@@ -187,9 +190,14 @@
     [self.overlayView removeFromSuperview];
     [self.showImgView removeFromSuperview];
     
-    self.cropFrame = CGRectMake(10, 40, 300, 300);
+    onebtn.selected = YES;
+    fourbtn.selected = NO;
+
+    self.cropFrame = CGRectMake(10, 10, 300, 300);
 
     [self initView];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"imageSize"];
+
 }
 
 - (void)fourEvent:(UIButton *)button
@@ -198,9 +206,20 @@
     [self.overlayView removeFromSuperview];
     [self.showImgView removeFromSuperview];
 
-    self.cropFrame = CGRectMake(10, 40, 300, 400);
+    onebtn.selected = NO;
+    fourbtn.selected = YES;
 
+    self.cropFrame = CGRectMake(10, 10, 300, 400);
+    if (iPhone5) {
+        self.cropFrame = CGRectMake(10, 10, 300, 400);
+    }
+    else
+    {
+        self.cropFrame = CGRectMake(25, 10, 270, 360);
+    }
     [self initView];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:3] forKey:@"imageSize"];
+
 }
 
 - (void)cancel:(id)sender {

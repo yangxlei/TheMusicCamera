@@ -49,25 +49,25 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)viewDidAppear:(BOOL)animated
 {
-//    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
-//        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
-////        imageView.frame = CGRectMake(0, 0, 300, 300);
-//    }
-//    else
-//    {
-//        if (iPhone5) {
-//            mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
+        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
+//        imageView.frame = CGRectMake(0, 0, 300, 300);
+    }
+    else
+    {
+        if (iPhone5) {
+            mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
 //            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
-//        }
-//        else
-//        {
-//            NSLog(@"---%f----%f----%f---%f",mianView.frame.origin.x,mianView.frame.origin.y,mianView.frame.size.width,mianView.frame.size.height);
-//            mianView.frame = CGRectMake(25, 60, 270, 360);
+        }
+        else
+        {
+            NSLog(@"---%f----%f----%f---%f",mianView.frame.origin.x,mianView.frame.origin.y,mianView.frame.size.width,mianView.frame.size.height);
+            mianView.frame = CGRectMake(25, 60, 270, 360);
 //            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
-//            
-//        }
-////        imageView.frame = CGRectMake(0, 0, 300, 400);
-//    }
+            
+        }
+//        imageView.frame = CGRectMake(0, 0, 300, 400);
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -82,13 +82,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     {
         if (iPhone5) {
             mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
-            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+//            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
         }
         else
         {
             NSLog(@"---%f----%f----%f---%f",mianView.frame.origin.x,mianView.frame.origin.y,mianView.frame.size.width,mianView.frame.size.height);
             mianView.frame = CGRectMake(25, 60, 270, 360);
-            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 0, mianView.frame.size.width, mianView.frame.size.height)];
+//            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 0, mianView.frame.size.width, mianView.frame.size.height)];
         }
 //        imageView.frame = CGRectMake(0, 0, 300, 400);
     }
@@ -337,7 +337,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             }
             [[stampFrameArr objectAtIndex:0]removeFromSuperview];
         }
-        UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+        UIImageView *image;
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
+            image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+        }
+        else
+        {
+            image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 400)];
+        }
         image.image = img;
         [mianView addSubview:image];
         [mianView insertSubview:image atIndex:1];
@@ -404,7 +411,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIImageView *imageV = [[UIImageView alloc]
                            initWithImage:image];
     
-    CGRect gripFrame1 = CGRectMake(100, 50, 140, 140);
+    CGRect gripFrame1 = CGRectMake(100, 50, image.size.width, image.size.height);
     ZDStickerView *ageView = [[ZDStickerView alloc] initWithFrame:gripFrame1];
     ageView.contentView = imageV;
     ageView.preventsPositionOutsideSuperview = NO;
@@ -481,6 +488,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 }
 - (void)imageCropperDidCancel:(VPImageCropperViewController *)cropperViewController
 {
+    self.hidesBottomBarWhenPushed = NO;
+
   [self backBtuuon];
 }
 

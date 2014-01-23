@@ -111,6 +111,7 @@
                         button.frame = CGRectMake(35+95*i+(i/3*35), 40+100*j, 60, 60);
                         [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*2+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]] forState:UIControlStateNormal];
                         button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*2+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]];
+                        NSLog(@"======%@",[NSString stringWithFormat:@"frame_%d_%d",i*2+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]);
                         [button addTarget:self action:@selector(stampSelect:) forControlEvents:UIControlEventTouchUpInside];
                         [scrollView addSubview:button];
                         

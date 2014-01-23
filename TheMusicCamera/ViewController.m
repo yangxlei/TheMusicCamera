@@ -130,7 +130,7 @@ ViewController *_viewController;
 #pragma mark NavigationDelegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    if (viewController.hidesBottomBarWhenPushed)
+    if (viewController.hidesBottomBarWhenPushed|| [viewController isKindOfClass:[VPImageCropperViewController class]])
     {
         [self.mainTabBarController hidesTabBar:YES animated:YES];
     }
