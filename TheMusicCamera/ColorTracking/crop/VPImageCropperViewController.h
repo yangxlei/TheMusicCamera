@@ -18,6 +18,10 @@
 @end
 
 @interface VPImageCropperViewController : UIViewController
+{
+    UIButton* onebtn;
+    UIButton* fourbtn;
+}
 
 @property (nonatomic, assign) NSInteger tag;
 @property (nonatomic, assign) id<VPImageCropperDelegate> delegate;

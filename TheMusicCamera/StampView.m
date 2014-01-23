@@ -10,6 +10,7 @@
 #import "CustomButton.h"
 #import "StoreKitHelper.h"
 #import "DataManager.h"
+#import "UIButton+EnlargeArea.h"
 
 @implementation StampView
 
@@ -35,6 +36,8 @@
 {
     dataManager = [DataManager sharedManager];
 
+    stampType = type;
+    
     switch (type) {
         case 1:
         {
@@ -108,6 +111,7 @@
                         button.frame = CGRectMake(35+95*i+(i/3*35), 40+100*j, 60, 60);
                         [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*2+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]] forState:UIControlStateNormal];
                         button.btnImage = [UIImage imageNamed:[NSString stringWithFormat:@"frame_%d_%d",i*2+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]];
+                        NSLog(@"======%@",[NSString stringWithFormat:@"frame_%d_%d",i*2+j+1,[[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"] intValue]]);
                         [button addTarget:self action:@selector(stampSelect:) forControlEvents:UIControlEventTouchUpInside];
                         [scrollView addSubview:button];
                         
@@ -132,19 +136,23 @@
         default:
             break;
     }
-    UIButton *leftArrow = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftArrow = [UIButton buttonWithType:UIButtonTypeCustom];
     leftArrow.frame = CGRectMake(10, 130, 20, 21);
     [leftArrow setBackgroundImage:[UIImage imageNamed:@"arrow_left"] forState:UIControlStateNormal];
+    [leftArrow setEnlargeEdgeWithTop:20 right:20 bottom:20 left:20];
     [leftArrow addTarget:self action:@selector(leftBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:leftArrow];
     
-    UIButton *rightArrow = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightArrow = [UIButton buttonWithType:UIButtonTypeCustom];
     rightArrow.frame = CGRectMake(290, 130, 20, 21);
     [rightArrow setBackgroundImage:[UIImage imageNamed:@"arrow_right"] forState:UIControlStateNormal];
+    [rightArrow setEnlargeEdgeWithTop:20 right:20 bottom:20 left:20];
     [rightArrow addTarget:self action:@selector(rightBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:rightArrow];
 
-    
+    currentPage = 0;
+    [self showArrow];
+
 }
 
 - (void)leftBtn:(UIButton *)button
@@ -202,7 +210,44 @@
     currentPage = floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     NSLog(@"currentPage  %d",currentPage);
     
-    
+    [self showArrow];
+}
+
+- (void)showArrow
+{
+    if (stampType==1) {
+        if (currentPage==0) {
+            rightArrow.hidden = NO;
+            leftArrow.hidden = YES;
+        }
+        else if(currentPage==3)
+        {
+            rightArrow.hidden = YES;
+            leftArrow.hidden = NO;
+        }
+        else
+        {
+            rightArrow.hidden = NO;
+            leftArrow.hidden = NO;
+        }
+    }
+    else if (stampType==2)
+    {
+        if (currentPage==0) {
+            rightArrow.hidden = NO;
+            leftArrow.hidden = YES;
+        }
+        else if(currentPage==2)
+        {
+            rightArrow.hidden = YES;
+            leftArrow.hidden = NO;
+        }
+        else
+        {
+            rightArrow.hidden = NO;
+            leftArrow.hidden = NO;
+        }
+    }
 }
 
 @end

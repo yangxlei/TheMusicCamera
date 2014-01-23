@@ -88,10 +88,14 @@
   }
   
   [scrollView setContentSize:CGSizeMake(right_margin, 160)];
-
+    scrollView.pagingEnabled = YES;
+    scrollView.delegate = self;
+    
   year = 0 ;
   month = 0;
   stampItem = 0;
+    leftArrow.hidden = YES;
+    rightArrow.hidden = NO;
 }
 
 -(void) selectItem:(UIButton*)sender
@@ -157,12 +161,36 @@
 
 -(IBAction) arrowLeft:(id)sender
 {
+    leftArrow.hidden = YES;
+    rightArrow.hidden = NO;
+
   [scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
 
 -(IBAction) arrowRight:(id)sender
 {
+    leftArrow.hidden = NO;
+    rightArrow.hidden = YES;
+
   [scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
+}
+
+- (void) scrollViewDidScroll:(UIScrollView *)sender {
+    // 得到每页宽度
+    CGFloat pageWidth = sender.frame.size.width;
+    // 根据当前的x坐标和页宽度计算出当前页数
+    int currentPage = floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    NSLog(@"currentPage  %d",currentPage);
+    if (currentPage==0) {
+        leftArrow.hidden = YES;
+        rightArrow.hidden = NO;
+    }
+    else
+    {
+        leftArrow.hidden = NO;
+        rightArrow.hidden = YES;
+
+    }
 }
 
 @end

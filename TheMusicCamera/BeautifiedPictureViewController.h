@@ -11,11 +11,14 @@
 #import "TextFontViewController.h"
 #import "ImagePickerController.h"
 #import "StampAgeController.h"
+#import "VPImageCropperViewController.h"
+
+#define ORIGINAL_MAX_WIDTH 640.0f
 
 @class DataManager;
 //@class StampView;
 
-@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, ImagePickerControllerDelegate,StampViewDelegate,TextFontVCDelegate, StampAgeControllerDelegate>
+@interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, StampViewDelegate,TextFontVCDelegate, StampAgeControllerDelegate, UIImagePickerControllerDelegate,VPImageCropperDelegate>
 {
     IBOutlet UIImageView* imageView;
     IBOutlet UIView *mianView;

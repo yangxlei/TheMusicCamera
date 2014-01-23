@@ -25,6 +25,10 @@
     UIScrollView *scrollView;
     int totaolPage;
     
+    UIButton *leftArrow;
+    UIButton *rightArrow;
+    int stampType;
+    
 }
 
 @property (nonatomic, strong) id<StampViewDelegate> delegate;

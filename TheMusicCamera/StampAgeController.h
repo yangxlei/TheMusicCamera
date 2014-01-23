@@ -18,7 +18,11 @@
 
 @end
 
-@interface StampAgeController : UIViewController<AgeDialogDelegate>
+@interface StampAgeController : UIViewController<AgeDialogDelegate,UIScrollViewDelegate>
+{
+    __weak IBOutlet UIButton *leftArrow;
+    __weak IBOutlet UIButton *rightArrow;
+}
 
 @property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, strong) IBOutlet MQEditField* age;

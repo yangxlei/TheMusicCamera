@@ -167,6 +167,16 @@
 
             [player play];
 
+            intPlayTime = 0;
+            NSTimeInterval timeInterval =0.01 ;
+            //定时器
+            timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
+                                                     target:self
+                                                   selector:@selector(playTimer:)
+                                                   userInfo:nil
+                                                    repeats:YES];
+            [timer fire];
+
         }
         
     }
@@ -200,6 +210,31 @@
         [timer fire];
         
     }
+}
+
+- (void)playTimer:(NSTimer *)theTimer
+{
+    intPlayTime = intPlayTime+0.01;
+    NSString *timeStr = [NSString stringWithFormat:@"%.2f",intTime];
+    
+    timeStr = [timeStr stringByReplacingOccurrencesOfString :@"." withString:@":"];
+    
+    NSString *playtimeStr = [NSString stringWithFormat:@"%.2f",intPlayTime];
+    
+    playtimeStr = [playtimeStr stringByReplacingOccurrencesOfString :@"." withString:@":"];
+
+    timeLabel.text = [NSString stringWithFormat:@"%@/%@",playtimeStr,timeStr];
+
+    if (intPlayTime==intTime) {
+        [timer invalidate];
+        
+        _isPlaying = YES;
+        recorder = nil;
+        deleteBtn.hidden = NO;
+        saveBtn.hidden = NO;
+        
+    }
+
 }
 
 - (void)showTimer:(NSTimer *)theTimer
@@ -265,6 +300,7 @@
         saveBtn.hidden = YES;
         deleteBtn.hidden = YES;
         intTime = 0.00;
+        intPlayTime = 0.00;
         timeLabel.text = [NSString stringWithFormat:@"0:00/10:00"];
         
         [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_rec"] forState:UIControlStateNormal];
