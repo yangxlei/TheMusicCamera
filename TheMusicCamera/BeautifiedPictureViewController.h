@@ -20,8 +20,11 @@
 
 @interface BeautifiedPictureViewController : UIViewController<UINavigationControllerDelegate, StampViewDelegate,TextFontVCDelegate, StampAgeControllerDelegate, UIImagePickerControllerDelegate,VPImageCropperDelegate>
 {
-    IBOutlet UIImageView* imageView;
-    IBOutlet UIView *mianView;
+//    IBOutlet UIImageView* imageView;
+//    IBOutlet UIView *mianView;
+    
+    UIView *screenView;
+    UIImageView *photoImg;
     
     DataManager *dataManager;
 

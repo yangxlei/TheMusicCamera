@@ -17,7 +17,7 @@
     BOOL isPlay;
     DataManager *dataManager;
     BOOL cameraStop;
-  
+    UIImageView *myAnimatedView;
   BOOL isFront ;
     
 }

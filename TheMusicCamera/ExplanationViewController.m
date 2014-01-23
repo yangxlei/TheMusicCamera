@@ -38,7 +38,7 @@
         imageV.image = [UIImage imageNamed:[NSString stringWithFormat:@"howTo_0%d.png",i+1]];
         [scrollView addSubview:imageV];
     }
-    scrollView.contentSize =CGSizeMake(320*4, 568);
+    scrollView.contentSize =CGSizeMake(320*4, self.view.frame.size.height);
     scrollView.delegate = self;
     currentPage = 0;
     self.hidesBottomBarWhenPushed = YES;
