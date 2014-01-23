@@ -69,13 +69,14 @@
                          [UIImage imageNamed:@"anime_3.png"],
                          [UIImage imageNamed:@"anime_4.png"], nil];
     
-    UIImageView *myAnimatedView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 80, 320, 320)];
+    myAnimatedView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 80, 320, 320)];
     myAnimatedView.animationImages = myImages; //animationImages属性返回一个存放动画图片的数组
     myAnimatedView.animationDuration = 1.0; //浏览整个图片一次所用的时间
     myAnimatedView.animationRepeatCount = 0; // 0 = loops forever 动画重复次数
     [myAnimatedView startAnimating]; 
     [self.view addSubview:myAnimatedView];
-
+    myAnimatedView.hidden = YES;
+    
 //    MPMusicPlayerController *mpc = [MPMusicPlayerController applicationMusicPlayer];
 //    mpc.volume = 0;  //0.0~1.0
     ///////////////////磊磊上面是我加的
@@ -267,10 +268,12 @@
       
       if (position == AVCaptureDevicePositionFront)
       {
+          myAnimatedView.hidden = YES;
         newCamera = [self cameraWithPosition:AVCaptureDevicePositionBack];
       }
       else
       {
+          myAnimatedView.hidden = NO;
         newCamera = [self cameraWithPosition:AVCaptureDevicePositionFront];
       }
       _device = newCamera;
@@ -404,7 +407,6 @@
   animation.duration = 0.5f;//间隔的时间
   animation.timingFunction = UIViewAnimationCurveEaseInOut;
   animation.type = @"cameraIrisHollowClose";
-  
   [view.layer addAnimation:animation forKey:@"HollowClose"];
 }
 

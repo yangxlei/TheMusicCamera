@@ -49,49 +49,78 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
-        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
-//        imageView.frame = CGRectMake(0, 0, 300, 300);
-    }
-    else
-    {
-        if (iPhone5) {
-            mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
-//            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
-        }
-        else
-        {
-            NSLog(@"---%f----%f----%f---%f",mianView.frame.origin.x,mianView.frame.origin.y,mianView.frame.size.width,mianView.frame.size.height);
-            mianView.frame = CGRectMake(25, 60, 270, 360);
-//            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
-            
-        }
-//        imageView.frame = CGRectMake(0, 0, 300, 400);
-    }
+//    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
+//        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
+////        imageView.frame = CGRectMake(0, 0, 300, 300);
+//    }
+//    else
+//    {
+//        if (iPhone5) {
+//            mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
+////            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+//        }
+//        else
+//        {
+//            NSLog(@"---%f----%f----%f---%f",mianView.frame.origin.x,mianView.frame.origin.y,mianView.frame.size.width,mianView.frame.size.height);
+//            mianView.frame = CGRectMake(25, 60, 270, 360);
+////            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+//            
+//        }
+////        imageView.frame = CGRectMake(0, 0, 300, 400);
+//    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNPHOTOVC" object:nil];
     [UIApplication sharedApplication].statusBarHidden=YES;
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
-        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
-//        imageView.frame = CGRectMake(0, 0, 300, 300);
-    }
-    else
-    {
-        if (iPhone5) {
-            mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
-//            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+//    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
+//        mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
+////        imageView.frame = CGRectMake(0, 0, 300, 300);
+//    }
+//    else
+//    {
+//        if (iPhone5) {
+//            mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
+////            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+//        }
+//        else
+//        {
+//            NSLog(@"---%f----%f----%f---%f",mianView.frame.origin.x,mianView.frame.origin.y,mianView.frame.size.width,mianView.frame.size.height);
+//            mianView.frame = CGRectMake(25, 60, 270, 360);
+////            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 0, mianView.frame.size.width, mianView.frame.size.height)];
+//        }
+////        imageView.frame = CGRectMake(0, 0, 300, 400);
+//    }
+
+    CGRect rect;
+    if (iPhone5) {
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1)
+        {
+            rect = CGRectMake(10, 60, 300, 300);
         }
         else
         {
-            NSLog(@"---%f----%f----%f---%f",mianView.frame.origin.x,mianView.frame.origin.y,mianView.frame.size.width,mianView.frame.size.height);
-            mianView.frame = CGRectMake(25, 60, 270, 360);
-//            imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 0, mianView.frame.size.width, mianView.frame.size.height)];
+            rect = CGRectMake(10, 60, 300, 400);
+            
         }
-//        imageView.frame = CGRectMake(0, 0, 300, 400);
     }
+    else
+    {
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1)
+        {
+            rect = CGRectMake(10, 60, 300, 300);
+        }
+        else
+        {
+            rect = CGRectMake(25, 60, 270, 360);
+            
+        }
+    }
+    
+    screenView.frame = rect;
+    photoImg.frame = CGRectMake(0, 0, screenView.frame.size.width, screenView.frame.size.height);
+    
 }
 
 - (void)viewDidLoad
@@ -116,6 +145,38 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIButton *editBtn = [self navgationButton:@"button_OK" andFrame:CGRectMake(250, 10, 62, 31)];
     [editBtn addTarget:self action:@selector(okBtuuon) forControlEvents:UIControlEventTouchUpInside];
 
+    CGRect rect;
+    if (iPhone5) {
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1)
+        {
+            rect = CGRectMake(10, 60, 300, 300);
+        }
+        else
+        {
+            rect = CGRectMake(10, 60, 300, 400);
+
+        }
+    }
+    else
+    {
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1)
+        {
+            rect = CGRectMake(10, 60, 300, 300);
+        }
+        else
+        {
+            rect = CGRectMake(25, 60, 270, 360);
+            
+        }
+    }
+    
+    screenView = [[UIView alloc]initWithFrame:rect];
+    screenView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:screenView];
+    
+    photoImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, screenView.frame.size.width, screenView.frame.size.height)];
+    [screenView addSubview:photoImg];
+    
     stampView = [[StampView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-51-269, 320, 269)];
     stampView.hidden = YES;
     stampView.delegate = self;
@@ -138,7 +199,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)backBtuuon
 {
-    for (UIView *subview in mianView.subviews) {
+    for (UIView *subview in screenView.subviews) {
         [subview removeFromSuperview];
 	}
 
@@ -221,8 +282,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         [zdsView hideEditingHandles];
     }
     
-    UIGraphicsBeginImageContext(mianView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
-    [mianView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
+    UIGraphicsBeginImageContext(screenView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
+    [screenView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();//返回一个基于当前图形上下文的图片
     UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
     UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
@@ -231,7 +292,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"shareImage"];
 
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RETURNSHAREVC" object:nil];
-  	for (UIView *subview in mianView.subviews) {
+  	for (UIView *subview in screenView.subviews) {
         [subview removeFromSuperview];
 	}
 
@@ -323,14 +384,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         userResizableView1.contentView = imageV;
         userResizableView1.preventsPositionOutsideSuperview = NO;
         [userResizableView1 showEditingHandles];
-        [mianView addSubview:userResizableView1];
+        [screenView addSubview:userResizableView1];
         
         [stampArr addObject:userResizableView1];
         
     }
     else if (type==2)
     {
-        
         if (stampFrameArr.count!=0) {
             for (UIImageView *mView in stampFrameArr) {
                 [mView removeFromSuperview];
@@ -339,18 +399,17 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         }
         UIImageView *image;
         if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
-            image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+            image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, screenView.frame.size.width, screenView.frame.size.height)];
         }
         else
         {
-            image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 400)];
+            image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, screenView.frame.size.width, screenView.frame.size.height)];
         }
         image.image = img;
-        [mianView addSubview:image];
-        [mianView insertSubview:image atIndex:1];
+        [screenView addSubview:image];
+        [screenView insertSubview:image atIndex:1];
         [stampFrameArr addObject:image];
     }
-
 }
 
 - (void)selectImageWating
@@ -374,7 +433,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     userResizableView2.contentView = tv;
     userResizableView2.preventsPositionOutsideSuperview = NO;
     [userResizableView2 showEditingHandles];
-    [mianView addSubview:userResizableView2];
+    [screenView addSubview:userResizableView2];
 
     [stampArr addObject:userResizableView2];
 
@@ -416,7 +475,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     ageView.contentView = imageV;
     ageView.preventsPositionOutsideSuperview = NO;
     [ageView showEditingHandles];
-    [mianView addSubview:ageView];
+    [screenView addSubview:ageView];
     [stampArr addObject:ageView];
 
 }
@@ -458,34 +517,44 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage
 {
-  if (imageView!=nil) {
+  if (photoImg!=nil) {
 //    [imageView removeFromSuperview];
-    cleanRemoveFromSuperview(imageView);
+    cleanRemoveFromSuperview(photoImg);
   }
-  if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1) {
-    mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 300);
-    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
-    [mianView addSubview:imageView];
-  }
-  else
-  {
+    CGRect rect;
     if (iPhone5) {
-      mianView.frame = CGRectMake(mianView.frame.origin.x, mianView.frame.origin.y, 300, 400);
-      imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1)
+        {
+            rect = CGRectMake(10, 60, 300, 300);
+        }
+        else
+        {
+            rect = CGRectMake(10, 60, 300, 400);
+            
+        }
     }
     else
     {
-      mianView.frame = CGRectMake(25, 60, 270, 360);
-      imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mianView.frame.size.width, mianView.frame.size.height)];
-      
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"]intValue]==1)
+        {
+            rect = CGRectMake(10, 60, 300, 300);
+        }
+        else
+        {
+            rect = CGRectMake(25, 60, 270, 360);
+            
+        }
     }
-    [mianView addSubview:imageView];
-  }
+    
+    screenView.frame = rect;
+    
+    photoImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, screenView.frame.size.width, screenView.frame.size.height)];
+    [screenView addSubview:photoImg];
   
-  imageView.image = editedImage;
+  photoImg.image = editedImage;
   dataManager.shareImg = editedImage;
-  
 }
+
 - (void)imageCropperDidCancel:(VPImageCropperViewController *)cropperViewController
 {
     self.hidesBottomBarWhenPushed = NO;
