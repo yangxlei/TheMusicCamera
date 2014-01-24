@@ -45,6 +45,8 @@
             break;
     }
     
+    
+    
     switch (self.imageOrientation) {
         case UIImageOrientationUpMirrored:
         case UIImageOrientationDownMirrored:
@@ -88,10 +90,12 @@
     return img;
 }
 
+
 @end
 
 #import "VPImageCropperViewController.h"
 #import "DataManager.h"
+
 #import "Public.h"
 
 #define SCALE_FRAME_Y 100.0f
