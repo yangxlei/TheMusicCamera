@@ -47,8 +47,14 @@
   self.hidesBottomBarWhenPushed = YES;
     dataManager = [DataManager sharedManager];
 
-  [self initialize];
-  
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
+        [self initialize];
+
+    }
+    else
+    {
+        [self initializeVideo];
+    }
     _musicBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicstation"] intValue]==1) {
@@ -191,11 +197,9 @@
     // If you wish to cap the frame rate to a known value, such as 15 fps, set
     // minFrameDuration.
 //    output.minFrameDuration = CMTimeMake(1, 15);
-    device.ActiveVideoMinFrameDuration = CMTimeMake(1, 15);
+//    device.ActiveVideoMinFrameDuration = CMTimeMake(1, 15);
 
     // Start the session running to start the flow of data
-    [_session startRunning];
-
 }
 
 -(IBAction) back:(id)sender
@@ -337,47 +341,49 @@
     [_musicBtn setEnabled:NO];
     cameraStop = YES;
     
-  [self addHollowCloseToView:self.cameraView];
-  
-  //get connection
-  AVCaptureConnection *videoConnection = nil;
-  for (AVCaptureConnection *connection in _captureOutput.connections) {
-    for (AVCaptureInputPort *port in [connection inputPorts]) {
-      if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
-        videoConnection = connection;
-        break;
-      }
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
+        [self addHollowCloseToView:self.cameraView];
+        
+        //get connection
+        AVCaptureConnection *videoConnection = nil;
+        for (AVCaptureConnection *connection in _captureOutput.connections) {
+            for (AVCaptureInputPort *port in [connection inputPorts]) {
+                if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
+                    videoConnection = connection;
+                    break;
+                }
+            }
+            if (videoConnection) { break; }
+        }
+        
+        //get UIImage
+        [_captureOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
+         ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
+             //     _saveButton.hidden = NO;
+             //     _cancelButton.hidden = NO;
+             [self addHollowCloseToView:self.cameraView];
+             [_session stopRunning];
+             [self addHollowOpenToView:self.cameraView];
+             CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+             if (exifAttachments) {
+                 // Do something with the attachments.
+             }
+             // Continue as appropriate.
+             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
+             _finishImage = [[UIImage alloc] initWithData:imageData] ;
+             UIImageWriteToSavedPhotosAlbum(_finishImage, nil, nil, nil);//然后将该图片保存到图片图
+             [self.cameraView.layer removeAllAnimations];
+             [cameraBtn setEnabled:NO];
+             [self performSelector:@selector(resetCamear) withObject:nil afterDelay:0.8];
+         }];
+        
+        
+        UIGraphicsBeginImageContext(self.cameraView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
+        [self.cameraView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
+        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();//返回一个基于当前图形上下文的图片
+        UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
+        UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
     }
-    if (videoConnection) { break; }
-  }
-  
-  //get UIImage
-  [_captureOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
-   ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
-//     _saveButton.hidden = NO;
-//     _cancelButton.hidden = NO;
-     [self addHollowCloseToView:self.cameraView];
-     [_session stopRunning];
-     [self addHollowOpenToView:self.cameraView];
-     CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
-     if (exifAttachments) {
-       // Do something with the attachments.
-     }
-     // Continue as appropriate.
-     NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
-     _finishImage = [[UIImage alloc] initWithData:imageData] ;
-       UIImageWriteToSavedPhotosAlbum(_finishImage, nil, nil, nil);//然后将该图片保存到图片图
-     [self.cameraView.layer removeAllAnimations];
-     [cameraBtn setEnabled:NO];
-     [self performSelector:@selector(resetCamear) withObject:nil afterDelay:0.8];
-   }];
-    
-    
-//    UIGraphicsBeginImageContext(self.cameraView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
-//    [self.cameraView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
-//    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();//返回一个基于当前图形上下文的图片
-//    UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
-//    UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
 
 }
 
@@ -387,7 +393,15 @@
   [_musicBtn setEnabled:YES];
   cameraStop = NO;
   
-  [self initialize];
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
+        [self initialize];
+        
+    }
+    else
+    {
+        [self initializeVideo];
+    }
 }
 
 - (void)addHollowOpenToView:(UIView *)view
@@ -448,6 +462,10 @@
         
         [avAudioPlayer play];
     }
+    else
+    {
+    
+    }
 
 }
 
@@ -469,6 +487,10 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 {
     // Create a UIImage from the sample buffer data
     if (cameraStop) {
+        cameraStop = NO;
+
+//        [self performSelector:@selector(resetCamear) withObject:nil afterDelay:0.8];
+
         UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
         
         int height ;
@@ -488,8 +510,11 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);//然后将该图片保存到图片图
 //
+        cameraStop = NO;
 //        NSData *mData = UIImageJPEGRepresentation(image, 0.5);//这里的mData是NSData对象，后面的0.5代表生成的图片质量
-        [_session stopRunning];
+        [self addHollowCloseToView:self.cameraView];
+//        [_session stopRunning];
+        [self addHollowOpenToView:self.cameraView];
     }
     
 }
