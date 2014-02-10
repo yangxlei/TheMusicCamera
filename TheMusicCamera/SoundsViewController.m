@@ -54,11 +54,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self navgationImage:@"header_sound_setting"];
-    
+//    [self navgationImage:@"header_sound_setting"];
+    [self navgationImage:[NSString stringWithFormat:@"%@header_sound_setting",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+
     if (iPhone5) {
         UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(20, 168, 281, 252)];
-        image.image = [UIImage imageNamed:@"setting_sound_image_1136"];
+//        image.image = [UIImage imageNamed:@"setting_sound_image_1136"];
+        image.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@setting_sound_image_1136",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
         [self.view addSubview:image];
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -71,7 +73,8 @@
     else
     {
         UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(20, 152, 281, 207)];
-        image.image = [UIImage imageNamed:@"setting_sound_image_960"];
+//        image.image = [UIImage imageNamed:@"setting_sound_image_960"];
+        image.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@setting_sound_image_960",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
         [self.view addSubview:image];
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];

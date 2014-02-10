@@ -28,8 +28,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self navgationImage:@"header_sound_list"];
-    
+//    [self navgationImage:@"header_sound_list"];
+    [self navgationImage:[NSString stringWithFormat:@"%@header_sound_list",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+
     UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
@@ -87,16 +88,38 @@
     
     UIImageView *bgImg = (UIImageView *)[cell viewWithTag:1];
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
+    
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+
     if (indexPath.row==0) {
         bgImg.image = [UIImage imageNamed:@"list_top"];
-        nameLabel.text = [NSString stringWithFormat:@"なし"];
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            nameLabel.text = [NSString stringWithFormat:@"无"];
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            nameLabel.text = [NSString stringWithFormat:@"NO"];
+        }
+        else
+        {
+            nameLabel.text = [NSString stringWithFormat:@"なし"];
+        }
 
     }
     else
     {
         UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
-        nameLabel.text = [NSString stringWithFormat:@"あり"];
-        
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            nameLabel.text = [NSString stringWithFormat:@"有"];
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            nameLabel.text = [NSString stringWithFormat:@"YES"];
+        }
+        else
+        {
+            nameLabel.text = [NSString stringWithFormat:@"あり"];//有
+        }
+
         bgImg.image = [UIImage imageNamed:@"list_bottom"];
     }
     

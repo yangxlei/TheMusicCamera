@@ -28,7 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self navgationImage:@"header_sound_btn"];
+//    [self navgationImage:@"header_sound_btn"];
+    [self navgationImage:[NSString stringWithFormat:@"%@header_sound_btn",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
 
     UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];

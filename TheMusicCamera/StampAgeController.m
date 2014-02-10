@@ -33,14 +33,20 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [ageBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@age_btn",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forState:UIControlStateNormal];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.hidesBottomBarWhenPushed = YES;
 
-  [self navgationImage:@"header_age_stamp.png"];
-  
+//  [self navgationImage:@"header_age_stamp.png"];
+    [self navgationImage:[NSString stringWithFormat:@"%@header_age_stamp.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+
   demoView.contentMode = UIViewContentModeScaleAspectFit;
   age.userInteractionEnabled = NO;
   age.backgroundColor = [UIColor clearColor];

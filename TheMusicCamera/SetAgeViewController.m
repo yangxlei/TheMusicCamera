@@ -36,8 +36,9 @@
 	// Do any additional setup after loading the view.
     self.hidesBottomBarWhenPushed = YES;
 
-  [self navgationImage:@"header_age_stamp.png"];
-  
+//  [self navgationImage:@"header_age_stamp.png"];
+    [self navgationImage:[NSString stringWithFormat:@"%@header_age_stamp.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+
   UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
   [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
   

@@ -20,6 +20,7 @@
 
 @interface StampAgeController : UIViewController<AgeDialogDelegate,UIScrollViewDelegate>
 {
+    __weak IBOutlet UIButton *ageBtn;
     __weak IBOutlet UIButton *leftArrow;
     __weak IBOutlet UIButton *rightArrow;
 }

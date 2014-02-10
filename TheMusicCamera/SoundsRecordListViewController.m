@@ -31,12 +31,13 @@
     [super viewDidLoad];
     //header_record_sound
     
-    [self navgationImage:@"header_record_sound"];
-    
+//    [self navgationImage:@"header_record_sound"];
+    [self navgationImage:[NSString stringWithFormat:@"%@header_record_sound",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+
     UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *editBtn = [self navgationButton:@"button_edit" andFrame:CGRectMake(250, 7, 62, 31)];
+    UIButton *editBtn = [self navgationButton:[NSString stringWithFormat:@"%@btn_edit",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]] andFrame:CGRectMake(250, 7, 62, 31)];
     [editBtn addTarget:self action:@selector(editBtuuon:) forControlEvents:UIControlEventTouchUpInside];
 
     self.hidesBottomBarWhenPushed = YES;
@@ -68,13 +69,13 @@
 {
     if (isEdit) {
         isEdit = NO;
-        [button setBackgroundImage:[UIImage imageNamed:@"button_edit"] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@btn_edit",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forState:UIControlStateNormal];
         selectIndex = -1;
     }
     else
     {
         isEdit = YES;
-        [button setBackgroundImage:[UIImage imageNamed:@"button_finish"] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@button_finish",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forState:UIControlStateNormal];
     }
     [tableViews reloadData];
 

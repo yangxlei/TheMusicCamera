@@ -24,15 +24,15 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="gLQ-BH-xjn">
-                                <rect key="frame" x="0.0" y="239.99999999999997" width="320" height="240.00000000000003"/>
+                                <rect key="frame" x="0.0" y="240" width="320" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decorationage_stamp.png" id="x0d-gc-FeP">
-                                        <rect key="frame" x="0.0" y="-1" width="320" height="240.00000000000003"/>
+                                        <rect key="frame" x="0.0" y="-1" width="320" height="240"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Os2-2H-nSf">
-                                        <rect key="frame" x="0.0" y="25.000000000000028" width="320" height="215"/>
+                                        <rect key="frame" x="0.0" y="25" width="320" height="215"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     </scrollView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tP6-HG-vUQ">
@@ -75,6 +75,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ageBtn" destination="QdO-fO-Ssg" id="N2O-Hx-dnX"/>
                         <outlet property="demoView" destination="brk-qQ-FUm" id="ROr-Gg-e5G"/>
                         <outlet property="leftArrow" destination="tP6-HG-vUQ" id="E1W-ti-PBi"/>
                         <outlet property="rightArrow" destination="V8b-Fo-eeO" id="fbU-SV-5ym"/>

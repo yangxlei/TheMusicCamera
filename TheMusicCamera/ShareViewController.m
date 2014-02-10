@@ -48,7 +48,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.hidesBottomBarWhenPushed = YES;
-    [self navgationImage:@"header_share"];
+//    [self navgationImage:@"header_share"];
+    [self navgationImage:[NSString stringWithFormat:@"%@header_share",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+
     dataManager = [DataManager sharedManager];
 
     UIButton *btn = [self navgationButton:@"button_top" andFrame:CGRectMake(250, 10, 62, 31)];

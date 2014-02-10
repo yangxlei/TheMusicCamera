@@ -45,8 +45,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self navgationImage:@"header_sound_setting"];
-
+    [self navgationImage:[NSString stringWithFormat:@"%@header_setting",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+    
     dataManager = [DataManager sharedManager];
     stationLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 

@@ -30,16 +30,32 @@ ViewController *_viewController;
   _viewController = self;
   
     NSArray *fontArray = [UIFont familyNames];
-    NSLog(@"fontArray  %@",fontArray);
+//    NSLog(@"fontArray  %@",fontArray);
     
     firstEntry = YES;
 
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    NSLog( @"currentLanguage====   %@" , currentLanguage);
+    
+    if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"c_"] forKey:@"languages"];
+    }else if ([currentLanguage isEqualToString:@"en"])
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"e_"] forKey:@"languages"];
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@""] forKey:@"languages"];
+    }
+    
     [self loadMainView];
     
     if ([[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"]]isEqualToString:@"(null)"]) {
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicID"];
         
         [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"default01.wav"] forKey:@"musicName"];
+
 
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"musicrepeat"];
 
@@ -50,6 +66,8 @@ ViewController *_viewController;
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"shareImage"];
 
     }
+    
+    
     dataManager = [DataManager sharedManager];
     
 }
@@ -79,28 +97,33 @@ ViewController *_viewController;
     
     NSArray *ctrlArr = [NSArray arrayWithObjects:bpNC,soundsNC,photoNC,settingNC,shareNC,nil];
     
+
     NSMutableDictionary *imgDic = [NSMutableDictionary dictionaryWithCapacity:3];
-	[imgDic setObject:[UIImage imageNamed:@"main_tab_decoration_off.png"] forKey:@"Default"];
-	[imgDic setObject:[UIImage imageNamed:@"main_tab_decoration_on.png"] forKey:@"Highlighted"];
-	[imgDic setObject:[UIImage imageNamed:@"main_tab_decoration_on.png"] forKey:@"Seleted"];
+    NSLog(@"%@",[NSString stringWithFormat:@"%@main_tab_decoration_off",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]);
+	[imgDic setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_decoration_off",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Default"];
+    
+    [imgDic setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_decoration_on",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Highlighted"];
+	[imgDic setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_decoration_on",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Seleted"];
+
 	NSMutableDictionary *imgDic2 = [NSMutableDictionary dictionaryWithCapacity:3];
-	[imgDic2 setObject:[UIImage imageNamed:@"main_tab_sound_off.png"] forKey:@"Default"];
-	[imgDic2 setObject:[UIImage imageNamed:@"main_tab_sound_on.png"] forKey:@"Highlighted"];
-	[imgDic2 setObject:[UIImage imageNamed:@"main_tab_sound_on.png"] forKey:@"Seleted"];
+    [imgDic2 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_sound_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Default"];
+	[imgDic2 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_sound_on.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Highlighted"];
+	[imgDic2 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_sound_on.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Seleted"];
+
 	NSMutableDictionary *imgDic3 = [NSMutableDictionary dictionaryWithCapacity:3];
-	[imgDic3 setObject:[UIImage imageNamed:@"main_tab_camera.png"] forKey:@"Default"];
-	[imgDic3 setObject:[UIImage imageNamed:@"main_tab_camera.png"] forKey:@"Highlighted"];
-	[imgDic3 setObject:[UIImage imageNamed:@"main_tab_camera.png"] forKey:@"Seleted"];
+    [imgDic3 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_camera.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Default"];
+	[imgDic3 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_camera.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Highlighted"];
+	[imgDic3 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_camera.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Seleted"];
+
 	NSMutableDictionary *imgDic4 = [NSMutableDictionary dictionaryWithCapacity:3];
-	[imgDic4 setObject:[UIImage imageNamed:@"main_tab_setting_off.png"] forKey:@"Default"];
-	[imgDic4 setObject:[UIImage imageNamed:@"main_tab_setting_on.png"] forKey:@"Highlighted"];
-	[imgDic4 setObject:[UIImage imageNamed:@"main_tab_setting_on.png"] forKey:@"Seleted"];
+    [imgDic4 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_setting_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Default"];
+	[imgDic4 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_setting_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Highlighted"];
+	[imgDic4 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_setting_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Seleted"];
+
 	NSMutableDictionary *imgDic5 = [NSMutableDictionary dictionaryWithCapacity:3];
-	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_off.png"] forKey:@"Default"];
-//	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_on.png"] forKey:@"Highlighted"];
-//	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_on.png"] forKey:@"Seleted"];
-	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_off.png"] forKey:@"Highlighted"];
-	[imgDic5 setObject:[UIImage imageNamed:@"main_tab_osusume_off.png"] forKey:@"Seleted"];
+    [imgDic5 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_osusume_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Default"];
+    [imgDic5 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_osusume_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Highlighted"];
+    [imgDic5 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_osusume_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Seleted"];
 
 	NSArray *imgArr = [NSArray arrayWithObjects:imgDic,imgDic2,imgDic3,imgDic4,imgDic5,nil];
     

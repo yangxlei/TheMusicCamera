@@ -138,7 +138,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     selectBtnTag = 1;
     
     [self navgationImage:@"header"];
-    
+//    [self navgationImage:[NSString stringWithFormat:@"%@header",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+
     UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
 

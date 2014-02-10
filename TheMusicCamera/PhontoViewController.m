@@ -42,11 +42,14 @@
     backImage = [[UIImageView alloc]initWithFrame:self.view.frame];
     
     if (iPhone5) {
-        backImage.image = [UIImage imageNamed:@"mama_camera_top_1136.png"];
+
+//        backImage.image = [UIImage imageNamed:@"mama_camera_top_1136.png"];
+        backImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@mama_camera_top_1136",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
     }
     else
     {
-        backImage.image = [UIImage imageNamed:@"mama_camera_top_960.png"];
+        backImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@mama_camera_top_960",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
+//        backImage.image = [UIImage imageNamed:@"mama_camera_top_960.png"];
 
     }
     

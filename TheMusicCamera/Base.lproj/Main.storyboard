@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="width" constant="80" id="zzI-4W-7RA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="decoration_tab_footer_stamp_off.png">
+                                <state key="normal" image="e_decoration_tab_footer_stamp_off.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="decoration_tab_footer_stamp_on.png"/>
@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="height" constant="51" id="zcy-Ps-T7j"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="decoration_tab_footer_frame_off.png">
+                                <state key="normal" image="e_decoration_tab_footer_frame_off.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="decoration_tab_footer_frame_on.png"/>
@@ -93,7 +93,7 @@
                                     <constraint firstAttribute="width" constant="80" id="xrf-qT-PKr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="decoration_tab_footer_age_off.png">
+                                <state key="normal" image="e_decoration_tab_footer_age_off.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="decoration_tab_footer_age_on.png"/>
@@ -109,7 +109,7 @@
                                     <constraint firstAttribute="height" constant="51" id="rJM-9b-7hj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="decoration_tab_footer_mojiire_off.png">
+                                <state key="normal" image="e_decoration_tab_footer_mojiire_off.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="decoration_tab_ooter_mojiire_on.png"/>
@@ -292,15 +292,15 @@
                                     <constraint firstAttribute="height" constant="568" id="UfJ-rI-uyM"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_setting_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-rV-73Z">
-                                <rect key="frame" x="20" y="63" width="55" height="13"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="e_setting_setting_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-rV-73Z">
+                                <rect key="frame" x="20" y="63" width="95" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_ver_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="eU4-AQ-Kyb">
-                                <rect key="frame" x="20" y="159" width="110" height="13"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="e_setting_ver_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="eU4-AQ-Kyb">
+                                <rect key="frame" x="20" y="159" width="57" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_info_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="RhN-bI-Hfg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="e_setting_info_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="RhN-bI-Hfg">
                                 <rect key="frame" x="18" y="297" width="110" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -308,7 +308,7 @@
                                 <rect key="frame" x="10" y="319" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="setting_04.png">
+                                <state key="normal" backgroundImage="e_setting_04.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -330,7 +330,7 @@
                                 <rect key="frame" x="10" y="224" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="setting_03.png">
+                                <state key="normal" backgroundImage="e_setting_03.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -341,7 +341,7 @@
                                 <rect key="frame" x="10" y="182" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="setting_02.png">
+                                <state key="normal" backgroundImage="e_setting_02.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -349,7 +349,7 @@
                                 <rect key="frame" x="10" y="85" width="302" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="setting_01.png">
+                                <state key="normal" backgroundImage="e_setting_01.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -403,7 +403,7 @@
                                 <rect key="frame" x="20" y="137" width="111" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="btn_setting_left.png">
+                                <state key="normal" backgroundImage="e_sound_btn_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -414,7 +414,7 @@
                                 <rect key="frame" x="189" y="137" width="111" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="btn_setting_right.png">
+                                <state key="normal" backgroundImage="e_sound_btn_right.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -453,7 +453,7 @@
                                     <constraint firstAttribute="width" constant="215" id="kfn-sp-KdT"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_save_pop.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-i7-Pee">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e_share_save_pop.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-i7-Pee">
                                 <rect key="frame" x="38" y="62" width="244" height="41"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
@@ -477,7 +477,7 @@
                                     <constraint firstAttribute="height" constant="149" id="WPx-Re-EBV"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_announce.png" translatesAutoresizingMaskIntoConstraints="NO" id="VEx-Rf-kvp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e_share_announce.png" translatesAutoresizingMaskIntoConstraints="NO" id="VEx-Rf-kvp">
                                 <rect key="frame" x="36" y="432" width="248" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -709,7 +709,7 @@
                                     <constraint firstAttribute="width" constant="302" id="Jml-fA-Igw"/>
                                     <constraint firstAttribute="height" constant="40" id="bTv-xK-dGW"/>
                                 </constraints>
-                                <state key="normal" image="sound_setting_now_list2.png">
+                                <state key="normal" image="e_sound_setting_now_list2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -723,14 +723,14 @@
                                     <constraint firstAttribute="width" constant="302" id="dIS-tq-7Jo"/>
                                     <constraint firstAttribute="height" constant="41" id="mT3-Fi-v8u"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="sound_setting_now_list1.png">
+                                <state key="normal" title="Button" image="e_sound_setting_now_list1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="gotoSoundsList:" destination="nFA-Vz-LM8" eventType="touchUpInside" id="op7-XO-vi5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_setting_now.png" translatesAutoresizingMaskIntoConstraints="NO" id="EYl-Wc-25z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e_sound_setting_now_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="EYl-Wc-25z">
                                 <rect key="frame" x="20" y="53" width="109" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -738,12 +738,12 @@
                                     <constraint firstAttribute="height" constant="14" id="xPe-NQ-wjX"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recorded_sound.png" translatesAutoresizingMaskIntoConstraints="NO" id="qMf-E8-Zl7">
-                                <rect key="frame" x="21" y="448" width="80" height="15"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="e_sound_recorded.png" translatesAutoresizingMaskIntoConstraints="NO" id="qMf-E8-Zl7">
+                                <rect key="frame" x="21" y="448" width="120" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="BCJ-KW-XPf"/>
-                                    <constraint firstAttribute="width" constant="80" id="SOe-xG-dev"/>
+                                    <constraint firstAttribute="height" constant="12" id="eV0-92-K2j"/>
+                                    <constraint firstAttribute="width" constant="120" id="xOP-Be-271"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je5-9e-JLq">
@@ -753,7 +753,7 @@
                                     <constraint firstAttribute="width" constant="302" id="6im-cm-bEx"/>
                                     <constraint firstAttribute="height" constant="42" id="JBT-Ex-2dH"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="sound_setting_now_list3.png">
+                                <state key="normal" backgroundImage="e_sound_setting_now_list3.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -816,17 +816,16 @@
                         <constraints>
                             <constraint firstItem="nwa-06-HUf" firstAttribute="leading" secondItem="HH4-Bq-woi" secondAttribute="leading" id="3wm-og-wBo"/>
                             <constraint firstItem="8Eg-d7-m8Y" firstAttribute="leading" secondItem="Wua-T4-j8a" secondAttribute="leading" id="5uL-44-vRd"/>
+                            <constraint firstAttribute="bottom" secondItem="qMf-E8-Zl7" secondAttribute="bottom" constant="108" id="6yr-Zf-DYX"/>
                             <constraint firstItem="Hp9-wj-uhP" firstAttribute="leading" secondItem="Je5-9e-JLq" secondAttribute="leading" id="Ar2-Wd-y3E"/>
                             <constraint firstItem="Hp9-wj-uhP" firstAttribute="centerX" secondItem="Wua-T4-j8a" secondAttribute="centerX" id="CBg-U1-fgg"/>
                             <constraint firstItem="Hp9-wj-uhP" firstAttribute="centerX" secondItem="ini-cl-odM" secondAttribute="centerX" id="CuN-x6-wn0"/>
                             <constraint firstItem="8Eg-d7-m8Y" firstAttribute="top" secondItem="Wua-T4-j8a" secondAttribute="top" id="DEK-Q7-lc2"/>
-                            <constraint firstItem="qMf-E8-Zl7" firstAttribute="leading" secondItem="Wua-T4-j8a" secondAttribute="leading" constant="21" id="Dsc-s8-Inj"/>
                             <constraint firstAttribute="trailing" secondItem="nwa-06-HUf" secondAttribute="trailing" constant="40" id="JrC-Ia-j1a"/>
                             <constraint firstItem="K05-op-st3" firstAttribute="top" secondItem="Wua-T4-j8a" secondAttribute="top" constant="160" id="LMD-Jx-brk"/>
                             <constraint firstAttribute="bottom" secondItem="8Eg-d7-m8Y" secondAttribute="bottom" id="PIx-GT-nbY"/>
                             <constraint firstItem="Hp9-wj-uhP" firstAttribute="leading" secondItem="6Qd-jP-Zcg" secondAttribute="leading" id="Qtd-as-TM4"/>
                             <constraint firstItem="ini-cl-odM" firstAttribute="leading" secondItem="Wua-T4-j8a" secondAttribute="leading" constant="91" id="Qty-YA-vKc"/>
-                            <constraint firstAttribute="bottom" secondItem="qMf-E8-Zl7" secondAttribute="bottom" constant="105" id="RIa-cD-y36"/>
                             <constraint firstAttribute="bottom" secondItem="Je5-9e-JLq" secondAttribute="bottom" constant="60" id="VMC-hF-DKe"/>
                             <constraint firstItem="Hp9-wj-uhP" firstAttribute="top" secondItem="Wua-T4-j8a" secondAttribute="top" constant="75" id="XAG-6g-Vsz"/>
                             <constraint firstAttribute="bottom" secondItem="IDu-C2-9vj" secondAttribute="bottom" constant="71" id="XXH-P1-3s2"/>
@@ -931,7 +930,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recording_playsound_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZZx-Ip-deI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="e_recording_playsound_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZZx-Ip-deI">
                                 <rect key="frame" x="57" y="60" width="147" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1074,7 +1073,7 @@
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGf-5a-jSy" customClass="CustomButton">
                                                     <rect key="frame" x="233" y="5" width="62" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" backgroundImage="btn_delete.png">
+                                                    <state key="normal" backgroundImage="e_btn_delete.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
@@ -1167,7 +1166,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleep_mode.png" translatesAutoresizingMaskIntoConstraints="NO" id="h6t-de-v6G">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e_sleep_mode.png" translatesAutoresizingMaskIntoConstraints="NO" id="h6t-de-v6G">
                                 <rect key="frame" x="40" y="380" width="240" height="74"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
@@ -1189,7 +1188,7 @@
                                     <action selector="soundsBtn:" destination="Xbw-PU-M6a" eventType="touchUpInside" id="INu-00-X7i"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_now_sound.png" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-F7-arS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e_top_now_sound.png" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-F7-arS">
                                 <rect key="frame" x="10" y="344" width="300" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1234,9 +1233,6 @@
     </scenes>
     <resources>
         <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="btn_delete.png" width="124" height="62"/>
-        <image name="btn_setting_left.png" width="223" height="334"/>
-        <image name="btn_setting_right.png" width="223" height="334"/>
         <image name="btn_setting_text .png" width="514" height="60"/>
         <image name="check.png" width="41" height="36"/>
         <image name="check_mark_blank.png" width="30" height="30"/>
@@ -1247,52 +1243,54 @@
         <image name="decoration_tab_font_bg.png" width="640" height="550"/>
         <image name="decoration_tab_font_off.png" width="320" height="64"/>
         <image name="decoration_tab_font_on.png" width="320" height="64"/>
-        <image name="decoration_tab_footer_age_off.png" width="160" height="102"/>
         <image name="decoration_tab_footer_age_on.png" width="160" height="102"/>
-        <image name="decoration_tab_footer_frame_off.png" width="160" height="102"/>
         <image name="decoration_tab_footer_frame_on.png" width="160" height="102"/>
-        <image name="decoration_tab_footer_mojiire_off.png" width="160" height="102"/>
-        <image name="decoration_tab_footer_stamp_off.png" width="160" height="102"/>
         <image name="decoration_tab_footer_stamp_on.png" width="160" height="102"/>
         <image name="decoration_tab_ooter_mojiire_on.png" width="160" height="102"/>
+        <image name="e_btn_delete.png" width="124" height="62"/>
+        <image name="e_decoration_tab_footer_age_off.png" width="80" height="51"/>
+        <image name="e_decoration_tab_footer_frame_off.png" width="80" height="51"/>
+        <image name="e_decoration_tab_footer_mojiire_off.png" width="80" height="51"/>
+        <image name="e_decoration_tab_footer_stamp_off.png" width="80" height="51"/>
+        <image name="e_recording_playsound_text.png" width="294" height="127"/>
+        <image name="e_setting_01.png" width="604" height="84"/>
+        <image name="e_setting_02.png" width="604" height="83"/>
+        <image name="e_setting_03.png" width="604" height="81"/>
+        <image name="e_setting_04.png" width="604" height="83"/>
+        <image name="e_setting_info_text.png" width="640" height="1136"/>
+        <image name="e_setting_setting_text.png" width="220" height="27"/>
+        <image name="e_setting_ver_text.png" width="115" height="27"/>
+        <image name="e_share_announce.png" width="235" height="23"/>
+        <image name="e_share_save_pop.png" width="488" height="82"/>
+        <image name="e_sleep_mode.png" width="241" height="74"/>
+        <image name="e_sound_btn_left.png" width="223" height="334"/>
+        <image name="e_sound_btn_right.png" width="223" height="334"/>
+        <image name="e_sound_recorded.png" width="243" height="24"/>
+        <image name="e_sound_setting_now_list1.png" width="604" height="83"/>
+        <image name="e_sound_setting_now_list2.png" width="604" height="81"/>
+        <image name="e_sound_setting_now_list3.png" width="604" height="84"/>
+        <image name="e_sound_setting_now_text.png" width="179" height="24"/>
+        <image name="e_top_now_sound.png" width="600" height="70"/>
         <image name="howTo_nest.png" width="43" height="49"/>
         <image name="howTo_previous.png" width="42" height="48"/>
         <image name="info.png" width="521" height="407"/>
         <image name="list_middle.png" width="604" height="80"/>
-        <image name="record_sound_setting.png" width="608" height="72"/>
-        <image name="recorded_sound.png" width="160" height="29"/>
         <image name="recording_bg.png" width="640" height="1136"/>
         <image name="recording_bg_2.png" width="308" height="481"/>
         <image name="recording_button.png" width="278" height="84"/>
         <image name="recording_dustbox.png" width="99" height="98"/>
         <image name="recording_playsound_name_back.png" width="442" height="66"/>
-        <image name="recording_playsound_text.png" width="294" height="127"/>
         <image name="recording_rec.png" width="178" height="178"/>
-        <image name="setting_01.png" width="604" height="84"/>
-        <image name="setting_02.png" width="604" height="83"/>
-        <image name="setting_03.png" width="604" height="81"/>
-        <image name="setting_04.png" width="604" height="83"/>
         <image name="setting_05.png" width="604" height="81"/>
-        <image name="setting_info_text.png" width="220" height="25"/>
-        <image name="setting_setting_text.png" width="110" height="27"/>
         <image name="setting_sound_image_1136.png" width="562" height="505"/>
-        <image name="setting_ver_text.png" width="223" height="27"/>
         <image name="share_11_bg.png" width="430" height="430"/>
-        <image name="share_announce.png" width="496" height="46"/>
         <image name="share_arrow.png" width="93" height="144"/>
-        <image name="share_save_pop.png" width="488" height="82"/>
         <image name="share_sns_bg.png" width="615" height="295"/>
         <image name="share_sns_facebook.png" width="128" height="102"/>
         <image name="share_sns_line.png" width="78" height="104"/>
         <image name="share_sns_mail.png" width="78" height="102"/>
         <image name="share_sns_twitter.png" width="97" height="102"/>
-        <image name="sleep_mode.png" width="483" height="149"/>
         <image name="sleep_mode_off.png" width="140" height="60"/>
-        <image name="sound_setting_now.png" width="219" height="28"/>
-        <image name="sound_setting_now_list1.png" width="604" height="83"/>
-        <image name="sound_setting_now_list2.png" width="604" height="81"/>
-        <image name="sound_setting_now_list3.png" width="604" height="84"/>
-        <image name="top_now_sound.png" width="600" height="70"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
