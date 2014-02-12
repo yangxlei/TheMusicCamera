@@ -349,7 +349,7 @@
                                 <rect key="frame" x="10" y="85" width="302" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="e_setting_01.png">
+                                <state key="normal" backgroundImage="setting_01.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1255,7 +1255,6 @@
         <image name="decoration_tab_footer_stamp_off.png" width="160" height="102"/>
         <image name="decoration_tab_footer_stamp_on.png" width="160" height="102"/>
         <image name="decoration_tab_ooter_mojiire_on.png" width="160" height="102"/>
-        <image name="e_setting_01.png" width="604" height="84"/>
         <image name="howTo_nest.png" width="43" height="49"/>
         <image name="howTo_previous.png" width="42" height="48"/>
         <image name="info.png" width="521" height="407"/>
@@ -1268,6 +1267,7 @@
         <image name="recording_playsound_name_back.png" width="442" height="66"/>
         <image name="recording_playsound_text.png" width="294" height="127"/>
         <image name="recording_rec.png" width="178" height="178"/>
+        <image name="setting_01.png" width="604" height="84"/>
         <image name="setting_02.png" width="604" height="83"/>
         <image name="setting_03.png" width="604" height="81"/>
         <image name="setting_04.png" width="604" height="83"/>

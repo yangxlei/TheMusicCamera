@@ -395,7 +395,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn_setting_text .png" translatesAutoresizingMaskIntoConstraints="NO" id="ftV-YU-g9z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="c_btn_setting_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="ftV-YU-g9z">
                                 <rect key="frame" x="32" y="80" width="257" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1234,8 +1234,18 @@
     </scenes>
     <resources>
         <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
+        <image name="bg_1136.png" width="640" height="1136"/>
         <image name="btn_delete.png" width="124" height="62"/>
-        <image name="btn_setting_text .png" width="514" height="60"/>
+        <image name="c_btn_setting_text.png" width="514" height="60"/>
         <image name="c_decoration_tab_footer_age_off.png" width="80" height="51"/>
         <image name="c_decoration_tab_footer_age_on.png" width="80" height="51"/>
         <image name="c_decoration_tab_footer_frame_off.png" width="80" height="51"/>
@@ -1263,10 +1273,12 @@
         <image name="c_sound_setting_now_text.png" width="165" height="26"/>
         <image name="c_top_now_sound.png" width="600" height="70"/>
         <image name="check.png" width="41" height="36"/>
+        <image name="check.png" width="41" height="36"/>
         <image name="check_mark_blank.png" width="30" height="30"/>
         <image name="decoration_mojiire_text.png" width="496" height="236"/>
         <image name="decoration_tab_color_bg.png" width="640" height="551"/>
         <image name="decoration_tab_color_off.png" width="320" height="64"/>
+        <image name="decoration_tab_color_on.png" width="320" height="64"/>
         <image name="decoration_tab_color_on.png" width="320" height="64"/>
         <image name="decoration_tab_font_bg.png" width="640" height="550"/>
         <image name="decoration_tab_font_off.png" width="320" height="64"/>
@@ -1274,6 +1286,8 @@
         <image name="howTo_nest.png" width="43" height="49"/>
         <image name="howTo_previous.png" width="42" height="48"/>
         <image name="info.png" width="521" height="407"/>
+        <image name="list_middle.png" width="604" height="80"/>
+        <image name="list_middle.png" width="604" height="80"/>
         <image name="list_middle.png" width="604" height="80"/>
         <image name="recording_bg.png" width="640" height="1136"/>
         <image name="recording_bg_2.png" width="308" height="481"/>

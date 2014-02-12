@@ -36,7 +36,7 @@
 
     for (int i=0; i<4; i++) {
         UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(0+i*320, 0, 320, 568)];
-        imageV.image = [UIImage imageNamed:[NSString stringWithFormat:@"howTo_0%d.png",i+1]];
+        imageV.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@howTo_0%d.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"],i+1]];
         [scrollView addSubview:imageV];
     }
     scrollView.contentSize =CGSizeMake(320*4, self.view.frame.size.height);
