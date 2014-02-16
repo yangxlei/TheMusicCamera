@@ -34,18 +34,46 @@
     [UIApplication sharedApplication].statusBarHidden=YES;
     soundsName.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
     soundsName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
-    
-    if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"musicrepeat"]intValue]==1) {
-        repeatName.text = [NSString stringWithFormat:@"あり"];
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    dataManager = [DataManager sharedManager];
+
+    if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"musicrepeat"]intValue]==1) {        
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            repeatName.text = [NSString stringWithFormat:@"有"];
+            recordListLab.text = [NSString stringWithFormat:@"%d",dataManager.recordMusicList.count];
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            repeatName.text = [NSString stringWithFormat:@"YES"];
+            recordListLab.text = [NSString stringWithFormat:@"%d",dataManager.recordMusicList.count];
+        }
+        else
+        {
+            repeatName.text = [NSString stringWithFormat:@"あり"];//有
+            recordListLab.text = [NSString stringWithFormat:@"%d件",dataManager.recordMusicList.count];
+        }
+
+
+        
     }
     else{
-        repeatName.text = [NSString stringWithFormat:@"なし"];
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            repeatName.text = [NSString stringWithFormat:@"无"];
+            recordListLab.text = [NSString stringWithFormat:@"%d",dataManager.recordMusicList.count];
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            repeatName.text = [NSString stringWithFormat:@"NO"];
+            recordListLab.text = [NSString stringWithFormat:@"%d",dataManager.recordMusicList.count];
+        }
+        else
+        {
+            repeatName.text = [NSString stringWithFormat:@"なし"];
+            recordListLab.text = [NSString stringWithFormat:@"%d件",dataManager.recordMusicList.count];
+        }
     }
     repeatName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 
-    dataManager = [DataManager sharedManager];
     [dataManager getLoadRecordMusicList];
-    recordListLab.text = [NSString stringWithFormat:@"%d件",dataManager.recordMusicList.count];
     recordListLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 
 }

@@ -32,12 +32,34 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    
+
     if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"musicstation"]intValue]==1) {
-        stationLab.text = @"左";
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            stationLab.text = @"左";
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            stationLab.text = @"left";
+        }
+        else
+        {
+            stationLab.text = @"左";
+        }
     }
     else
     {
-        stationLab.text = @"右";
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            stationLab.text = @"右";
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            stationLab.text = @"right";
+        }
+        else
+        {
+            stationLab.text = @"右";
+        }
     }
 }
 

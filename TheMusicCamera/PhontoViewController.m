@@ -36,7 +36,21 @@
     else
     {
         soundsOff = NO;
-        musicLabel.text = @"おやすみモード";
+        NSArray *languages = [NSLocale preferredLanguages];
+        NSString *currentLanguage = [languages objectAtIndex:0];
+        NSLog( @"currentLanguage====   %@" , currentLanguage);
+        
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            musicLabel.text = @"安睡模式";
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            musicLabel.text = @"sleeping mode";
+        }
+        else
+        {
+            musicLabel.text = @"おやすみモード";
+        }
+
     }
     
     backImage = [[UIImageView alloc]initWithFrame:self.view.frame];
@@ -70,7 +84,20 @@
     else
     {
         soundsOff = NO;
-        musicLabel.text = @"おやすみモード";
+        NSArray *languages = [NSLocale preferredLanguages];
+        NSString *currentLanguage = [languages objectAtIndex:0];
+        NSLog( @"currentLanguage====   %@" , currentLanguage);
+        
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            musicLabel.text = @"安睡模式";
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            musicLabel.text = @"sleeping mode";
+        }
+        else
+        {
+            musicLabel.text = @"おやすみモード";
+        }
         [soundBtn setImage:[UIImage imageNamed:@"sleep_mode_on"] forState:UIControlStateNormal];
     }
 }
@@ -84,7 +111,20 @@
 - (IBAction)soundsBtn:(id)sender {
     if (soundsOff) {
         soundsOff = NO;
-        musicLabel.text = @"おやすみモード";
+        NSArray *languages = [NSLocale preferredLanguages];
+        NSString *currentLanguage = [languages objectAtIndex:0];
+        NSLog( @"currentLanguage====   %@" , currentLanguage);
+        
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            musicLabel.text = @"安睡模式";
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            musicLabel.text = @"sleeping mode";
+        }
+        else
+        {
+            musicLabel.text = @"おやすみモード";
+        }
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"musicOFF"];
         [sender setImage:[UIImage imageNamed:@"sleep_mode_on"] forState:UIControlStateNormal];
     }
