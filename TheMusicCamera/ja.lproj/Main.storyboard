@@ -1272,7 +1272,7 @@
         <image name="setting_03.png" width="604" height="81"/>
         <image name="setting_04.png" width="604" height="83"/>
         <image name="setting_05.png" width="604" height="81"/>
-        <image name="setting_info_text.png" width="220" height="25"/>
+        <image name="setting_info_text.png" width="250" height="25"/>
         <image name="setting_setting_text.png" width="110" height="27"/>
         <image name="setting_sound_image_1136.png" width="562" height="505"/>
         <image name="setting_ver_text.png" width="223" height="27"/>

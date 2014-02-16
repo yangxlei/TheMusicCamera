@@ -35,7 +35,10 @@
     NSArray *languages = [NSLocale preferredLanguages];
     NSString *currentLanguage = [languages objectAtIndex:0];
     
+    self.navigationController.navigationBar.translucent = NO;
+    self.tabBarController.tabBar.translucent = NO;
 
+    
     if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"musicstation"]intValue]==1) {
         if ([currentLanguage isEqualToString:@"zh-Hans"]) {
             stationLab.text = @"左";
@@ -67,6 +70,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
     [self navgationImage:[NSString stringWithFormat:@"%@header_setting",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
     
     dataManager = [DataManager sharedManager];
