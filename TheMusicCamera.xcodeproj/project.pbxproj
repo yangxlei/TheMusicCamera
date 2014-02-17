@@ -105,6 +105,9 @@
 		2E45B88C1882CD0E00253AF3 /* recording_playsound_name_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B88B1882CD0E00253AF3 /* recording_playsound_name_back.png */; };
 		2E45B8911882CF0900253AF3 /* frame_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B88F1882CF0900253AF3 /* frame_1_1.png */; };
 		2E45B8921882CF0900253AF3 /* frame_1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E45B8901882CF0900253AF3 /* frame_1_3.png */; };
+		2E4655CA18B24C2F0086B259 /* TextLayoutLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4655C918B24C2F0086B259 /* TextLayoutLabel.m */; };
+		2E4655CC18B24FCD0086B259 /* c_setting_info_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4655CB18B24FCD0086B259 /* c_setting_info_text.png */; };
+		2E4655CE18B24FDA0086B259 /* e_setting_info_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4655CD18B24FDA0086B259 /* e_setting_info_text.png */; };
 		2E532DB818880C2200CF95E0 /* header_howto.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E532DB718880C2200CF95E0 /* header_howto.png */; };
 		2E5C9F1A1871B21A00E6A680 /* ExplanationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C9F191871B21A00E6A680 /* ExplanationViewController.m */; };
 		2E5C9F201871B3DD00E6A680 /* howTo_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C9F1B1871B3DD00E6A680 /* howTo_01.png */; };
@@ -630,6 +633,11 @@
 		2E45B88B1882CD0E00253AF3 /* recording_playsound_name_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recording_playsound_name_back.png; path = TheMusicCamera/image/recording_playsound_name_back.png; sourceTree = SOURCE_ROOT; };
 		2E45B88F1882CF0900253AF3 /* frame_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_1_1.png; path = TheMusicCamera/image/frame_1_1.png; sourceTree = SOURCE_ROOT; };
 		2E45B8901882CF0900253AF3 /* frame_1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_1_3.png; path = TheMusicCamera/image/frame_1_3.png; sourceTree = SOURCE_ROOT; };
+		2E4655C818B24C2F0086B259 /* TextLayoutLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayoutLabel.h; sourceTree = "<group>"; };
+		2E4655C918B24C2F0086B259 /* TextLayoutLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayoutLabel.m; sourceTree = "<group>"; };
+		2E4655CB18B24FCD0086B259 /* c_setting_info_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c_setting_info_text.png; sourceTree = "<group>"; };
+		2E4655CD18B24FDA0086B259 /* e_setting_info_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = e_setting_info_text.png; sourceTree = "<group>"; };
+		2E4655D218B25EC50086B259 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		2E532DB718880C2200CF95E0 /* header_howto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_howto.png; sourceTree = "<group>"; };
 		2E5C9F181871B21A00E6A680 /* ExplanationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplanationViewController.h; sourceTree = "<group>"; };
 		2E5C9F191871B21A00E6A680 /* ExplanationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplanationViewController.m; sourceTree = "<group>"; };
@@ -814,11 +822,8 @@
 		2E8F662D1899627B009CB145 /* e_sound_setting_now_list3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = e_sound_setting_now_list3.png; sourceTree = "<group>"; };
 		2E8F662E1899627B009CB145 /* e_sound_setting_now_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = e_sound_setting_now_text.png; sourceTree = "<group>"; };
 		2E8F662F1899627B009CB145 /* e_top_now_sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = e_top_now_sound.png; sourceTree = "<group>"; };
-		2E8F66A81899628B009CB145 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		2E8F66A91899628C009CB145 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2E8F66AB18996293009CB145 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2E8F66AC18996293009CB145 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2E8F66AD189962A8009CB145 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		2E8F66AE189962E3009CB145 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E8F66AF18A517AE009CB145 /* e_main_tab_decoration_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "e_main_tab_decoration_off@2x.png"; sourceTree = "<group>"; };
 		2E8F66B118A52406009CB145 /* e_setting_sound_image_1136@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "e_setting_sound_image_1136@2x.png"; sourceTree = "<group>"; };
@@ -1245,6 +1250,7 @@
 			isa = PBXGroup;
 			children = (
 				2E92564518ABC0C9006A4868 /* c_btn_setting_text.png */,
+				2E4655CB18B24FCD0086B259 /* c_setting_info_text.png */,
 				2E92563518ABBBD4006A4868 /* c_howTo_01.png */,
 				2E92563618ABBBD4006A4868 /* c_howTo_02.png */,
 				2E92563718ABBBD4006A4868 /* c_howTo_03.png */,
@@ -1317,6 +1323,7 @@
 			isa = PBXGroup;
 			children = (
 				2E92564718ABC126006A4868 /* e_btn_setting_text.png */,
+				2E4655CD18B24FDA0086B259 /* e_setting_info_text.png */,
 				2E92563D18ABBBE1006A4868 /* e_howTo_01.png */,
 				2E92563E18ABBBE1006A4868 /* e_howTo_02.png */,
 				2E92563F18ABBBE1006A4868 /* e_howTo_03.png */,
@@ -1672,6 +1679,8 @@
 		354467F3185AD419005AB0D9 /* TheMusicCamera */ = {
 			isa = PBXGroup;
 			children = (
+				2E4655C818B24C2F0086B259 /* TextLayoutLabel.h */,
+				2E4655C918B24C2F0086B259 /* TextLayoutLabel.m */,
 				95AFDA9C188EC70300145338 /* age_dialog */,
 				2E661A46188588C100985717 /* LineKit */,
 				35070260187CE78A00BEB701 /* JSON */,
@@ -2324,6 +2333,7 @@
 				350B2731187A500D0084B7C0 /* decorathion_flame.png in Resources */,
 				2E70138C187EDF2B00A641E6 /* color8.png in Resources */,
 				352C015A1862D57B00C0C710 /* top_now_sound.png in Resources */,
+				2E4655CC18B24FCD0086B259 /* c_setting_info_text.png in Resources */,
 				2E8F66711899627B009CB145 /* e_btn_top.png in Resources */,
 				35452A6E187F8E1E0093CB9D /* trimming_1_1_off.png in Resources */,
 				957DAAEA188053AB00A1FC06 /* age_stamp_8_number.png in Resources */,
@@ -2339,6 +2349,7 @@
 				2E2F716F1875B2BD001A7816 /* stamp_2.png in Resources */,
 				2E701398187EE32A00A641E6 /* decoration_tab_color_on.png in Resources */,
 				2E2F71751875B2BD001A7816 /* stamp_8.png in Resources */,
+				2E4655CE18B24FDA0086B259 /* e_setting_info_text.png in Resources */,
 				95AFDAA6188EC77800145338 /* age_btn.png in Resources */,
 				2E45B8711882CCCE00253AF3 /* frame_7_1.png in Resources */,
 				2E701386187EDF2B00A641E6 /* color2.png in Resources */,
@@ -2530,6 +2541,7 @@
 				356E6A8E185B15FC002A1014 /* DataManager.m in Sources */,
 				957DAAF11882C5D600A1FC06 /* TSLocateView.m in Sources */,
 				35070274187CE78A00BEB701 /* SBJsonParser.m in Sources */,
+				2E4655CA18B24C2F0086B259 /* TextLayoutLabel.m in Sources */,
 				950C7ECB1865E3F60021FE5D /* ColorTrackingCamera.m in Sources */,
 				35070279187CECB700BEB701 /* TextFontViewController.m in Sources */,
 				2E5C9F1A1871B21A00E6A680 /* ExplanationViewController.m in Sources */,
@@ -2563,7 +2575,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				354467F7185AD419005AB0D9 /* en */,
-				2E8F66A81899628B009CB145 /* zh-Hans */,
 				2E8F66AB18996293009CB145 /* ja */,
 			);
 			name = InfoPlist.strings;
@@ -2573,8 +2584,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				35446800185AD419005AB0D9 /* Base */,
-				2E8F66AD189962A8009CB145 /* zh-Hans */,
 				2E8F66AE189962E3009CB145 /* ja */,
+				2E4655D218B25EC50086B259 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -2583,7 +2594,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				35446816185AD419005AB0D9 /* en */,
-				2E8F66A91899628C009CB145 /* zh-Hans */,
 				2E8F66AC18996293009CB145 /* ja */,
 			);
 			name = InfoPlist.strings;
@@ -2627,8 +2637,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
+				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "98D75640-DB0C-46FE-9565-DE5C1D86F86E";
 				SDKROOT = iphoneos;
 			};
@@ -2663,7 +2672,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
 				PROVISIONING_PROFILE = "98D75640-DB0C-46FE-9565-DE5C1D86F86E";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -2690,9 +2698,8 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
 				PROVISIONING_PROFILE = "98D75640-DB0C-46FE-9565-DE5C1D86F86E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "98D75640-DB0C-46FE-9565-DE5C1D86F86E";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2718,9 +2725,8 @@
 					/Users/yanglei/Documents/waibao/iphone/TheMusicCamera/TheMusicCamera/ColorTracking,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6D5D8F0-6063-42DA-8A09-6A632B31348E";
 				PROVISIONING_PROFILE = "98D75640-DB0C-46FE-9565-DE5C1D86F86E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "98D75640-DB0C-46FE-9565-DE5C1D86F86E";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

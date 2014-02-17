@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -287,8 +287,8 @@
                                     <constraint firstAttribute="height" constant="13" id="XAj-zh-09b"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e_setting_info_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="RhN-bI-Hfg">
-                                <rect key="frame" x="18" y="297" width="110" height="13"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="e_setting_info_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="RhN-bI-Hfg">
+                                <rect key="frame" x="18" y="297" width="125" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13" id="57N-Tg-hMe"/>
                                     <constraint firstAttribute="width" constant="110" id="a4D-oY-YjO"/>
@@ -1398,7 +1398,7 @@
         <image name="e_setting_02.png" width="604" height="83"/>
         <image name="e_setting_03.png" width="604" height="81"/>
         <image name="e_setting_04.png" width="604" height="83"/>
-        <image name="e_setting_info_text.png" width="640" height="1136"/>
+        <image name="e_setting_info_text.png" width="250" height="25"/>
         <image name="e_setting_setting_text.png" width="220" height="27"/>
         <image name="e_setting_ver_text.png" width="115" height="27"/>
         <image name="e_share_announce.png" width="235" height="23"/>
