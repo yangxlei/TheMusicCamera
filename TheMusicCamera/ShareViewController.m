@@ -40,7 +40,6 @@
         threeShareImg.hidden = NO;
         threeShareImg.image = dataManager.shareImg;
     }
-  
 }
 
 - (void)viewDidLoad

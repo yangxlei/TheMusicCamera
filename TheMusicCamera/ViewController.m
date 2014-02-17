@@ -117,8 +117,8 @@ ViewController *_viewController;
 
 	NSMutableDictionary *imgDic4 = [NSMutableDictionary dictionaryWithCapacity:3];
     [imgDic4 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_setting_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Default"];
-	[imgDic4 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_setting_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Highlighted"];
-	[imgDic4 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_setting_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Seleted"];
+	[imgDic4 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_setting_on.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Highlighted"];
+	[imgDic4 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_setting_on.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Seleted"];
 
 	NSMutableDictionary *imgDic5 = [NSMutableDictionary dictionaryWithCapacity:3];
     [imgDic5 setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@main_tab_osusume_off.png",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]] forKey:@"Default"];
