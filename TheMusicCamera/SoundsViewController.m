@@ -33,7 +33,7 @@
 {
     [UIApplication sharedApplication].statusBarHidden=YES;
     soundsName.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
-    soundsName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+//    soundsName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
     NSArray *languages = [NSLocale preferredLanguages];
     NSString *currentLanguage = [languages objectAtIndex:0];
     dataManager = [DataManager sharedManager];
@@ -71,10 +71,10 @@
             recordListLab.text = [NSString stringWithFormat:@"%d件",dataManager.recordMusicList.count];
         }
     }
-    repeatName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+//    repeatName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 
     [dataManager getLoadRecordMusicList];
-    recordListLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+//    recordListLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
 
 }
 
@@ -114,7 +114,21 @@
 
     }
     fadeImage = [[UIImageView alloc]initWithFrame:CGRectMake(33, 180, 254, 108)];
-    fadeImage.image = [UIImage imageNamed:@"recording_popup"];
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    NSLog( @"currentLanguage====   %@" , currentLanguage);
+    
+    if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+        fadeImage.image = [UIImage imageNamed:@"c_recording_popup"];
+    }else if ([currentLanguage isEqualToString:@"en"])
+    {
+        fadeImage.image = [UIImage imageNamed:@"e_recording_popup"];
+    }
+    else
+    {
+        fadeImage.image = [UIImage imageNamed:@"recording_popup"];
+    }
+
     [self.view addSubview:fadeImage];
     fadeImage.alpha = 0;
     

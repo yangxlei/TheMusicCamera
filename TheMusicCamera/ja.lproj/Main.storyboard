@@ -643,9 +643,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kq-r9-od8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kq-r9-od8">
                                 <rect key="frame" x="11" y="269" width="21" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="21" id="Yh8-cC-t9V"/>
+                                    <constraint firstAttribute="height" constant="24" id="fwH-7Q-Jw4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" backgroundImage="howTo_previous.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -654,9 +658,13 @@
                                     <action selector="previousBtn:" destination="h4Z-ty-JeT" eventType="touchUpInside" id="rLS-Fm-GrO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC2-Yh-rVG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC2-Yh-rVG">
                                 <rect key="frame" x="288" y="269" width="21" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="fMY-2m-ynb"/>
+                                    <constraint firstAttribute="width" constant="21" id="hXZ-oM-RQe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" backgroundImage="howTo_nest.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -670,12 +678,16 @@
                         <constraints>
                             <constraint firstItem="5bs-69-DCg" firstAttribute="trailing" secondItem="3OU-OC-XFe" secondAttribute="trailing" id="CGf-KB-FFc"/>
                             <constraint firstItem="5bs-69-DCg" firstAttribute="leading" secondItem="3OU-OC-XFe" secondAttribute="leading" id="E6P-u3-lfI"/>
+                            <constraint firstAttribute="trailing" secondItem="ZC2-Yh-rVG" secondAttribute="trailing" constant="11" id="EkJ-5V-ZVt"/>
                             <constraint firstItem="5bs-69-DCg" firstAttribute="leading" secondItem="s6q-my-sJG" secondAttribute="leading" id="GIe-aQ-W72"/>
                             <constraint firstAttribute="bottom" secondItem="5bs-69-DCg" secondAttribute="bottom" id="OSx-YU-7wC"/>
                             <constraint firstItem="5bs-69-DCg" firstAttribute="top" secondItem="3OU-OC-XFe" secondAttribute="top" id="RYu-Jv-F6e"/>
                             <constraint firstItem="5bs-69-DCg" firstAttribute="top" secondItem="s6q-my-sJG" secondAttribute="top" id="Raw-Ds-hyN"/>
                             <constraint firstItem="5bs-69-DCg" firstAttribute="bottom" secondItem="3OU-OC-XFe" secondAttribute="bottom" id="V0K-vX-26g"/>
+                            <constraint firstItem="7Kq-r9-od8" firstAttribute="leading" secondItem="s6q-my-sJG" secondAttribute="leading" constant="11" id="amv-yD-T1y"/>
+                            <constraint firstItem="7Kq-r9-od8" firstAttribute="top" secondItem="s6q-my-sJG" secondAttribute="top" constant="269" id="mIH-a2-4jA"/>
                             <constraint firstAttribute="trailing" secondItem="5bs-69-DCg" secondAttribute="trailing" id="qj2-oD-Cvn"/>
+                            <constraint firstItem="ZC2-Yh-rVG" firstAttribute="top" secondItem="s6q-my-sJG" secondAttribute="top" constant="269" id="y86-n6-qNd"/>
                         </constraints>
                     </view>
                     <connections>

@@ -56,7 +56,7 @@
     
 //    musicNameLabel.text = dateString;
     musicNameText.text = dateString;
-    musicNameText.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+//    musicNameText.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
 
     UITapGestureRecognizer* showTap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showGes)];
     showTap.numberOfTapsRequired=1;
@@ -65,10 +65,26 @@
 //    [self navgationImage:@"header_recording"];
     [self navgationImage:[NSString stringWithFormat:@"%@header_recording",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
 
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    
+    NSString *savebg;
+    if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+        savebg = @"c_btn_save";
+    }else if ([currentLanguage isEqualToString:@"en"])
+    {
+        savebg = @"e_btn_save";
+    }
+    else
+    {
+        savebg = @"btn_save";
+    }
+
     UIButton *btn = [self navgationButton:@"btn_back" andFrame:CGRectMake(10, 7, 52, 32)];
     [btn addTarget:self action:@selector(backBtuuon) forControlEvents:UIControlEventTouchUpInside];
     
-    saveBtn = [self navgationButton:@"btn_save" andFrame:CGRectMake(250, 7, 62, 31)];
+    saveBtn = [self navgationButton:savebg andFrame:CGRectMake(250, 7, 62, 31)];
+    
     [saveBtn addTarget:self action:@selector(saveBtuuon) forControlEvents:UIControlEventTouchUpInside];
     saveBtn.hidden = YES;
     
@@ -89,7 +105,7 @@
     recorder = [[AVAudioRecorder alloc] initWithURL:recordedFile settings:nil error:nil];
     [recorder prepareToRecord];
 
-    timeLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:35];
+//    timeLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:35];
 
     
 
@@ -277,8 +293,25 @@
 
 - (IBAction)deleteSounds:(id)sender
 {
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    NSLog( @"currentLanguage====   %@" , currentLanguage);
+    
+    NSString *alertStr;
+    
+    if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+        alertStr = @"不保存录音，删除吗？";
+    }else if ([currentLanguage isEqualToString:@"en"])
+    {
+        alertStr = @"Delete without save?";
+    }
+    else
+    {
+        alertStr = @"保存をせずに削除してよろしいですか？";
+    }
+
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@""
-                                                       message:@"保存をせずに削除してよろしいですか？"
+                                                       message:alertStr
                                                       delegate:self
                                              cancelButtonTitle:@"NO"
                                              otherButtonTitles:@"YES", nil];
