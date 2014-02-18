@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -1370,16 +1370,6 @@
     </scenes>
     <resources>
         <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
-        <image name="bg_1136.png" width="640" height="1136"/>
         <image name="c_btn_delete.png" width="124" height="62"/>
         <image name="c_btn_setting_text.png" width="514" height="60"/>
         <image name="c_decoration_tab_footer_age_off.png" width="80" height="51"/>
@@ -1406,12 +1396,10 @@
         <image name="c_sound_setting_now_text.png" width="165" height="26"/>
         <image name="c_top_now_sound.png" width="600" height="70"/>
         <image name="check.png" width="41" height="36"/>
-        <image name="check.png" width="41" height="36"/>
         <image name="check_mark_blank.png" width="30" height="30"/>
         <image name="decoration_mojiire_text.png" width="496" height="236"/>
         <image name="decoration_tab_color_bg.png" width="640" height="551"/>
         <image name="decoration_tab_color_off.png" width="320" height="64"/>
-        <image name="decoration_tab_color_on.png" width="320" height="64"/>
         <image name="decoration_tab_color_on.png" width="320" height="64"/>
         <image name="decoration_tab_font_bg.png" width="640" height="550"/>
         <image name="decoration_tab_font_off.png" width="320" height="64"/>
@@ -1423,8 +1411,6 @@
         <image name="howTo_nest.png" width="43" height="49"/>
         <image name="howTo_previous.png" width="42" height="48"/>
         <image name="info.png" width="521" height="407"/>
-        <image name="list_middle.png" width="604" height="80"/>
-        <image name="list_middle.png" width="604" height="80"/>
         <image name="list_middle.png" width="604" height="80"/>
         <image name="recording_bg.png" width="640" height="1136"/>
         <image name="recording_bg_2.png" width="308" height="481"/>
