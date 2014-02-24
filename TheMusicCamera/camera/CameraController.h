@@ -36,4 +36,5 @@
 -(IBAction) sizeClick:(id)sender;
 -(IBAction) takePhoto:(id)sender;
 
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 @end
