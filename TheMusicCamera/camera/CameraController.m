@@ -137,6 +137,9 @@
     
     _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
     int height = MIN(427, self.cameraView.frame.size.height);
+  if (sizeBtn.isSelected) {
+    height = 320;
+  }
     _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
@@ -189,6 +192,9 @@
     
     _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
     int height = MIN(427, self.cameraView.frame.size.height);
+  if (sizeBtn.isSelected) {
+    height = 320;
+  }
     _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
@@ -312,14 +318,14 @@
 -(IBAction)sizeClick:(id)sender
 {
   int height ;
-  if (sizeBtn.isSelected)
+  if (!sizeBtn.isSelected)
   {
-    [sizeBtn setSelected:NO];
+    [sizeBtn setSelected:YES];
     height = 320;
   }
   else
   {
-    [sizeBtn setSelected:YES];
+    [sizeBtn setSelected:NO];
     height = MIN(427, self.cameraView.frame.size.height);
   }
   
