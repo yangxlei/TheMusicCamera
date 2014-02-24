@@ -137,12 +137,12 @@
     
     _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
     int height = MIN(427, self.cameraView.frame.size.height);
+
     _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
     [self.cameraView.layer addSublayer:_preview];
     [_session startRunning];
-
 
 }
 
@@ -511,6 +511,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
         
         _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height) /2, 320, height);
 
+        image = [CameraController imageWithImage:image scaledToSize:_preview.bounds.size];
 
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);//然后将该图片保存到图片图
 //
