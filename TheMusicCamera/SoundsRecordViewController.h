@@ -16,7 +16,7 @@
 
 @end
 
-@interface SoundsRecordViewController : UIViewController<AVAudioPlayerDelegate,UIAlertViewDelegate>
+@interface SoundsRecordViewController : UIViewController<AVAudioPlayerDelegate,UIAlertViewDelegate,UITextFieldDelegate>
 {
     __weak IBOutlet UIImageView *timeImage;
     AVAudioRecorder *recorder;
@@ -36,6 +36,7 @@
     float intPlayTime;//播放秒数计数
     NSTimer   *timer ;
     __weak IBOutlet UILabel *timeLabel;
+    BOOL canPlay;
 }
 
 @property (nonatomic) BOOL isRecording;

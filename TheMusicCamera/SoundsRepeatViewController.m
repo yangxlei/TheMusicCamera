@@ -123,7 +123,9 @@
         bgImg.image = [UIImage imageNamed:@"list_bottom"];
     }
     
-//    nameLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        nameLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+    }
 
     UIImageView *checkImg = (UIImageView *)[cell viewWithTag:2];
     

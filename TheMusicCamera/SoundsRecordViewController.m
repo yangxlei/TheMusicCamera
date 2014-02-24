@@ -53,11 +53,16 @@
     self.hidesBottomBarWhenPushed = YES;
     _isRecording = NO;
     _isPlaying = NO;
+    canPlay = YES;
     
 //    musicNameLabel.text = dateString;
     musicNameText.text = dateString;
-//    musicNameText.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        musicNameText.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+    }
 
+    musicNameText.delegate =self;
+    
     UITapGestureRecognizer* showTap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showGes)];
     showTap.numberOfTapsRequired=1;
     [self.view addGestureRecognizer:showTap];
@@ -105,7 +110,9 @@
     recorder = [[AVAudioRecorder alloc] initWithURL:recordedFile settings:nil error:nil];
     [recorder prepareToRecord];
 
-//    timeLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:35];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        timeLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:35];
+    }
 
     
 
@@ -182,18 +189,20 @@
             player.delegate = self;
             player.volume=1.0;//0.0~1.0之间
 
-            [player play];
-
-            intPlayTime = 0;
-            NSTimeInterval timeInterval =0.01 ;
-            //定时器
-            timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
-                                                     target:self
-                                                   selector:@selector(playTimer:)
-                                                   userInfo:nil
-                                                    repeats:YES];
-            [timer fire];
-
+            if (canPlay) {
+                [player play];
+                
+                intPlayTime = 0;
+                NSTimeInterval timeInterval =0.01 ;
+                //定时器
+                timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
+                                                         target:self
+                                                       selector:@selector(playTimer:)
+                                                       userInfo:nil
+                                                        repeats:YES];
+                [timer fire];
+            }
+            canPlay = NO;
         }
         
     }
@@ -249,7 +258,7 @@
         recorder = nil;
         deleteBtn.hidden = NO;
         saveBtn.hidden = NO;
-        
+        canPlay = YES;
     }
 
 }
@@ -357,4 +366,8 @@
     
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

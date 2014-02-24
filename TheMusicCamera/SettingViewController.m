@@ -74,7 +74,10 @@
     [self navgationImage:[NSString stringWithFormat:@"%@header_setting",[[NSUserDefaults standardUserDefaults] objectForKey:@"languages"]]];
     
     dataManager = [DataManager sharedManager];
-//    stationLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        stationLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    }
+//    stationLab.font = [UIFont fontWithName:@"MakibaFont" size:14];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fromSetReturnVC:) name:@"FROMSETRETURNVC" object:nil];
 

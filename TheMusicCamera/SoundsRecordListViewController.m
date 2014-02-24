@@ -171,7 +171,9 @@
     
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:3];
     nameLabel.text = [NSString stringWithFormat:@"%@",music.name];
-//    nameLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        nameLabel.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:15];
+    }
 
     
     cell.selectionStyle=UITableViewCellSelectionStyleNone;

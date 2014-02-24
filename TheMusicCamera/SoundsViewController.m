@@ -33,7 +33,9 @@
 {
     [UIApplication sharedApplication].statusBarHidden=YES;
     soundsName.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"musicName"];
-//    soundsName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        soundsName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    }
     NSArray *languages = [NSLocale preferredLanguages];
     NSString *currentLanguage = [languages objectAtIndex:0];
     dataManager = [DataManager sharedManager];
@@ -71,10 +73,14 @@
             recordListLab.text = [NSString stringWithFormat:@"%d件",dataManager.recordMusicList.count];
         }
     }
-//    repeatName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        repeatName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    }
 
     [dataManager getLoadRecordMusicList];
-//    recordListLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        recordListLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
+    }
 
 }
 
