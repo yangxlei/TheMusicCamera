@@ -73,11 +73,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/camera/CameraController.m"
-            timestampString = "414947672.84745"
+            timestampString = "414948439.549392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "322"
-            endingLineNumber = "322"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "-sizeClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -89,12 +89,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMusicCamera/camera/CameraController.m"
-            timestampString = "414947672.84745"
+            timestampString = "414948439.549392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
-            landmarkName = "-cameraWithPosition:"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
+            landmarkName = "-frontCamera:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
