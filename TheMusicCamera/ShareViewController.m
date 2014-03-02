@@ -113,7 +113,7 @@
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     
     picker.mailComposeDelegate =self;
-    [picker setSubject:@"文件分享"];
+    [picker setSubject:@"#PicoSweet"];
     // Set up recipients
     NSArray *toRecipients = [NSArray arrayWithObject:@""];
     
@@ -122,7 +122,7 @@
     
     [picker addAttachmentData:imageData mimeType:@"" fileName:@"image.jpg"];
     
-    NSString *emailBody =[NSString stringWithFormat:@"我分享了图片给您"] ;
+    NSString *emailBody =[NSString stringWithFormat:@"http://favs.jp/picosweet/"] ;
     [picker setMessageBody:emailBody isHTML:NO];
     [self presentViewController:picker animated:YES completion:nil];
     
@@ -143,9 +143,9 @@
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
     slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [slComposerSheet setInitialText:@"this is facebook"];
+    [slComposerSheet setInitialText:@"#PicoSweet"];
     [slComposerSheet addImage:dataManager.shareImg];
-    [slComposerSheet addURL:[NSURL URLWithString:@"http://www.facebook.com/"]];
+    [slComposerSheet addURL:[NSURL URLWithString:@"http://favs.jp/picosweet/"]];
     [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
     }
     else
@@ -184,9 +184,9 @@
 - (IBAction)twitterBtn:(id)sender {
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [slComposerSheet setInitialText:@"this is ios6 twitter"];
+        [slComposerSheet setInitialText:@"#PicoSweet"];
         [slComposerSheet addImage:dataManager.shareImg];
-        [slComposerSheet addURL:[NSURL URLWithString:@"http://www.twitter.com/"]];
+        [slComposerSheet addURL:[NSURL URLWithString:@"http://favs.jp/picosweet/"]];
         [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
     }
         else

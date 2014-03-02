@@ -68,7 +68,7 @@
     [_musicBtn addTarget:self action:@selector(playMusic:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_musicBtn];
     
-    
+    sizeBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
     NSArray *myImages = [NSArray arrayWithObjects:
                          [UIImage imageNamed:@"anime_1.png"],
                          [UIImage imageNamed:@"anime_2.png"],
@@ -321,11 +321,13 @@
   if (!sizeBtn.isSelected)
   {
     [sizeBtn setSelected:YES];
+      sizeBtn.bounds = CGRectMake(0, 0, 28, 35);
     height = 320;
   }
   else
   {
     [sizeBtn setSelected:NO];
+      sizeBtn.bounds = CGRectMake(0, 0, 28, 28);
     height = MIN(427, self.cameraView.frame.size.height);
   }
   
