@@ -92,6 +92,12 @@
 - (void) initialize
 {
   //1.创建会话层
+    if (_session) {
+        _session = nil;
+        _device = nil;
+        _captureInput = nil;
+        _captureOutput = nil;
+    }
   _session = [[AVCaptureSession alloc] init];
   [_session setSessionPreset:AVCaptureSessionPreset640x480];
   

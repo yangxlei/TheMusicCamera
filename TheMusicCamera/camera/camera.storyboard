@@ -14,21 +14,23 @@
                         <viewControllerLayoutGuide type="bottom" id="iEE-zy-W5k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eUj-fY-07E">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoot_camera_button_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="j2H-tx-Wh4">
-                                <rect key="frame" x="0.0" y="485" width="320" height="83"/>
+                                <rect key="frame" x="0.0" y="397" width="320" height="83"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="MPC-ee-o6F"/>
+                                    <constraint firstAttribute="width" constant="320" id="XKb-56-Hpi"/>
+                                    <constraint firstAttribute="height" constant="83" id="sj0-YL-aqf"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFh-yl-SnE">
-                                <rect key="frame" x="99" y="501" width="123" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFh-yl-SnE">
+                                <rect key="frame" x="99" y="413" width="123" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="my8-SH-QSt"/>
+                                    <constraint firstAttribute="width" constant="123" id="os4-cY-WfL"/>
+                                    <constraint firstAttribute="height" constant="51" id="xcD-tl-BqE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" backgroundImage="shoot_camera_button_1.png">
@@ -39,11 +41,11 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoot_camera_button_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-JB-dHn">
-                                <rect key="frame" x="139" y="507" width="43" height="32"/>
+                                <rect key="frame" x="139" y="419" width="43" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="43" id="62P-cj-K4z"/>
-                                    <constraint firstAttribute="height" constant="32" id="me8-Nr-nTb"/>
+                                    <constraint firstAttribute="height" constant="32" id="mUR-6C-SRv"/>
+                                    <constraint firstAttribute="width" constant="43" id="wIJ-s0-zdQ"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="shot_button_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="iGK-t8-Jlt">
@@ -97,28 +99,26 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Gm-GZG">
-                                <rect key="frame" x="0.0" y="59" width="320" height="427"/>
+                                <rect key="frame" x="0.0" y="59" width="320" height="339"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="leading" secondItem="j2H-tx-Wh4" secondAttribute="leading" id="2P7-FH-Uwm"/>
-                            <constraint firstAttribute="trailing" secondItem="j2H-tx-Wh4" secondAttribute="trailing" id="6uH-X6-WyJ"/>
-                            <constraint firstAttribute="bottom" secondItem="j2H-tx-Wh4" secondAttribute="bottom" id="8WT-MS-1TN"/>
-                            <constraint firstItem="HFh-yl-SnE" firstAttribute="centerX" secondItem="j2H-tx-Wh4" secondAttribute="centerX" id="HDu-1A-Cb6"/>
-                            <constraint firstItem="j2H-tx-Wh4" firstAttribute="leading" secondItem="eUj-fY-07E" secondAttribute="leading" id="MON-c3-b51"/>
-                            <constraint firstAttribute="bottom" secondItem="HFh-yl-SnE" secondAttribute="bottom" constant="16" id="MmZ-V7-yJy"/>
-                            <constraint firstItem="RJr-JB-dHn" firstAttribute="centerX" secondItem="HFh-yl-SnE" secondAttribute="centerX" id="OFX-uW-cda"/>
-                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="top" secondItem="iGK-t8-Jlt" secondAttribute="bottom" id="XKj-67-4Vz"/>
-                            <constraint firstItem="HFh-yl-SnE" firstAttribute="leading" secondItem="eUj-fY-07E" secondAttribute="leading" constant="99" id="Yw9-6Y-yyl"/>
-                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="leading" secondItem="iGK-t8-Jlt" secondAttribute="leading" id="dRP-qG-ZrY"/>
-                            <constraint firstAttribute="bottom" secondItem="RJr-JB-dHn" secondAttribute="bottom" constant="29" id="lEN-jw-XhV"/>
-                            <constraint firstAttribute="bottom" secondItem="wA9-Gm-GZG" secondAttribute="bottom" constant="82" id="ojC-0z-KBA"/>
-                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="trailing" secondItem="j2H-tx-Wh4" secondAttribute="trailing" id="pEv-5Q-dw7"/>
-                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="trailing" secondItem="iGK-t8-Jlt" secondAttribute="trailing" id="q4D-WO-vcs"/>
-                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="top" secondItem="eUj-fY-07E" secondAttribute="top" constant="59" id="wBP-Zw-vPS"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="leading" secondItem="j2H-tx-Wh4" secondAttribute="leading" id="2y9-Bg-u7W"/>
+                            <constraint firstItem="RJr-JB-dHn" firstAttribute="top" secondItem="wA9-Gm-GZG" secondAttribute="bottom" constant="21" id="7Oe-8x-oHX"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="leading" secondItem="iGK-t8-Jlt" secondAttribute="leading" id="CXj-Cs-zsI"/>
+                            <constraint firstItem="RJr-JB-dHn" firstAttribute="centerX" secondItem="j2H-tx-Wh4" secondAttribute="centerX" id="N3t-na-qzb"/>
+                            <constraint firstAttribute="bottom" secondItem="RJr-JB-dHn" secondAttribute="bottom" constant="29" id="U38-GU-QH6"/>
+                            <constraint firstItem="RJr-JB-dHn" firstAttribute="centerX" secondItem="eUj-fY-07E" secondAttribute="centerX" id="W0t-Da-clL"/>
+                            <constraint firstAttribute="bottom" secondItem="j2H-tx-Wh4" secondAttribute="bottom" id="awz-bo-xhN"/>
+                            <constraint firstItem="RJr-JB-dHn" firstAttribute="centerX" secondItem="iGK-t8-Jlt" secondAttribute="centerX" id="sDe-PI-vR8"/>
+                            <constraint firstAttribute="bottom" secondItem="HFh-yl-SnE" secondAttribute="bottom" constant="16" id="tCI-pV-vkk"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="top" secondItem="iGK-t8-Jlt" secondAttribute="bottom" id="uKm-aA-tgF"/>
+                            <constraint firstItem="RJr-JB-dHn" firstAttribute="centerX" secondItem="HFh-yl-SnE" secondAttribute="centerX" id="z7r-LA-XG5"/>
+                            <constraint firstItem="wA9-Gm-GZG" firstAttribute="top" secondItem="eUj-fY-07E" secondAttribute="top" constant="59" id="zXk-1u-7Bx"/>
+                            <constraint firstItem="RJr-JB-dHn" firstAttribute="centerX" secondItem="wA9-Gm-GZG" secondAttribute="centerX" id="zh3-dV-xM2"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -152,6 +152,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
