@@ -39,6 +39,7 @@
     NSArray *languages = [NSLocale preferredLanguages];
     NSString *currentLanguage = [languages objectAtIndex:0];
     dataManager = [DataManager sharedManager];
+    [dataManager getLoadRecordMusicList];
 
     if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"musicrepeat"]intValue]==1) {        
         if ([currentLanguage isEqualToString:@"zh-Hans"]) {
@@ -77,7 +78,6 @@
         repeatName.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
     }
 
-    [dataManager getLoadRecordMusicList];
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         recordListLab.font = [UIFont fontWithName:@"A-OTF Jun Pro" size:14];
     }

@@ -20,6 +20,7 @@
     UIImageView *myAnimatedView;
   BOOL isFront ;
     
+    
 }
 
 @property (nonatomic, strong) IBOutlet UIButton* backBtn;

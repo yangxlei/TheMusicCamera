@@ -137,22 +137,50 @@
 
 - (void)saveBtuuon
 {
-    
-    Music *music = [[Music alloc]init];
-    music.name = musicNameText.text;
-    music.path = [NSString stringWithFormat:@"%@.caf",musicNameText.text];
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"appStore"] intValue]==0) {
-        [dataManager deleteMusicWithID:4];
-        [dataManager insertMusicInfo:music];
+    if ([dataManager getMusicId]==5) {
+        NSArray *languages = [NSLocale preferredLanguages];
+        NSString *currentLanguage = [languages objectAtIndex:0];
+        
+        NSString *alertStr;
+        
+        if ([currentLanguage isEqualToString:@"zh-Hans"]) {
+            alertStr = @"录音文件超过了保存上限\n※购买升级版，可以增加可保存上线\n删除之前的录音文件，保存刚才录音的内容吗？";
+        }else if ([currentLanguage isEqualToString:@"en"])
+        {
+            alertStr = @"Sound file can be saved is full\n※Buy our upgrade version can save more sound\ndelete old sound file to save new?";
+        }
+        else
+        {
+            alertStr = @"録音サウンドの保存上限を超えています。\n※アプリ内課金をすると、保存上限が増えます。\n過去に録音したを削除し、今録音したものを保存してよろしいですか";
+        }
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@""
+                                                           message:alertStr
+                                                          delegate:self
+                                                 cancelButtonTitle:@"NO"
+                                                 otherButtonTitles:@"YES", nil];
+        alertView.tag = 2;
+        [alertView show];
     }
     else
     {
-        [dataManager insertMusicInfo:music];
+        Music *music = [[Music alloc]init];
+        music.name = musicNameText.text;
+        music.path = [NSString stringWithFormat:@"%@.caf",musicNameText.text];
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"appStore"] intValue]==0) {
+            [dataManager deleteMusicWithID:4];
+            [dataManager insertMusicInfo:music];
+        }
+        else
+        {
+            [dataManager insertMusicInfo:music];
+        }
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        [self.delegate recordDelegateEvent];
     }
 
-    [self.navigationController popViewControllerAnimated:YES];
-    
-    [self.delegate recordDelegateEvent];
 }
 
 - (IBAction)recordVoice:(id)sender {
@@ -324,38 +352,68 @@
                                                       delegate:self
                                              cancelButtonTitle:@"NO"
                                              otherButtonTitles:@"YES", nil];
+    alertView.tag = 1;
     [alertView show];
 
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex==0) {
-        NSLog(@"0");
-        
-        
+    if (alertView.tag ==1) {
+        if (buttonIndex==0) {
+            NSLog(@"0");
+            
+            
+        }
+        else
+        {
+            _isRecording = NO;
+            _isPlaying = NO;
+            
+            saveBtn.hidden = YES;
+            deleteBtn.hidden = YES;
+            intTime = 0.00;
+            intPlayTime = 0.00;
+            timeLabel.text = [NSString stringWithFormat:@"0:00/10:00"];
+            
+            [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_rec"] forState:UIControlStateNormal];
+            timeImage.frame = CGRectMake(timeImage.frame.origin.x, 346, timeImage.frame.size.width, 481);
+            
+            NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
+            NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", savePath,dateString];
+            
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            [fileManager removeItemAtPath:recorderFilePath error:nil];
+            
+            [dataManager deleteMusicWithName:[NSString stringWithFormat:@"%@.caf",dateString]];
+        }
     }
     else
     {
-        _isRecording = NO;
-        _isPlaying = NO;
-        
-        saveBtn.hidden = YES;
-        deleteBtn.hidden = YES;
-        intTime = 0.00;
-        intPlayTime = 0.00;
-        timeLabel.text = [NSString stringWithFormat:@"0:00/10:00"];
-        
-        [recordBtn setBackgroundImage:[UIImage imageNamed:@"recording_rec"] forState:UIControlStateNormal];
-        timeImage.frame = CGRectMake(timeImage.frame.origin.x, 346, timeImage.frame.size.width, 481);
-        
-        NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
-        NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", savePath,dateString];
-        
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        [fileManager removeItemAtPath:recorderFilePath error:nil];
-        
-        [dataManager deleteMusicWithName:[NSString stringWithFormat:@"%@.caf",dateString]];
+        if (buttonIndex==0) {
+            NSLog(@"0");
+            
+            
+        }
+        else
+        {
+            Music *music = [[Music alloc]init];
+            music.name = musicNameText.text;
+            music.path = [NSString stringWithFormat:@"%@.caf",musicNameText.text];
+            if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"appStore"] intValue]==0) {
+                [dataManager deleteMusicWithID:4];
+                [dataManager insertMusicInfo:music];
+            }
+            else
+            {
+                [dataManager insertMusicInfo:music];
+            }
+            
+            [self.navigationController popViewControllerAnimated:YES];
+            
+            [self.delegate recordDelegateEvent];
+        }
+
     }
 }
 

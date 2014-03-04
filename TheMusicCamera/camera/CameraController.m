@@ -92,6 +92,12 @@
 - (void) initialize
 {
   //1.创建会话层
+    if (_session) {
+        _session = nil;
+        _device = nil;
+        _captureInput = nil;
+        _captureOutput = nil;
+    }
   _session = [[AVCaptureSession alloc] init];
   [_session setSessionPreset:AVCaptureSessionPreset640x480];
   
@@ -348,7 +354,10 @@
     [avAudioPlayer stop];
     [_musicBtn setEnabled:NO];
     cameraStop = YES;
-    
+  
+  [cameraBtn setEnabled:NO];
+  self.view.userInteractionEnabled = NO;
+  
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
         [self addHollowCloseToView:self.cameraView];
         
@@ -382,7 +391,8 @@
            _finishImage = [CameraController imageWithImage:_finishImage scaledToSize:_preview.bounds.size];
              UIImageWriteToSavedPhotosAlbum(_finishImage, nil, nil, nil);//然后将该图片保存到图片图
              [self.cameraView.layer removeAllAnimations];
-             [cameraBtn setEnabled:NO];
+//             [cameraBtn setEnabled:NO];
+//           self.view.userInteractionEnabled = NO;
              [self performSelector:@selector(resetCamear) withObject:nil afterDelay:0.8];
          }];
         
@@ -401,6 +411,7 @@
 
 - (void) resetCamear
 {
+  self.view.userInteractionEnabled = YES;
   [cameraBtn setEnabled:YES];
   [_musicBtn setEnabled:YES];
   cameraStop = NO;

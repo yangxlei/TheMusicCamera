@@ -113,7 +113,7 @@
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     
     picker.mailComposeDelegate =self;
-    [picker setSubject:@"#PicoSweet"];
+    [picker setSubject:@"iOSアプリ～ママカメラ～"];
     // Set up recipients
     NSArray *toRecipients = [NSArray arrayWithObject:@""];
     
@@ -122,7 +122,7 @@
     
     [picker addAttachmentData:imageData mimeType:@"" fileName:@"image.jpg"];
     
-    NSString *emailBody =[NSString stringWithFormat:@"http://favs.jp/picosweet/"] ;
+    NSString *emailBody =[NSString stringWithFormat:@"http://bit.ly/mamacamera"] ;
     [picker setMessageBody:emailBody isHTML:NO];
     [self presentViewController:picker animated:YES completion:nil];
     
@@ -143,16 +143,16 @@
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
     slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [slComposerSheet setInitialText:@"#PicoSweet"];
+        [slComposerSheet setInitialText:@"iOSアプリ～ママカメラ～"];
     [slComposerSheet addImage:dataManager.shareImg];
-    [slComposerSheet addURL:[NSURL URLWithString:@"http://favs.jp/picosweet/"]];
+    [slComposerSheet addURL:[NSURL URLWithString:@"http://bit.ly/mamacamera"]];
     [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
     }
     else
     {
         
 
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请设置facebook账号信息，这里需要改"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请设置facebook账号信息"
                                                         message:@""
                                                        delegate:self
                                               cancelButtonTitle:@"OK"
@@ -184,14 +184,14 @@
 - (IBAction)twitterBtn:(id)sender {
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         slComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [slComposerSheet setInitialText:@"#PicoSweet"];
+        [slComposerSheet setInitialText:@"iOSアプリ～ママカメラ～"];
         [slComposerSheet addImage:dataManager.shareImg];
-        [slComposerSheet addURL:[NSURL URLWithString:@"http://favs.jp/picosweet/"]];
+        [slComposerSheet addURL:[NSURL URLWithString:@"http://bit.ly/mamacamera"]];
         [self.navigationController presentViewController:slComposerSheet animated:YES completion:nil];
     }
         else
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请设置twitter账号信息，这里需要改"
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请设置twitter账号信息"
                                                             message:@""
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
