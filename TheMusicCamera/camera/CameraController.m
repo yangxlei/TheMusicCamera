@@ -147,7 +147,7 @@
   if (sizeBtn.isSelected) {
     height = 320;
   }
-    _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
+    _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2 , 320, height);
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
     [self.cameraView.layer addSublayer:_preview];
