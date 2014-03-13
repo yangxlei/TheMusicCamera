@@ -99,7 +99,7 @@
     
   year = 0 ;
   month = 0;
-  stampItem = 0;
+  stampItem = 1;
     leftArrow.hidden = YES;
     rightArrow.hidden = NO;
 }
@@ -149,6 +149,7 @@
   month = _month;
  age.text = [NSString stringWithFormat:@"%d歳 %dか月",year,month];
   [self setAgeImage];
+    NSLog(@"stampItem===   %d",stampItem);
 }
 
 -(IBAction)ageClick:(id)sender

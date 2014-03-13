@@ -25,6 +25,8 @@
     __weak IBOutlet UIButton *colorButton;
     __weak IBOutlet UIButton *fontButton;
     UIButton *editBtn;
+    BOOL firstTextView;
+    
 }
 
 @property (nonatomic, strong) id<TextFontVCDelegate> delegate;

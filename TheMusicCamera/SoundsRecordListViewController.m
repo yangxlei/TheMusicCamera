@@ -189,7 +189,15 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (isEdit) {
-        selectIndex = indexPath.row;
+//        selectIndex = indexPath.row;
+        if (selectIndex == indexPath.row) {
+            selectIndex = -1;
+        }
+        else
+        {
+            selectIndex = indexPath.row;
+        }
+        
         [tableViews reloadData];
     }else
     {

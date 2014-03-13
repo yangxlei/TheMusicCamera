@@ -15,13 +15,13 @@
 
 @interface CameraController ()
 {
-  AVCaptureSession *_session;
-  AVCaptureDeviceInput *_captureInput;
-  AVCaptureStillImageOutput *_captureOutput;
-  AVCaptureVideoPreviewLayer *_preview;
-  AVCaptureDevice *_device;
-  
-  UIImage *_finishImage;
+    AVCaptureSession *_session;
+    AVCaptureDeviceInput *_captureInput;
+    AVCaptureStillImageOutput *_captureOutput;
+    AVCaptureVideoPreviewLayer *_preview;
+    AVCaptureDevice *_device;
+    
+    UIImage *_finishImage;
 }
 @end
 
@@ -44,19 +44,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  self.hidesBottomBarWhenPushed = YES;
+    self.hidesBottomBarWhenPushed = YES;
     dataManager = [DataManager sharedManager];
-
+    
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
+        NSLog( @"initialize====   %s" , "initialize");
         [self initialize];
-
-    }
-    else
-    {
+    } else {
+        NSLog( @"initialize====   %s" , "initializeVideo");
         [self initializeVideo];
     }
     _musicBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-
+    
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicstation"] intValue]==1) {
         _musicBtn.frame = CGRectMake(20, self.view.frame.size.height-150, 44, 44);
     }
@@ -79,52 +78,53 @@
     myAnimatedView.animationImages = myImages; //animationImages属性返回一个存放动画图片的数组
     myAnimatedView.animationDuration = 1.0; //浏览整个图片一次所用的时间
     myAnimatedView.animationRepeatCount = 0; // 0 = loops forever 动画重复次数
-    [myAnimatedView startAnimating]; 
+    [myAnimatedView startAnimating];
     [self.view addSubview:myAnimatedView];
     myAnimatedView.hidden = YES;
     
-//    MPMusicPlayerController *mpc = [MPMusicPlayerController applicationMusicPlayer];
-//    mpc.volume = 0;  //0.0~1.0
+    //    MPMusicPlayerController *mpc = [MPMusicPlayerController applicationMusicPlayer];
+    //    mpc.volume = 0;  //0.0~1.0
     ///////////////////磊磊上面是我加的
-
+    
 }
 
 - (void) initialize
 {
-  //1.创建会话层
+    NSLog( @"initialize====   %s" , "start");
+    //1.创建会话层
     if (_session) {
         _session = nil;
         _device = nil;
         _captureInput = nil;
         _captureOutput = nil;
     }
-  _session = [[AVCaptureSession alloc] init];
-  [_session setSessionPreset:AVCaptureSessionPreset640x480];
-  
-  //2.创建、配置输入设备
-  _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-  
-  if (!isFront)
-  {
-    _device = [self cameraWithPosition:AVCaptureDevicePositionBack];
-  }
-  else
-  {
-    _device = [self cameraWithPosition:AVCaptureDevicePositionFront];
-  }
-  
-  [_device lockForConfiguration:nil];
-  if([_device flashMode] == AVCaptureFlashModeOff){
-    [flashBtn setSelected:NO];
-  }
-  else if([_device flashMode] == AVCaptureFlashModeAuto){
-    [flashBtn setSelected:NO];
-  }
-  else{
-    [flashBtn setSelected:YES];
-  }
-  [_device unlockForConfiguration];
-  
+    _session = [[AVCaptureSession alloc] init];
+    [_session setSessionPreset:AVCaptureSessionPreset640x480];
+    
+    //2.创建、配置输入设备
+    _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    if (!isFront)
+    {
+        _device = [self cameraWithPosition:AVCaptureDevicePositionBack];
+    }
+    else
+    {
+        _device = [self cameraWithPosition:AVCaptureDevicePositionFront];
+    }
+    
+    [_device lockForConfiguration:nil];
+    if([_device flashMode] == AVCaptureFlashModeOff){
+        [flashBtn setSelected:NO];
+    }
+    else if([_device flashMode] == AVCaptureFlashModeAuto){
+        [flashBtn setSelected:NO];
+    }
+    else{
+        [flashBtn setSelected:YES];
+    }
+    [_device unlockForConfiguration];
+    
 	NSError *error;
 	_captureInput = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
 	if (!_captureInput)
@@ -132,31 +132,34 @@
 		NSLog(@"Error: %@", error);
 		return;
 	}
-  [_session addInput:_captureInput];
-  
-  
-  //3.创建、配置输出
-  _captureOutput = [[AVCaptureStillImageOutput alloc] init];
-  NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG,AVVideoCodecKey,nil];
-  [_captureOutput setOutputSettings:outputSettings];
+    [_session addInput:_captureInput];
+    
+    NSLog( @"initialize====   %s" , "starting");
+    
+    //3.创建、配置输出
+    _captureOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG,AVVideoCodecKey,nil];
+    [_captureOutput setOutputSettings:outputSettings];
 	[_session addOutput:_captureOutput];
     
     _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
     int height = MIN(427, self.cameraView.frame.size.height);
-
-  if (sizeBtn.isSelected) {
-    height = 320;
-  }
+    
+    if (sizeBtn.isSelected) {
+        height = 320;
+    }
     _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
     [self.cameraView.layer addSublayer:_preview];
     [_session startRunning];
-
+    
+    NSLog( @"initialize====   %s" , "finish");
 }
 
 - (void) initializeVideo
 {
+    NSLog( @"initializeVideo====   %s" , "start");
     cameraStop = NO;
     NSError *error = nil;
     
@@ -171,7 +174,7 @@
     // Find a suitable AVCaptureDevice
     AVCaptureDevice *device = [AVCaptureDevice
                                defaultDeviceWithMediaType:AVMediaTypeVideo];//这里默认是使用后置摄像头，你可以改成前置摄像头
-  
+    
     // Create a device input with the device and add it to the session.
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device
                                                                         error:&error];
@@ -197,167 +200,169 @@
     
     
     _preview = [AVCaptureVideoPreviewLayer layerWithSession: _session];
+    NSLog( @"initializeVideo====   %s" , "starting");
     int height = MIN(427, self.cameraView.frame.size.height);
-  if (sizeBtn.isSelected) {
-    height = 320;
-  }
+    if (sizeBtn.isSelected) {
+        height = 320;
+    }
     _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height)/2, 320, height);
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
     [self.cameraView.layer addSublayer:_preview];
     [_session startRunning];
+    NSLog( @"initializeVideo====   %s" , "finish");
     // If you wish to cap the frame rate to a known value, such as 15 fps, set
     // minFrameDuration.
-//    output.minFrameDuration = CMTimeMake(1, 15);
-//    device.ActiveVideoMinFrameDuration = CMTimeMake(1, 15);
-
+    //    output.minFrameDuration = CMTimeMake(1, 15);
+    //    device.ActiveVideoMinFrameDuration = CMTimeMake(1, 15);
+    
     // Start the session running to start the flow of data
 }
 
 -(IBAction) back:(id)sender
 {
-  [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(IBAction) flash:(id)sender
 {
-  if([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera] && [_device hasFlash])
-  {
-    [flashBtn setEnabled:NO];
-    [_session beginConfiguration];
-    [_device lockForConfiguration:nil];
-    if (flashBtn.isSelected) {
-      [flashBtn setSelected:NO];
-      [_device setFlashMode:AVCaptureFlashModeOff];
-    }
-    else
+    if([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera] && [_device hasFlash])
     {
-      [flashBtn setSelected:YES];
-      [_device setFlashMode:AVCaptureFlashModeOn];
+        [flashBtn setEnabled:NO];
+        [_session beginConfiguration];
+        [_device lockForConfiguration:nil];
+        if (flashBtn.isSelected) {
+            [flashBtn setSelected:NO];
+            [_device setFlashMode:AVCaptureFlashModeOff];
+        }
+        else
+        {
+            [flashBtn setSelected:YES];
+            [_device setFlashMode:AVCaptureFlashModeOn];
+        }
+        //    if([_device flashMode] == AVCaptureFlashModeOff)
+        //    {
+        //      [_device setFlashMode:AVCaptureFlashModeAuto];
+        //      [flashBtn setSelected:NO];
+        //    }
+        //    else if([_device flashMode] == AVCaptureFlashModeAuto)
+        //    {
+        //      [_device setFlashMode:AVCaptureFlashModeOn];
+        //      [flashBtn setSelected:YES];
+        //    }
+        //    else{
+        //      [_device setFlashMode:AVCaptureFlashModeOff];
+        //      [flashBtn setSelected:NO];
+        //    }
+        [_device unlockForConfiguration];
+        [_session commitConfiguration];
+        [flashBtn setEnabled:YES];
     }
-//    if([_device flashMode] == AVCaptureFlashModeOff)
-//    {
-//      [_device setFlashMode:AVCaptureFlashModeAuto];
-//      [flashBtn setSelected:NO];
-//    }
-//    else if([_device flashMode] == AVCaptureFlashModeAuto)
-//    {
-//      [_device setFlashMode:AVCaptureFlashModeOn];
-//      [flashBtn setSelected:YES];
-//    }
-//    else{
-//      [_device setFlashMode:AVCaptureFlashModeOff];
-//      [flashBtn setSelected:NO];
-//    }
-    [_device unlockForConfiguration];
-    [_session commitConfiguration];
-    [flashBtn setEnabled:YES];
-  }
 }
 
 -(IBAction) frontCamera:(id)sender
 {
-  isFront = !isFront;
-  //添加动画
-  CATransition *animation = [CATransition animation];
-  animation.delegate = self;
-  animation.duration = .8f;
-  animation.timingFunction = UIViewAnimationCurveEaseInOut;
-  animation.type = @"oglFlip";
-  if (_device.position == AVCaptureDevicePositionFront) {
-    animation.subtype = kCATransitionFromRight;
-  }
-  else if(_device.position == AVCaptureDevicePositionBack){
-    animation.subtype = kCATransitionFromLeft;
-  }
-  [_preview addAnimation:animation forKey:@"animation"];
-  
-  NSArray *inputs = _session.inputs;
-  for ( AVCaptureDeviceInput *input in inputs )
-  {
-    AVCaptureDevice *device = input.device;
-    if ([device hasMediaType:AVMediaTypeVideo])
-    {
-      AVCaptureDevicePosition position = device.position;
-      AVCaptureDevice *newCamera = nil;
-      AVCaptureDeviceInput *newInput = nil;
-      
-      if (position == AVCaptureDevicePositionFront)
-      {
-          myAnimatedView.hidden = YES;
-        newCamera = [self cameraWithPosition:AVCaptureDevicePositionBack];
-      }
-      else
-      {
-          myAnimatedView.hidden = NO;
-        newCamera = [self cameraWithPosition:AVCaptureDevicePositionFront];
-      }
-      _device = newCamera;
-      newInput = [AVCaptureDeviceInput deviceInputWithDevice:newCamera error:nil];
-      
-      // beginConfiguration ensures that pending changes are not applied immediately
-      [_session beginConfiguration];
-      
-      [_session removeInput:input];
-      [_session addInput:newInput];
-      
-      // Changes take effect once the outermost commitConfiguration is invoked.
-      [_session commitConfiguration];
-      break;
+    isFront = !isFront;
+    //添加动画
+    CATransition *animation = [CATransition animation];
+    animation.delegate = self;
+    animation.duration = .8f;
+    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+    animation.type = @"oglFlip";
+    if (_device.position == AVCaptureDevicePositionFront) {
+        animation.subtype = kCATransitionFromRight;
     }
-  }
+    else if(_device.position == AVCaptureDevicePositionBack){
+        animation.subtype = kCATransitionFromLeft;
+    }
+    [_preview addAnimation:animation forKey:@"animation"];
+    
+    NSArray *inputs = _session.inputs;
+    for ( AVCaptureDeviceInput *input in inputs )
+    {
+        AVCaptureDevice *device = input.device;
+        if ([device hasMediaType:AVMediaTypeVideo])
+        {
+            AVCaptureDevicePosition position = device.position;
+            AVCaptureDevice *newCamera = nil;
+            AVCaptureDeviceInput *newInput = nil;
+            
+            if (position == AVCaptureDevicePositionFront)
+            {
+                myAnimatedView.hidden = YES;
+                newCamera = [self cameraWithPosition:AVCaptureDevicePositionBack];
+            }
+            else
+            {
+                myAnimatedView.hidden = NO;
+                newCamera = [self cameraWithPosition:AVCaptureDevicePositionFront];
+            }
+            _device = newCamera;
+            newInput = [AVCaptureDeviceInput deviceInputWithDevice:newCamera error:nil];
+            
+            // beginConfiguration ensures that pending changes are not applied immediately
+            [_session beginConfiguration];
+            
+            [_session removeInput:input];
+            [_session addInput:newInput];
+            
+            // Changes take effect once the outermost commitConfiguration is invoked.
+            [_session commitConfiguration];
+            break;
+        }
+    }
 }
 
 - (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position
 {
-  NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-  for (AVCaptureDevice *device in devices)
-  {
-    if (device.position == position)
+    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in devices)
     {
-      return device;
+        if (device.position == position)
+        {
+            return device;
+        }
     }
-  }
-  return nil;
+    return nil;
 }
 
 -(IBAction)sizeClick:(id)sender
 {
-  int height ;
-  if (!sizeBtn.isSelected)
-  {
-    [sizeBtn setSelected:YES];
-      sizeBtn.bounds = CGRectMake(0, 0, 28, 35);
-    height = 320;
-  }
-  else
-  {
-    [sizeBtn setSelected:NO];
-      sizeBtn.bounds = CGRectMake(0, 0, 28, 28);
-    height = MIN(427, self.cameraView.frame.size.height);
-  }
-  
-  _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height) /2, 320, height);
-  
+    int height ;
+    if (!sizeBtn.isSelected)
+    {
+        [sizeBtn setSelected:YES];
+        sizeBtn.bounds = CGRectMake(0, 0, 28, 35);
+        height = 320;
+    }
+    else
+    {
+        [sizeBtn setSelected:NO];
+        sizeBtn.bounds = CGRectMake(0, 0, 28, 28);
+        height = MIN(427, self.cameraView.frame.size.height);
+    }
+    
+    _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height) /2, 320, height);
+    
 }
 
 -(IBAction)takePhoto:(id)sender
 {
-///////////////////
-//    if([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera] )
-//    {
-//        UIImagePickerController * picker=[[UIImagePickerController alloc]init];
-//        [picker takePicture];//他将会自动调用代理方法完成照片的拍摄；
-//    }
-///////////////////磊磊上面是我加的
+    ///////////////////
+    //    if([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera] )
+    //    {
+    //        UIImagePickerController * picker=[[UIImagePickerController alloc]init];
+    //        [picker takePicture];//他将会自动调用代理方法完成照片的拍摄；
+    //    }
+    ///////////////////磊磊上面是我加的
     
     [avAudioPlayer stop];
     [_musicBtn setEnabled:NO];
     cameraStop = YES;
-  
-  [cameraBtn setEnabled:NO];
-  self.view.userInteractionEnabled = NO;
-  
+    
+    [cameraBtn setEnabled:NO];
+    self.view.userInteractionEnabled = NO;
+    
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
         [self addHollowCloseToView:self.cameraView];
         
@@ -372,86 +377,86 @@
             }
             if (videoConnection) { break; }
         }
-        
         //get UIImage
         [_captureOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
          ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
-             //     _saveButton.hidden = NO;
-             //     _cancelButton.hidden = NO;
-             [self addHollowCloseToView:self.cameraView];
-             [_session stopRunning];
-             [self addHollowOpenToView:self.cameraView];
+             NSLog( @"takePhoto====   %s" , "2");
+             //   [self addHollowCloseToView:self.cameraView];
+             //   [_session stopRunning];
+             //    [self addHollowOpenToView:self.cameraView];
              CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
              if (exifAttachments) {
+                 NSLog( @"takePhoto====   %s" , "3");
                  // Do something with the attachments.
              }
              // Continue as appropriate.
              NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
              _finishImage = [[UIImage alloc] initWithData:imageData] ;
-           _finishImage = [CameraController imageWithImage:_finishImage scaledToSize:_preview.bounds.size];
+             _finishImage = [CameraController imageWithImage:_finishImage scaledToSize:_preview.bounds.size];
+             NSLog( @"takePhoto====   %s" , "4");
              UIImageWriteToSavedPhotosAlbum(_finishImage, nil, nil, nil);//然后将该图片保存到图片图
              [self.cameraView.layer removeAllAnimations];
-//             [cameraBtn setEnabled:NO];
-//           self.view.userInteractionEnabled = NO;
+             //    [cameraBtn setEnabled:NO];
+             //    self.view.userInteractionEnabled = NO;
              [self performSelector:@selector(resetCamear) withObject:nil afterDelay:0.8];
          }];
         
-//        UIGraphicsBeginImageContext(self.cameraView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
-//        [self.cameraView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
-//        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();//返回一个基于当前图形上下文的图片
-//        UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
-//        UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
-
+        //        UIGraphicsBeginImageContext(self.cameraView.bounds.size);     //currentView 当前的view  创建一个基于位图的图形上下文并指定大小为
+        //        [self.cameraView.layer renderInContext:UIGraphicsGetCurrentContext()];//renderInContext呈现接受者及其子范围到指定的上下文
+        //        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();//返回一个基于当前图形上下文的图片
+        //        UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
+        //        UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);//然后将该图片保存到图片图
+        
     }
     else
     {
     }
-
+    
 }
 
 - (void) resetCamear
 {
-  self.view.userInteractionEnabled = YES;
-  [cameraBtn setEnabled:YES];
-  [_musicBtn setEnabled:YES];
-  cameraStop = NO;
-  
+    self.view.userInteractionEnabled = YES;
+    [cameraBtn setEnabled:YES];
+    [_musicBtn setEnabled:YES];
+    cameraStop = NO;
+    
     
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
-        [self initialize];
+        //   [self initialize];
         
     }
     else
     {
-        [self initializeVideo];
+        //   [self initializeVideo];
     }
 }
 
 - (void)addHollowOpenToView:(UIView *)view
 {
-  CATransition *animation = [CATransition animation];
-  animation.duration = 0.5f;
-  animation.delegate = self;
-  animation.timingFunction = UIViewAnimationCurveEaseInOut;
-  animation.fillMode = kCAFillModeForwards;
-  animation.type = @"cameraIrisHollowOpen";
-  [view.layer addAnimation:animation forKey:@"animation"];
+//    CATransition *animation = [CATransition animation];
+//    animation.duration = 0.5f;
+//    animation.delegate = self;
+//    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+//    animation.fillMode = kCAFillModeForwards;
+//    animation.type = @"cameraIrisHollowOpen";
+//    [view.layer addAnimation:animation forKey:@"animation"];
 }
 
 - (void)addHollowCloseToView:(UIView *)view
 {
-  CATransition *animation = [CATransition animation];//初始化动画
-  animation.duration = 0.5f;//间隔的时间
-  animation.timingFunction = UIViewAnimationCurveEaseInOut;
-  animation.type = @"cameraIrisHollowClose";
-  [view.layer addAnimation:animation forKey:@"HollowClose"];
+//    CATransition *animation = [CATransition animation];//初始化动画
+//    animation.duration = 0.5f;//间隔的时间
+//    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+//    animation.type = @"cameraIrisHollowClose";
+//    [view.layer addAnimation:animation forKey:@"HollowClose"];
 }
 
 - (IBAction)playMusic:(id)sender
 {
-//    [[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"]
-//    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:music.ID] forKey:@"musicID"];
-
+    //    [[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"]
+    //    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:music.ID] forKey:@"musicID"];
+    
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"musicOFF"] intValue]==1) {
         [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];//静音下可以播放
         [[AVAudioSession sharedInstance] setActive: YES error:nil];
@@ -461,7 +466,7 @@
         AVAudioSession *audioSession = [AVAudioSession sharedInstance];//控制音量小的问题？？？
         NSError *err = nil;
         [audioSession setCategory :AVAudioSessionCategoryPlayback error:&err];
-
+        
         NSString *savePath = [dataManager.downloadPath  stringByAppendingPathComponent:[NSString stringWithFormat:@"music"]];
         int selectNO = [[[NSUserDefaults standardUserDefaults] objectForKey:@"musicID"] intValue];
         NSString *recorderFilePath = [NSString stringWithFormat:@"%@/%@", savePath,[dataManager selectMusicWithID:selectNO]];
@@ -487,9 +492,9 @@
     }
     else
     {
-    
+        
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -511,9 +516,9 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     // Create a UIImage from the sample buffer data
     if (cameraStop) {
         cameraStop = NO;
-
-//        [self performSelector:@selector(resetCamear) withObject:nil afterDelay:0.8];
-
+        
+        //        [self performSelector:@selector(resetCamear) withObject:nil afterDelay:0.8];
+        
         UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
         
         int height ;
@@ -529,15 +534,15 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
         }
         
         _preview.frame = CGRectMake(0, (self.cameraView.frame.size.height - height) /2, 320, height);
-
+        
         image = [CameraController imageWithImage:image scaledToSize:_preview.bounds.size];
-
+        
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);//然后将该图片保存到图片图
-//
+        //
         cameraStop = NO;
-//        NSData *mData = UIImageJPEGRepresentation(image, 0.5);//这里的mData是NSData对象，后面的0.5代表生成的图片质量
+        //        NSData *mData = UIImageJPEGRepresentation(image, 0.5);//这里的mData是NSData对象，后面的0.5代表生成的图片质量
         [self addHollowCloseToView:self.cameraView];
-//        [_session stopRunning];
+        //        [_session stopRunning];
         [self addHollowOpenToView:self.cameraView];
     }
     
@@ -585,15 +590,15 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 }
 
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
-  //UIGraphicsBeginImageContext(newSize);
-  // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
-  // Pass 1.0 to force exact pixel size.
+    //UIGraphicsBeginImageContext(newSize);
+    // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
+    // Pass 1.0 to force exact pixel size.
     
-  UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-  [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-  UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
-  return newImage;
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 @end

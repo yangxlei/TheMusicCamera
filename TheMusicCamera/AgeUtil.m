@@ -13,6 +13,7 @@
 +(UIImage*) generateAgeStampImage:(int)item andYear:(int)year andMonth:(int)month
 {
   UIImage* stamp = [UIImage imageNamed:[NSString stringWithFormat:@"age_stamp_%d.png", item]];
+    NSLog(@"%d---%d---%d",item,year,month);
 //  UIImage* number = [UIImage imageNamed:[NSString stringWithFormat:@"age_stamp_%d_number.png", item]];
   
   if (year < 0 || month < 0)

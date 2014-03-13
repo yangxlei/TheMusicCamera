@@ -73,6 +73,7 @@
     textView.delegate = self;
     textView.textColor = [UIColor lightGrayColor];
     
+    firstTextView = YES;
 
     UITapGestureRecognizer *t = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
     [self.view addGestureRecognizer:t];
@@ -87,7 +88,10 @@
 
 -(BOOL)textViewShouldBeginEditing:(UITextView *)tv
 {
-    textView.text=@"";
+    if (firstTextView) {
+        firstTextView = NO;
+        textView.text=@"";
+    }
     textView.textColor = [UIColor blackColor];
     
     return YES;
@@ -204,6 +208,15 @@
 {
     [textView resignFirstResponder];
 
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
 }
 
 @end

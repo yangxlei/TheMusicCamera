@@ -225,12 +225,15 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void) begin
 {
+    self.hidesBottomBarWhenPushed = YES;
+
   UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
   imagePicker.delegate = self;
   imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
   imagePicker.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
   imagePicker.allowsEditing = NO;
   [self presentModalViewController:imagePicker animated:YES];
+    
 }
 
 -(void) didFinishImagePickerAndCrop:(UIImage *)image
@@ -388,7 +391,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         [screenView addSubview:userResizableView1];
         
         [stampArr addObject:userResizableView1];
-        
+        screenView.userInteractionEnabled = NO;
     }
     else if (type==2)
     {
