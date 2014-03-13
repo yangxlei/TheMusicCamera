@@ -62,8 +62,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "519"
             endingLineNumber = "519"
-            landmarkName = "-captureOutput:didOutputSampleBuffer:fromConnection:"
-            landmarkType = "5">
+            landmarkName = "@implementation CameraController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
